@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <!-- RTMP Host -->
+    <category label="10075">
+        <setting id="rtmp_host" type="text" label="10070" default="rtmp://" />
+    </category>
+</settings>

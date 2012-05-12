@@ -1,0 +1,9 @@
+# vim
+*.swp
+
+# python pyc
+*.pyc
+*.pyo
+
+# zip file
+*.zip
