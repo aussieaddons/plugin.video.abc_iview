@@ -27,5 +27,3 @@ Credits
 Created by Andy Botting (andybz)
 iView parsing code is thanks to Jeremy Visser.
 Portions of plugin code thanks to BBC iPlayer plugin.
-
-simplejson - simple json->dictionary decoder - http://code.google.com/p/simplejson/

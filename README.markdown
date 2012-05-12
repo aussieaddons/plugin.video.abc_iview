@@ -8,6 +8,10 @@ The content is only available with Australia, or you can apparently use sites
 like Unblock-US or your own VPN solution which terminates in with an AU IP 
 address.
 
+This plugin wouldn't be possible without the great work on python-iview from
+Jeremy Visser.
+https://jeremy.visser.name/2009/08/python-iview/
+
 Installation
 ------------
 This plugin is available as part of the XBMC CatchUp TV AU repository, but
