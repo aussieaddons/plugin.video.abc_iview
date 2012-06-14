@@ -35,9 +35,9 @@ BASE_SKIN_THUMBNAIL_PATH = os.path.join(os.getcwd(), 'resources', 'media')
 BASE_PLUGIN_THUMBNAIL_PATH = os.path.join(os.getcwd(), 'resources', 'media')
 
 
-def get_series():
+def get_series(keyword):
 	iview_config = comm.get_config()
-	programme = comm.get_programme(iview_config)
+	programme = comm.get_programme(iview_config, keyword)
 	return programme
 
 
@@ -45,13 +45,7 @@ def make_series_list(url):
 	params = utils.get_url(url)
 
 	try:
-		series_list = get_series()
-
-		# If we have a category_id filter out any series that don't have it as
-		# a keyword
-		category = params["category_id"]
-		if category:
-			series_list = filter(lambda s: s.has_keyword(category), series_list)
+		series_list = get_series(params["category_id"])
 		series_list.sort()
 
 		# fill media list
