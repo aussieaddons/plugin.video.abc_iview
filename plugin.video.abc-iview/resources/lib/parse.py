@@ -175,43 +175,6 @@ def parse_categories(soup):
 
 	return categories_list
 
-def parse_series(soup):
-	""" This function parses the series list, which lists the
-		the individual progams available. The items are things
-		like 'beached az Episode 8' and 'beached az Episode 9'.
-	"""
-
-	# HACK: replace <abc: with < because BeautifulSoup doesn't have
-	# any (obvious) way to inspect inside namespaces.
-	soup = soup \
-		.replace('<abc:', '<') \
-		.replace('</abc:', '</') \
-		.replace('<media:', '<') \
-		.replace('</media:', '</') \
-
-	# HACK: replace &amp; with &#38; because HTML entities aren't
-	# valid in plain XML, but the ABC doesn't know that.
-	soup = soup.replace('&amp;', '&#38;')
-
-	series_xml = BeautifulStoneSoup(soup)
-
-	return series_xml
-
-
-def parse_series_info(soup, series):
-	""" This function parses the series list, which lists the
-		the individual progams available. The items are things
-		like 'beached az Episode 8' and 'beached az Episode 9'.
-	"""
-
-	series_xml = parse_series(soup)
-
-	series.thumbnail = series_xml.find('image').find('url').string
-	series.description = series_xml.find('description').string
-
-	return series
-	
-
 def parse_series_items(soup, get_meta=False):
 	series_json = json.loads(soup)
 	

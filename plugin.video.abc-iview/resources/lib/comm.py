@@ -91,12 +91,3 @@ def get_series_items(iview_config, series_id):
 	series_json = fetch_url(iview_config['api_url'] + 'series=%s' % series_id)
 	return parse.parse_series_items(series_json)
 
-
-def get_series_info(iview_config, series):
-	"""This function fetches the series detail page for the selected series,
-		which contain the items (i.e. the actual episodes).
-	"""
-	url = config.series_url % series.id
-	series_xml = fetch_url(url)
-
-	return parse.parse_series_info(series_xml, series)
