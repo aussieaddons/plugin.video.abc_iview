@@ -146,6 +146,26 @@ def parse_index(soup):
 
 	return series_list
 
+def parse_categories(soup):
+	categories_list = []
+
+	"""
+	<category id="pre-school" genre="true">
+		<name>ABC 4 Kids</name>
+	</category>
+	"""
+
+	xml = BeautifulStoneSoup(soup)
+
+	for cat in xml.findAll('category', attrs={'genre':'true'}):
+
+		item = {}
+		item['keyword'] = cat.get('id');
+		item['name']    = cat.find('name').string;
+
+		categories_list.append(item);
+
+	return categories_list
 
 def parse_series(soup):
 	""" This function parses the series list, which lists the

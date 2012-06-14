@@ -31,31 +31,21 @@ try:
 except ImportError:
 	pass # for PC debugging
 
-BASE_SKIN_THUMBNAIL_PATH = os.path.join(os.getcwd(), 'resources', 'media')
-BASE_PLUGIN_THUMBNAIL_PATH = os.path.join(os.getcwd(), 'resources', 'media')
 
-
-def get_series():
+def get_categories():
 	iview_config = comm.get_config()
-	programme = comm.get_programme(iview_config)
-	return programme
+	categories = comm.get_categories(iview_config)
+	return categories
 
 
-def make_series_list(url):
-	params = utils.get_url(url)
-
+def make_category_list():
 	try:
-		series_list = get_series()
-
-		# If we have a category_id filter out any series that don't have it as
-		# a keyword
-		category = params["category_id"]
-		if category:
-			series_list = filter(lambda s: s.has_keyword(category), series_list)
-		series_list.sort()
+		category_list = get_categories()
+		category_list = sorted(category_list, key=lambda k: k['name'])
+		category_list.insert(0, {'name':'All', 'keyword':''})
 
 		# fill media list
-		ok = fill_series_list(series_list)
+		ok = fill_category_list(category_list)
 	except:
 		d = xbmcgui.Dialog()
 		message = utils.dialog_error("Unable to fetch listing")
@@ -68,32 +58,28 @@ def make_series_list(url):
 
 
 
-def fill_series_list(series_list):
+def fill_category_list(category_list):
 	iview_config = comm.get_config()
 	try:
 		ok = True
 		# enumerate through the list of categories and add the item to the media list
-		for s in series_list:
-			url = "%s?series_id=%s" % (sys.argv[0], s.id)
-			#thumbnail = get_thumbnail(s.id)
-			thumbnail = ''
-
-			listitem = xbmcgui.ListItem(s.get_list_title(), thumbnailImage=thumbnail)
+		for g in category_list:
+			url = "%s?category_id=%s" % (sys.argv[0], g['keyword'])
+			listitem = xbmcgui.ListItem(g['name'])
 
 			# add the item to the media list
 			ok = xbmcplugin.addDirectoryItem(
-				handle=int(sys.argv[1]), 
-				url=url, 
-				listitem=listitem, 
-				isFolder=True, 
-				totalItems=len(series_list)
+				handle=int(sys.argv[1]),
+				url=url,
+				listitem=listitem,
+				isFolder=True,
+				totalItems=len(category_list)
 			)
 
 			# if user cancels, call raise to exit loop
-			if (not ok): 
+			if (not ok):
 				raise
 
-		xbmcplugin.setContent(handle=int(sys.argv[1]), content='tvshows')
 	except:
 		# user cancelled dialog or an error occurred
 		utils.log_error()

@@ -30,7 +30,7 @@ except:
 
 sys.path.append(os.path.join(current_dir, 'resources', 'lib'))
 
-import utils, series, programs, play
+import utils, categories, series, programs, play
 
 utils.log('Initialised')
 
@@ -39,9 +39,10 @@ if __name__ == "__main__" :
    params = utils.get_url(params_str)
 
    if (len(params) == 0):
-      series.make_series_list()
-   else:
-      if params.has_key("series_id"):
-         programs.make_programs_list(params_str)
-      elif params.has_key("play"):
-         play.play(params_str)
+      categories.make_category_list()
+   elif params.has_key("category_id"):
+      series.make_series_list(params_str)
+   elif params.has_key("series_id"):
+      programs.make_programs_list(params_str)
+   elif params.has_key("play"):
+      play.play(params_str)
