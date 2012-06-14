@@ -175,7 +175,7 @@ def parse_categories(soup):
 
 	return categories_list
 
-def parse_series_items(soup, get_meta=False):
+def parse_series_items(soup):
 	series_json = json.loads(soup)
 	
 	programs_list = []
