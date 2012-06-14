@@ -74,6 +74,12 @@ class Series(object):
 		"""
 		return self.keywords
 
+	def get_thumbnail(self):
+		return self.thumbnail
+
+	def get_description(self):
+		return self.description
+
 	def has_keyword(self, keyword):
 		""" Returns true if a keyword is found
 		"""

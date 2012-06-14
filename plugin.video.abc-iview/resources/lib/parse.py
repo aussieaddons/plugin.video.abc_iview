@@ -130,6 +130,8 @@ def parse_index(soup):
 		new_series.title = series['b']
 		new_series.keywords = series['e'].split(" ")
 		new_series.num_episodes = int(len(series['f']))
+		new_series.description = series['c']
+		new_series.thumbnail = series['d']
 	
 		# Only include a program if isn't a 'Shop Download'
 		if new_series.has_keyword("shopdownload"):
