@@ -155,12 +155,20 @@ def parse_categories(soup):
 	</category>
 	"""
 
+	# This next line is the magic to make recursive=False work (wtf?)
+	BeautifulStoneSoup.NESTABLE_TAGS["category"] = []
 	xml = BeautifulStoneSoup(soup)
 
-	for cat in xml.findAll('category', attrs={'genre':'true'}):
+	# Get all the top level categories, except the alphabetical ones, and
+	# ABC1/2/3/4
+	for cat in xml.find('categories').findAll('category', recursive=False):
+
+		id = cat.get('id')
+		if cat.get('index') or id == 'index' or re.match(r'abc[1-4]', id):
+			continue
 
 		item = {}
-		item['keyword'] = cat.get('id');
+		item['keyword'] = id
 		item['name']    = cat.find('name').string;
 
 		categories_list.append(item);

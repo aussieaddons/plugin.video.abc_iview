@@ -41,7 +41,7 @@ def get_categories():
 def make_category_list():
 	try:
 		category_list = get_categories()
-		category_list = sorted(category_list, key=lambda k: k['name'])
+		category_list = sorted(category_list, key=lambda k: k['name'].lower())
 		category_list.insert(0, {'name':'All', 'keyword':''})
 
 		# fill media list
