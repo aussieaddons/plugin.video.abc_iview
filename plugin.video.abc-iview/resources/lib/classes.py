@@ -34,7 +34,15 @@ class Series(object):
 		return self.title
 
 	def __cmp__(self, other):
-		return cmp(self.title, other.title)
+		return cmp(self.get_sort_title(), other.get_sort_title())
+
+	def get_sort_title(self):
+		""" Return a munged version of the title which
+			forces correct sorting behaviour.
+		"""
+		sort_title = self.title.lower()
+		sort_title = sort_title.replace('the ', '')
+		return sort_title
 
 	def get_title(self):
 		""" Return the program title, including the Series X part
@@ -65,6 +73,12 @@ class Series(object):
 		""" Return a list of keywords
 		"""
 		return self.keywords
+
+	def get_thumbnail(self):
+		return self.thumbnail
+
+	def get_description(self):
+		return self.description
 
 	def has_keyword(self, keyword):
 		""" Returns true if a keyword is found

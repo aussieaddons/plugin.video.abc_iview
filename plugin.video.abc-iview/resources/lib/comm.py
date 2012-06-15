@@ -65,13 +65,21 @@ def get_auth(iview_config):
 	auth_config = fetch_url(config.auth_url)
 	return parse.parse_auth(auth_config, iview_config)
 
-
-def get_programme(iview_config):
-	"""This function pulls in the index, which contains the TV series
-		that are available to us. The index is possibly encrypted, so we
-		must decrypt it here before passing it to the parser.
+def get_categories(iview_config):
+	"""Returns the list of categories
 	"""
-	url = iview_config['api_url'] + 'seriesIndex'
+	url = config.base_url + iview_config['categories_url']
+	category_data = fetch_url(url)
+	categories = parse.parse_categories(category_data)
+	return categories
+
+def get_programme(iview_config, keyword):
+	"""This function pulls in the by-keyword index, which contains the TV
+		series that are available to us, filtered by the given keyword.
+		Using 0-z as the keyword gives the complete list.
+		Unlike the seriesIndex list, this gives all the JSON fields.
+	"""
+	url = iview_config['api_url'] + 'keyword=' + keyword
 	index_data = fetch_url(url)
 	programme = parse.parse_index(index_data)
 	return programme
@@ -84,12 +92,3 @@ def get_series_items(iview_config, series_id):
 	series_json = fetch_url(iview_config['api_url'] + 'series=%s' % series_id)
 	return parse.parse_series_items(series_json)
 
-
-def get_series_info(iview_config, series):
-	"""This function fetches the series detail page for the selected series,
-		which contain the items (i.e. the actual episodes).
-	"""
-	url = config.series_url % series.id
-	series_xml = fetch_url(url)
-
-	return parse.parse_series_info(series_xml, series)
