@@ -4,7 +4,7 @@ import os
 import zipfile
 from xml.dom.minidom import parse
 
-ADDON='plugin.video.abc_iview'
+ADDON='plugin.video.abc-iview'
 EXCLUDE_EXTS = ['.pyc', '.pyo', '.swp']
 
 # Parse addon.xml for version number
