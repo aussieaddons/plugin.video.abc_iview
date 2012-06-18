@@ -12,6 +12,9 @@ This plugin wouldn't be possible without the great work on python-iview from
 Jeremy Visser.
 https://jeremy.visser.name/2009/08/python-iview/
 
+Thanks also for contributions from:
+  * sdt (Stephen Thirlwall)
+
 Installation
 ------------
 This plugin is available as part of the XBMC CatchUp TV AU repository, but
@@ -42,8 +45,33 @@ For AppleTV:
 
 Issues
 ------
-For any issues or bug reports, please file them at the GitHub issues part of this project:
+For any issues or bug reports, please file them at the GitHub issues part of this 
+project: 
 https://github.com/andybotting/xbmc-addon-abc-iview/issues
+
+Please include log output if possible, using Github Gist or Pastebin.com.
+
+The location of your XBMC log file will depend on your platform.
+
+For Windows:
+```
+   %APPDATA%\XBMC\temp\xbmc.log
+```
+
+For Linux:
+```
+   ~/.xbmc/temp/xbmc.log
+```
+
+For Mac:
+```
+   ~/Library/Application Support/XBMC/temp/xbmc.log
+```
+
+For AppleTV:
+```
+   /Users/frontrow/Library/Application Support/XBMC/temp/xbmc.log
+```
 
 Contact Me
 ----------
