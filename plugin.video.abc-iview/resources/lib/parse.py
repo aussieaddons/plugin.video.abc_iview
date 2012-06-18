@@ -130,6 +130,8 @@ def parse_index(soup):
 		new_series.title = series['b']
 		new_series.keywords = series['e'].split(" ")
 		new_series.num_episodes = int(len(series['f']))
+		new_series.description = series['c']
+		new_series.thumbnail = series['d']
 	
 		# Only include a program if isn't a 'Shop Download'
 		if new_series.has_keyword("shopdownload"):
@@ -146,45 +148,36 @@ def parse_index(soup):
 
 	return series_list
 
+def parse_categories(soup):
+	categories_list = []
 
-def parse_series(soup):
-	""" This function parses the series list, which lists the
-		the individual progams available. The items are things
-		like 'beached az Episode 8' and 'beached az Episode 9'.
+	"""
+	<category id="pre-school" genre="true">
+		<name>ABC 4 Kids</name>
+	</category>
 	"""
 
-	# HACK: replace <abc: with < because BeautifulSoup doesn't have
-	# any (obvious) way to inspect inside namespaces.
-	soup = soup \
-		.replace('<abc:', '<') \
-		.replace('</abc:', '</') \
-		.replace('<media:', '<') \
-		.replace('</media:', '</') \
+	# This next line is the magic to make recursive=False work (wtf?)
+	BeautifulStoneSoup.NESTABLE_TAGS["category"] = []
+	xml = BeautifulStoneSoup(soup)
 
-	# HACK: replace &amp; with &#38; because HTML entities aren't
-	# valid in plain XML, but the ABC doesn't know that.
-	soup = soup.replace('&amp;', '&#38;')
+	# Get all the top level categories, except the alphabetical ones, and
+	# ABC1/2/3/4
+	for cat in xml.find('categories').findAll('category', recursive=False):
 
-	series_xml = BeautifulStoneSoup(soup)
+		id = cat.get('id')
+		if cat.get('index') or id == 'index' or re.match(r'abc[1-4]', id):
+			continue
 
-	return series_xml
+		item = {}
+		item['keyword'] = id
+		item['name']    = cat.find('name').string;
 
+		categories_list.append(item);
 
-def parse_series_info(soup, series):
-	""" This function parses the series list, which lists the
-		the individual progams available. The items are things
-		like 'beached az Episode 8' and 'beached az Episode 9'.
-	"""
+	return categories_list
 
-	series_xml = parse_series(soup)
-
-	series.thumbnail = series_xml.find('image').find('url').string
-	series.description = series_xml.find('description').string
-
-	return series
-	
-
-def parse_series_items(soup, get_meta=False):
+def parse_series_items(soup):
 	series_json = json.loads(soup)
 	
 	programs_list = []
