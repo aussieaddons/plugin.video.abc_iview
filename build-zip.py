@@ -11,7 +11,7 @@ EXCLUDE_EXTS = ['.pyc', '.pyo', '.swp']
 dom = parse("%s/addon.xml" % ADDON)
 addon = dom.getElementsByTagName('addon')[0]
 version = addon.getAttribute('version')
-zfilename = "%s-%s.zip" % (ADDON, version)
+zfilename = "plugin.video.abc_iview-%s.zip" % version
 
 # Walk the directory to create the zip file
 z = zipfile.ZipFile(zfilename, 'w')
