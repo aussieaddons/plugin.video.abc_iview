@@ -51,14 +51,13 @@ Issues
 AppleTV 2+ users have reported that programs will not start. This is due to
 a broken librtmp.
 
-Try downloading an updated librtmp.0.dylib from
+Try downloading an updated librtmp.0.dylib from:
 http://supercloudtv.com/librtmp.html
 
 Extract the ZIP file, and push the file to your AppleTV (maybe use WinSCP for
-Windows users) to to ```/Applications/XBMC.frappliance/Frameworks```
+Windows users) to: ```/Applications/XBMC.frappliance/Frameworks```
 
 Through SSH (PuTTY for Windows users) type this:
-
 ```
 chown mobile.mobile /Applications/XBMC.frappliance/Frameworks/librtmp.0.dylib
 chmod a+x /Applications/XBMC.frappliance/Frameworks/librtmp.0.dylib
