@@ -45,8 +45,31 @@ For AppleTV:
 
 Issues
 ------
-For any issues or bug reports, please file them at the GitHub issues part of this 
-project: 
+
+### AppleTV won't start program
+
+AppleTV 2+ users have reported that programs will not start. This is due to
+a broken librtmp.
+
+Try downloading an updated librtmp.0.dylib from
+http://supercloudtv.com/librtmp.html
+
+Extract the ZIP file, and push the file to your AppleTV (maybe use WinSCP for
+Windows users) to to ```/Applications/XBMC.frappliance/Frameworks```
+
+Through SSH (PuTTY for Windows users) type this:
+
+```
+chown mobile.mobile /Applications/XBMC.frappliance/Frameworks/librtmp.0.dylib
+chmod a+x /Applications/XBMC.frappliance/Frameworks/librtmp.0.dylib
+```
+
+Reboot your AppleTV and it should work.
+
+### Reporting an issue
+
+For any issues or bug reports, please file them at the GitHub issues part of
+this project:
 https://github.com/andybotting/xbmc-addon-abc-iview/issues
 
 Please include log output if possible, using Github Gist or Pastebin.com.
