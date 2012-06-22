@@ -25,22 +25,22 @@ Download the latest ZIP file from the downloads section, and put it into your
 
 For Windows:
 ```
-	%APPDATA%\XBMC\addons
+%APPDATA%\XBMC\addons
 ```
 
 For Linux:
 ```
-	~/.xbmc/addons
+~/.xbmc/addons
 ```
 
-For Mac:
+For Mac OS X:
 ```
-	~/Library/Application Support/XBMC/addons
+~/Library/Application Support/XBMC/addons
 ```
 
 For AppleTV:
 ```
-	/Users/frontrow/Library/Application Support/XBMC/addons
+/Users/frontrow/Library/Application Support/XBMC/addons
 ```
 
 Issues
@@ -77,22 +77,22 @@ The location of your XBMC log file will depend on your platform.
 
 For Windows:
 ```
-   %APPDATA%\XBMC\temp\xbmc.log
+%APPDATA%\XBMC\temp\xbmc.log
 ```
 
 For Linux:
 ```
-   ~/.xbmc/temp/xbmc.log
+~/.xbmc/temp/xbmc.log
 ```
 
-For Mac:
+For Mac OS X:
 ```
-   ~/Library/Application Support/XBMC/temp/xbmc.log
+~/Library/Application Support/XBMC/temp/xbmc.log
 ```
 
 For AppleTV:
 ```
-   /Users/frontrow/Library/Application Support/XBMC/temp/xbmc.log
+/Users/frontrow/Library/Application Support/XBMC/temp/xbmc.log
 ```
 
 Contact Me
