@@ -59,7 +59,7 @@ def make_url(d):
 	pairs = []
 	for k,v in d.iteritems():
 		k = urllib.quote_plus(k)
-                # Values can possibly be - UTF-8 as an ASCII str, ASCII as an ASCII str, or unicode. Want clean ASCII for URL.
+		# Values can possibly be - UTF-8 as an ASCII str, ASCII as an ASCII str, or unicode. Want clean ASCII for URL.
 		if not isinstance(v, unicode):
 			v = str(v)
 			v = v.decode("utf-8")
