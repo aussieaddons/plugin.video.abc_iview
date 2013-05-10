@@ -5,8 +5,8 @@ This plugin provides a simple list of available programs from the ABC iView
 web site, and allows you to stream them with.
 
 The content is only available with Australia, or you can apparently use sites
-like Unblock-US or your own VPN solution which terminates in with an AU IP 
-address.
+like Unblock-US, UnoTelly or Tunlr.net (free). or your own VPN solution which
+terminates in with an AU IP address.
 
 This plugin wouldn't be possible without the great work on python-iview from
 Jeremy Visser.
