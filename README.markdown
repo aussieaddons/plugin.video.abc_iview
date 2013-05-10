@@ -17,59 +17,16 @@ Thanks also for contributions from:
 
 Installation
 ------------
-This plugin is available as part of the XBMC CatchUp TV AU repository, but
-you'll always find the latest version here.
+This plugin is available as part of the [XBMC CatchUp TV AU repository] [repository]
+but you'll always find the latest version [here] [download].
 
-Download the latest ZIP file from the downloads section, and put it into your
-'addons' directory of XBMC. This will differ between platforms.
-
-For Windows:
-```
-%APPDATA%\XBMC\addons
-```
-
-For Linux:
-```
-~/.xbmc/addons
-```
-
-For Mac OS X:
-```
-~/Library/Application Support/XBMC/addons
-```
-
-For AppleTV:
-```
-/Users/frontrow/Library/Application Support/XBMC/addons
-```
+Simply download the ZIP file to your XBMC device and install through the menu via
+System -> Settings -> Add-ons -> Install from zip file
 
 Issues
 ------
 
-### AppleTV won't start program
-
-AppleTV 2+ users have reported that programs will not start. This is due to
-a broken librtmp.
-
-Try downloading an updated librtmp.0.dylib from:
-http://supercloudtv.com/librtmp.html
-
-Extract the ZIP file, and push the file to your AppleTV (maybe use WinSCP for
-Windows users) to: ```/Applications/XBMC.frappliance/Frameworks```
-
-Through SSH (PuTTY for Windows users) type this:
-```
-chown mobile.mobile /Applications/XBMC.frappliance/Frameworks/librtmp.0.dylib
-chmod a+x /Applications/XBMC.frappliance/Frameworks/librtmp.0.dylib
-```
-
-Reboot your AppleTV and it should work.
-
-### Reporting an issue
-
-For any issues or bug reports, please file them at the GitHub issues part of
-this project:
-https://github.com/andybotting/xbmc-addon-abc-iview/issues
+For any issues or bug reports, please file them on the [issues page] [issues].
 
 Please include log output if possible, using Github Gist or Pastebin.com.
 
@@ -97,4 +54,8 @@ For AppleTV:
 
 Contact Me
 ----------
-For anything else, you can contact me by email at andy#andybottng.com
+For anything else, you can contact me by email at andy#andybotting.com
+
+[repository]: http://code.google.com/p/xbmc-catchuptv-au
+[download]: https://code.google.com/p/xbmc-catchuptv-au/downloads/list?q=label:Plugin-ABC_iView
+[issues]: https://github.com/andybotting/xbmc-addon-abc-iview/issues
