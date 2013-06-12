@@ -171,7 +171,7 @@ class Program(object):
 		hours = seconds / 3600
 		seconds -= 3600*hours
 		minutes = seconds / 60
-		return "%02d:%02d" % (hours, minutes)
+		return minutes
 
 	def get_date(self):
 		""" Return a string of the date in the format 2010-02-28
@@ -229,6 +229,17 @@ class Program(object):
 		if self.get_rating():
 			info_dict['mpaa'] = self.get_rating()
 		return info_dict
+
+
+	def get_xbmc_stream_info(self):
+		"""
+			Return a stream info dict
+		"""
+		info_dict = {}
+		if self.get_duration():
+			info_dict['duration'] = self.get_duration()
+		return info_dict
+
 
 	def make_xbmc_url(self):
 		""" Returns a string which represents the program object, but in
