@@ -31,42 +31,15 @@ try:
 except ImportError:
 	pass # for PC debugging
 
-BASE_SKIN_THUMBNAIL_PATH = os.path.join(os.getcwd(), 'resources', 'media')
-BASE_PLUGIN_THUMBNAIL_PATH = os.path.join(os.getcwd(), 'resources', 'media')
-
-
-def get_series(keyword):
-	iview_config = comm.get_config()
-	programme = comm.get_programme(iview_config, keyword)
-	return programme
-
-
 def make_series_list(url):
 	params = utils.get_url(url)
 
 	try:
-		series_list = get_series(params["category_id"])
+		iview_config = comm.get_config()
+		series_list = comm.get_programme(iview_config, params["category_id"])
 		series_list.sort()
 
-		# fill media list
-		ok = fill_series_list(series_list)
-	except:
-		d = xbmcgui.Dialog()
-		message = utils.dialog_error("Unable to fetch listing")
-		d.ok(*message)
-		utils.log_error();
-		ok = False
-
-	# send notification we're finished, successfully or unsuccessfully
-	xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
-
-
-
-def fill_series_list(series_list):
-	iview_config = comm.get_config()
-	try:
 		ok = True
-		# enumerate through the list of categories and add the item to the media list
 		for s in series_list:
 			url = "%s?series_id=%s" % (sys.argv[0], s.id)
 			thumbnail = s.get_thumbnail()
@@ -75,22 +48,13 @@ def fill_series_list(series_list):
 			listitem.setInfo('video', { 'plot' : s.get_description() })
 
 			# add the item to the media list
-			ok = xbmcplugin.addDirectoryItem(
-				handle=int(sys.argv[1]), 
-				url=url, 
-				listitem=listitem, 
-				isFolder=True, 
-				totalItems=len(series_list)
-			)
+			ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=url, listitem=listitem, isFolder=True)
 
-			# if user cancels, call raise to exit loop
-			if (not ok): 
-				raise
-
+		xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
 		xbmcplugin.setContent(handle=int(sys.argv[1]), content='tvshows')
 	except:
-		# user cancelled dialog or an error occurred
-		utils.log_error()
-		ok = False
-	return ok
+		d = xbmcgui.Dialog()
+		message = utils.dialog_error("Unable to fetch listing")
+		d.ok(*message)
+		utils.log_error();
 

@@ -54,6 +54,7 @@ def play(url):
 	
 		listitem=xbmcgui.ListItem(label=p.get_list_title(), iconImage=p.thumbnail, thumbnailImage=p.thumbnail)
 		listitem.setInfo('video', p.get_xbmc_list_item())
+		listitem.addStreamInfo('video', p.get_xbmc_stream_info())
 	
 		xbmc.Player().play(rtmp_url, listitem)
 	except:

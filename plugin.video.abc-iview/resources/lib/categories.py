@@ -31,58 +31,27 @@ try:
 except ImportError:
 	pass # for PC debugging
 
-
-def get_categories():
-	iview_config = comm.get_config()
-	categories = comm.get_categories(iview_config)
-	return categories
-
-
 def make_category_list():
-	try:
-		category_list = get_categories()
-		category_list = sorted(category_list, key=lambda k: k['name'].lower())
-		category_list.insert(0, {'name':'All', 'keyword':'0-z'})
 
-		# fill media list
-		ok = fill_category_list(category_list)
+	try:
+		iview_config = comm.get_config()
+		categories = comm.get_categories(iview_config)
+		categories = sorted(categories, key=lambda k: k['name'].lower())
+		categories.insert(0, {'name':'All', 'keyword':'0-z'})
+
+		ok = True
+		for g in categories:
+			url = "%s?category_id=%s" % (sys.argv[0], g['keyword'])
+			listitem = xbmcgui.ListItem(g['name'])
+
+			# Add the program item to the list
+			ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=url, listitem=listitem, isFolder=True)
+
+		xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
+		xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
 	except:
 		d = xbmcgui.Dialog()
 		message = utils.dialog_error("Unable to fetch listing")
 		d.ok(*message)
 		utils.log_error();
-		ok = False
-
-	# send notification we're finished, successfully or unsuccessfully
-	xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
-
-
-
-def fill_category_list(category_list):
-	iview_config = comm.get_config()
-	try:
-		ok = True
-		# enumerate through the list of categories and add the item to the media list
-		for g in category_list:
-			url = "%s?category_id=%s" % (sys.argv[0], g['keyword'])
-			listitem = xbmcgui.ListItem(g['name'])
-
-			# add the item to the media list
-			ok = xbmcplugin.addDirectoryItem(
-				handle=int(sys.argv[1]),
-				url=url,
-				listitem=listitem,
-				isFolder=True,
-				totalItems=len(category_list)
-			)
-
-			# if user cancels, call raise to exit loop
-			if (not ok):
-				raise
-
-	except:
-		# user cancelled dialog or an error occurred
-		utils.log_error()
-		ok = False
-	return ok
 
