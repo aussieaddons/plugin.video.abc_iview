@@ -89,10 +89,9 @@ def parse_auth(soup, iview_config):
 			rtmp_url = iview_config['rtmp_url']
 			rtmp_host = iview_config['rtmp_host']
 			rtmp_app = iview_config['rtmp_app']
-	
+
 		token = xml.find("token").string
 		token = token.replace('&amp;', '&') # work around BeautifulSoup bug
-	
 	except:
 		d = xbmcgui.Dialog()
 		d.ok('iView Error', 'There was an iView handshake error.', 'Please try again later')
@@ -132,7 +131,7 @@ def parse_index(soup):
 		new_series.num_episodes = int(len(series['f']))
 		new_series.description = series['c']
 		new_series.thumbnail = series['d']
-	
+
 		# Only include a program if isn't a 'Shop Download'
 		if new_series.has_keyword("shopdownload"):
 			utils.log("Skipping shopdownload: %s" % new_series.title)
@@ -140,7 +139,7 @@ def parse_index(soup):
 
 		if new_series.title == "ABC News 24":
 			utils.log("Skipping: %s" % new_series.title)
-			continue		
+			continue
 
 		if new_series.num_episodes > 0:
 			utils.log("Found series: %s" % (new_series.get_list_title()))
@@ -179,7 +178,7 @@ def parse_categories(soup):
 
 def parse_series_items(soup):
 	series_json = json.loads(soup)
-	
+
 	programs_list = []
 
 	series_id = series_json[0]['a']
@@ -187,60 +186,57 @@ def parse_series_items(soup):
 	series_title = series_json[0]['b']
 	series_thumb = series_json[0]['d']
 
-	try:
-		for item in series_json[0]['f']:
-	
-			new_program = classes.Program()
-			new_program.id = item.get('a')
-	
-			# Let's try and parse the title apart
-			title_string = item.get('b')
-	
-			# Roary The Racing Car Series 2 Episode 25 Home Is Where The Hatch Is
-			title_match = re.search('^(?P<title>.*)\s+[Ss]eries\s?(?P<series>\w+)\s[Ee]pisode\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', title_string)
-			if not title_match:
-				# At The Movies Series 8 Episode 13
-				title_match = re.search('^(?P<title>.*)\s+[Ss]eries\s?(?P<series>\w+)\s[Ee]pisode\s?(?P<episode>\d+)$', title_string)
-			if not title_match:
-				# Astro Boy Episode 34 Shape Shifter
-				title_match = re.search('^(?P<title>.*)\s[Ee]pisode\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', title_string)
-			if not title_match:
-				#Country Town Rescue Episode 5
-				title_match = re.search('^(?P<title>.*)\s[Ee]pisode\s?(?P<episode>\d+)$', title_string)
-			if not title_match:
-				# 7.30 10/05/12
-				title_match = re.search('^(?P<title>.*)\s(?P<episode_title>\d+/\d+/\d+)$', title_string)
-			if not title_match:
-				# 7.30 Budget Special Report 2012 Right Of Reply Special Edition
-				title_match = re.search('^(?P<title>.* 2012)\s(?P<episode_title>.*)$', title_string)
-			if not title_match:
-				# Bananas In Pyjamas Morgan's Cafe
-				title_match = re.search("^(?P<title>%s)\s(?P<episode_title>.*)$" % series_title, title_string)
-			if not title_match:
-				# Anything else
-				title_match = re.search("^(?P<title>.*)$", title_string)
-	
-			title_parts = title_match.groupdict()
-			
-			new_program.title         = title_parts.get('title')
-			new_program.episode_title = title_parts.get('episode_title')
-			new_program.series        = title_parts.get('series')
-			new_program.episode       = title_parts.get('episode')
-	
-			new_program.description   = item.get('d')
-			new_program.url           = item.get('n')
-	
-			new_program.livestream    = item.get('r')
-			new_program.thumbnail     = item.get('s')
-			new_program.duration      = item.get('j')
-	
-			temp_date                 = item.get('f')
-			timestamp = time.mktime(time.strptime(temp_date, '%Y-%m-%d %H:%M:%S'))
-			new_program.date = datetime.date.fromtimestamp(timestamp)
-	
-			programs_list.append(new_program)
-	
-	except:
-		utils.log_error("Unable to parse program metadata")
+	for item in series_json[0]['f']:
+
+		new_program = classes.Program()
+		new_program.id = item.get('a')
+
+		# Let's try and parse the title apart
+		title_string = item.get('b')
+
+		# Roary The Racing Car Series 2 Episode 25 Home Is Where The Hatch Is
+		title_match = re.search('^(?P<title>.*)\s+[Ss]eries\s?(?P<series>\w+)\s[Ee]pisode\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', title_string)
+		if not title_match:
+			# At The Movies Series 8 Episode 13
+			title_match = re.search('^(?P<title>.*)\s+[Ss]eries\s?(?P<series>\w+)\s[Ee]pisode\s?(?P<episode>\d+)$', title_string)
+		if not title_match:
+			# Astro Boy Episode 34 Shape Shifter
+			title_match = re.search('^(?P<title>.*)\s[Ee]pisode\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', title_string)
+		if not title_match:
+			#Country Town Rescue Episode 5
+			title_match = re.search('^(?P<title>.*)\s[Ee]pisode\s?(?P<episode>\d+)$', title_string)
+		if not title_match:
+			# 7.30 10/05/12
+			title_match = re.search('^(?P<title>.*)\s(?P<episode_title>\d+/\d+/\d+)$', title_string)
+		if not title_match:
+			# 7.30 Budget Special Report 2012 Right Of Reply Special Edition
+			title_match = re.search('^(?P<title>.* 2012)\s(?P<episode_title>.*)$', title_string)
+		if not title_match:
+			# Bananas In Pyjamas Morgan's Cafe
+			title_match = re.search("^(?P<title>%s)\s(?P<episode_title>.*)$" % series_title, title_string)
+		if not title_match:
+			# Anything else
+			title_match = re.search("^(?P<title>.*)$", title_string)
+
+		title_parts = title_match.groupdict()
+
+		new_program.title         = title_parts.get('title')
+		new_program.episode_title = title_parts.get('episode_title')
+		new_program.series        = title_parts.get('series')
+		new_program.episode       = title_parts.get('episode')
+
+		new_program.description   = item.get('d')
+		new_program.url           = item.get('n')
+
+		new_program.livestream    = item.get('r')
+		new_program.thumbnail     = item.get('s')
+
+		new_program.duration      = item.get('j')
+
+		temp_date = item.get('f')
+		timestamp = time.mktime(time.strptime(temp_date, '%Y-%m-%d %H:%M:%S'))
+		new_program.date = datetime.date.fromtimestamp(timestamp)
+
+		programs_list.append(new_program)
 
 	return programs_list
