@@ -14,6 +14,7 @@ https://jeremy.visser.name/2009/08/python-iview/
 
 Thanks also for contributions from:
   * sdt (Stephen Thirlwall)
+  * Adam M-W
 
 Installation
 ------------
