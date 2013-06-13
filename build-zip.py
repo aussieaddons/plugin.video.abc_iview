@@ -20,6 +20,7 @@ version = addon.getAttribute('version')
 zfilename = "plugin.video.abc_iview-%s.zip" % version
 
 # Walk the directory to create the zip file
+print("Writing ZIP file: %s" % zfilename)
 z = zipfile.ZipFile(zfilename, 'w')
 for r, d, f in os.walk(ADDON):
   for ff in f:
@@ -53,6 +54,7 @@ zfilename = "plugin.video.abc_iview-%s_XBOX.zip" % version
 shutil.copytree(ADDON, EDEN_PLUGIN)
 
 # Walk the directory to create the zip file
+print("Writing ZIP file: %s" % zfilename)
 z = zipfile.ZipFile(zfilename, 'w')
 for r, d, f in os.walk(EDEN_PLUGIN):
   for ff in f:
