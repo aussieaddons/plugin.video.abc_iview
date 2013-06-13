@@ -1,3 +1,7 @@
+[B]Version 1.3.0[/B]
+- Fix streaming issues for some ISPs
+- Fix duration time handling for new XBMC
+
 [B]Version 1.2.0[/B]
 - Top level categories
 - Series thumbnails
