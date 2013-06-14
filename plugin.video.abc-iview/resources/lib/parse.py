@@ -23,6 +23,7 @@ import comm
 import config
 import classes
 import utils
+import sys
 import re
 import datetime
 import time
@@ -93,9 +94,8 @@ def parse_auth(soup, iview_config):
 		token = xml.find("token").string
 		token = token.replace('&amp;', '&') # work around BeautifulSoup bug
 	except:
-		d = xbmcgui.Dialog()
-		d.ok('iView Error', 'There was an iView handshake error.', 'Please try again later')
-		return None
+		exc_type, exc_value, exc_traceback = sys.exc_info()
+		raise Exception("iView handshake error: %s" % exc_value)
 
 	return {
 		'rtmp_url'        : rtmp_url,
