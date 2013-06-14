@@ -32,13 +32,19 @@ except ImportError:
 
 def play(url):
 
-	iview_config = comm.get_config()
-	auth = comm.get_auth(iview_config)
-
-	p = classes.Program()
-	p.parse_xbmc_url(url)
-
 	try:
+		iview_config = comm.get_config()
+		auth = comm.get_auth(iview_config)
+
+		# We don't support Adobe HDS yet, Fallback to RTMP streaming server
+		if auth['rtmp_url'].startswith('http://'):
+			auth['rtmp_url'] = iview_config['rtmp_url'] or config.akamai_fallback_server
+			auth['playpath_prefix'] = config.akamai_playpath_prefix
+			utils.log("Adobe HDS Not Supported, using fallback server %s" % auth['rtmp_url'])
+
+		p = classes.Program()
+		p.parse_xbmc_url(url)
+
 		# Playpath shoud look like this:
 		# 	Akamai: mp4:flash/playback/_definst_/itcrowd_10_03_02
 		playpath = auth['playpath_prefix'] + p.url
