@@ -27,12 +27,23 @@ import sys
 import re
 import datetime
 import time
-from BeautifulSoup import BeautifulStoneSoup
 
+# Try importing default modules, but if that doesn't work
+# we might be old platforms with bundled deps
+try:
+	from BeautifulSoup import BeautifulStoneSoup
+except ImportError:
+	from deps.BeautifulSoup import BeautifulStoneSoup
+
+# Try importing default modules, but if that doesn't work
+# we might be old platforms with bundled deps
 try:
 	import simplejson as json
 except ImportError:
-	import json
+	try:
+		import deps.simplejson as json
+	except ImportError:
+		import json
 
 
 def parse_config(soup):
