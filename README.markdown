@@ -18,8 +18,14 @@ Thanks also for contributions from:
 
 Installation
 ------------
-This plugin is available as part of the [XBMC CatchUp TV AU repository] [repository]
-but you'll always find the latest version [here] [download].
+The latest stable release of this add-on is available as part of the
+[XBMC CatchUp TV AU repository] [repository].
+
+If you prefer, you can grab the stable release ZIP file by itself from the 
+[Google Code project site download] [download]. You can also file an XBMC4XBOX compatible
+version which you just need to unzip into Q:\plugins\video.
+
+For the latest development version, you can grab the [GitHub generated ZIP file] [githubzip].
 
 Simply download the ZIP file to your XBMC device and install through the menu via
 System -> Settings -> Add-ons -> Install from zip file
@@ -59,4 +65,5 @@ For anything else, you can contact me by email at andy#andybotting.com
 
 [repository]: http://code.google.com/p/xbmc-catchuptv-au
 [download]: https://code.google.com/p/xbmc-catchuptv-au/downloads/list?q=label:Plugin-ABC_iView
+[githubzip]: https://github.com/andybotting/xbmc-addon-abc-iview/archive/master.zip
 [issues]: https://github.com/andybotting/xbmc-addon-abc-iview/issues
