@@ -231,13 +231,30 @@ class Program(object):
 		return info_dict
 
 
-	def get_xbmc_stream_info(self):
+	def get_xbmc_audio_stream_info(self):
 		"""
-			Return a stream info dict
+			Return an audio stream info dict
+		"""
+		info_dict = {}
+		# This information may be incorrect
+		info_dict['codec']    = 'aac'
+		info_dict['language'] = 'en'
+		info_dict['channels'] = 2
+		return info_dict
+
+
+	def get_xbmc_video_stream_info(self):
+		"""
+			Return a video stream info dict
 		"""
 		info_dict = {}
 		if self.get_duration():
 			info_dict['duration'] = self.get_duration()
+
+		# This information may be incorrect
+		info_dict['codec']  = 'h264'
+		info_dict['width']  = '640'
+		info_dict['height'] = '360'
 		return info_dict
 
 

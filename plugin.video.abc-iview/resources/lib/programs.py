@@ -41,7 +41,10 @@ def make_programs_list(url):
 		for p in programs:
 			listitem = xbmcgui.ListItem(label=p.get_list_title(), iconImage=p.get_thumbnail(), thumbnailImage=p.get_thumbnail())
 			listitem.setInfo('video', p.get_xbmc_list_item())
-			listitem.addStreamInfo('video', p.get_xbmc_stream_info())
+
+			if hasattr(listitem, 'addStreamInfo'):
+				listitem.addStreamInfo('audio', p.get_xbmc_audio_stream_info())
+				listitem.addStreamInfo('video', p.get_xbmc_video_stream_info())
 
 			# Build the URL for the program, including the list_info
 			url = "%s?play=true&%s" % (sys.argv[0], p.make_xbmc_url())
