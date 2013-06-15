@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.abc_iview" name="ABC iView" version="1.3.1" provider-name="Andy Botting">
+<?xml version="1.0" ?><addon id="plugin.video.abc_iview" name="ABC iView" provider-name="Andy Botting" version="1.3.1-4-ga31fe98">
   <requires>
     <import addon="xbmc.python" version="1.0"/>
     <import addon="script.module.simplejson"/>
     <import addon="script.module.beautifulsoup"/>
   </requires>
-  <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
     <provides>video</provides>
   </extension>
-  <extension point="xbmc.addon.metadata" library="default.py">
+  <extension library="default.py" point="xbmc.addon.metadata">
     <summary>ABC iView script by Andy Botting</summary>
     <description>iView offers full-length programs as seen on ABC TV, and iView originals ranging from arts to anime. Programs are added every day; most programs are available for 14 days. You must be located in Australia to access content. NOTE: This plugin will count towards your usage quota.</description>
     <provides>video</provides>

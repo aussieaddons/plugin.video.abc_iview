@@ -6,6 +6,9 @@ import shutil
 import glob
 from xml.dom.minidom import parse
 
+# Fetch version from version.py
+from resources.lib.version import VERSION
+
 ADDON='plugin.video.abc-iview'
 
 # Exclude these in modern zip files. They're only needed for XBMC Eden (xbmc4xbox)
@@ -13,12 +16,7 @@ EXCLUDE_EXTS = ['.pyc', '.pyo', '.swp', '.zip', '.gitignore']
 EXCLUDE_FILES = ['build-zip.py']
 EXCLUDE_DIRS = ['.git']
 
-# Parse addon.xml for version number
-dom = parse("addon.xml")
-addon = dom.getElementsByTagName('addon')[0]
-version = addon.getAttribute('version')
-
-zfilename = "plugin.video.abc_iview-%s.zip" % version
+zfilename = "plugin.video.abc_iview-%s.zip" % VERSION
 print("Writing ZIP file: %s" % zfilename)
 # Walk the directory to create the zip file
 z = zipfile.ZipFile(zfilename, 'w')
@@ -47,7 +45,7 @@ z.close()
 
 # Build XBMC Eden plugin for XBOX
 EDEN_PLUGIN = 'ABC iView'
-zfilename = "plugin.video.abc_iview-%s_XBOX.zip" % version
+zfilename = "plugin.video.abc_iview-%s_XBOX.zip" % VERSION
 
 # Walk the directory to create the zip file
 print("Writing ZIP file: %s" % zfilename)

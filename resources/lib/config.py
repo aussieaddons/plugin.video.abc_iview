@@ -20,9 +20,10 @@
 #
 
 import os
+import version
 
 NAME = 'ABC iView'
-VERSION = '1.3.1'
+VERSION = version.VERSION
 
 api_version = 383
 
