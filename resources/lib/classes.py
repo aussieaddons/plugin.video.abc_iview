@@ -99,7 +99,7 @@ class Program(object):
 		self.description = None
 		self.series = None
 		self.episode = None
-		self.category = 'Unknown'
+		self.category = None
 		self.keywords = []
 		self.rating = 'PG'
 		self.duration = '0'
@@ -151,38 +151,42 @@ class Program(object):
 		""" Return a string the program description, after running it through
 			the descape.
 		"""
-		return utils.descape(self.description)
+		if self.description:
+			return utils.descape(self.description)
 
 	def get_category(self):
 		""" Return a string of the category. E.g. Comedy
 		"""
-		return utils.descape(self.category)
+		if self.category:
+			return utils.descape(self.category)
 
 	def get_rating(self):
 		""" Return a string of the rating. E.g. PG, MA
 		"""
-		return utils.descape(self.category)
+		if self.rating:
+			return utils.descape(self.rating)
 
 	def get_duration(self):
 		""" Return a string representing the duration of the program.
 			E.g. 00:30 (30 minutes)
 		"""
-		seconds = int(self.duration)
-		hours = seconds / 3600
-		seconds -= 3600*hours
-		minutes = seconds / 60
-		return minutes
+		if self.duration:
+			seconds = int(self.duration)
+			minutes = seconds / 60
+			return minutes
 
 	def get_date(self):
 		""" Return a string of the date in the format 2010-02-28
 			which is useful for XBMC labels.
 		"""
-		return self.date.strftime("%Y-%m-%d")
+		if self.date:
+			return self.date.strftime("%Y-%m-%d")
 
 	def get_year(self):
 		""" Return an integer of the year of publish date
 		"""
-		return self.date.year
+		if self.date:
+			return self.date.year
 
 	def get_season(self):
 		""" Return an integer of the Series
@@ -199,7 +203,8 @@ class Program(object):
 	def get_thumbnail(self):
 		""" Returns the thumbnail
 		"""
-		return utils.descape(self.thumbnail)
+		if self.thumbnail:
+			return utils.descape(self.thumbnail)
 
 	def get_xbmc_list_item(self):
 		""" Returns a dict of program information, in the format which
