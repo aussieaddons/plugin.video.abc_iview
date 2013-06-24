@@ -1,41 +1,44 @@
-[B]Version 1.3.1[/B]
-- Fix streaming issue again
+[B]Version master[/B]
+- Fix handling of some programs with missing metadata
+- Add git-hook and update ZIP building scripts to more automatic
+- Updated README
+- Move plugin directory so we can pull a ZIP file directly from github
+- Rework addStreamInfo to be compatible with XBMC <12
+- Added new iView icon thanks to @ltmon
 
-[B]Version 1.3.0[/B]
-- Fix streaming issues for some ISPs
-- Fix duration time handling for new XBMC
+[B]Version v1.3.1[/B]
+- Nice dialog message text wrapping
+- Better handshake error handling
+- Better fix for streaming server issue
 
-[B]Version 1.2.0[/B]
-- Top level categories
-- Series thumbnails
+[B]Version v1.3[/B]
+- Add thanks to AdamMW
+- Print filename when building zip
+- Use PS3 auth to avoid AkamaiHD
+- Clean up dir lists and pass exceptions to the user better
+- Add streamInfo output and fix duration for new XBMC
+- Remove try/except here to pass error to the UI
+- Add more proxy services to README
+- Fix readme
+- Merge pull request #6 from projectgus/master
+- Oops, switch comment spaces to tabs to match rest of routine
+- Fix url encoding if components are unicode without ascii-representable characters
+- Support for building XBMC Eden plugin, mainly for xbmc4xbox
+- Update README
+- Update README
+- Accidently mixed - and _ in dir name. Hack build script
+- Update README for librtmp fix on ATV
+- Fix path for building zip file
 
-[B]Version 1.1.0[/B]
-- Use iView API 384
-- Now using JSON series list for faster show listings
+[B]Version v1.2.0[/B]
+- Update version to 1.2.0 and update readme
+- Merge pull request #3 from sdt/sdt/categorised-menus
+- Add thumbnail & description to series info
+- Use api?keyword=XXX rather than api?seriesIndex
+- Better sorting for series lists
+- Remove unused get_meta from parse_series_items
+- Remove unused code path
+- Extend categories list
+- Split single series menu into category submenus
+- Add GPLv3 license file and headers
 
-[B]Version 1.0.2[/B]
-- Accept compressed payload from ABC to fix problem downloading index
-
-[B]Version 1.0.1[/B]
-- Updated to iView API 374
-- Updated handshake URL
-- Fixed import errors
-
-[B]Version 0.0.8[/B]
-- Updated to iView API 362
-- Updated handshake URL
-- Fixed non-ascii char problem when passing program details
-
-
-[B]Version 0.0.7[/B]
-- Initial version of Addon
-- Better URL handling
-- Information dialogs
-- Auth token is generate at play time
-
-Credits
-================
-Created by Andy Botting (andybz)
-iView parsing code is thanks to Jeremy Visser.
-Thanks also to contributors:
-- Stephen Thirlwall (sdt)
