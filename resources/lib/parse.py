@@ -176,7 +176,7 @@ def parse_categories(soup):
 	for cat in xml.find('categories').findAll('category', recursive=False):
 
 		id = cat.get('id')
-		if cat.get('index') or id == 'index' or re.match(r'abc[1-4]', id):
+		if cat.get('index') or id == 'index':
 			continue
 
 		item = {}
