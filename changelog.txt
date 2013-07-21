@@ -1,4 +1,5 @@
 [B]Version master[/B]
+- Update pre-commit script for better automation
 - Fix handling of some programs with missing metadata
 - Add git-hook and update ZIP building scripts to more automatic
 - Updated README
