@@ -1,4 +1,5 @@
 [B]Version master[/B]
+- Add ABC1-4 categories back to index
 - Move pre-commit and build-zip to seperate project
 - Update pre-commit script for better automation
 - Fix handling of some programs with missing metadata

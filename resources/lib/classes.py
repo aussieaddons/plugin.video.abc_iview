@@ -102,7 +102,7 @@ class Program(object):
 		self.category = None
 		self.keywords = []
 		self.rating = 'PG'
-		self.duration = '0'
+		self.duration = None
 		self.date = datetime.datetime.now()
 		self.thumbnail = None
 
