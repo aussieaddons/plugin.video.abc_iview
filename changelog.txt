@@ -1,4 +1,5 @@
-[B]Version master[/B]
+[B]Version 1.4.0[/B]
+- Don't die if duration is missing from metadata
 - Add ABC1-4 categories back to index
 - Move pre-commit and build-zip to seperate project
 - Update pre-commit script for better automation
