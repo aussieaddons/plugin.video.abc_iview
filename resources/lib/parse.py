@@ -191,12 +191,12 @@ def parse_series_items(soup):
 
 	programs_list = []
 
-	series_id = series_json[0]['a']
+	series_id = series_json[1]['a']
 	# Roary The Racing Car Series 2
-	series_title = series_json[0]['b']
-	series_thumb = series_json[0]['d']
+	series_title = series_json[1]['b']
+	series_thumb = series_json[1]['d']
 
-	for item in series_json[0]['f']:
+	for item in series_json[1]['f']:
 
 		new_program = classes.Program()
 		new_program.id = item.get('a')
