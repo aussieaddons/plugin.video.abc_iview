@@ -1,4 +1,10 @@
-[B]Version 1.4.0[/B]
+[B]Version 1.4.1[/B]
+- Fixed so that it works with news24
+- More robust method of checking for error
+- Work around News24 addition to all arrays
+
+[B]Version v1.4.0[/B]
+- Version 1.4.0
 - Don't die if duration is missing from metadata
 - Add ABC1-4 categories back to index
 - Move pre-commit and build-zip to seperate project
