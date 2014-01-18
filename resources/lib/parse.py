@@ -189,14 +189,22 @@ def parse_categories(soup):
 def parse_series_items(soup):
 	series_json = json.loads(soup)
 
+	if series_json[0]['a'] == '9900019':
+		if len(series_json) == 1:
+			index = 0
+		else:
+			index = 1
+	else:
+		index = 0
+
 	programs_list = []
 
-	series_id = series_json[0]['a']
+	series_id = series_json[index]['a']
 	# Roary The Racing Car Series 2
-	series_title = series_json[0]['b']
-	series_thumb = series_json[0]['d']
+	series_title = series_json[index]['b']
+	series_thumb = series_json[index]['d']
 
-	for item in series_json[0]['f']:
+	for item in series_json[index]['f']:
 
 		new_program = classes.Program()
 		new_program.id = item.get('a')
@@ -244,7 +252,10 @@ def parse_series_items(soup):
 		new_program.duration      = item.get('j')
 
 		temp_date = item.get('f')
-		timestamp = time.mktime(time.strptime(temp_date, '%Y-%m-%d %H:%M:%S'))
+		try:
+			timestamp = time.mktime(time.strptime(temp_date, '%Y-%m-%d %H:%M:%S'))
+		except:
+			timestamp = time.mktime(time.strptime(temp_date, '%Y-%m-%d'))
 		new_program.date = datetime.date.fromtimestamp(timestamp)
 
 		programs_list.append(new_program)
