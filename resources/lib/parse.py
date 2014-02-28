@@ -51,25 +51,25 @@ def parse_config(soup):
         In particular, it gives us the URLs of all the other XML data we
         need.
     """
+    try:
+        soup = soup.replace('&amp;', '&#38;')
+        xml = BeautifulStoneSoup(soup)
 
-    soup = soup.replace('&amp;', '&#38;')
+        # should look like "rtmp://cp53909.edgefcs.net/ondemand"
+        # Looks like the ABC don't always include this field.
+        # If not included, that's okay -- ABC usually gives us the server in the auth result as well.
+        rtmp_url = xml.find('param', attrs={'name':'server_streaming'}).get('value')
+        rtmp_chunks = rtmp_url.split('/')
 
-    xml = BeautifulStoneSoup(soup)
-
-    # should look like "rtmp://cp53909.edgefcs.net/ondemand"
-    # Looks like the ABC don't always include this field.
-    # If not included, that's okay -- ABC usually gives us the server in the auth result as well.
-    rtmp_url = xml.find('param', attrs={'name':'server_streaming'}).get('value')
-    rtmp_chunks = rtmp_url.split('/')
-
-    return {
-        'rtmp_url'  : rtmp_url,
-        'rtmp_host' : rtmp_chunks[2],
-        'rtmp_app'  : rtmp_chunks[3],
-        'api_url' : xml.find('param', attrs={'name':'api'}).get('value'),
-        'categories_url' : xml.find('param', attrs={'name':'categories'}).get('value'),
-    }
-
+        return {
+            'rtmp_url'  : rtmp_url,
+            'rtmp_host' : rtmp_chunks[2],
+            'rtmp_app'  : rtmp_chunks[3],
+            'api_url' : xml.find('param', attrs={'name':'api'}).get('value'),
+            'categories_url' : xml.find('param', attrs={'name':'categories'}).get('value'),
+        }
+    except:
+        raise Exception("Error fetching iView config. Service possibly unavailable")
 
 def parse_auth(soup, iview_config):
     """    There are lots of goodies in the auth handshake we get back,
