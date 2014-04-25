@@ -23,6 +23,7 @@ import os
 import version
 
 NAME = 'ABC iView'
+ADDON_ID = 'plugin.video.abc_iview'
 VERSION = version.VERSION
 
 api_version = 383
@@ -36,10 +37,12 @@ except AttributeError:
 
 user_agent = '%s plugin for XBMC %s%s' % (NAME, VERSION, os_string)
 
-base_url   = 'http://www.abc.net.au/iview/'
-config_url = 'http://www.abc.net.au/iview/xml/config.xml?r=%d' % api_version
-auth_url   = 'http://tviview.abc.net.au/iview/auth/?v2'
-series_url = 'http://www.abc.net.au/iview/api/series_mrss.htm?id=%s'
+base_url     = 'http://www.abc.net.au/iview/'
+config_url   = 'http://www.abc.net.au/iview/xml/config.xml?r=%d' % api_version
+auth_url     = 'http://tviview.abc.net.au/iview/auth/?v2'
+series_url   = 'http://www.abc.net.au/iview/api/series_mrss.htm?id=%s'
+redirect_url = 'http://iview.abc.net.au/redirect/legacy/?url='
+feed_url     = 'https://tviview.abc.net.au/iview/feed/samsung/'
 
 akamai_fallback_server = 'rtmp://cp53909.edgefcs.net/ondemand'
 akamai_playpath_prefix = 'flash/playback/_definst_/'

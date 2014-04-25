@@ -28,16 +28,22 @@ from StringIO import StringIO
 
 cache = False
 
-def fetch_url(url):
+class JsonRedirectHandler(urllib2.HTTPRedirectHandler): 
+    def http_error_301(self, req, fp, code, msg, headers):
+        utils.log('Redirected to: %s' % headers['location'])
+        headers['location'] += '.json'
+        return urllib2.HTTPRedirectHandler.http_error_301(self, req, fp, code, msg, headers) 
+
+def fetch_url(url, headers={}):
     """Simple function that fetches a URL using urllib2.
         An exception is raised if an error (e.g. 404) occurs.
     """
     utils.log("Fetching URL: %s" % url)
     http = urllib2.urlopen(
-        urllib2.Request(url, None, {
+        urllib2.Request(url, None, dict(headers.items() + {
             'User-Agent' : config.user_agent,
             'Accept-Encoding' : 'gzip'
-        })
+        }.items()))
     )
     headers = http.info()
     if 'content-encoding' in headers.keys() and headers['content-encoding'] == 'gzip':
@@ -91,4 +97,21 @@ def get_series_items(iview_config, series_id):
     """
     series_json = fetch_url(iview_config['api_url'] + 'series=%s' % series_id)
     return parse.parse_series_items(series_json)
+
+def get_new_programme(program_id):
+    utils.log("Finding new iView URL for program with ID: %s" % program_id)
+    url = '%sview/%s' % (config.redirect_url, program_id)
+
+    request = urllib2.Request(url)
+    opener = urllib2.build_opener(JsonRedirectHandler())
+    f = opener.open(request)
+    return parse.parse_new_programme(f.read())
+
+def get_program_from_feed(episode_id, series_id):
+    url = config.feed_url + '?series=' + series_id
+    headers = {'Authorization': 'Basic ZmVlZHRlc3Q6YWJjMTIz'}
+    feed_data = parse.parse_feed(fetch_url(url, headers))
+    for item in feed_data:
+        if item['url'].split('/')[-1] == episode_id:
+            return item
 
