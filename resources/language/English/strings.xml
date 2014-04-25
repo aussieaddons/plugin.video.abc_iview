@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
     <string id="10000">ABC iView</string>
-    
-    <!--Categories-->
-    <string id="10070">Override RTMP Settings</string>
-    
-    <!--Settings-->
-    <string id="10075">Host</string>
-    
+
+    <!-- Categories -->
+    <string id="10080">Settings</string>
+
+    <!-- Video Transport -->
+    <string id="10090">Video Transport</string>
+    <string id="10091">RTMP</string>
+    <string id="10092">HTTP</string>
 </strings>

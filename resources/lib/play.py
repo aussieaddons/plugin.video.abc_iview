@@ -26,11 +26,17 @@ import classes
 import comm
 
 try:
-    import xbmc, xbmcgui, xbmcplugin
+    import xbmc, xbmcgui, xbmcplugin, xbmcaddon
 except ImportError:
     pass # for PC debugging
 
-def rtmp_url(url):
+def http_url(p):
+    # Work out new series ID
+    program_data = comm.get_new_programme(p.id)
+    feed_data = comm.get_program_from_feed(program_data['episodeHouseNumber'], program_data['seriesHouseNumber'])
+    return feed_data['videoasset']
+
+def rtmp_url(p):
     iview_config = comm.get_config()
     auth = comm.get_auth(iview_config)
 
@@ -42,7 +48,7 @@ def rtmp_url(url):
 
     # Playpath shoud look like this:
     #   Akamai: mp4:flash/playback/_definst_/itcrowd_10_03_02
-    playpath = auth['playpath_prefix'] + url
+    playpath = auth['playpath_prefix'] + p.url
     if playpath.split('.')[-1] == 'mp4':
         playpath = 'mp4:' + playpath
 
@@ -54,12 +60,18 @@ def rtmp_url(url):
     return "%s?auth=%s playpath=%s swfurl=%s swfvfy=true" % (auth['rtmp_url'], auth['token'], playpath, config.swf_url)
 
 def play(url):
+    addon = xbmcaddon.Addon(config.ADDON_ID)
 
     try:
         p = classes.Program()
         p.parse_xbmc_url(url)
 
-        media_url = rtmp_url(p.url)
+        if addon and addon.getSetting('video_transport') == 'HTTP':
+            utils.log('Using HTTP Transport')
+            media_url = http_url(p)
+        else:
+            utils.log('Using RTMP Transport')
+            media_url = rtmp_url(p)
     
         listitem=xbmcgui.ListItem(label=p.get_list_title(), iconImage=p.thumbnail, thumbnailImage=p.thumbnail)
         listitem.setInfo('video', p.get_xbmc_list_item())

@@ -261,3 +261,20 @@ def parse_series_items(soup):
         programs_list.append(new_program)
 
     return programs_list
+
+def parse_new_programme(data):
+    return json.loads(data)
+
+def parse_feed(data):
+    xml = BeautifulStoneSoup(data)
+    items = xml.findAll('item')
+    programs_list = []
+    for item in items:
+        programs_list.append({
+            'title': item.find('title').string,
+            'episode_title': item.find('subtitle').string,
+            'description': item.find('description').string,
+            'url': item.find('link').string,
+            'videoasset': item.find('abc:videoasset').string
+        })
+    return programs_list

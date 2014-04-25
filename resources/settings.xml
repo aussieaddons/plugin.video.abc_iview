@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
-    <!-- RTMP Host -->
-    <category label="10075">
-        <setting id="rtmp_host" type="text" label="10070" default="rtmp://" />
-    </category>
+  <category label="10080">
+    <!-- Video Transport -->
+    <setting id="video_transport" type="labelenum" label="10090" lvalues="10091|10092" />
+  </category>
 </settings>
