@@ -143,7 +143,7 @@ def parse_index(soup):
             continue
 
         if new_series.num_episodes > 0:
-            utils.log("Found series: %s" % (new_series.get_list_title()))
+            #utils.log("Found series: %s" % (new_series.get_list_title()))
             series_list.append(new_series)
 
     return series_list
