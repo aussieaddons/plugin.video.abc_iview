@@ -138,7 +138,7 @@ def parse_index(soup):
             utils.log("Skipping shopdownload: %s" % new_series.title)
             continue
 
-        if new_series.title == "ABC News 24":
+        if new_series.title == "ABC News 24 Live Stream":
             utils.log("Skipping: %s" % new_series.title)
             continue
 
