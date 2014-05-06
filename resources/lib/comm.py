@@ -42,16 +42,9 @@ def fetch_url(url, headers={}):
     http = urllib2.urlopen(
         urllib2.Request(url, None, dict(headers.items() + {
             'User-Agent' : config.user_agent,
-            'Accept-Encoding' : 'gzip'
         }.items()))
     )
-    headers = http.info()
-    if 'content-encoding' in headers.keys() and headers['content-encoding'] == 'gzip':
-        data = StringIO(http.read())
-        return gzip.GzipFile(fileobj=data).read()
-    else:
-        return http.read()
-
+    return http.read()
 
 def get_config():
     """This function fetches the iView "config". Among other things,
