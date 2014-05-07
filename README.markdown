@@ -1,12 +1,17 @@
 ABC iView plugin for XBMC
 ================================
 
-This plugin provides a simple list of available programs from the ABC iView 
+This plugin provides a simple list of available programs from the ABC iView
 web site, and allows you to stream them with.
 
 The content is only available with Australia, or you can apparently use sites
 like Unblock-US, UnoTelly or Tunlr.net (free). or your own VPN solution which
 terminates in with an AU IP address.
+
+We now support streaming using both RTMP (old) and HTTP (new). In some cases
+the RTMP stream can crash XBMC, especially for older versions of XBMC.
+HTTPS streaming support is still new, but is probably more reliable and
+recommended. You can switch your streaming method from the addon settings.
 
 This plugin wouldn't be possible without the great work on python-iview from
 Jeremy Visser.
@@ -21,9 +26,8 @@ Installation
 The latest stable release of this add-on is available as part of the
 [XBMC CatchUp TV AU repository] [repository].
 
-If you prefer, you can grab the stable release ZIP file by itself from the 
-[Google Code project site download] [download]. You can also file an XBMC4XBOX compatible
-version which you just need to unzip into Q:\plugins\video.
+If you prefer, you can grab the stable release ZIP file by itself from the
+[Google Code project site download] [download].
 
 For the latest development version, you can grab the [GitHub generated ZIP file] [githubzip].
 
@@ -32,8 +36,11 @@ System -> Settings -> Add-ons -> Install from zip file
 
 Issues
 ------
+In some cases the RTMP stream can crash XBMC, especially for older versions.
+It is recommended that you use XBMC v13 (Gotham) or later and switch to HTTP
+streaming via the addon settings.
 
-For any issues or bug reports, please file them on the [issues page] [issues].
+For any other issues or bug reports, please file them on the [issues page] [issues].
 
 Please include log output if possible, using Github Gist or Pastebin.com.
 
