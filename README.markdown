@@ -32,7 +32,8 @@ If you prefer, you can grab the stable release ZIP file by itself from the
 For the latest development version, you can grab the [GitHub generated ZIP file] [githubzip].
 
 Simply download the ZIP file to your XBMC device and install through the menu via
-System -> Settings -> Add-ons -> Install from zip file
+System -> Settings -> Add-ons -> Install from zip file, but ensure you've
+uninstalled any previous version first.
 
 Issues
 ------
