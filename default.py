@@ -32,7 +32,8 @@ sys.path.append(os.path.join(current_dir, 'resources', 'lib'))
 
 import utils, categories, series, programs, play
 
-utils.log('Initialised')
+# Print our platform/version debugging information
+utils.log_xbmc_platform_version()
 
 if __name__ == "__main__" :
    params_str = sys.argv[2]

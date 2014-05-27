@@ -28,8 +28,10 @@ import unicodedata
 import urllib
 import textwrap
 import config
+import xbmc
 
 pattern = re.compile("&(\w+?);")
+
 
 def descape_entity(m, defs=htmlentitydefs.entitydefs):
     # callback: translate one entity to its ISO Latin value
@@ -38,11 +40,13 @@ def descape_entity(m, defs=htmlentitydefs.entitydefs):
     except KeyError:
         return m.group(0) # use as is
 
+
 def descape(string):
     # Fix the hack back from parsing with BeautifulSoup
     string = string.replace('&#38;', '&amp;')
 
     return pattern.sub(descape_entity, string)
+
 
 def get_url(s):
     dict = {}
@@ -54,6 +58,7 @@ def get_url(s):
         v = urllib.unquote_plus(kv[1])
         dict[k] = v
     return dict
+
 
 def make_url(d):
     pairs = []
@@ -68,8 +73,10 @@ def make_url(d):
         pairs.append("%s=%s" % (k,v))
     return "&".join(pairs)
 
+
 def log(s):
     print "[%s v%s] %s" % (config.NAME, config.VERSION, s)
+
 
 def log_error(message=None):
     exc_type, exc_value, exc_traceback = sys.exc_info()
@@ -77,6 +84,7 @@ def log_error(message=None):
         exc_value = message
     print "[%s v%s] ERROR: %s (%d) - %s" % (config.NAME, config.VERSION, exc_traceback.tb_frame.f_code.co_name, exc_traceback.tb_lineno, exc_value)
     print traceback.print_exc()
+
 
 def dialog_error(msg):
     # Generate a list of lines for use in XBMC dialog
@@ -87,6 +95,7 @@ def dialog_error(msg):
     content.append(str(exc_value))
     return content
 
+
 def dialog_message(msg, title=None):
     if not title:
         title = "%s v%s" % (config.NAME, config.VERSION)
@@ -94,3 +103,46 @@ def dialog_message(msg, title=None):
     content = textwrap.wrap(msg, 60)
     content.insert(0, title)
     return content
+
+
+def get_platform():
+    """ Work through a list of possible platform types and return the first
+        match. Ordering of items is important as some match more thant one type.
+
+        E.g. Android will match both Android and Linux
+    """
+    platforms = [
+        "Android",
+        "Linux.RaspberryPi",
+        "Linux",
+        "XBOX",
+        "Windows",
+        "ATV2",
+        "IOS",
+        "OSX",
+        "Darwin",
+    ]
+
+    for platform in platforms:
+        if xbmc.getCondVisibility('System.Platform.'+platform):
+            return platform
+    return "Unknown"
+
+def get_xbmc_build():
+    return xbmc.getInfoLabel("System.BuildVersion")
+
+
+def get_xbmc_version():
+    build = get_xbmc_build()
+    # Keep the version number, and strip the rest
+    version = build.split(' ')[0]
+    return version
+
+
+def log_xbmc_platform_version():
+    """ Log our XBMC version and platform for debugging
+    """
+    version = get_xbmc_version()
+    platform = get_platform()
+    log("XBMC %s running on %s" % (version, platform))
+
