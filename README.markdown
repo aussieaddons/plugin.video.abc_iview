@@ -1,7 +1,7 @@
-ABC iView plugin for XBMC
+ABC iView addon for XBMC
 ================================
 
-This plugin provides a simple list of available programs from the ABC iView
+This addon provides a simple list of available programs from the ABC iView
 web site, and allows you to stream them with.
 
 The content is only available with Australia, or you can apparently use sites
@@ -13,7 +13,7 @@ the RTMP stream can crash XBMC, especially for older versions of XBMC.
 HTTPS streaming support is still new, but is probably more reliable and
 recommended. You can switch your streaming method from the addon settings.
 
-This plugin wouldn't be possible without the great work on python-iview from
+This addon wouldn't be possible without the great work on python-iview from
 Jeremy Visser.
 https://jeremy.visser.name/2009/08/python-iview/
 

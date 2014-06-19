@@ -1,8 +1,8 @@
 #
-#  ABC iView XBMC Plugin
+#  ABC iView XBMC Addon
 #  Copyright (C) 2012 Andy Botting
 #
-#  This plugin includes from from python-iview
+#  This plugin includes code from python-iview
 #  Copyright (C) 2009-2012 by Jeremy Visser <jeremy@visser.name>
 #
 #  This plugin is free software: you can redistribute it and/or modify
