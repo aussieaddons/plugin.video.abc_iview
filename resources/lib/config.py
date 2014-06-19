@@ -26,6 +26,10 @@ NAME = 'ABC iView'
 ADDON_ID = 'plugin.video.abc_iview'
 VERSION = version.VERSION
 
+ISSUE_API_URL = 'https://api.github.com/repos/andybotting/xbmc-addon-abc-iview/issues'
+ISSUE_API_AUTH = 'eGJtY2JvdDo1OTQxNTJjMTBhZGFiNGRlN2M0YWZkZDYwZGQ5NDFkNWY4YmIzOGFj'
+GIST_API_URL = 'https://api.github.com/gists'
+
 api_version = 383
 
 # os.uname() is not available on Windows, so we make this optional.
@@ -35,7 +39,7 @@ try:
 except AttributeError:
     os_string = ''
 
-user_agent = '%s plugin for XBMC %s%s' % (NAME, VERSION, os_string)
+user_agent = '%s add-on for XBMC %s%s' % (NAME, VERSION, os_string)
 
 base_url     = 'http://www.abc.net.au/iview/'
 config_url   = 'http://www.abc.net.au/iview/xml/config.xml?r=%d' % api_version

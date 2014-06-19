@@ -50,7 +50,4 @@ def make_programs_list(url):
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
     except:
-        d = xbmcgui.Dialog()
-        msg = utils.dialog_error("Unable to fetch listing")
-        d.ok(*msg)
-        utils.log_error();
+        utils.handle_error("Unable to play video")

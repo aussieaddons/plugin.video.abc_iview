@@ -25,11 +25,7 @@ import urllib2
 import urllib
 import comm
 import utils
-
-try:
-    import xbmc, xbmcgui, xbmcplugin
-except ImportError:
-    pass # for PC debugging
+import xbmc, xbmcgui, xbmcplugin
 
 def make_category_list():
 
@@ -50,8 +46,4 @@ def make_category_list():
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
     except:
-        d = xbmcgui.Dialog()
-        message = utils.dialog_error("Unable to fetch listing")
-        d.ok(*message)
-        utils.log_error();
-
+        utils.handle_error()

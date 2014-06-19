@@ -19,16 +19,13 @@
 #  along with this plugin. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import sys
-import traceback
-import re
-import htmlentitydefs
-import cgi
-import unicodedata
-import urllib
+import sys, re, traceback
+import htmlentitydefs, cgi, unicodedata, urllib
+import urllib2, socket
 import textwrap
+import xbmc, xbmcgui, xbmcplugin, xbmcaddon
 import config
-import xbmc
+import issue_reporter
 
 pattern = re.compile("&(\w+?);")
 
@@ -86,13 +83,16 @@ def log_error(message=None):
     print traceback.print_exc()
 
 
-def dialog_error(msg):
+def dialog_error(err=None):
     # Generate a list of lines for use in XBMC dialog
+    msg = ''
     content = []
     exc_type, exc_value, exc_traceback = sys.exc_info()
     content.append("%s v%s Error" % (config.NAME, config.VERSION))
-    content.append("%s (%d) - %s" % (exc_traceback.tb_frame.f_code.co_name, exc_traceback.tb_lineno, msg))
     content.append(str(exc_value))
+    if err:
+        msg = " - %s" % err
+    content.append("%s (%d) %s" % (exc_traceback.tb_frame.f_code.co_name, exc_traceback.tb_lineno, msg))
     return content
 
 
@@ -128,6 +128,7 @@ def get_platform():
             return platform
     return "Unknown"
 
+
 def get_xbmc_build():
     return xbmc.getInfoLabel("System.BuildVersion")
 
@@ -146,3 +147,24 @@ def log_xbmc_platform_version():
     platform = get_platform()
     log("XBMC %s running on %s" % (version, platform))
 
+
+def handle_error(err=None):
+    traceback_str = traceback.format_exc()
+    log(traceback_str)
+    report_issue = False
+    d = xbmcgui.Dialog()
+    if d:
+        message = dialog_error(err)
+        try:
+            message.append("Would you like to automatically report this error?")
+            report_issue = d.yesno(*message)
+        except:
+            message.append("If this error continues to occur, please report it to our issue tracker.")
+            d.ok(*message)
+    if report_issue:
+        log("Reporting issue to GitHub...")
+        issue_url = issue_reporter.report_issue(traceback_str)
+        if issue_url:
+            # Split the url here to make sure it fits in our dialog
+            split_url = issue_url.replace('/xbmc', ' /xbmc')
+            d.ok("%s v%s Error" % (config.NAME, config.VERSION), "Thanks! Your issue has been reported to: %s" % split_url)

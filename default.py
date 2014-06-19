@@ -19,8 +19,7 @@
 #  along with this plugin. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import os
-import sys
+import os, sys
 
 # Add our resources/lib to the python path
 try:
@@ -29,7 +28,6 @@ except:
    current_dir = os.getcwd()
 
 sys.path.append(os.path.join(current_dir, 'resources', 'lib'))
-
 import utils, categories, series, programs, play
 
 # Print our platform/version debugging information

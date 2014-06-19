@@ -1,34 +1,27 @@
 #
-#  ABC iView XBMC Plugin
+#  ABC iView XBMC Addon
 #  Copyright (C) 2012 Andy Botting
 #
-#  This plugin includes from from python-iview
+#  This addon includes code from python-iview
 #  Copyright (C) 2009-2012 by Jeremy Visser <jeremy@visser.name>
 #
-#  This plugin is free software: you can redistribute it and/or modify
+#  This addon is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  This plugin is distributed in the hope that it will be useful,
+#  This addon is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU General Public License for more details.
 #
 #  You should have received a copy of the GNU General Public License
-#  along with this plugin. If not, see <http://www.gnu.org/licenses/>.
+#  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
 import sys
-import config
-import utils
-import classes
-import comm
-
-try:
-    import xbmc, xbmcgui, xbmcplugin, xbmcaddon
-except ImportError:
-    pass # for PC debugging
+import classes, comm, config, utils
+import xbmc, xbmcgui, xbmcplugin, xbmcaddon
 
 def http_url(p):
     # Work out new series ID
@@ -66,12 +59,12 @@ def play(url):
         p = classes.Program()
         p.parse_xbmc_url(url)
 
-        if addon and addon.getSetting('video_transport') == 'HTTP':
-            utils.log('Using HTTP Transport')
-            media_url = http_url(p)
-        else:
+        if addon and addon.getSetting('video_transport') == 'RTMP':
             utils.log('Using RTMP Transport')
             media_url = rtmp_url(p)
+        else:
+            utils.log('Using HTTP Transport')
+            media_url = http_url(p)
     
         listitem=xbmcgui.ListItem(label=p.get_list_title(), iconImage=p.thumbnail, thumbnailImage=p.thumbnail)
         listitem.setInfo('video', p.get_xbmc_list_item())
@@ -82,9 +75,4 @@ def play(url):
     
         xbmc.Player().play(media_url, listitem)
     except:
-        # oops print error message
-        d = xbmcgui.Dialog()
-        message = utils.dialog_error("Unable to play video")
-        d.ok(*message)
-        utils.log_error();
-
+        utils.handle_error("Unable to play video")
