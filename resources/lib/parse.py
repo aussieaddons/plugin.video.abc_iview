@@ -39,7 +39,7 @@ except ImportError:
 # This is a throwaway variable to deal with a python bug with strptime:
 #   ImportError: Failed to import _strptime because the import lockis
 #   held by another thread.
-throwaway = datetime.datetime.strptime('20140101','%Y%m%d')
+throwaway = time.strptime('20140101', '%Y%m%d')
 
 def parse_config(soup):
     """There are lots of goodies in the config we get back from the ABC.
