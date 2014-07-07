@@ -19,7 +19,7 @@
 #  along with this plugin. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import sys, re, traceback
+import os, sys, re, traceback, time
 import htmlentitydefs, cgi, unicodedata, urllib
 import urllib2, socket
 import textwrap
@@ -148,6 +148,49 @@ def log_xbmc_platform_version():
     log("XBMC %s running on %s" % (version, platform))
 
 
+def get_file_dir():
+    """ Make our addon working directory if it doesn't exist and
+        return it.
+    """
+    filedir = os.path.join(xbmc.translatePath('special://temp/'), config.ADDON_ID)
+    if not os.path.isdir(filedir):
+        os.mkdir(filedir)
+    return filedir
+
+
+def save_last_error_report(trace):
+    """ Save a copy of our last error report
+    """
+    try:
+        rfile = os.path.join(get_file_dir(), 'last_report_error.txt')
+        with open(rfile, 'w') as f:
+            f.write(trace)
+    except:
+        log("Error writing error report file")
+
+
+def can_send_error(trace):
+    """ Check to see if our new error message is different from the last
+        successful error report. If it is, or the file doesn't exist, then
+        we'll return True
+    """
+    try:
+        rfile = os.path.join(get_file_dir(), 'last_report_error.txt')
+
+        if not os.path.isfile(rfile):
+            return True
+        else:
+            f = open(rfile, 'r')
+            report = f.read()
+            if report != trace:
+                return True
+    except:
+        log("Error checking error report file")
+
+    log("Not allowing error report. Last report matches this one")
+    return False
+
+
 def handle_error(err=None):
     traceback_str = traceback.format_exc()
     log(traceback_str)
@@ -155,11 +198,16 @@ def handle_error(err=None):
     d = xbmcgui.Dialog()
     if d:
         message = dialog_error(err)
-        try:
-            message.append("Would you like to automatically report this error?")
-            report_issue = d.yesno(*message)
-        except:
-            message.append("If this error continues to occur, please report it to our issue tracker.")
+        # Only report if we haven't done one already
+        if can_send_error(traceback_str):
+            try:
+                message.append("Would you like to automatically report this error?")
+                report_issue = d.yesno(*message)
+            except:
+                message.append("If this error continues to occur, please report it to our issue tracker.")
+                d.ok(*message)
+        else:
+            # Just show the message
             d.ok(*message)
     if report_issue:
         log("Reporting issue to GitHub...")
@@ -168,3 +216,5 @@ def handle_error(err=None):
             # Split the url here to make sure it fits in our dialog
             split_url = issue_url.replace('/xbmc', ' /xbmc')
             d.ok("%s v%s Error" % (config.NAME, config.VERSION), "Thanks! Your issue has been reported to: %s" % split_url)
+            # Touch our file to prevent more than one error report
+            save_last_error_report(traceback_str)
