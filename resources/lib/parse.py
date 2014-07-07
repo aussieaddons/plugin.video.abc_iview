@@ -241,12 +241,18 @@ def parse_series_items(soup):
 
         new_program.duration      = item.get('j')
 
+        # Try parsing the date. We try/except here just in case we get one of these:
+        #   ImportError: Failed to import _strptime because the import lockis held by another thread.
         temp_date = item.get('f')
         try:
             timestamp = time.mktime(time.strptime(temp_date, '%Y-%m-%d %H:%M:%S'))
+            new_program.date = datetime.date.fromtimestamp(timestamp)
         except:
-            timestamp = time.mktime(time.strptime(temp_date, '%Y-%m-%d'))
-        new_program.date = datetime.date.fromtimestamp(timestamp)
+            try:
+                timestamp = time.mktime(time.strptime(temp_date, '%Y-%m-%d'))
+                new_program.date = datetime.date.fromtimestamp(timestamp)
+            except:
+                pass
 
         programs_list.append(new_program)
 
