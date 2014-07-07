@@ -36,6 +36,11 @@ try:
 except ImportError:
     from deps.BeautifulSoup import BeautifulStoneSoup
 
+# This is a throwaway variable to deal with a python bug with strptime:
+#   ImportError: Failed to import _strptime because the import lockis
+#   held by another thread.
+throwaway = datetime.datetime.strptime('20140101','%Y%m%d')
+
 def parse_config(soup):
     """There are lots of goodies in the config we get back from the ABC.
         In particular, it gives us the URLs of all the other XML data we
@@ -241,8 +246,8 @@ def parse_series_items(soup):
 
         new_program.duration      = item.get('j')
 
-        # Try parsing the date. We try/except here just in case we get one of these:
-        #   ImportError: Failed to import _strptime because the import lockis held by another thread.
+        # Try parsing the date. We try/except everything here because this can
+        # be fragile, and no date isn't the end of the world.
         temp_date = item.get('f')
         try:
             timestamp = time.mktime(time.strptime(temp_date, '%Y-%m-%d %H:%M:%S'))
