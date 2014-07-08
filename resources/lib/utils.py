@@ -25,10 +25,23 @@ import urllib2, socket
 import textwrap
 import xbmc, xbmcgui, xbmcplugin, xbmcaddon
 import config
-import issue_reporter
+from issue_reporter import IssueReporter
+from version_check import VersionCheck
 
 pattern = re.compile("&(\w+?);")
 
+issue_reporter = IssueReporter({
+    'github_api_url': config.GITHUB_API_URL,
+    'addon_name': config.NAME,
+    'addon_id': config.ADDON_ID,
+    'addon_version': config.VERSION
+})
+version_check = VersionCheck({
+    'github_api_url': config.GITHUB_API_URL,
+    'addon_name': config.NAME,
+    'addon_id': config.ADDON_ID,
+    'addon_version': config.VERSION
+})
 
 def descape_entity(m, defs=htmlentitydefs.entitydefs):
     # callback: translate one entity to its ISO Latin value
@@ -198,16 +211,21 @@ def handle_error(err=None):
     d = xbmcgui.Dialog()
     if d:
         message = dialog_error(err)
-        # Only report if we haven't done one already
-        if can_send_error(traceback_str):
-            try:
-                message.append("Would you like to automatically report this error?")
-                report_issue = d.yesno(*message)
-            except:
-                message.append("If this error continues to occur, please report it to our issue tracker.")
+        # Only report on the latest version
+        if version_check.is_latest_version(config.VERSION):
+            # Only report if we haven't done one already
+            if issue_reporter.can_send_error(traceback_str):
+                try:
+                    message.append("Would you like to automatically report this error?")
+                    report_issue = d.yesno(*message)
+                except:
+                    message.append("If this error continues to occur, please report it to our issue tracker.")
+                    d.ok(*message)
+            else:
+                # Just show the message
                 d.ok(*message)
         else:
-            # Just show the message
+            message.append("Please try updating this addon before reporting this issue.")
             d.ok(*message)
     if report_issue:
         log("Reporting issue to GitHub...")
@@ -217,4 +235,4 @@ def handle_error(err=None):
             split_url = issue_url.replace('/xbmc', ' /xbmc')
             d.ok("%s v%s Error" % (config.NAME, config.VERSION), "Thanks! Your issue has been reported to: %s" % split_url)
             # Touch our file to prevent more than one error report
-            save_last_error_report(traceback_str)
+            issue_reporter.save_last_error_report(traceback_str)
