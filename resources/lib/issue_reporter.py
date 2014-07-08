@@ -58,18 +58,37 @@ def get_public_ip():
         result = urllib2.urlopen('http://ipecho.net/plain', timeout=5)
         data = str(result.read())
     except:
-        return "Could not fetch IP"
+        return "Unknown (lookup failure)"
 
     try:
         ip = re.compile(r'(\d+\.\d+\.\d+\.\d+)').search(data).group(1)
     except:
-        return "IP address not returned from lookup"
+        return "Unknown (parse failure)"
 
     try:
         hostname = socket.gethostbyaddr(ip)[0]
         return "%s (%s)" % (ip, hostname)
     except:
         return ip
+
+
+def get_isp():
+    """ 
+        Try and fetch the ISP of the reporter for logging
+        and reporting purposes
+    """
+    try:
+        result = urllib2.urlopen('http://www.whoismyisp.org', timeout=5)
+        data = str(result.read())
+    except:
+        return "Unknown (lookup failure)"
+
+    try:
+        isp = re.compile(r'<h1>(.*)</h1>').search(data).group(1)
+    except:
+        return "Unknown (parse failure)"
+
+    return isp
 
 
 def get_xbmc_log():
@@ -109,6 +128,7 @@ def format_issue(issue_data):
         "**Python Version:** %s" % sys.version.replace('\n', ''),
         "**Operating System:** [%s] %s" % (sys.platform, ' '.join(os.uname())),
         "**IP Address:** %s" % get_public_ip(),
+        "**ISP :** %s" % get_isp(),
         "**Python Path:**\n```\n%s\n```" % '\n'.join(sys.path),
         "\n## Traceback\n```\n%s\n```" % issue_data,
     ]
