@@ -1,4 +1,16 @@
-[B]Version 1.5.0[/B]
+[B]Version 1.6.0[/B]
+- Fix program feed after ABC broke it
+- Add ISP lookup to error reports
+- Don't allow the same error report twice
+- Fix strptime fix
+- Better fix for strptime import threading python issue
+- Work around Python strptime threading issue
+- Add automatic issue reporting
+- Update license headers
+- Update README
+
+[B]Version v1.5.0[/B]
+- Version 1.5.0
 - Add XBMC version/platform debugging information
 - Update README and addon description
 - Comment out some noisy debugging
