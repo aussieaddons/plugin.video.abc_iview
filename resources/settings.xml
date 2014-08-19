@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<settings>
-  <category label="10080">
-    <!-- Video Transport -->
-    <setting id="video_transport" type="labelenum" label="10090" lvalues="10092|10091" />
-  </category>
-</settings>

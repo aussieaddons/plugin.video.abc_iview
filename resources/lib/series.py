@@ -25,23 +25,18 @@ import urllib2
 import urllib
 import comm
 import utils
-
-try:
-    import xbmc, xbmcgui, xbmcplugin
-except ImportError:
-    pass # for PC debugging
+import xbmc, xbmcgui, xbmcplugin
 
 def make_series_list(url):
     params = utils.get_url(url)
 
     try:
-        iview_config = comm.get_config()
-        series_list = comm.get_programme(iview_config, params["category_id"])
+        series_list = comm.get_programme_from_feed(params["category"])
         series_list.sort()
 
         ok = True
         for s in series_list:
-            url = "%s?series_id=%s" % (sys.argv[0], s.id)
+            url = "%s?%s" % (sys.argv[0], utils.make_url({'series': s.title}))
             thumbnail = s.get_thumbnail()
 
             listitem = xbmcgui.ListItem(s.get_list_title(), iconImage=thumbnail, thumbnailImage=thumbnail)
@@ -53,8 +48,5 @@ def make_series_list(url):
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='tvshows')
     except:
-        d = xbmcgui.Dialog()
-        message = utils.dialog_error("Unable to fetch listing")
-        d.ok(*message)
-        utils.log_error();
+        utils.handle_error('Unable to fetch show list')
 

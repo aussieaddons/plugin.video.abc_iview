@@ -26,11 +26,9 @@ import comm
 import xbmc, xbmcgui, xbmcplugin
 
 def make_programs_list(url):
-
     try:
         params = utils.get_url(url)
-        iview_config = comm.get_config()
-        programs = comm.get_series_items(iview_config, params["series_id"])
+        programs = comm.get_series_from_feed(params['series'])
 
         ok = True
         for p in programs:
@@ -50,4 +48,4 @@ def make_programs_list(url):
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
     except:
-        utils.handle_error("Unable to play video")
+        utils.handle_error('Unable to fetch program list')

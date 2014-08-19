@@ -46,6 +46,13 @@ def fetch_url(url, headers={}):
     )
     return http.read()
 
+def fetch_protected_url(url):
+    """
+
+    """
+    headers = {'Authorization': 'Basic ZmVlZHRlc3Q6YWJjMTIz'}
+    return fetch_url(url, headers)
+
 def get_config():
     """This function fetches the iView "config". Among other things,
         it tells us an always-metered "fallback" RTMP server, and points
@@ -72,39 +79,18 @@ def get_categories(iview_config):
     categories = parse.parse_categories(category_data)
     return categories
 
-def get_programme(iview_config, keyword):
-    """This function pulls in the by-keyword index, which contains the TV
-        series that are available to us, filtered by the given keyword.
-        Using 0-z as the keyword gives the complete list.
-        Unlike the seriesIndex list, this gives all the JSON fields.
-    """
-    url = iview_config['api_url'] + 'keyword=' + keyword
-    index_data = fetch_url(url)
-    programme = parse.parse_index(index_data)
-    return programme
+def get_programme_from_feed(keyword):
+    url = config.feed_url + '?keyword=' + keyword
+    feed = fetch_protected_url(url)
+    shows = parse.parse_programme_from_feed(feed)
+    return shows
 
-
-def get_series_items(iview_config, series_id):
-    """This function fetches the series detail page for the selected series
-        which contain the items (i.e. the actual episodes).
-    """
-    series_json = fetch_url(iview_config['api_url'] + 'series=%s' % series_id)
-    return parse.parse_series_items(series_json)
-
-def get_new_programme(program_id):
-    utils.log("Finding new iView URL for program with ID: %s" % program_id)
-    url = '%sview/%s' % (config.redirect_url, program_id)
-
-    request = urllib2.Request(url)
-    opener = urllib2.build_opener(JsonRedirectHandler())
-    f = opener.open(request)
-    return parse.parse_new_programme(f.read())
-
-def get_program_from_feed(episode_id, series_id):
-    url = config.feed_url + '?series=' + series_id
-    headers = {'Authorization': 'Basic ZmVlZHRlc3Q6YWJjMTIz'}
-    feed_data = parse.parse_feed(fetch_url(url, headers))
-    for item in feed_data:
-        if item['url'].split('/')[-1] == episode_id:
-            return item
-
+def get_series_from_feed(series):
+    url = config.feed_url + '?keyword=0-z'
+    feed = fetch_protected_url(url)
+    programs = parse.parse_programs_from_feed(feed)
+    filtered = []
+    for p in programs:
+        if p.title == series:
+            filtered.append(p)
+    return filtered

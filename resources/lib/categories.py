@@ -37,7 +37,7 @@ def make_category_list():
 
         ok = True
         for g in categories:
-            url = "%s?category_id=%s" % (sys.argv[0], g['keyword'])
+            url = "%s?category=%s" % (sys.argv[0], g['keyword'])
             listitem = xbmcgui.ListItem(g['name'])
 
             # Add the program item to the list

@@ -28,7 +28,9 @@ import time
 class Series(object):
 
     def __init__(self):
-        pass
+        self.description = None
+        self.num_episodes = 1
+        self.thumbnail = None
 
     def __repr__(self):
         return self.title
@@ -66,19 +68,25 @@ class Series(object):
             return 0
         return int(series.group('season'))
 
+    def increment_num_episodes(self):
+        self.num_episodes += 1
+
     def get_num_episodes(self):
         return self.num_episodes
 
     def get_keywords(self):
         """ Return a list of keywords
         """
-        return self.keywords
+        if self.keywords:
+            return self.keywords
 
     def get_thumbnail(self):
-        return self.thumbnail
+        if self.thumbnail:
+            return self.thumbnail
 
     def get_description(self):
-        return self.description
+        if self.description:
+            return self.description
 
     def has_keyword(self, keyword):
         """ Returns true if a keyword is found
@@ -105,6 +113,7 @@ class Program(object):
         self.duration = None
         self.date = datetime.datetime.now()
         self.thumbnail = None
+        self.url = None
 
     def __repr__(self):
         return self.title
@@ -205,6 +214,12 @@ class Program(object):
         """
         if self.thumbnail:
             return utils.descape(self.thumbnail)
+
+    def get_url(self):
+        """ Returns the video url
+        """
+        if self.url:
+            return utils.descape(self.url)
 
     def get_xbmc_list_item(self):
         """ Returns a dict of program information, in the format which
