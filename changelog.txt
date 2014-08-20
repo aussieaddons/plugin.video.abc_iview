@@ -1,4 +1,8 @@
-[B]Version 1.6.0[/B]
+[B]Version 1.6.1[/B]
+- Make feed parsing faster and fix series thumbnail issue
+
+[B]Version v1.6.0[/B]
+- Version 1.6.0
 - Fix program feed after ABC broke it
 - Add ISP lookup to error reports
 - Don't allow the same error report twice
