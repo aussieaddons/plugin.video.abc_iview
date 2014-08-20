@@ -101,7 +101,7 @@ def parse_programme_from_feed(data):
     xml = ET.fromstring(data)
     show_list = []
     
-    for item in xml.iter('item'):
+    for item in xml.getiterator('item'):
 
         title = item.find('title').text
         if title.startswith('Trailer'):
@@ -127,7 +127,7 @@ def parse_programs_from_feed(data):
     xml = ET.fromstring(data)
 
     programs_list = []
-    for item in xml.iter('item'):
+    for item in xml.getiterator('item'):
         p = classes.Program()
         p.title         = item.find('title').text
         p.episode_title = item.find('subtitle').text
