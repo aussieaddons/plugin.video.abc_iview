@@ -198,8 +198,16 @@ def handle_error(err=None):
     d = xbmcgui.Dialog()
     if d:
         message = dialog_error(err)
-        # Only report if we haven't done one already
+
         if can_send_error(traceback_str):
+            latest_version = issue_reporter.get_latest_version()
+            version_string = '.'.join([str(i) for i in latest_version])
+            if not issue_reporter.is_latest_version(config.VERSION, latest_version):
+                message.append("Your version of this add-on is outdated. Please try upgrading to the latest version: v%s" % version_string)
+                d.ok(*message)
+                return
+
+            # Only report if we haven't done one already
             try:
                 message.append("Would you like to automatically report this error?")
                 report_issue = d.yesno(*message)

@@ -24,7 +24,7 @@ import os, re, sys
 import urllib2, socket
 import base64
 import config, utils
-import xbmc
+import xbmc, xbmcplugin
 
 try:
     import simplejson as json
@@ -113,6 +113,44 @@ def get_xbmc_version():
         return xbmc.getInfoLabel("System.BuildVersion")
     except:
         return 'Unknown'
+
+
+def fetch_tags():
+    """
+        Fetch the version tags from GitHub
+    """
+    return json.load(urllib2.urlopen("%s/tags" % config.GITHUB_API_URL))
+
+
+def get_versions():
+    """
+        Assemble a list of version from the tags, and split them into lists
+    """
+    tags = fetch_tags()
+    utils.log('Version check: found tags: %s' % tags)
+    tag_names = map(lambda tag: tag['name'], tags)
+    versions = filter(lambda tag: re.match(r'v(\d+)\.(\d+)(?:\.(\d+))?', tag), tag_names)
+    return map(lambda tag: map(lambda v: int(v), tag[1::].split('.')), versions)
+
+
+def get_latest_version():
+    """
+        Sort the list, and get the latest version
+    """
+    versions = get_versions()
+    utils.log('Version check found versions: %s' % versions)
+    return sorted(versions, reverse=True)[0]
+
+
+def is_latest_version(current_version, latest_version):
+    """
+        Compare current_version (x.x.x string) and latest_version ([x,x,x] list)
+    """
+    if current_version.startswith('v'):
+        current_version = current_version[1::]
+    current_version = map(lambda v: int(v), current_version.split('.'))
+    utils.log('Version check: Latest version: %s, Current version: %s' % (latest_version, current_version))
+    return current_version == latest_version
 
 
 def format_issue(issue_data):
