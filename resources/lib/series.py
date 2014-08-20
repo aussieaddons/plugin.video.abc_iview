@@ -31,16 +31,19 @@ def make_series_list(url):
     params = utils.get_url(url)
 
     try:
-        series_list = comm.get_programme_from_feed(params["category"])
+        category = params["category"]
+        series_list = comm.get_programme_from_feed(category)
         series_list.sort()
 
         ok = True
         for s in series_list:
-            url = "%s?%s" % (sys.argv[0], utils.make_url({'series': s.title}))
-            thumbnail = s.get_thumbnail()
+            url = "%s?%s" % (sys.argv[0], utils.make_url({'series': s.title, 'category': category}))
 
-            listitem = xbmcgui.ListItem(s.get_list_title(), iconImage=thumbnail, thumbnailImage=thumbnail)
-            listitem.setInfo('video', { 'plot' : s.get_description() })
+            # We don't have access to this right now with the new feed
+            #thumbnail = s.get_thumbnail()
+            #listitem = xbmcgui.ListItem(s.get_list_title(), iconImage=thumbnail, thumbnailImage=thumbnail)
+            #listitem.setInfo('video', { 'plot' : s.get_description() })
+            listitem = xbmcgui.ListItem(s.get_list_title())
 
             # add the item to the media list
             ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=url, listitem=listitem, isFolder=True)

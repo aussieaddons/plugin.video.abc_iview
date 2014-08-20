@@ -47,8 +47,7 @@ def fetch_url(url, headers={}):
     return http.read()
 
 def fetch_protected_url(url):
-    """
-
+    """ For protected URLs we add or Auth header when fetching
     """
     headers = {'Authorization': 'Basic ZmVlZHRlc3Q6YWJjMTIz'}
     return fetch_url(url, headers)
@@ -85,8 +84,8 @@ def get_programme_from_feed(keyword):
     shows = parse.parse_programme_from_feed(feed)
     return shows
 
-def get_series_from_feed(series):
-    url = config.feed_url + '?keyword=0-z'
+def get_series_from_feed(series, category='0-z'):
+    url = config.feed_url + '?keyword=' + category
     feed = fetch_protected_url(url)
     programs = parse.parse_programs_from_feed(feed)
     filtered = []

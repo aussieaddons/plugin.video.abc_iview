@@ -29,6 +29,8 @@ import datetime
 import time
 import json
 
+import xml.etree.ElementTree as ET
+
 # Try importing default modules, but if that doesn't work
 # we might be old platforms with bundled deps
 try:
@@ -96,14 +98,13 @@ def parse_categories(soup):
     return categories_list
 
 def parse_programme_from_feed(data):
-    xml = BeautifulStoneSoup(data)
-    items = xml.findAll('item')
+    xml = ET.fromstring(data)
     show_list = []
     
-    for item in items:
-        title = item.find('title').string[:] # hack to convert CData to plain unicode string
+    for item in xml.iter('item'):
+
+        title = item.find('title').text
         if title.startswith('Trailer'):
-            print("Skipping Trailer: %s" % title)            
             continue
 
         show = None
@@ -122,35 +123,19 @@ def parse_programme_from_feed(data):
     return show_list
 
 def parse_programs_from_feed(data):
-    xml = BeautifulStoneSoup(data)
-    items = xml.findAll('item')
+
+    xml = ET.fromstring(data)
+
     programs_list = []
-    
-    for item in items:
+    for item in xml.iter('item'):
         p = classes.Program()
-        p.title = item.find('title').string[:]
-        p.episode_title = item.find('subtitle').string[:]
-        p.description = item.find('description').string[:]
-        p.url = item.find('abc:videoasset').string[:]
-        p.thumbnail = item.find('media:thumbnail').get('url')[:]
+        p.title         = item.find('title').text
+        p.episode_title = item.find('subtitle').text
+        p.description   = item.find('description').text
+        p.url           = item.find('{http://www.abc.net.au/tv/mrss}videoAsset').text
+        p.thumbnail     = item.find('{http://search.yahoo.com/mrss/}thumbnail').attrib['url']
         programs_list.append(p)
 
     return programs_list
-
-def parse_feed(data):
-    xml = BeautifulStoneSoup(data)
-    items = xml.findAll('item')
-    programs_list = []
-    for item in items:
-        programs_list.append({
-            
-            'title': item.find('title').string,
-            'episode_title': item.find('subtitle').string,
-            'description': item.find('description').string,
-            'url': item.find('link').string,
-            'videoasset': item.find('abc:videoasset').string
-        })
-
-
 
 
