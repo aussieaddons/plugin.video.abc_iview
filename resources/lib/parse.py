@@ -129,11 +129,77 @@ def parse_programs_from_feed(data):
     programs_list = []
     for item in xml.getiterator('item'):
         p = classes.Program()
-        p.title         = item.find('title').text
-        p.episode_title = item.find('subtitle').text
+
+        title = item.find('title').text
+        p.title = title
+
+        subtitle = item.find('subtitle').text
+
+        title_match = None
+        title_parts = None
+
+        if subtitle:
+            # Series 2 Episode 25 Home Is Where The Hatch Is
+            title_match = re.search('^[Ss]eries\s?(?P<series>\w+)\s[Ee]pisode\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', subtitle)
+            if not title_match:
+                # Series 8 Episode 13
+                title_match = re.search('^[Ss]eries\s?(?P<series>\w+)\s[Ee]pisode\s?(?P<episode>\d+)$', subtitle)
+            if not title_match:
+                # Episode 34 Shape Shifter
+                title_match = re.search('^[Ee]pisode\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', subtitle)
+            if not title_match:
+                # Series 10 Rylan Clark, Joanna Lumley, Ant And Dec, The Vaccines
+                title_match = re.search('^[Ss]eries\s?(?P<series>\d+)\s(?P<episode_title>.*)$', subtitle)
+            if not title_match:
+                # Episode 5
+                title_match = re.search('^[Ee]pisode\s?(?P<episode>\d+)$', subtitle)
+            if not title_match:
+                p.episode_title = subtitle
+
+            if title_match:
+                title_parts = title_match.groupdict()
+                p.episode_title = title_parts.get('episode_title')
+
+        try:
+            # If we have actual series/episode fields given
+            p.series        = item.find('series').text
+            p.episode       = item.find('episode').text
+        except:
+            try:
+                # If we only get series/episode in the subtitle
+                p.series        = title_parts.get('series')
+                p.episode       = title_parts.get('episode')
+            except:
+                pass
+
         p.description   = item.find('description').text
         p.url           = item.find('{http://www.abc.net.au/tv/mrss}videoAsset').text
         p.thumbnail     = item.find('{http://search.yahoo.com/mrss/}thumbnail').attrib['url']
+
+        try:
+            p.rating = item.find('{http://www.abc.net.au/tv/mrss}rating').text
+        except:
+            # Rating not given for all programs
+            pass
+
+        try:
+            duration = item.find('{http://search.yahoo.com/mrss/}content').attrib['duration']
+            p.duration = int(duration)
+        except:
+            utils.log("Couldn't parse program duration: %s" % duration)
+
+        # Tue, 05 Aug 2014 14:45:00 +1000
+        pubdate = item.find('pubDate').text
+        try:
+            # Tue, 05 Aug 2014 14:45:00 +1000
+            pubdate = item.find('pubDate').text
+            # strptime sucks. Remove the +1000 part from the end
+            pubdate = re.sub(r' [+-]([0-9]){4}$', '', pubdate)
+            dt = time.mktime(time.strptime(pubdate, '%a, %d %b %Y %H:%M:%S'))
+            p.date = datetime.date.fromtimestamp(dt)
+        except:
+            utils.log("Couldn't parse program date: %s" % pubdate)
+
         programs_list.append(p)
 
     return programs_list

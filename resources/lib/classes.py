@@ -146,10 +146,6 @@ class Program(object):
             if self.get_episode():
                 # Only episode information
                 title = "%s (E%02d)" % (title, self.get_episode())
-            else:
-                if not self.get_episode_title():
-                    # Date only, no episode information or episode title
-                    title = "%s (%s)" % (title, self.get_date())
 
         if self.get_episode_title():
             title = "%s: %s" % (title, self.get_episode_title())
