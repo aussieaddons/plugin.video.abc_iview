@@ -27,7 +27,7 @@ The latest stable release of this add-on is available as part of the
 [XBMC CatchUp TV AU repository] [repository].
 
 If you prefer, you can grab the stable release ZIP file by itself from the
-[Google Code project site download] [download].
+[Github project site download] [download].
 
 For the latest development version, you can grab the [GitHub generated ZIP file] [githubzip].
 
@@ -71,7 +71,7 @@ Contact Me
 ----------
 For anything else, you can contact me by email at andy#andybotting.com
 
-[repository]: http://code.google.com/p/xbmc-catchuptv-au
-[download]: https://code.google.com/p/xbmc-catchuptv-au/downloads/list?q=label:Plugin-ABC_iView
+[repository]: https://github.com/xbmc-catchuptv-au/repo
+[download]: https://github.com/xbmc-catchuptv-au/repo/tree/master/plugin.video.abc_iview
 [githubzip]: https://github.com/andybotting/xbmc-addon-abc-iview/archive/master.zip
 [issues]: https://github.com/andybotting/xbmc-addon-abc-iview/issues
