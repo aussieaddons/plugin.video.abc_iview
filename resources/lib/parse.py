@@ -118,6 +118,8 @@ def parse_programme_from_feed(data):
         else:
             show = classes.Series()
             show.title = title
+            show.description = item.find('description').text
+            show.thumbnail = item.find('{http://search.yahoo.com/mrss/}thumbnail').attrib['url']
             show_list.append(show)
 
     return show_list
