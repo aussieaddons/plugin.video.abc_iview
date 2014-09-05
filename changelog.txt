@@ -1,3 +1,12 @@
+[B]Version 1.6.4[/B]
+- Merge pull request #165 from sdt/sdt/github-catchup-repo
+- Merge pull request #164 from sdt/sdt/series-attrs
+- Catchup repo & zip links on github not google code
+- Restore description & thumbnail to series list
+
+[B]Version v1.6.3[/B]
+- Parse episode title and add aired date
+
 [B]Version v1.6.2[/B]
 - Version 1.6.2
 - Only allow issue reporting on latest version
