@@ -1,4 +1,12 @@
-[B]Version 1.6.4[/B]
+[B]Version 1.6.5[/B]
+- Add basic URL fetch retry mechanism
+- Fix indentation error
+- Replace XBMC with XBMC/Kodi in logging and error reports
+- Fix error reporting for Windows
+- Improve error handling and reporting
+
+[B]Version v1.6.4[/B]
+- Version 1.6.4
 - Merge pull request #165 from sdt/sdt/github-catchup-repo
 - Merge pull request #164 from sdt/sdt/series-attrs
 - Catchup repo & zip links on github not google code
