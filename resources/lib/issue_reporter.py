@@ -163,7 +163,7 @@ def format_issue(issue_data):
     """
     # os.uname() is not available on Windows, so we make this optional.
     try:
-    uname = os.uname()
+        uname = os.uname()
         os_string = ' (%s %s %s)' % (uname[0], uname[2], uname[4])
     except AttributeError:
         os_string = ''
@@ -173,7 +173,7 @@ def format_issue(issue_data):
         "**Plugin Name:** %s" % config.NAME,
         "**Plugin ID:** %s" % config.ADDON_ID,
         "**Plugin Version:** %s" % config.VERSION,
-        "**XBMC Version:** %s" % get_xbmc_version(),
+        "**XBMC/Kodi Version:** %s" % get_xbmc_version(),
         "**Python Version:** %s" % sys.version.replace('\n', ''),
         "**Operating System:** [%s] %s" % (sys.platform, os_string),
         "**IP Address:** %s" % get_public_ip(),
