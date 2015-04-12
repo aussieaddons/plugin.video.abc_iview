@@ -39,7 +39,7 @@ LOG_FILTERS = (
 )
 
 def make_request(url):
-    """ 
+    """
         Make our JSON request to GitHub
     """
     return urllib2.Request(url, headers={
@@ -50,7 +50,7 @@ def make_request(url):
 
 
 def get_public_ip():
-    """ 
+    """
         Try and fetch the public IP of the reporter for logging
         and reporting purposes
     """
@@ -73,7 +73,7 @@ def get_public_ip():
 
 
 def get_isp():
-    """ 
+    """
         Try and fetch the ISP of the reporter for logging
         and reporting purposes
     """
@@ -92,11 +92,15 @@ def get_isp():
 
 
 def get_xbmc_log():
-    """ 
+    """
         Fetch and read the XBMC log
     """
     log_path = xbmc.translatePath('special://logpath')
+
     log_file_path = os.path.join(log_path, 'xbmc.log')
+    if not os.path.isfile(log_file_path):
+        log_file_path = os.path.join(log_path, 'kodi.log')
+
     utils.log("Reading log file from \"%s\"" % log_file_path)
     with open(log_file_path, 'r') as f:
         log_content = f.read()
@@ -106,7 +110,7 @@ def get_xbmc_log():
 
 
 def get_xbmc_version():
-    """ 
+    """
         Fetch the XBMC build version
     """
     try:
@@ -127,7 +131,7 @@ def get_versions():
         Assemble a list of version from the tags, and split them into lists
     """
     tags = fetch_tags()
-    utils.log('Version check: found tags: %s' % tags)
+    #utils.log('Version check: found tags: %s' % tags)
     tag_names = map(lambda tag: tag['name'], tags)
     versions = filter(lambda tag: re.match(r'v(\d+)\.(\d+)(?:\.(\d+))?', tag), tag_names)
     return map(lambda tag: map(lambda v: int(v), tag[1::].split('.')), versions)
@@ -179,12 +183,12 @@ def format_issue(issue_data):
 
 
 def upload_log():
-    """ 
+    """
         Upload our full XBMC log as a GitHub gist
     """
     try:
         log_content = get_xbmc_log()
-    except Execption as e:
+    except Exception as e:
         utils.log("Failed to read log: %s" % e)
         return None
 
@@ -212,7 +216,7 @@ def upload_log():
 
 
 def report_issue(issue_data):
-    """ 
+    """
         Report our issue to GitHub
     """
     issue_body = format_issue(issue_data)

@@ -39,11 +39,10 @@ def fetch_url(url, headers={}):
         An exception is raised if an error (e.g. 404) occurs.
     """
     utils.log("Fetching URL: %s" % url)
-    http = urllib2.urlopen(
-        urllib2.Request(url, None, dict(headers.items() + {
-            'User-Agent' : config.user_agent,
-        }.items()))
-    )
+    request = urllib2.Request(url, None, dict(headers.items() + {
+        'User-Agent' : config.user_agent
+    }.items()))
+    http = urllib2.urlopen(request, timeout=15)
     return http.read()
 
 def fetch_protected_url(url):

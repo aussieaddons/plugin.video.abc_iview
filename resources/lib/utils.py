@@ -199,7 +199,15 @@ def handle_error(err=None):
     if d:
         message = dialog_error(err)
 
-        if can_send_error(traceback_str):
+        # Work out if we should allow an error report
+        send_error = can_send_error(traceback_str)
+
+        # Some transient network errors we don't want any reports about
+        if ((traceback_str.find('The read operation timed out') > 0) or
+            (traceback_str.find('HTTP Error 404: Not Found') > 0)):
+            send_error = False
+
+        if send_error:
             latest_version = issue_reporter.get_latest_version()
             version_string = '.'.join([str(i) for i in latest_version])
             if not issue_reporter.is_latest_version(config.VERSION, latest_version):

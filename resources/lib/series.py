@@ -49,5 +49,5 @@ def make_series_list(url):
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='tvshows')
     except:
-        utils.handle_error('Unable to fetch show list')
+        utils.handle_error('Unable to fetch program list. Please try again later.')
 
