@@ -35,15 +35,32 @@ class JsonRedirectHandler(urllib2.HTTPRedirectHandler):
         return urllib2.HTTPRedirectHandler.http_error_301(self, req, fp, code, msg, headers) 
 
 def fetch_url(url, headers={}):
-    """Simple function that fetches a URL using urllib2.
-        An exception is raised if an error (e.g. 404) occurs.
+    """ Fetches a URL using urllib2 with some basic retry.
+        An exception is raised if an error (e.g. 404) occurs after the max
+        number of retries.
     """
     utils.log("Fetching URL: %s" % url)
     request = urllib2.Request(url, None, dict(headers.items() + {
         'User-Agent' : config.user_agent
     }.items()))
-    http = urllib2.urlopen(request, timeout=15)
-    return http.read()
+
+    attempts = 3
+    attempt = 0
+    fail_exception = Exception("Unknown failure in URL fetch")
+
+    # Attempt three times and increase the timeout each time
+    while attempt < attempts:
+        try:
+            timeout = 10 * (attempt + 1)
+            http = urllib2.urlopen(request, timeout=timeout)
+            return http.read()
+        except Exception, e:
+            fail_exception = e
+            attempt += 1
+            utils.log('Error fetching URL: "%s". Attempting to retry URL fetch %d/%d' % (e, attempt, attempts))
+
+    # Pass the last exception though
+    raise Exception(fail_exception)
 
 def fetch_protected_url(url):
     """ For protected URLs we add or Auth header when fetching
