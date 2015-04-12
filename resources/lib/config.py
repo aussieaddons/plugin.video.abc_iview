@@ -40,7 +40,7 @@ try:
 except AttributeError:
     os_string = ''
 
-user_agent = '%s add-on for XBMC %s%s' % (NAME, VERSION, os_string)
+user_agent = '%s add-on for XBMC/Kodi %s%s' % (NAME, VERSION, os_string)
 
 base_url     = 'http://www.abc.net.au/iview/'
 config_url   = 'http://www.abc.net.au/iview/xml/config.xml?r=%d' % api_version

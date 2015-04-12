@@ -145,7 +145,7 @@ def log_xbmc_platform_version():
     """
     version = get_xbmc_version()
     platform = get_platform()
-    log("XBMC %s running on %s" % (version, platform))
+    log("XBMC/Kodi %s running on %s" % (version, platform))
 
 
 def get_file_dir():
