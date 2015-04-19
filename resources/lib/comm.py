@@ -26,7 +26,13 @@ import utils
 import gzip
 from StringIO import StringIO
 
-cache = False
+try:
+    import StorageServer
+except:
+    utils.log("script.common.plugin.cache not found!")
+    import storageserverdummy as StorageServer
+
+cache = StorageServer.StorageServer(config.ADDON_ID, 1)
 
 class JsonRedirectHandler(urllib2.HTTPRedirectHandler): 
     def http_error_301(self, req, fp, code, msg, headers):
@@ -44,7 +50,7 @@ def fetch_url(url, headers={}):
         'User-Agent' : config.user_agent
     }.items()))
 
-    attempts = 3
+    attempts = 10
     attempt = 0
     fail_exception = Exception("Unknown failure in URL fetch")
 
@@ -76,7 +82,6 @@ def get_config():
     iview_config = fetch_url(config.config_url)
     return parse.parse_config(iview_config)
 
-
 def get_auth(iview_config):
     """This function performs an authentication handshake with iView.
         Among other things, it tells us if the connection is unmetered,
@@ -94,15 +99,21 @@ def get_categories(iview_config):
     categories = parse.parse_categories(category_data)
     return categories
 
-def get_programme_from_feed(keyword):
+def get_feed(keyword):
+    utils.log("Fetching feed")
     url = config.feed_url + '?keyword=' + keyword
-    feed = fetch_protected_url(url)
+    feed = cache.cacheFunction(fetch_protected_url, url)
+    return feed
+
+def get_programme_from_feed(keyword):
+    utils.log("Getting programme from feed (%s)" % keyword)
+    feed = get_feed(keyword)
     shows = parse.parse_programme_from_feed(feed)
     return shows
 
 def get_series_from_feed(series, category='0-z'):
-    url = config.feed_url + '?keyword=' + category
-    feed = fetch_protected_url(url)
+    utils.log("Fetching series feed")
+    feed = get_feed(category)
     programs = parse.parse_programs_from_feed(feed)
     filtered = []
     for p in programs:

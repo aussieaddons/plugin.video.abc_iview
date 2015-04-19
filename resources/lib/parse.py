@@ -31,12 +31,7 @@ import json
 
 import xml.etree.ElementTree as ET
 
-# Try importing default modules, but if that doesn't work
-# we might be old platforms with bundled deps
-try:
-    from BeautifulSoup import BeautifulStoneSoup
-except ImportError:
-    from deps.BeautifulSoup import BeautifulStoneSoup
+from BeautifulSoup import BeautifulStoneSoup
 
 # This is a throwaway variable to deal with a python bug with strptime:
 #   ImportError: Failed to import _strptime because the import lockis
