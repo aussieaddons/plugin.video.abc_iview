@@ -97,9 +97,14 @@ def get_xbmc_log():
     """
     log_path = xbmc.translatePath('special://logpath')
 
-    log_file_path = os.path.join(log_path, 'xbmc.log')
-    if not os.path.isfile(log_file_path):
+    test_path = os.path.join(log_path, 'kodi.log')
+    if os.path.isfile(os.path.join(log_path, 'kodi.log')):
         log_file_path = os.path.join(log_path, 'kodi.log')
+    elif os.path.isfile(os.path.join(log_path, 'xbmc.log')):
+        log_file_path = os.path.join(log_path, 'xbmc.log')
+    else:
+        # No log file found
+        return None
 
     utils.log("Reading log file from \"%s\"" % log_file_path)
     with open(log_file_path, 'r') as f:

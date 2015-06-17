@@ -54,7 +54,7 @@ def fetch_url(url, headers={}):
     attempt = 0
     fail_exception = Exception("Unknown failure in URL fetch")
 
-    # Attempt three times and increase the timeout each time
+    # Attempt $attempt times and increase the timeout each time
     while attempt < attempts:
         try:
             timeout = 10 * (attempt + 1)
@@ -66,7 +66,7 @@ def fetch_url(url, headers={}):
             utils.log('Error fetching URL: "%s". Attempting to retry URL fetch %d/%d' % (e, attempt, attempts))
 
     # Pass the last exception though
-    raise Exception(fail_exception)
+    raise fail_exception
 
 def fetch_protected_url(url):
     """ For protected URLs we add or Auth header when fetching

@@ -46,8 +46,7 @@ base_url     = 'http://www.abc.net.au/iview/'
 config_url   = 'http://www.abc.net.au/iview/xml/config.xml?r=%d' % api_version
 auth_url     = 'http://tviview.abc.net.au/iview/auth/?v2'
 programs_url = 'http://iview.abc.net.au/api/search/programs'
-feed_url     = 'https://tviview.abc.net.au/iview/feed/samsung/'
-
+feed_url     = 'https://tviview.abc.net.au/iview/feed/lg/'
 
 series_url   = 'http://www.abc.net.au/iview/api/series_mrss.htm?id=%s'
 redirect_url = 'http://iview.abc.net.au/redirect/legacy/?url='

@@ -195,6 +195,11 @@ def handle_error(err=None):
     traceback_str = traceback.format_exc()
     log(traceback_str)
     report_issue = False
+
+    # Don't show any dialogs when user cancels
+    if traceback_str.find('SystemExit') > 0:
+        return
+
     d = xbmcgui.Dialog()
     if d:
         message = dialog_error(err)
