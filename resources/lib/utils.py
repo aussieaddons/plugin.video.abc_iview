@@ -209,6 +209,7 @@ def handle_error(err=None):
 
         # Some transient network errors we don't want any reports about
         if ((traceback_str.find('The read operation timed out') > 0) or
+            (traceback_str.find('IncompleteRead') > 0) or
             (traceback_str.find('HTTP Error 404: Not Found') > 0)):
             send_error = False
 
