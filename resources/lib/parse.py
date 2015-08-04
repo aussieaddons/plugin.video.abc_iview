@@ -169,7 +169,15 @@ def parse_programs_from_feed(data):
             except:
                 pass
 
-        p.description   = item.find('description').text
+        description = item.find('description').text
+        description_match = re.search('^(?P<plot>.*) CAST: (?P<cast>.*)$', description)
+        if description_match:
+            description_parts = description_match.groupdict()
+            p.cast = description_parts.get('cast')
+            p.description = description_parts.get('plot')
+        else:
+            p.description = description
+
         p.url           = item.find('{http://www.abc.net.au/tv/mrss}videoAsset').text
         p.thumbnail     = item.find('{http://search.yahoo.com/mrss/}thumbnail').attrib['url']
 

@@ -115,6 +115,7 @@ class Program(object):
         self.thumbnail = None
         self.url = None
         self.expire = None
+        self.cast = None
 
     def __repr__(self):
         return self.title
@@ -229,6 +230,12 @@ class Program(object):
         if self.expire:
             return self.expire.strftime("%Y-%m-%d %h:%m:%s")
 
+    def get_cast(self):
+        """ Return the cast
+        """
+        if self.cast:
+            return tuple(utils.descape(self.cast).replace(' and ', ', ').split(', '))
+
     def get_xbmc_list_item(self):
         """ Returns a dict of program information, in the format which
             XBMC requires for video metadata.
@@ -256,6 +263,8 @@ class Program(object):
             info_dict['episode'] = self.get_episode()
         if self.get_rating():
             info_dict['mpaa'] = self.get_rating()
+        if self.get_cast():
+            info_dict['cast'] = self.get_cast()
         return info_dict
 
 
