@@ -29,6 +29,16 @@ import issue_reporter
 
 pattern = re.compile("&(\w+?);")
 
+def get_datetime(datetime):
+    # Tue, 05 Aug 2014 14:45:00 +1000
+    try:
+        # strptime sucks. Remove the +1000 part from the end
+        datetime = re.sub(r' [+-]([0-9]){4}$', '', datetime)
+        dt = time.mktime(time.strptime(datetime, '%a, %d %b %Y %H:%M:%S'))
+        return datetime.date.fromtimestamp(dt)
+    except:
+        log("Couldn't parse date: %s" % datetime)
+    return
 
 def descape_entity(m, defs=htmlentitydefs.entitydefs):
     # callback: translate one entity to its ISO Latin value
