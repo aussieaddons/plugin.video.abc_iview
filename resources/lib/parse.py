@@ -137,19 +137,19 @@ def parse_programs_from_feed(data):
 
         if subtitle:
             # Series 2 Episode 25 Home Is Where The Hatch Is
-            title_match = re.search('^[Ss]eries\s?(?P<series>\w+)\s[Ee]p\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', subtitle)
+            title_match = re.search('^[Ss]eries\s?(?P<series>\w+)\s[Ee]p(isode)?\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', subtitle)
             if not title_match:
                 # Series 8 Episode 13
-                title_match = re.search('^[Ss]eries\s?(?P<series>\w+)\s[Ee]p\s?(?P<episode>\d+)$', subtitle)
+                title_match = re.search('^[Ss]eries\s?(?P<series>\w+)\s[Ee]p(isode)?\s?(?P<episode>\d+)$', subtitle)
             if not title_match:
                 # Episode 34 Shape Shifter
-                title_match = re.search('^[Ee]p\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', subtitle)
+                title_match = re.search('^[Ee]p(isode)?\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', subtitle)
             if not title_match:
                 # Series 10 Rylan Clark, Joanna Lumley, Ant And Dec, The Vaccines
                 title_match = re.search('^[Ss]eries\s?(?P<series>\d+)\s(?P<episode_title>.*)$', subtitle)
             if not title_match:
                 # Episode 5
-                title_match = re.search('^[Ee]p\s?(?P<episode>\d+)$', subtitle)
+                title_match = re.search('^[Ee]p(isode)?\s?(?P<episode>\d+)$', subtitle)
             if not title_match:
                 p.episode_title = subtitle
 
