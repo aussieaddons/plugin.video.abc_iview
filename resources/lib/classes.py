@@ -163,7 +163,7 @@ class Program(object):
         if self.description:
             description = self.description
         if self.expire:
-            expire = "Expires: %s" % self.date.strftime('%a, %d %b %Y')
+            expire = "Expires: %s" % self.expire.strftime('%a, %d %b %Y')
             description = "%s\n%s" % (description, expire)
         return utils.descape(description)
 
