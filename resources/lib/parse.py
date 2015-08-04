@@ -137,19 +137,19 @@ def parse_programs_from_feed(data):
 
         if subtitle:
             # Series 2 Episode 25 Home Is Where The Hatch Is
-            title_match = re.search('^[Ss]eries\s?(?P<series>\w+)\s[Ee]pisode\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', subtitle)
+            title_match = re.search('^[Ss]eries\s?(?P<series>\w+)\s[Ee]p\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', subtitle)
             if not title_match:
                 # Series 8 Episode 13
-                title_match = re.search('^[Ss]eries\s?(?P<series>\w+)\s[Ee]pisode\s?(?P<episode>\d+)$', subtitle)
+                title_match = re.search('^[Ss]eries\s?(?P<series>\w+)\s[Ee]p\s?(?P<episode>\d+)$', subtitle)
             if not title_match:
                 # Episode 34 Shape Shifter
-                title_match = re.search('^[Ee]pisode\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', subtitle)
+                title_match = re.search('^[Ee]p\s?(?P<episode>\d+)\s(?P<episode_title>.*)$', subtitle)
             if not title_match:
                 # Series 10 Rylan Clark, Joanna Lumley, Ant And Dec, The Vaccines
                 title_match = re.search('^[Ss]eries\s?(?P<series>\d+)\s(?P<episode_title>.*)$', subtitle)
             if not title_match:
                 # Episode 5
-                title_match = re.search('^[Ee]pisode\s?(?P<episode>\d+)$', subtitle)
+                title_match = re.search('^[Ee]p\s?(?P<episode>\d+)$', subtitle)
             if not title_match:
                 p.episode_title = subtitle
 
@@ -185,17 +185,8 @@ def parse_programs_from_feed(data):
         except:
             utils.log("Couldn't parse program duration: %s" % duration)
 
-        # Tue, 05 Aug 2014 14:45:00 +1000
-        pubdate = item.find('pubDate').text
-        try:
-            # Tue, 05 Aug 2014 14:45:00 +1000
-            pubdate = item.find('pubDate').text
-            # strptime sucks. Remove the +1000 part from the end
-            pubdate = re.sub(r' [+-]([0-9]){4}$', '', pubdate)
-            dt = time.mktime(time.strptime(pubdate, '%a, %d %b %Y %H:%M:%S'))
-            p.date = datetime.date.fromtimestamp(dt)
-        except:
-            utils.log("Couldn't parse program date: %s" % pubdate)
+        p.date = utils.get_datetime(item.find('pubDate').text)
+        p.expire = utils.get_datetime(item.find('{http://www.abc.net.au/tv/mrss}expireDate').text)
 
         programs_list.append(p)
 

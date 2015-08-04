@@ -60,7 +60,7 @@ class Series(object):
 
     def get_season(self):
         """ Return an integer of the Series, discovered by a regular
-            expression from the orginal title, unless its not available,
+            expression from the original title, unless its not available,
             then a 0 will be returned.
         """
         season = re.search('^.* Series (?P<season>\d+)$', self.get_title())
@@ -114,6 +114,7 @@ class Program(object):
         self.date = datetime.datetime.now()
         self.thumbnail = None
         self.url = None
+        self.expire = None
 
     def __repr__(self):
         return self.title
@@ -142,10 +143,12 @@ class Program(object):
         if (self.get_season() and self.get_episode()):
             # Series and episode information
             title = "%s (S%02dE%02d)" % (title, self.get_season(), self.get_episode())
-        else:
-            if self.get_episode():
-                # Only episode information
-                title = "%s (E%02d)" % (title, self.get_episode())
+        elif self.get_episode():
+            # Only episode information
+            title = "%s (E%02d)" % (title, self.get_episode())
+        elif self.get_season():
+            # Only season information
+            title = "%s (S%02d)" % (title, self.get_season())
 
         if self.get_episode_title():
             title = "%s: %s" % (title, self.get_episode_title())
@@ -217,6 +220,12 @@ class Program(object):
         if self.url:
             return utils.descape(self.url)
 
+    def get_expire(self):
+        """ Returns the expiry date
+        """
+        if self.expire:
+            return self.expire.strftime("(%Y-%m-%d %h:%m:%s")
+
     def get_xbmc_list_item(self):
         """ Returns a dict of program information, in the format which
             XBMC requires for video metadata.
@@ -244,6 +253,8 @@ class Program(object):
             info_dict['episode'] = self.get_episode()
         if self.get_rating():
             info_dict['mpaa'] = self.get_rating()
+        if self.get_expire():
+            info_dict['lastplayed'] = self.get_expire()
         return info_dict
 
 
