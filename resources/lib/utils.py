@@ -19,7 +19,7 @@
 #  along with this plugin. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import os, sys, re, traceback, time
+import os, sys, re, traceback, time, datetime
 import htmlentitydefs, cgi, unicodedata, urllib
 import urllib2, socket
 import textwrap
@@ -29,15 +29,15 @@ import issue_reporter
 
 pattern = re.compile("&(\w+?);")
 
-def get_datetime(datetime):
+def get_datetime(timestamp):
     # Tue, 05 Aug 2014 14:45:00 +1000
     try:
         # strptime sucks. Remove the +1000 part from the end
-        datetime = re.sub(r' [+-]([0-9]){4}$', '', datetime)
-        dt = time.mktime(time.strptime(datetime, '%a, %d %b %Y %H:%M:%S'))
+        timestamp_fixed = re.sub(r' [+-]([0-9]){4}$', '', timestamp)
+        dt = time.mktime(time.strptime(timestamp_fixed, '%a, %d %b %Y %H:%M:%S'))
         return datetime.date.fromtimestamp(dt)
     except:
-        log("Couldn't parse date: %s" % datetime)
+        log_error("Couldn't parse timestamp: %s" % timestamp)
     return
 
 def descape_entity(m, defs=htmlentitydefs.entitydefs):
