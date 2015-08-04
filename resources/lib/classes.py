@@ -157,10 +157,15 @@ class Program(object):
 
     def get_description(self):
         """ Return a string the program description, after running it through
-            the descape.
+            the descape. Add the expires date to the end, if available
         """
+        description = ""
         if self.description:
-            return utils.descape(self.description)
+            description = self.description
+        if self.expire:
+            expire = "Expires: %s" % self.date.strftime('%a, %d %b %Y')
+            description = "%s\n%s" % (description, expire)
+        return utils.descape(description)
 
     def get_category(self):
         """ Return a string of the category. E.g. Comedy
@@ -175,13 +180,11 @@ class Program(object):
             return utils.descape(self.rating)
 
     def get_duration(self):
-        """ Return a string representing the duration of the program.
-            E.g. 00:30 (30 minutes)
+        """ Return the number of seconds as an int
         """
         if self.duration:
             seconds = int(self.duration)
-            minutes = seconds / 60
-            return minutes
+            return seconds
 
     def get_date(self):
         """ Return a string of the date in the format 2010-02-28
@@ -224,7 +227,7 @@ class Program(object):
         """ Returns the expiry date
         """
         if self.expire:
-            return self.expire.strftime("(%Y-%m-%d %h:%m:%s")
+            return self.expire.strftime("%Y-%m-%d %h:%m:%s")
 
     def get_xbmc_list_item(self):
         """ Returns a dict of program information, in the format which
