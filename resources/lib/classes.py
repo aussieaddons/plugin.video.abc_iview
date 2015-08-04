@@ -256,8 +256,6 @@ class Program(object):
             info_dict['episode'] = self.get_episode()
         if self.get_rating():
             info_dict['mpaa'] = self.get_rating()
-        if self.get_expire():
-            info_dict['lastplayed'] = self.get_expire()
         return info_dict
 
 
