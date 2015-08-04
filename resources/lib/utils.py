@@ -35,7 +35,7 @@ def get_datetime(timestamp):
         # strptime sucks. Remove the +1000 part from the end
         timestamp_fixed = re.sub(r' [+-]([0-9]){4}$', '', timestamp)
         dt = time.mktime(time.strptime(timestamp_fixed, '%a, %d %b %Y %H:%M:%S'))
-        return datetime.date.fromtimestamp(dt)
+        return datetime.datetime.fromtimestamp(dt)
     except:
         log_error("Couldn't parse timestamp: %s" % timestamp)
     return

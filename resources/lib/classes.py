@@ -164,9 +164,15 @@ class Program(object):
         if self.description:
             description = self.description
         if self.expire:
-            expire = "Expires: %s" % self.expire.strftime('%a, %d %b %Y')
+            expire = "Expires: %s" % self.expire.strftime('%a, %d %b %Y at %I:%M%p')
             description = "%s\n%s" % (description, expire)
         return utils.descape(description)
+
+    def get_plotoutline(self):
+        """" Return a basic description of the program
+        """
+        if self.description:
+            return utils.descape(self.description)
 
     def get_category(self):
         """ Return a string of the category. E.g. Comedy
@@ -249,8 +255,8 @@ class Program(object):
             info_dict['genre'] = self.get_category()
         if self.get_description():
             info_dict['plot'] = self.get_description()
-        if self.get_description():
-            info_dict['plotoutline'] = self.get_description()
+        if self.get_plotoutline():
+            info_dict['plotoutline'] = self.get_plotoutline()
         if self.get_duration():
             info_dict['duration'] = self.get_duration()
         if self.get_year():
