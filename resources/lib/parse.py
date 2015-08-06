@@ -170,7 +170,7 @@ def parse_programs_from_feed(data):
                 pass
 
         description = item.find('description').text
-        description_match = re.search('^(?P<plot>.*) CAST: (?P<cast>.*)$', description)
+        description_match = re.search('^(?P<plot>.*) (CAST|Cast): (?P<cast>.*)$', description)
         if description_match:
             description_parts = description_match.groupdict()
             p.cast = description_parts.get('cast')
