@@ -24,6 +24,7 @@ import utils
 import datetime
 import urllib
 import time
+import utils
 
 class Series(object):
 
@@ -180,11 +181,18 @@ class Program(object):
             return utils.descape(self.rating)
 
     def get_duration(self):
-        """ Return the number of seconds as an int
+        """ Return the duration
         """
         if self.duration:
+            version = utils.get_xbmc_major_version()
             seconds = int(self.duration)
-            return seconds
+            if ver >= 15:
+                # Kodi v15 uses seconds
+                return seconds
+            else:
+                # Older versions use minutes
+                minutes = seconds / 60
+                return minutes
 
     def get_date(self):
         """ Return a string of the date in the format 2010-02-28

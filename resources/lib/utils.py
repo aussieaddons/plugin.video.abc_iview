@@ -150,6 +150,13 @@ def get_xbmc_version():
     return version
 
 
+def get_xbmc_major_version():
+    """ Return the major version number of the running XBMC
+    """
+    version = get_xbmc_version().split('.')[0]
+    return int(version)
+
+
 def log_xbmc_platform_version():
     """ Log our XBMC version and platform for debugging
     """
