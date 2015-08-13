@@ -186,7 +186,7 @@ class Program(object):
         if self.duration:
             version = utils.get_xbmc_major_version()
             seconds = int(self.duration)
-            if ver >= 15:
+            if version >= 15:
                 # Kodi v15 uses seconds
                 return seconds
             else:
