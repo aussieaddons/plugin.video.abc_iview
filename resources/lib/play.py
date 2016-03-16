@@ -20,23 +20,31 @@
 #
 
 import sys
-import classes, comm, config, utils
-import xbmc, xbmcgui, xbmcplugin, xbmcaddon
+import classes
+import comm
+import config
+import utils
+import xbmcgui
+import xbmcplugin
+import xbmcaddon
 
 def play(url):
-    addon = xbmcaddon.Addon(config.ADDON_ID)
 
     try:
         p = classes.Program()
         p.parse_xbmc_url(url)
 
-        listitem=xbmcgui.ListItem(label=p.get_list_title(), iconImage=p.thumbnail, thumbnailImage=p.thumbnail)
+        listitem=xbmcgui.ListItem(label=p.get_list_title(),
+                                  iconImage=p.thumbnail,
+                                  thumbnailImage=p.thumbnail,
+                                  path=p.get_url())
+
         listitem.setInfo('video', p.get_xbmc_list_item())
 
         if hasattr(listitem, 'addStreamInfo'):
             listitem.addStreamInfo('audio', p.get_xbmc_audio_stream_info())
             listitem.addStreamInfo('video', p.get_xbmc_video_stream_info())
-    
-        xbmc.Player().play(p.get_url(), listitem)
+
+        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, listitem=listitem)
     except:
         utils.handle_error("Unable to play video")
