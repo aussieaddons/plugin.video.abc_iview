@@ -46,23 +46,25 @@ def play(url):
         listitem.setInfo('video', p.get_xbmc_list_item())
 
         #add subtitles if available
-        profile = xbmcaddon.Addon().getAddonInfo('profile')
-        path = xbmc.translatePath(profile).decode('utf-8')
-        if not os.path.isdir(path):
-            os.makedirs(path)
-        subfile = xbmc.translatePath(os.path.join(path, 'subtitles.eng.srt'))
-        if os.path.isfile(subfile):
-            os.remove(subfile)
-        suburl = (config.subtitle_url+p.url[p.url.rfind('/')
-                    +1:p.url.rfind('_')]+'.xml')
-        try:
-            data = urllib2.urlopen(suburl).read()
-            f = open(subfile, 'w')
-            f.write(parse.convert_to_srt(data))
-            f.close()
-            listitem.setSubtitles([subfile])
-        except:
-            utils.log('Subtitles not available for this program')
+        addon = xbmcaddon.Addon(config.ADDON_ID)
+        if addon.getSetting('subtitles_enabled') == 'true':
+            profile = xbmcaddon.Addon().getAddonInfo('profile')
+            path = xbmc.translatePath(profile).decode('utf-8')
+            if not os.path.isdir(path):
+                os.makedirs(path)
+            subfile = xbmc.translatePath(os.path.join(path, 'subtitles.eng.srt'))
+            if os.path.isfile(subfile):
+                os.remove(subfile)
+            suburl = (config.subtitle_url+p.url[p.url.rfind('/')
+                        +1:p.url.rfind('_')]+'.xml')
+            try:
+                data = urllib2.urlopen(suburl).read()
+                f = open(subfile, 'w')
+                f.write(parse.convert_to_srt(data))
+                f.close()
+                listitem.setSubtitles([subfile])
+            except:
+                utils.log('Subtitles not available for this program')
 
         if hasattr(listitem, 'addStreamInfo'):
             listitem.addStreamInfo('audio', p.get_xbmc_audio_stream_info())
