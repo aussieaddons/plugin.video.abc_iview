@@ -47,6 +47,7 @@ def play(url):
 
         #add subtitles if available
         addon = xbmcaddon.Addon(config.ADDON_ID)
+        subtitles = None
         if addon.getSetting('subtitles_enabled') == 'true':
             profile = xbmcaddon.Addon().getAddonInfo('profile')
             path = xbmc.translatePath(profile).decode('utf-8')
@@ -62,7 +63,11 @@ def play(url):
                 f = open(subfile, 'w')
                 f.write(parse.convert_to_srt(data))
                 f.close()
-                listitem.setSubtitles([subfile])
+                if hasattr(listitem, 'setSubtitles'):
+                    # This function only supported from Kodi v14+
+                    listitem.setSubtitles([subfile])
+                else:
+                    subtitles = True
             except:
                 utils.log('Subtitles not available for this program')
 
@@ -71,5 +76,15 @@ def play(url):
             listitem.addStreamInfo('video', p.get_xbmc_video_stream_info())
 
         xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, listitem=listitem)
+
+        # Enable subtitles for XBMC v13
+        if addon.getSetting('subtitles_enabled') == "true":
+            if subtitles == True:
+                if not hasattr(listitem, 'setSubtitles'):
+                    player = xbmc.Player()
+                    while not player.isPlaying():
+                        xbmc.sleep(100) # wait until video is being played
+                        player.setSubtitles(subfile)
+
     except:
         utils.handle_error("Unable to play video")
