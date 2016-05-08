@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <category label="10080">
+    <!-- Subtitles -->
+    <setting id="subtitles_enabled" type="bool" label="10093" default="false" />
+  </category>
+</settings>

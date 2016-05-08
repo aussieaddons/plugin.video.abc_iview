@@ -20,10 +20,14 @@
 #
 
 import sys
+import os
+import urllib2
 import classes
 import comm
 import config
+import parse
 import utils
+import xbmc
 import xbmcgui
 import xbmcplugin
 import xbmcaddon
@@ -41,10 +45,46 @@ def play(url):
 
         listitem.setInfo('video', p.get_xbmc_list_item())
 
+        #add subtitles if available
+        addon = xbmcaddon.Addon(config.ADDON_ID)
+        subtitles = None
+        if addon.getSetting('subtitles_enabled') == 'true':
+            profile = xbmcaddon.Addon().getAddonInfo('profile')
+            path = xbmc.translatePath(profile).decode('utf-8')
+            if not os.path.isdir(path):
+                os.makedirs(path)
+            subfile = xbmc.translatePath(os.path.join(path, 'subtitles.eng.srt'))
+            if os.path.isfile(subfile):
+                os.remove(subfile)
+            suburl = (config.subtitle_url+p.url[p.url.rfind('/')
+                        +1:p.url.rfind('_')]+'.xml')
+            try:
+                data = urllib2.urlopen(suburl).read()
+                f = open(subfile, 'w')
+                f.write(parse.convert_to_srt(data))
+                f.close()
+                if hasattr(listitem, 'setSubtitles'):
+                    # This function only supported from Kodi v14+
+                    listitem.setSubtitles([subfile])
+                else:
+                    subtitles = True
+            except:
+                utils.log('Subtitles not available for this program')
+
         if hasattr(listitem, 'addStreamInfo'):
             listitem.addStreamInfo('audio', p.get_xbmc_audio_stream_info())
             listitem.addStreamInfo('video', p.get_xbmc_video_stream_info())
 
         xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, listitem=listitem)
+
+        # Enable subtitles for XBMC v13
+        if addon.getSetting('subtitles_enabled') == "true":
+            if subtitles == True:
+                if not hasattr(listitem, 'setSubtitles'):
+                    player = xbmc.Player()
+                    while not player.isPlaying():
+                        xbmc.sleep(100) # wait until video is being played
+                        player.setSubtitles(subfile)
+
     except:
         utils.handle_error("Unable to play video")

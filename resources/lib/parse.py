@@ -95,7 +95,7 @@ def parse_categories(soup):
 def parse_programme_from_feed(data):
     xml = ET.fromstring(data)
     show_list = []
-    
+
     for item in xml.getiterator('item'):
 
         title = item.find('title').text
@@ -192,4 +192,26 @@ def parse_programs_from_feed(data):
 
     return programs_list
 
+
+
+def convert_timecode(start, end):
+    """ convert iview xml timecode attribute to subrip srt standard"""
+    return start[:8]+','+start[9:11]+'0'+' --> '+end[:8]+','+end[9:11]+'0'
+
+
+def convert_to_srt(data):
+    """ convert our iview xml subtitles to subrip SRT format"""
+    tree = ET.fromstring(data)
+    root = tree.find('reel')
+    result = ""
+    count = 1
+    for elem in root.findall('title'):
+        result += str(count) + '\n'
+        result += convert_timecode(elem.get('start'), elem.get('end'))+'\n'
+        st = elem.text.split('|')
+        for line in st:
+            result += line + '\n'
+        result += '\n'
+        count +=1
+    return result.encode('utf-8')
 
