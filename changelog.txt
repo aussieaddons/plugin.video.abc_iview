@@ -1,9 +1,24 @@
-[B]Version 1.6.8[/B]
+[B]Version master[/B]
+- Add pre-Kodi v14 support for subtitles
+- Enable subtitles in settings
+- Enable subtitles in settings
+- Enable subtitles in settings
+- Add support for subtitles
+- Add support for subtitles
+- Add support for subtitles
+- Add support for subtitles
+- Change method of playing videos
+- Fix incorrect variable name
+- Use minutes for older XBMC/Kodi versions
+
+[B]Version v1.6.8[/B]
+- Version 1.6.8
 - Remove expire date from lastplayed field
 - Fix incorrect date variable
 - Add expiry date to end of description and fix duration
 - Fix datetime parsing
 - Parse episode correctly for title containing either Ep or Episode
+- Merge branch 'master' of github.com:andybotting/xbmc-addon-abc-iview
 - Merge pull request #1130 from rgc99/Series_and_expire
 - Correct series  parsing. Get expire date and send to kodi in lastplayed.
 - Don't allow bug report for IncompleteRead errors from API

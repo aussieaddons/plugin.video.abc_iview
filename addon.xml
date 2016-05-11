@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><addon id="plugin.video.abc_iview" name="ABC iView" provider-name="Andy Botting" version="1.6.8">
+<?xml version="1.0" ?><addon id="plugin.video.abc_iview" name="ABC iView" provider-name="Andy Botting" version="1.6.8-12-gfde4123">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.common.plugin.cache"/>
