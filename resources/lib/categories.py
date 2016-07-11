@@ -25,7 +25,8 @@ import urllib2
 import urllib
 import comm
 import utils
-import xbmc, xbmcgui, xbmcplugin
+import xbmcgui
+import xbmcplugin
 
 def make_category_list():
 
@@ -33,7 +34,9 @@ def make_category_list():
         iview_config = comm.get_config()
         categories = comm.get_categories(iview_config)
         categories = sorted(categories, key=lambda k: k['name'].lower())
-        categories.insert(0, {'name':'All', 'keyword':'0-z'})
+        # All category is disabled for now due to API issues
+        # https://github.com/andybotting/xbmc-addon-abc-iview/issues/1454
+        #categories.insert(0, {'name':'All', 'keyword':'0-z'})
 
         ok = True
         for g in categories:

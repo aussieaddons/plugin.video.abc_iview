@@ -1,4 +1,5 @@
 [B]Version master[/B]
+- Issue reporter fixes
 - Disable SSL verification to work around Apple issues
 - Add pre-Kodi v14 support for subtitles
 - Enable subtitles in settings
