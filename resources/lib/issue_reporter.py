@@ -157,6 +157,9 @@ def is_latest_version(current_version, latest_version):
     """
     if current_version.startswith('v'):
         current_version = current_version[1::]
+    if current_version.find('-') > 1:
+        # Strip git hash from version e.g. 1.6.8-12-gfde4123 to 1.6.8
+        current_version = current_version.split('-')[0]
     current_version = map(lambda v: int(v), current_version.split('.'))
     utils.log('Version check: Latest version: %s, Current version: %s' % (latest_version, current_version))
     return current_version == latest_version
