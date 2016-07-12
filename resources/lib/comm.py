@@ -54,7 +54,11 @@ def fetch_url(url, headers={}):
     attempts = 10
     attempt = 0
     fail_exception = Exception("Unknown failure in URL fetch")
-
+    
+    #monkey patch SSL context to fix SSL errors on some platforms w/ python >= 2.7.9
+    if hasattr(ssl, '_create_unverified_context'):
+        ssl._create_default_https_context = ssl._create_unverified_context
+    
     # Attempt $attempt times and increase the timeout each time
     while attempt < attempts:
         try:
