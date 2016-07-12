@@ -24,6 +24,7 @@ import config
 import parse
 import utils
 import gzip
+import ssl
 from StringIO import StringIO
 
 try:
@@ -58,7 +59,7 @@ def fetch_url(url, headers={}):
     while attempt < attempts:
         try:
             timeout = 10 * (attempt + 1)
-            http = urllib2.urlopen(request, timeout=timeout)
+            http = urllib2.urlopen(request, timeout=timeout, context=context)
             return http.read()
         except Exception, e:
             fail_exception = e
