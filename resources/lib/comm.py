@@ -59,7 +59,7 @@ def fetch_url(url, headers={}):
     while attempt < attempts:
         try:
             timeout = 10 * (attempt + 1)
-            http = urllib2.urlopen(request, timeout=timeout, context=context)
+            http = urllib2.urlopen(request, timeout=timeout)
             return http.read()
         except Exception, e:
             fail_exception = e
