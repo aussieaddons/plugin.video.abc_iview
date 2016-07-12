@@ -55,10 +55,6 @@ def fetch_url(url, headers={}):
     attempt = 0
     fail_exception = Exception("Unknown failure in URL fetch")
 
-    # Having issues with SSL verification of Apple platforms
-    # so disable it completely
-    context = ssl._create_unverified_context()
-
     # Attempt $attempt times and increase the timeout each time
     while attempt < attempts:
         try:
