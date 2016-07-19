@@ -1,3 +1,6 @@
+[B]Version master[/B]
+- Attempt to ignore SSL errors on Python 2.7.9+
+
 [B]Version v1.7.2[/B]
 - Version 1.7.2
 - Remove unset variable

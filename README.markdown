@@ -1,77 +1,52 @@
-ABC iView addon for XBMC
+ABC iView add-on for Kodi/XBMC
 ================================
 
-This addon provides a simple list of available programs from the ABC iView
-web site, and allows you to stream them with.
+This is a simple ABC iView add-on for Kodi/XBMC that allows you to stream
+iView programs.
 
-The content is only available with Australia, or you can apparently use sites
-like Unblock-US, UnoTelly or Tunlr.net (free). or your own VPN solution which
-terminates in with an AU IP address.
+The content is only available with Australia, or you can use Smart DNS/Proxies
+like Unblock-US, UnoTelly or GetFlix or your own VPN solution which
+uses an Australian endpoint.
 
-We now support streaming using both RTMP (old) and HTTP (new). In some cases
-the RTMP stream can crash XBMC, especially for older versions of XBMC.
-HTTPS streaming support is still new, but is probably more reliable and
-recommended. You can switch your streaming method from the addon settings.
-
-This addon wouldn't be possible without the great work on python-iview from
-Jeremy Visser.
-https://jeremy.visser.name/2009/08/python-iview/
+This add-on wouldn't be possible without the great work on 
+[python-iview by Jeremy Visser] [python_iview].
 
 Thanks also for contributions from:
   * sdt (Stephen Thirlwall)
   * Adam M-W
+  * Glenn Guy
 
 Installation
 ------------
 The latest stable release of this add-on is available as part of the
-[XBMC CatchUp TV AU repository] [repository].
+[XBMC CatchUp TV AU repository] [repository]. This is the recommended method
+for installation, as it'll automatically update the iView add-on when fixes
+are released.
 
-If you prefer, you can grab the stable release ZIP file by itself from the
-[Github project site download] [download].
+See the [XBMC CatchUp TV AU repository] [repository] README for installation
+steps.
 
-For the latest development version, you can grab the [GitHub generated ZIP file] [githubzip].
-
-Simply download the ZIP file to your XBMC device and install through the menu via
-System -> Settings -> Add-ons -> Install from zip file, but ensure you've
-uninstalled any previous version first.
+If you would like to test the latest development version, you can grab the
+[GitHub generated ZIP file] [githubzip]. It is recommended to set up and
+install the stable version from the repository first to ensure all the
+required dependencies are installed.
 
 Issues
 ------
-In some cases the RTMP stream can crash XBMC, especially for older versions.
-It is recommended that you use XBMC v13 (Gotham) or later and switch to HTTP
-streaming via the addon settings.
+For any issues or bug reports, please file them on the [issues page] [issues].
 
-For any other issues or bug reports, please file them on the [issues page] [issues].
-
-Please include log output if possible, using Github Gist or Pastebin.com.
-
-The location of your XBMC log file will depend on your platform.
-
-For Windows:
-```
-%APPDATA%\XBMC\temp\xbmc.log
-```
-
-For Linux:
-```
-~/.xbmc/temp/xbmc.log
-```
-
-For Mac OS X:
-```
-~/Library/Application Support/XBMC/temp/xbmc.log
-```
-
-For AppleTV:
-```
-/Users/frontrow/Library/Application Support/XBMC/temp/xbmc.log
-```
+Please include log output if possible, and the easiest way is with the Kodi
+Log Uploader add-on. See this [great guide] [logfile] for steps.
 
 Contact Me
 ----------
-For anything else, you can contact me by email at andy#andybotting.com
+For anything else, you can contact me by email <andy@andybotting.com> or Twitter: @andybotting
 
+Good luck and happy viewing.
+
+[python_iview]: https://jeremy.visser.name/2009/08/python-iview/
 [repository]: https://github.com/xbmc-catchuptv-au/repo
 [download]: https://github.com/xbmc-catchuptv-au/repo/tree/master/plugin.video.abc_iview
 [githubzip]: https://github.com/andybotting/xbmc-addon-abc-iview/archive/master.zip
 [issues]: https://github.com/andybotting/xbmc-addon-abc-iview/issues
+[logfile]: http://kodi.wiki/view/Log_file/Easy
