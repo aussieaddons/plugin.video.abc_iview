@@ -25,6 +25,7 @@ import datetime
 import urllib
 import time
 import utils
+from HTMLParser import HTMLParser
 
 class Series(object):
 
@@ -116,6 +117,7 @@ class Program(object):
         self.thumbnail = None
         self.url = None
         self.expire = None
+        self.link = None
 
     def __repr__(self):
         return self.title
@@ -309,7 +311,7 @@ class Program(object):
         if self.date:          d['date'] = self.date.strftime("%Y-%m-%d %H:%M:%S")
         if self.thumbnail:     d['thumbnail'] = self.thumbnail
         if self.url:           d['url'] = self.url
-
+        if self.link:          d['link'] = self.link
         return utils.make_url(d)
 
 
@@ -327,7 +329,13 @@ class Program(object):
         self.rating        = d.get('rating')
         self.url           = d.get('url')
         self.thumbnail     = urllib.unquote_plus(d.get('thumbnail'))
+        self.link          = d.get('link')
         if d.has_key('date'):
            timestamp = time.mktime(time.strptime(d['date'], '%Y-%m-%d %H:%M:%S'))
            self.date = datetime.date.fromtimestamp(timestamp)
 
+class MyHTMLParser(HTMLParser):
+    def handle_data(self, data):
+        # Get metadata which includes subtitles link
+        if 'var videoParams' in data:
+            self.data = data
