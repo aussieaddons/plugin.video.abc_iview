@@ -59,7 +59,7 @@ def play(url):
                 os.remove(subfile)
             
             try:
-                parser = classes.MyHTMLParser()
+                parser = classes.HTMLMetadataParser()
                 htmldata = urllib2.urlopen(p.link).read()
                 parser.feed(htmldata)
                 rawjson = parser.data.strip()[18:parser.data.find('};')-6]

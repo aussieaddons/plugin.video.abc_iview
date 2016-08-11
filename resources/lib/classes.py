@@ -334,7 +334,7 @@ class Program(object):
            timestamp = time.mktime(time.strptime(d['date'], '%Y-%m-%d %H:%M:%S'))
            self.date = datetime.date.fromtimestamp(timestamp)
 
-class MyHTMLParser(HTMLParser):
+class HTMLMetadataParser(HTMLParser):
     def handle_data(self, data):
         # Get metadata which includes subtitles link
         if 'var videoParams' in data:
