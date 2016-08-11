@@ -184,6 +184,11 @@ def parse_programs_from_feed(data):
             p.duration = int(duration)
         except:
             utils.log("Couldn't parse program duration: %s" % duration)
+            
+        try:
+            p.link = item.find('link').text
+        except:
+            pass
 
         p.date = utils.get_datetime(item.find('pubDate').text)
         p.expire = utils.get_datetime(item.find('{http://www.abc.net.au/tv/mrss}expireDate').text)
@@ -206,6 +211,8 @@ def convert_to_srt(data):
     result = ""
     count = 1
     for elem in root.findall('title'):
+        if elem.text == None:
+            continue
         result += str(count) + '\n'
         result += convert_timecode(elem.get('start'), elem.get('end'))+'\n'
         st = elem.text.split('|')

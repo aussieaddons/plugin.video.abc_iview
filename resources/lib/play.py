@@ -22,6 +22,7 @@
 import sys
 import os
 import urllib2
+import json
 import classes
 import comm
 import config
@@ -56,9 +57,14 @@ def play(url):
             subfile = xbmc.translatePath(os.path.join(path, 'subtitles.eng.srt'))
             if os.path.isfile(subfile):
                 os.remove(subfile)
-            suburl = (config.subtitle_url+p.url[p.url.rfind('/')
-                        +1:p.url.rfind('_')]+'.xml')
+            
             try:
+                parser = classes.HTMLMetadataParser()
+                htmldata = urllib2.urlopen(p.link).read()
+                parser.feed(htmldata)
+                rawjson = parser.data.strip()[18:parser.data.find('};')-6]
+                utils.log(rawjson)
+                suburl = json.loads(rawjson)['captions']
                 data = urllib2.urlopen(suburl).read()
                 f = open(subfile, 'w')
                 f.write(parse.convert_to_srt(data))
