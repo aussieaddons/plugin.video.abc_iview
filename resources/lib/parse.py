@@ -72,13 +72,14 @@ def parse_programme_from_feed(data):
                     episode_count = houseno[1]
                     show.num_episodes = episode_count
                     break
-            if episode_count == 0: #some shows have multiple house no's
+            #some shows have multiple house no's, try matching titles
+            if episode_count == 0: 
                 for group in show_index['index']:
                     for listing in group['episodes']:
                         if listing['seriesTitle'] == title:
                             show.num_episodes = listing['episodeCount']
                             break
-            
+                    
             show.title = title
             if u'title' in item:
                 show.description = item[u'title']
@@ -133,7 +134,7 @@ def parse_programs_from_feed(data, episode_count):
             duration = item['duration']
             p.duration = int(duration)
         except:
-            if 'duration' in locals():
+            if 'duration' in item: # Live streams have no duration
                 utils.log("Couldn't parse program duration: %s" % duration)
             
         try:
@@ -159,6 +160,30 @@ def parse_other_episodes(url):
         related_list.append(episode['href'])
     return related_list
 
+def parse_m3u8_streams(m3u8, quality):
+    """ Parse the retrieved m3u8 stream list into a list of dictionaries
+        then return the url for the highest quality stream. Different 
+        handling is required of live m3u8 files as they seem to only contain
+        the destination filename and not the domain/path.""" 
+    data = m3u8.splitlines()
+    count = 1
+    m3uList = []
+    
+    while count < len(data):
+        line = data[count]
+        line = line.strip('#EXT-X-STREAM-INF:').strip('PROGRAM-ID=1,')
+        line = line[:line.find('CODECS')]
+        if line.endswith(','):
+            line = line[:-1]
+        line = line.strip().split(',')
+        linelist = [i.split('=') for i in line]
+        linelist.append(['URL',data[count+1]])
+        m3uList.append(dict((i[0], i[1]) for i in linelist))
+        count += 2
+    
+    sorted_m3uList = sorted(m3uList, key=lambda k: int(k['BANDWIDTH']))
+    stream = sorted_m3uList[int(quality)]['URL']   
+    return stream
 
 def convert_timecode(start, end):
     """ convert iview xml timecode attribute to subrip srt standard"""

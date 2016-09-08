@@ -21,6 +21,7 @@
 
 import sys
 import os
+import urllib
 import urllib2
 import json
 import classes
@@ -41,11 +42,19 @@ def play(url):
         auth = utils.get_auth(p)
         akamai_auth = utils.get_akamai_auth(auth)
         akamai_url = "{0}?hdnea={1}".format(p.get_url(), akamai_auth)
+        streams_list = comm.fetch_url_withcookies(akamai_url)
+        quality = xbmcaddon.Addon().getSetting('HLSQUALITY')
+        stream_url = parse.parse_m3u8_streams(streams_list, quality)
+        cookies = utils.cookies_to_string(comm.cj)
+        url_to_play = '{0}|{1}={2}&Cookie={3}'.format(stream_url, 
+                        config.user_agent[0][0], 
+                        urllib.quote(config.user_agent[0][1]), 
+                        urllib.quote(cookies))
         
         listitem=xbmcgui.ListItem(label=p.get_list_title(),
                                   iconImage=p.thumbnail,
                                   thumbnailImage=p.thumbnail,
-                                  path = akamai_url)
+                                  path=url_to_play)
 
         listitem.setInfo('video', p.get_xbmc_list_item())
 

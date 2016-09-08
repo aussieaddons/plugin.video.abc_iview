@@ -46,6 +46,16 @@ def get_akamai_auth(url):
     res = urllib2.urlopen(url)
     return res.read()
 
+def cookies_to_string(cookiejar):
+    result = ""
+    for cookie in cookiejar:
+        result += cookie.name
+        result += '='
+        result += cookie.value
+        result += '; '
+    result = result[:-1]
+    return result 
+
 def get_datetime(timestamp):
     # 2016-04-18 07:00:00
     try:

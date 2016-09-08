@@ -40,15 +40,16 @@ try:
 except AttributeError:
     os_string = ''
 
-user_agent = '%s add-on for XBMC/Kodi %s%s' % (NAME, VERSION, os_string)
+user_agent = [('User-Agent', 'Android SDK HW (5.31.0; 6.0; htc_himauhl; arm64-v8a)')]
+secret = 'android.content.res.Resources'
 
 base_url     = 'http://iview.abc.net.au'
 config_url   = 'http://iview.abc.net.au/api/navigation/mobile/2/?device=android-mobile&'
 auth_url     = '/auth/hls/sign?'
 index_url    = 'http://iview.abc.net.au/api/index?device=android-mobile&fields=seriesTitle,episodeCount,href'
-feed_url     = ' http://iview.abc.net.au/api/{0}?device=android-mobile&sort=az'
+feed_url     = 'http://iview.abc.net.au/api/{0}?device=android-mobile&sort=az'
 
-secret = 'android.content.res.Resources'
+
 
 
 

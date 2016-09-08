@@ -27,6 +27,7 @@ import gzip
 import ssl
 import json
 import threading
+import cookielib
 from StringIO import StringIO
 
 try:
@@ -36,6 +37,10 @@ except:
     import storageserverdummy as StorageServer
 
 cache = StorageServer.StorageServer(config.ADDON_ID, 1)
+cj = cookielib.CookieJar()
+handler = urllib2.HTTPCookieProcessor(cj)
+opener = urllib2.build_opener(handler)
+opener.addheaders = config.user_agent
 
 class JsonRedirectHandler(urllib2.HTTPRedirectHandler): 
     def http_error_301(self, req, fp, code, msg, headers):
@@ -80,6 +85,11 @@ def fetch_protected_url(url):
     """
     headers = {'Authorization': 'Basic ZmVlZHRlc3Q6YWJjMTIz'}
     return fetch_url(url, headers)
+
+def fetch_url_withcookies(url, data=None):
+    """ Fetches a URL using a cookiejar opener"""
+    http = opener.open(url, data=None)
+    return http.read()
 
 def get_categories():
     """Returns the list of categories
