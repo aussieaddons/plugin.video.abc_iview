@@ -41,7 +41,7 @@ if __name__ == "__main__" :
       categories.make_category_list()
    elif params.has_key("play"):
       play.play(params_str)
-   elif params.has_key("series"):
+   elif params.has_key("series_url"):
       programs.make_programs_list(params_str)
    elif params.has_key("category"):
       series.make_series_list(params_str)

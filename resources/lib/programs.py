@@ -28,7 +28,7 @@ import xbmc, xbmcgui, xbmcplugin
 def make_programs_list(url):
     try:
         params = utils.get_url(url)
-        programs = comm.get_series_from_feed(params['series'], category=params['category'])
+        programs = comm.get_series_from_feed(params['series_url'], params['episode_count'])
 
         ok = True
         for p in programs:
