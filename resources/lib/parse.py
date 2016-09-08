@@ -78,7 +78,7 @@ def parse_programme_from_feed(data):
                         if listing['seriesTitle'] == title:
                             show.num_episodes = listing['episodeCount']
                             break
-                    break
+            
             show.title = title
             if u'title' in item:
                 show.description = item[u'title']
