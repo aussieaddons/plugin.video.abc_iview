@@ -107,7 +107,7 @@ def make_url(d):
 
 
 def log(s):
-    print "[%s v%s] %s" % (config.NAME, config.VERSION, s)
+    xbmc.log("[%s v%s] %s" % (config.NAME, config.VERSION, s), level=xbmc.LOGNOTICE)
 
 
 def log_error(message=None):

@@ -42,19 +42,20 @@ def play(url):
         auth = utils.get_auth(p)
         akamai_auth = utils.get_akamai_auth(auth)
         akamai_url = "{0}?hdnea={1}".format(p.get_url(), akamai_auth)
-        streams_list = comm.fetch_url_withcookies(akamai_url)
-        quality = xbmcaddon.Addon().getSetting('HLSQUALITY')
-        stream_url = parse.parse_m3u8_streams(streams_list, quality)
-        cookies = utils.cookies_to_string(comm.cj)
-        url_to_play = '{0}|{1}={2}&Cookie={3}'.format(stream_url, 
-                        config.user_agent[0][0], 
-                        urllib.quote(config.user_agent[0][1]), 
-                        urllib.quote(cookies))
+        #Test akamai URL to see if we get HTTP Success
+        try: 
+            response = urllib2.urlopen(akamai_url)
+        except urllib2.HTTPError, e:
+            utils.handle_error('HTTPError = ' + str(e.code))
+        except urllib2.URLError, e:
+            utils.handle_error('URLError = ' + str(e.reason))
+        except httplib.HTTPException, e:
+            utils.handle_error('HTTPException')
         
         listitem=xbmcgui.ListItem(label=p.get_list_title(),
                                   iconImage=p.thumbnail,
                                   thumbnailImage=p.thumbnail,
-                                  path=url_to_play)
+                                  path=akamai_url)
 
         listitem.setInfo('video', p.get_xbmc_list_item())
 
