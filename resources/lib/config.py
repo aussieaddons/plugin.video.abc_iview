@@ -40,22 +40,16 @@ try:
 except AttributeError:
     os_string = ''
 
-user_agent = '%s add-on for XBMC/Kodi %s%s' % (NAME, VERSION, os_string)
+user_agent = [('User-Agent', 'Android SDK HW (5.31.0; 6.0; htc_himauhl; arm64-v8a)')]
+secret = 'android.content.res.Resources'
 
-base_url     = 'http://www.abc.net.au/iview/'
-config_url   = 'http://www.abc.net.au/iview/xml/config.xml?r=%d' % api_version
-auth_url     = 'http://tviview.abc.net.au/iview/auth/?v2'
-programs_url = 'http://iview.abc.net.au/api/search/programs'
-feed_url     = 'https://tviview.abc.net.au/iview/feed/lg/'
+base_url     = 'http://iview.abc.net.au'
+config_url   = 'http://iview.abc.net.au/api/navigation/mobile/2/?device=android-mobile&'
+auth_url     = '/auth/hls/sign?'
+index_url    = 'http://iview.abc.net.au/api/index?device=android-mobile&fields=seriesTitle,episodeCount,href'
+feed_url     = 'http://iview.abc.net.au/api/{0}?device=android-mobile&sort=az'
 
-series_url   = 'http://www.abc.net.au/iview/api/series_mrss.htm?id=%s'
-redirect_url = 'http://iview.abc.net.au/redirect/legacy/?url='
 
-akamai_fallback_server = 'rtmp://cp53909.edgefcs.net/ondemand'
-akamai_playpath_prefix = 'flash/playback/_definst_/'
 
-# Used for "SWF verification", a stream obfuscation technique
-swf_hash    = '96cc76f1d5385fb5cda6e2ce5c73323a399043d0bb6c687edd807e5c73c42b37'
-swf_size    = '2122'
-swf_url     = 'http://www.abc.net.au/iview/images/iview.jpg'
+
 

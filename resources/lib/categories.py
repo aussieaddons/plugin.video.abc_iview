@@ -31,16 +31,15 @@ import xbmcplugin
 def make_category_list():
 
     try:
-        iview_config = comm.get_config()
-        categories = comm.get_categories(iview_config)
+        categories = comm.get_categories()
         categories = sorted(categories, key=lambda k: k['name'].lower())
         # All category is disabled for now due to API issues
         # https://github.com/andybotting/xbmc-addon-abc-iview/issues/1454
-        #categories.insert(0, {'name':'All', 'keyword':'0-z'})
+        #categories.insert(0, {'name':'All', 'path':'index?device=android-mobile&fields=seriesTitle,episodeCount,href'})
 
         ok = True
         for g in categories:
-            url = "%s?category=%s" % (sys.argv[0], g['keyword'])
+            url = "%s?category=%s" % (sys.argv[0], g['path'])
             listitem = xbmcgui.ListItem(g['name'])
 
             # Add the program item to the list

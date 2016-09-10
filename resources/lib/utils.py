@@ -26,16 +26,41 @@ import textwrap
 import xbmc, xbmcgui, xbmcplugin, xbmcaddon
 import config
 import issue_reporter
+import hmac
+import hashlib
 
 pattern = re.compile("&(\w+?);")
 
+def get_auth(program):
+    """ Calculate signature and build auth URL for a program"""
+    ts = str(int(time.time()))
+    hn = program.get_house_number()
+    base = config.base_url
+    path = ''.join([config.auth_url, 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)])
+    secret = config.secret
+    digest = hmac.new(secret, msg=path, digestmod=hashlib.sha256).hexdigest()
+    return ''.join([base, path, '&sig=', digest])
+
+def get_akamai_auth(url):
+    """ Access ABC auth URL and retrieve Akamai authorization data"""
+    res = urllib2.urlopen(url)
+    return res.read()
+
+def cookies_to_string(cookiejar):
+    result = ""
+    for cookie in cookiejar:
+        result += cookie.name
+        result += '='
+        result += cookie.value
+        result += '; '
+    result = result[:-1]
+    return result 
+
 def get_datetime(timestamp):
-    # Tue, 05 Aug 2014 14:45:00 +1000
+    # 2016-04-18 07:00:00
     try:
-        # strptime sucks. Remove the +1000 part from the end
-        timestamp_fixed = re.sub(r' [+-]([0-9]){4}$', '', timestamp)
-        dt = time.mktime(time.strptime(timestamp_fixed, '%a, %d %b %Y %H:%M:%S'))
-        return datetime.date.fromtimestamp(dt)
+        dt = time.mktime(time.strptime(timestamp, '%Y-%m-%d %H:%M:%S'))
+        return datetime.datetime.fromtimestamp(dt)
     except:
         log_error("Couldn't parse timestamp: %s" % timestamp)
     return
@@ -82,7 +107,7 @@ def make_url(d):
 
 
 def log(s):
-    print "[%s v%s] %s" % (config.NAME, config.VERSION, s)
+    xbmc.log("[%s v%s] %s" % (config.NAME, config.VERSION, s), level=xbmc.LOGNOTICE)
 
 
 def log_error(message=None):

@@ -25,6 +25,9 @@ import parse
 import utils
 import gzip
 import ssl
+import json
+import threading
+import cookielib
 from StringIO import StringIO
 
 try:
@@ -34,6 +37,10 @@ except:
     import storageserverdummy as StorageServer
 
 cache = StorageServer.StorageServer(config.ADDON_ID, 1)
+cj = cookielib.CookieJar()
+handler = urllib2.HTTPCookieProcessor(cj)
+opener = urllib2.build_opener(handler)
+opener.addheaders = config.user_agent
 
 class JsonRedirectHandler(urllib2.HTTPRedirectHandler): 
     def http_error_301(self, req, fp, code, msg, headers):
@@ -48,7 +55,7 @@ def fetch_url(url, headers={}):
     """
     utils.log("Fetching URL: %s" % url)
     request = urllib2.Request(url, None, dict(headers.items() + {
-        'User-Agent' : config.user_agent
+        'User-Agent' : config.user_agent[0][1]
     }.items()))
 
     attempts = 10
@@ -79,35 +86,24 @@ def fetch_protected_url(url):
     headers = {'Authorization': 'Basic ZmVlZHRlc3Q6YWJjMTIz'}
     return fetch_url(url, headers)
 
-def get_config():
-    """This function fetches the iView "config". Among other things,
-        it tells us an always-metered "fallback" RTMP server, and points
-        us to many of iView's other XML files.
-    """
-    iview_config = fetch_url(config.config_url)
-    return parse.parse_config(iview_config)
+def fetch_url_withcookies(url, data=None):
+    """ Fetches a URL using a cookiejar opener"""
+    http = opener.open(url, data=None)
+    return http.read()
 
-def get_auth(iview_config):
-    """This function performs an authentication handshake with iView.
-        Among other things, it tells us if the connection is unmetered,
-        and gives us a one-time token we need to use to speak RTSP with
-        ABC's servers, and tells us what the RTMP URL is.
-    """
-    auth_config = fetch_url(config.auth_url)
-    return parse.parse_auth(auth_config, iview_config)
-
-def get_categories(iview_config):
+def get_categories():
     """Returns the list of categories
     """
-    url = config.base_url + iview_config['categories_url']
+    url = config.config_url
     category_data = fetch_url(url)
     categories = parse.parse_categories(category_data)
     return categories
 
 def get_feed(keyword):
     utils.log("Fetching feed")
-    url = config.feed_url + '?keyword=' + keyword
-    feed = cache.cacheFunction(fetch_protected_url, url)
+    url = config.feed_url.format(keyword)
+    utils.log("Fetching URL: %s" % url)
+    feed = cache.cacheFunction(fetch_url, url)
     return feed
 
 def get_programme_from_feed(keyword):
@@ -116,12 +112,23 @@ def get_programme_from_feed(keyword):
     shows = parse.parse_programme_from_feed(feed)
     return shows
 
-def get_series_from_feed(series, category='0-z'):
+def get_series_from_feed(series_url, episode_count):
     utils.log("Fetching series feed")
-    feed = get_feed(category)
-    programs = parse.parse_programs_from_feed(feed)
-    filtered = []
-    for p in programs:
-        if p.title == series:
-            filtered.append(p)
-    return filtered
+    feed = get_feed(series_url)
+    return parse.parse_programs_from_feed(feed,episode_count)
+
+def download_related(url, listobj, index):
+    listobj[index+1] = json.loads(fetch_url(config.feed_url.format(url)))
+
+def download_related_list(urls, listobj):
+    utils.log('Downloading JSON listings...')
+    threads = []
+    listobj.extend([None for x in range(len(urls))])
+    for index, url in enumerate(urls):
+        thread = threading.Thread(target=download_related, args=(url, listobj, index))
+        thread.daemon = True
+        thread.start()
+        threads.append(thread)
+
+    for thread in threads:
+        thread.join()
