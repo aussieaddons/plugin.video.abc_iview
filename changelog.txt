@@ -1,4 +1,4 @@
-[B]Version 1.7.3-8-g3b6ffe1-mobile[/B]
+[B]Version 1.7.3-9-gb4013ce-mobile[/B]
 - rename HTMLParser class
 - Fix for subtitles
 
