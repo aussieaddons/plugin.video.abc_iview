@@ -51,7 +51,7 @@ def parse_programme_from_feed(data):
     jsondata = json.loads(data)
     show_list = []
     href_list = []
-    show_index = json.loads(comm.fetch_url(config.index_url))
+    show_index = json.loads(comm.fetch_url(config.INDEX_URL))
     series_houseno_list = [(x['href'][-13:-6], x['episodeCount']) 
                     for item in show_index['index'] for x in item['episodes']]
     
@@ -98,52 +98,76 @@ def parse_programme_from_feed(data):
 def parse_programs_from_feed(data, episode_count):
 
     jsondata = json.loads(data)
-    related = config.feed_url.format(jsondata['related'])
+    related = config.FEED_URL.format(jsondata['related'])
     
     programs_list = []
     related_list = []
     related_list.append(jsondata)
     
     if int(episode_count) > 1:
-        comm.download_related_list(parse_other_episodes(related), related_list)
+        comm.fetch_related_list(parse_other_episodes(related), related_list)
     
     for item in related_list:
         p = classes.Program()
-        subtitle = None
-        if 'title' in item:
-            title = item['seriesTitle']
-            subtitle = item['title']
-            p.title = title
-            p.episode_title = subtitle
-        else:
-            title = item['seriesTitle']
-            p.title = title           
-        
-        p.house_number  = item['episodeHouseNumber']
-        p.description   = item['description']
-        p.url           = item['playlist'][-1]['hls-high']
-        p.thumbnail     = item['thumbnail']
+
+        title = item.get('seriesTitle')
+        p.title = title
+
+        # Convoluted Season/Episode parsing
+        title_match = None
+        title_parts = None
+
+        subtitle = item.get('title')
+        if subtitle:
+            # Series 2 Episode 25 Home Is Where The Hatch Is
+            # Series 4 Ep:11 As A Yoga Yuppie
+            # Series 4 Ep 10: Emission Impossible
+            title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s[Ee]p(isode)?:?\s?(?P<episode>\d+):?\s(?P<episode_title>.*)$', subtitle)
+            if not title_match:
+                # Series 8 Episode 13
+                # Series 8 Episode:13
+                title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s?[Ee]p(isode)?:?\s?(?P<episode>\d+)$', subtitle)
+            if not title_match:
+                # Episode 34 Shape Shifter
+                # Ep:34 Shape Shifter
+                title_match = re.search('^[Ee]p(isode)?:?\s?(?P<episode>\d+):?\s?(?P<episode_title>.*)$', subtitle)
+            if not title_match:
+                # Series 10 Rylan Clark, Joanna Lumley, Ant And Dec, The Vaccines
+                title_match = re.search('^[Ss]eries:?\s?(?P<series>\d+):?\s(?P<episode_title>.*)$', subtitle)
+            if not title_match:
+                # Episode 5
+                # Ep 5
+                # Episode:5
+                title_match = re.search('^[Ee]p(isode)?:?\s?(?P<episode>\d+)$', subtitle)
+            if not title_match:
+                p.episode_title = subtitle
+
+            if title_match:
+                title_parts = title_match.groupdict()
+                p.episode_title = title_parts.get('episode_title')
 
         try:
-            p.rating = item['rating']
+            # If we only get series/episode in the subtitle
+            p.series = title_parts.get('series')
+            p.episode = title_parts.get('episode')
         except:
-            # Rating not given for all programs
             pass
 
-        try:
-            duration = item['duration']
-            p.duration = int(duration)
-        except:
-            if 'duration' in item: # Live streams have no duration
-                utils.log("Couldn't parse program duration: %s" % duration)
-            
+        p.house_number = item.get('episodeHouseNumber')
+        p.description = item.get('description')
+        p.thumbnail = item.get('thumbnail')
+        p.url = item['playlist'][-1]['hls-high']
+
+        p.rating = item.get('rating')
+        p.duration = item.get('duration')
+
         try:
             p.subtitle_url = item['playlist'][-1]['captions']['src-xml']
         except:
             pass
 
-        p.date = utils.get_datetime(item['pubDate'])
-        p.expire = utils.get_datetime(item['expireDate'])
+        p.date = utils.get_datetime(item.get('pubDate'))
+        p.expire = utils.get_datetime(item.get('expireDate'))
 
         programs_list.append(p)
     

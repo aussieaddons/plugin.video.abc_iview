@@ -133,7 +133,7 @@ class Program(object):
         return utils.descape(self.title)
 
     def get_episode_title(self):
-        """ Return a string of the shorttitle entry, unless its not 
+        """ Return a string of the shorttitle entry, unless its not
             available, then we'll just use the program title instead.
         """
         if self.episode_title:
@@ -203,7 +203,7 @@ class Program(object):
         """
         if self.date:
             return self.date.strftime("%Y-%m-%d")
-        
+
     def get_date_time(self):
         """ Return string of the date/time in the format
         2016-09-08 10:00:00 which we can use to sort episodes
@@ -246,13 +246,13 @@ class Program(object):
         """
         if self.expire:
             return self.expire.strftime("%Y-%m-%d %h:%m:%s")
-    
+
     def get_house_number(self):
         """ Returns ABC's internal house number of the episode
         """
         if self.house_number:
             return self.house_number
-        
+
     def get_xbmc_list_item(self):
         """ Returns a dict of program information, in the format which
             XBMC requires for video metadata.
@@ -331,7 +331,7 @@ class Program(object):
 
 
     def parse_xbmc_url(self, string):
-        """ Takes a string input which is a URL representation of the 
+        """ Takes a string input which is a URL representation of the
            program object
         """
         d = utils.get_url(string)

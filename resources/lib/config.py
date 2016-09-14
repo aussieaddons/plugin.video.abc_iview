@@ -31,25 +31,11 @@ ISSUE_API_URL = GITHUB_API_URL + '/issues'
 ISSUE_API_AUTH = 'eGJtY2JvdDo1OTQxNTJjMTBhZGFiNGRlN2M0YWZkZDYwZGQ5NDFkNWY4YmIzOGFj'
 GIST_API_URL = 'https://api.github.com/gists'
 
-api_version = 383
+USER_AGENT = 'Android SDK HW (5.31.0; 6.0; htc_himauhl; arm64-v8a)'
+SECRET = 'android.content.res.Resources'
 
-# os.uname() is not available on Windows, so we make this optional.
-try:
-    uname = os.uname()
-    os_string = ' (%s %s %s)' % (uname[0], uname[2], uname[4])
-except AttributeError:
-    os_string = ''
-
-user_agent = [('User-Agent', 'Android SDK HW (5.31.0; 6.0; htc_himauhl; arm64-v8a)')]
-secret = 'android.content.res.Resources'
-
-base_url     = 'http://iview.abc.net.au'
-config_url   = 'http://iview.abc.net.au/api/navigation/mobile/2/?device=android-mobile&'
-auth_url     = '/auth/hls/sign?'
-index_url    = 'http://iview.abc.net.au/api/index?device=android-mobile&fields=seriesTitle,episodeCount,href'
-feed_url     = 'http://iview.abc.net.au/api/{0}?device=android-mobile&sort=az'
-
-
-
-
-
+BASE_URL = 'http://iview.abc.net.au'
+CONFIG_URL = 'http://iview.abc.net.au/api/navigation/mobile/2/?device=android-mobile&'
+AUTH_URL = '/auth/hls/sign?'
+INDEX_URL = 'http://iview.abc.net.au/api/index?device=android-mobile&fields=seriesTitle,episodeCount,href'
+FEED_URL = 'http://iview.abc.net.au/api/{0}?device=android-mobile&sort=az'

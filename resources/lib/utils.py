@@ -19,32 +19,44 @@
 #  along with this plugin. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import os, sys, re, traceback, time, datetime
-import htmlentitydefs, cgi, unicodedata, urllib
-import urllib2, socket
+import os
+import sys
+import re
+import traceback
+import time
+import datetime
+import htmlentitydefs
+import unicodedata
+import urllib
+import urllib2
 import textwrap
-import xbmc, xbmcgui, xbmcplugin, xbmcaddon
-import config
-import issue_reporter
 import hmac
 import hashlib
 
-pattern = re.compile("&(\w+?);")
+import xbmc
+import xbmcgui
+
+import config
+import issue_reporter
+
+PATTERN = re.compile("&(\w+?);")
+
 
 def get_auth(program):
     """ Calculate signature and build auth URL for a program"""
     ts = str(int(time.time()))
     hn = program.get_house_number()
-    base = config.base_url
-    path = ''.join([config.auth_url, 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)])
-    secret = config.secret
-    digest = hmac.new(secret, msg=path, digestmod=hashlib.sha256).hexdigest()
-    return ''.join([base, path, '&sig=', digest])
+    path = config.AUTH_URL + 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)
+    digest = hmac.new(config.SECRET, msg=path,
+                      digestmod=hashlib.sha256).hexdigest()
+    return config.BASE_URL + path + '&sig=' + digest
+
 
 def get_akamai_auth(url):
     """ Access ABC auth URL and retrieve Akamai authorization data"""
     res = urllib2.urlopen(url)
     return res.read()
+
 
 def cookies_to_string(cookiejar):
     result = ""
@@ -54,7 +66,8 @@ def cookies_to_string(cookiejar):
         result += cookie.value
         result += '; '
     result = result[:-1]
-    return result 
+    return result
+
 
 def get_datetime(timestamp):
     # 2016-04-18 07:00:00
@@ -65,27 +78,28 @@ def get_datetime(timestamp):
         log_error("Couldn't parse timestamp: %s" % timestamp)
     return
 
+
 def descape_entity(m, defs=htmlentitydefs.entitydefs):
     # callback: translate one entity to its ISO Latin value
     try:
         return defs[m.group(1)]
     except KeyError:
-        return m.group(0) # use as is
+        return m.group(0)  # use as is
 
 
 def descape(string):
     # Fix the hack back from parsing with BeautifulSoup
     string = string.replace('&#38;', '&amp;')
-
-    return pattern.sub(descape_entity, string)
+    return PATTERN.sub(descape_entity, string)
 
 
 def get_url(s):
     dict = {}
     pairs = s.lstrip("?").split("&")
     for pair in pairs:
-        if len(pair) < 3: continue
-        kv = pair.split("=",1)
+        if len(pair) < 3:
+            continue
+        kv = pair.split("=", 1)
         k = kv[0]
         v = urllib.unquote_plus(kv[1])
         dict[k] = v
@@ -94,40 +108,41 @@ def get_url(s):
 
 def make_url(d):
     pairs = []
-    for k,v in d.iteritems():
+    for k, v in d.iteritems():
         k = urllib.quote_plus(k)
-        # Values can possibly be - UTF-8 as an ASCII str, ASCII as an ASCII str, or unicode. Want clean ASCII for URL.
+        # Values can possibly be - UTF-8 as an ASCII str, ASCII as an ASCII
+        # str, or unicode. Want clean ASCII for URL.
         if not isinstance(v, unicode):
             v = str(v)
-            v = v.decode("utf-8")
-        v = unicodedata.normalize('NFC', v).encode('ascii','ignore')
+            v = v.decode('utf-8')
+        v = unicodedata.normalize('NFC', v).encode('ascii', 'ignore')
         v = urllib.quote_plus(v)
-        pairs.append("%s=%s" % (k,v))
+        pairs.append("%s=%s" % (k, v))
     return "&".join(pairs)
 
 
 def log(s):
-    xbmc.log("[%s v%s] %s" % (config.NAME, config.VERSION, s), level=xbmc.LOGNOTICE)
+    xbmc.log("[%s v%s] %s" % (config.NAME, config.VERSION, s),
+             level=xbmc.LOGNOTICE)
 
 
 def log_error(message=None):
-    exc_type, exc_value, exc_traceback = sys.exc_info()
+    exc_type, exc_value, exc_tb = sys.exc_info()
     if message:
         exc_value = message
-    print "[%s v%s] ERROR: %s (%d) - %s" % (config.NAME, config.VERSION, exc_traceback.tb_frame.f_code.co_name, exc_traceback.tb_lineno, exc_value)
-    print traceback.print_exc()
+    xbmc.log("[%s v%s] ERROR: %s (%d) - %s" %
+             (config.NAME, config.VERSION,
+              exc_traceback.tb_frame.f_code.co_name, exc_traceback.tb_lineno,
+              exc_value), level=xbmc.LOGERROR)
+    xbmc.log(traceback.print_exc(), level=xbmc.LOGERROR)
 
 
 def dialog_error(err=None):
     # Generate a list of lines for use in XBMC dialog
-    msg = ''
     content = []
-    exc_type, exc_value, exc_traceback = sys.exc_info()
+    exc_type, exc_value, exc_tb = sys.exc_info()
     content.append("%s v%s Error" % (config.NAME, config.VERSION))
     content.append(str(exc_value))
-    if err:
-        msg = " - %s" % err
-    content.append("%s (%d) %s" % (exc_traceback.tb_frame.f_code.co_name, exc_traceback.tb_lineno, msg))
     return content
 
 
@@ -142,7 +157,8 @@ def dialog_message(msg, title=None):
 
 def get_platform():
     """ Work through a list of possible platform types and return the first
-        match. Ordering of items is important as some match more thant one type.
+        match. Ordering of items is important as some match more thant one
+        type.
 
         E.g. Android will match both Android and Linux
     """
@@ -194,7 +210,8 @@ def get_file_dir():
     """ Make our addon working directory if it doesn't exist and
         return it.
     """
-    filedir = os.path.join(xbmc.translatePath('special://temp/'), config.ADDON_ID)
+    filedir = os.path.join(xbmc.translatePath('special://temp/'),
+                           config.ADDON_ID)
     if not os.path.isdir(filedir):
         os.mkdir(filedir)
     return filedir
@@ -258,17 +275,22 @@ def handle_error(err=None):
         if send_error:
             latest_version = issue_reporter.get_latest_version()
             version_string = '.'.join([str(i) for i in latest_version])
-            if not issue_reporter.is_latest_version(config.VERSION, latest_version):
-                message.append("Your version of this add-on is outdated. Please try upgrading to the latest version: v%s" % version_string)
+            if not issue_reporter.is_latest_version(config.VERSION,
+                                                    latest_version):
+                message.append('Your version of this add-on is outdated. '
+                               'Please try upgrading to the latest version: '
+                               'v%s' % version_string)
                 d.ok(*message)
                 return
 
             # Only report if we haven't done one already
             try:
-                message.append("Would you like to automatically report this error?")
+                message.append('Would you like to automatically '
+                               'report this error?')
                 report_issue = d.yesno(*message)
             except:
-                message.append("If this error continues to occur, please report it to our issue tracker.")
+                message.append('If this error continues to occur, '
+                               'please report it to our issue tracker.')
                 d.ok(*message)
         else:
             # Just show the message
@@ -279,6 +301,7 @@ def handle_error(err=None):
         if issue_url:
             # Split the url here to make sure it fits in our dialog
             split_url = issue_url.replace('/xbmc', ' /xbmc')
-            d.ok("%s v%s Error" % (config.NAME, config.VERSION), "Thanks! Your issue has been reported to: %s" % split_url)
+            d.ok('%s v%s Error' % (config.NAME, config.VERSION),
+                 'Thanks! Your issue has been reported to: %s' % split_url)
             # Touch our file to prevent more than one error report
             save_last_error_report(traceback_str)

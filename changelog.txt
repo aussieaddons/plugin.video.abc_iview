@@ -1,4 +1,8 @@
-[B]Version 1.7.3[/B]
+[B]Version 1.7.3-8-g3b6ffe1-mobile[/B]
+- rename HTMLParser class
+- Fix for subtitles
+
+[B]Version v1.7.3[/B]
 - Update README
 - Attempt to ignore SSL errors on Python 2.7.9+
 
@@ -14,11 +18,6 @@
 - Disable SSL verification to work around Apple issues
 - Add pre-Kodi v14 support for subtitles
 - Enable subtitles in settings
-- Enable subtitles in settings
-- Enable subtitles in settings
-- Add support for subtitles
-- Add support for subtitles
-- Add support for subtitles
 - Add support for subtitles
 - Change method of playing videos
 - Fix incorrect variable name
@@ -120,7 +119,6 @@
 - Oops, switch comment spaces to tabs to match rest of routine
 - Fix url encoding if components are unicode without ascii-representable characters
 - Support for building XBMC Eden plugin, mainly for xbmc4xbox
-- Update README
 - Update README
 - Accidently mixed - and _ in dir name. Hack build script
 - Update README for librtmp fix on ATV
