@@ -61,10 +61,10 @@ def get_akamai_auth(url):
 def cookies_to_string(cookiejar):
     result = ""
     for cookie in cookiejar:
-        result += cookie.name
-        result += '='
-        result += cookie.value
-        result += '; '
+        result += '{0}={1}; path={2}; domain={3}; '.format(cookie.name, 
+                                                        cookie.value, 
+                                                        cookie.path, 
+                                                        cookie.domain)
     result = result[:-1]
     return result
 

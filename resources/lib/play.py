@@ -52,10 +52,15 @@ def play(url):
         except httplib.HTTPException, e:
             utils.handle_error('HTTPException')
         
+        comm.fetch_url_withcookies(akamai_url)
+        cookies = utils.cookies_to_string(comm.cj)
+        url_to_play = '{0}|User-Agent={1}&Cookie={2}'.format(akamai_url,
+                                        urllib.quote(config.USER_AGENT), 
+                                        urllib.quote(cookies))
         listitem=xbmcgui.ListItem(label=p.get_list_title(),
                                   iconImage=p.thumbnail,
                                   thumbnailImage=p.thumbnail,
-                                  path=akamai_url)
+                                  path=url_to_play)
 
         listitem.setInfo('video', p.get_xbmc_list_item())
 

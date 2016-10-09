@@ -35,7 +35,7 @@ cache = StorageServer.StorageServer(config.ADDON_ID, 1)
 cj = cookielib.CookieJar()
 handler = urllib2.HTTPCookieProcessor(cj)
 opener = urllib2.build_opener(handler)
-opener.addheaders = config.USER_AGENT
+opener.addheaders = [('User-Agent', config.USER_AGENT)]
 
 
 def fetch_url(url, headers={}):
