@@ -96,7 +96,6 @@ def parse_programme_from_feed(data):
     return show_list
 
 def parse_programs_from_feed(data, episode_count):
-
     jsondata = json.loads(data)
     related = config.FEED_URL.format(jsondata['related'])
     
@@ -108,6 +107,9 @@ def parse_programs_from_feed(data, episode_count):
         comm.fetch_related_list(parse_other_episodes(related), related_list)
     
     for item in related_list:
+        if 'playlist' not in item:
+            continue
+        
         p = classes.Program()
 
         title = item.get('seriesTitle')
@@ -157,7 +159,6 @@ def parse_programs_from_feed(data, episode_count):
         p.description = item.get('description')
         p.thumbnail = item.get('thumbnail')
         p.url = item['playlist'][-1]['hls-high']
-
         p.rating = item.get('rating')
         p.duration = item.get('duration')
 
