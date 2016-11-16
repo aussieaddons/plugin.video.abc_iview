@@ -31,11 +31,14 @@ ISSUE_API_URL = GITHUB_API_URL + '/issues'
 ISSUE_API_AUTH = 'eGJtY2JvdDo1OTQxNTJjMTBhZGFiNGRlN2M0YWZkZDYwZGQ5NDFkNWY4YmIzOGFj'
 GIST_API_URL = 'https://api.github.com/gists'
 
-USER_AGENT = 'Android SDK HW (5.31.0; 6.0; htc_himauhl; arm64-v8a)'
+USER_AGENT = 'Mozilla/5.0 (PlayStation 4) AppleWebKit/531.3 (KHTML, like Gecko) SCEE/1.0 Nuanti/2.0'
+HEADERS =  {'User-Agent': USER_AGENT,
+            'Origin': 'http://tv.iview.abc.net.au',
+            'Referer': 'http://tv.iview.abc.net.au/playstation.php'}
 SECRET = 'android.content.res.Resources'
 
 BASE_URL = 'http://iview.abc.net.au'
-CONFIG_URL = 'http://iview.abc.net.au/api/navigation/mobile/2/?device=android-mobile&'
+CONFIG_URL = 'http://iview.abc.net.au/api/navigation/mobile/2/?device=hbb&hbr=1'
 AUTH_URL = '/auth/hls/sign?'
-INDEX_URL = 'http://iview.abc.net.au/api/index?device=android-mobile&fields=seriesTitle,episodeCount,href'
-FEED_URL = 'http://iview.abc.net.au/api/{0}?device=android-mobile&sort=az'
+INDEX_URL = 'http://iview.abc.net.au/api/index?device=hbb&hbr=1&fields=seriesTitle,episodeCount,href'
+FEED_URL = 'http://iview.abc.net.au/api/{0}?device=hbb&hbr=1&sort=az'

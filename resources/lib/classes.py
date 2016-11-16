@@ -119,6 +119,7 @@ class Program(object):
         self.expire = None
         self.subtitle_url = None
         self.house_number = None
+        self.hq = None
 
     def __repr__(self):
         return self.title
@@ -304,9 +305,14 @@ class Program(object):
             info_dict['duration'] = self.get_duration()
 
         # This information may be incorrect
-        info_dict['codec']  = 'h264'
-        info_dict['width']  = '640'
-        info_dict['height'] = '360'
+        if self.hq:
+            info_dict['codec']  = 'h264'
+            info_dict['width']  = '1024'
+            info_dict['height'] = '576'
+        else:
+            info_dict['codec']  = 'h264'
+            info_dict['width']  = '640'
+            info_dict['height'] = '360'
         return info_dict
 
 
@@ -327,6 +333,7 @@ class Program(object):
         if self.url:           d['url'] = self.url
         if self.subtitle_url:  d['subtitle_url'] = self.subtitle_url
         if self.house_number:  d['house_number'] = self.house_number
+        if self.hq:            d['hq'] = self.hq
         return utils.make_url(d)
 
 
@@ -346,6 +353,7 @@ class Program(object):
         self.thumbnail     = urllib.unquote_plus(d.get('thumbnail'))
         self.subtitle_url  = d.get('subtitle_url')
         self.house_number  = d.get('house_number')
+        self.hq            = d.get('hq')
         if d.has_key('date'):
            timestamp = time.mktime(time.strptime(d['date'], '%Y-%m-%d %H:%M:%S'))
            self.date = datetime.date.fromtimestamp(timestamp)

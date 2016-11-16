@@ -17,6 +17,7 @@
 #
 
 import urllib2
+import requests
 import config
 import parse
 import utils
@@ -44,10 +45,6 @@ def fetch_url(url, headers={}):
         number of retries.
     """
     utils.log('Fetching URL: %s' % url)
-    request = urllib2.Request(url, None, dict(headers.items() + {
-        'User-Agent': config.USER_AGENT
-    }.items()))
-
     attempts = 10
     attempt = 0
     fail_exception = Exception('Unknown failure in URL fetch')
@@ -60,8 +57,8 @@ def fetch_url(url, headers={}):
     while attempt < attempts:
         try:
             timeout = 10 * (attempt + 1)
-            http = urllib2.urlopen(request, timeout=timeout)
-            return http.read()
+            http = requests.get(url, headers=config.HEADERS, timeout=timeout)
+            return http.text
         except Exception as e:
             fail_exception = e
             attempt += 1

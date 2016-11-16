@@ -158,7 +158,11 @@ def parse_programs_from_feed(data, episode_count):
         p.house_number = item.get('episodeHouseNumber')
         p.description = item.get('description')
         p.thumbnail = item.get('thumbnail')
-        p.url = item['playlist'][-1]['hls-high']
+        if 'hls-plus' in item['playlist'][-1]:
+            p.url = item['playlist'][-1]['hls-plus']
+            p.hq = True
+        else:
+            p.url = item['playlist'][-1]['hls-high']
         p.rating = item.get('rating')
         p.duration = item.get('duration')
 
