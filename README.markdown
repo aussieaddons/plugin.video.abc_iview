@@ -44,9 +44,6 @@ For help and support, feel free to register on our [Slack channel] [slack].
 
 Good luck and happy viewing.
 
-
-Good luck and happy viewing.
-
 [python_iview]: https://jeremy.visser.name/2009/08/python-iview/
 [repository]: https://github.com/xbmc-catchuptv-au/repo
 [download]: https://github.com/xbmc-catchuptv-au/repo/tree/master/plugin.video.abc_iview
