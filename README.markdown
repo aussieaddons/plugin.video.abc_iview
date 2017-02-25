@@ -16,37 +16,42 @@ Thanks also for contributions from:
   * Adam M-W
   * Glenn Guy
 
+
 Installation
 ------------
-The latest stable release of this add-on is available as part of the
-[XBMC CatchUp TV AU repository] [repository]. This is the recommended method
-for installation, as it'll automatically update the iView add-on when fixes
-are released.
+First step is the grab the [repo ZIP file] [download].
 
-See the [XBMC CatchUp TV AU repository] [repository] README for installation
-steps.
+Simply download the ZIP file to your XBMC/Kodi device and install through the menu via:
 
-If you would like to test the latest development version, you can grab the
-[GitHub generated ZIP file] [githubzip]. It is recommended to set up and
-install the stable version from the repository first to ensure all the
-required dependencies are installed.
+System -> Settings -> Add-ons -> Install from zip file.
+
+The Kodi wiki has a good [walk-through guide to installing ZIP files] [installzip] if you get stuck.
+
+Once the repository ZIP file is installed, you can install the individual add-ons through the XBMC/Kodi Add-on manager:
+
+System -> Settings -> Add-ons -> Catch-Up TV AU -> Select the add-on category -> Select the add-on -> Install
+
+The Kodi wiki also has a nice guide on [installing Add-ons via the Add-on manager] [addonmanager].
 
 Issues
 ------
 For any issues or bug reports, please file them on the [issues page] [issues].
+Please include log output, if possible. Follow the [log upload guide] [logupload] and include the URL it gives you in your bug report.
 
-Please include log output if possible, and the easiest way is with the Kodi
-Log Uploader add-on. See this [great guide] [logfile] for steps.
+Contact
+-------
+For help and support, feel free to register on our [Slack channel] [slack].
 
-Contact Me
-----------
-For anything else, you can contact me by email <andy@andybotting.com> or Twitter: @andybotting
+Good luck and happy viewing.
+
 
 Good luck and happy viewing.
 
 [python_iview]: https://jeremy.visser.name/2009/08/python-iview/
 [repository]: https://github.com/xbmc-catchuptv-au/repo
 [download]: https://github.com/xbmc-catchuptv-au/repo/tree/master/plugin.video.abc_iview
-[githubzip]: https://github.com/andybotting/xbmc-addon-abc-iview/archive/master.zip
 [issues]: https://github.com/andybotting/xbmc-addon-abc-iview/issues
-[logfile]: http://kodi.wiki/view/Log_file/Easy
+[installzip]: http://kodi.wiki/view/HOW-TO:Install_add-ons_from_zip_files
+[addonmanager]: http://kodi.wiki/view/Add-on_manager
+[logupload]: http://kodi.wiki/view/Log_file/Easy
+[slack]: http://slack-invite.aussieaddons.com/
