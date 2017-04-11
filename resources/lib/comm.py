@@ -100,6 +100,7 @@ def get_stream_url(hn, url):
         session.mount('http://', HTTPAdapter(max_retries=5))
         session.mount('https://', HTTPAdapter(max_retries=5))
         session.verify = False
+        session.headers = {'User-Agent': config.USER_AGENT}
 
         auth = get_auth(hn)
 
