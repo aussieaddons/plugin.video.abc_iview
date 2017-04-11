@@ -21,7 +21,6 @@
 
 import sys
 import os
-import urllib
 import urllib2
 import json
 import classes
@@ -44,28 +43,13 @@ def play(url):
 
         p = classes.Program()
         p.parse_xbmc_url(url)
-        auth = utils.get_auth(p)
-        akamai_auth = utils.get_akamai_auth(auth)
-        akamai_url = "{0}?hdnea={1}".format(p.get_url(), akamai_auth)
-        # Test akamai URL to see if we get HTTP Success
-        try:
-            response = urllib2.urlopen(akamai_url)
-        except urllib2.HTTPError, e:
-            utils.handle_error('HTTPError = ' + str(e.code))
-        except urllib2.URLError, e:
-            utils.handle_error('URLError = ' + str(e.reason))
-        except httplib.HTTPException, e:
-            utils.handle_error('HTTPException')
 
-        comm.fetch_url_withcookies(akamai_url)
-        cookies = utils.cookies_to_string(comm.cj)
-        url_to_play = '{0}|User-Agent={1}&Cookie={2}'.format(akamai_url,
-                                        urllib.quote(config.USER_AGENT),
-                                        urllib.quote(cookies))
+        stream = comm.get_stream_url(p.get_house_number(), p.get_url())
+
         listitem = xbmcgui.ListItem(label=p.get_list_title(),
                                     iconImage=p.thumbnail,
                                     thumbnailImage=p.thumbnail,
-                                    path=url_to_play)
+                                    path=stream)
 
         listitem.setInfo('video', p.get_xbmc_list_item())
 

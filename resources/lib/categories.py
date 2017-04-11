@@ -21,8 +21,6 @@
 
 import sys
 import os
-import urllib2
-import urllib
 import comm
 import utils
 import xbmcgui
@@ -33,9 +31,6 @@ def make_category_list():
     try:
         categories = comm.get_categories()
         categories = sorted(categories, key=lambda k: k['name'].lower())
-        # All category is disabled for now due to API issues
-        # https://github.com/andybotting/xbmc-addon-abc-iview/issues/1454
-        #categories.insert(0, {'name':'All', 'path':'index?device=android-mobile&fields=seriesTitle,episodeCount,href'})
 
         ok = True
         for g in categories:

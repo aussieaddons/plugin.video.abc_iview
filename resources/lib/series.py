@@ -21,11 +21,11 @@
 
 import sys
 import os
-import urllib2
-import urllib
 import comm
 import utils
-import xbmc, xbmcgui, xbmcplugin
+import xbmc
+import xbmcgui
+import xbmcplugin
 
 def make_series_list(url):
     params = utils.get_url(url)
@@ -37,11 +37,14 @@ def make_series_list(url):
 
         ok = True
         for s in series_list:
-            url = "%s?%s" % (sys.argv[0], utils.make_url({'series_url': s.series_url, 'category': category, 'episode_count': s.num_episodes}))
+            p = utils.make_url({'series_url': s.series_url,
+                                'category': category,
+                                'episode_count': s.num_episodes})
+            url = "{0}?{1}".format(sys.argv[0], p)
 
             thumbnail = s.get_thumbnail()
             listitem = xbmcgui.ListItem(s.get_list_title(), iconImage=thumbnail, thumbnailImage=thumbnail)
-            listitem.setInfo('video', { 'plot' : s.get_description() })
+            listitem.setInfo('video', {'plot': s.get_description()})
 
             # add the item to the media list
             ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=url, listitem=listitem, isFolder=True)
