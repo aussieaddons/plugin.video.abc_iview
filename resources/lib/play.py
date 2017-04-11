@@ -21,6 +21,7 @@
 
 import sys
 import os
+import urllib
 import urllib2
 import json
 import classes
@@ -36,18 +37,40 @@ import xbmcaddon
 def play(url):
 
     try:
+        # Remove cookies.dat for Kodi < 17.0 - causes issues with playback
+        cookies_dat = xbmc.translatePath('special://home/cache/cookies.dat')
+        if os.path.isfile(cookies_dat):
+            os.remove(cookies_dat)
+
         p = classes.Program()
         p.parse_xbmc_url(url)
+        auth = utils.get_auth(p)
+        akamai_auth = utils.get_akamai_auth(auth)
+        akamai_url = "{0}?hdnea={1}".format(p.get_url(), akamai_auth)
+        # Test akamai URL to see if we get HTTP Success
+        try:
+            response = urllib2.urlopen(akamai_url)
+        except urllib2.HTTPError, e:
+            utils.handle_error('HTTPError = ' + str(e.code))
+        except urllib2.URLError, e:
+            utils.handle_error('URLError = ' + str(e.reason))
+        except httplib.HTTPException, e:
+            utils.handle_error('HTTPException')
 
-        listitem=xbmcgui.ListItem(label=p.get_list_title(),
-                                  iconImage=p.thumbnail,
-                                  thumbnailImage=p.thumbnail,
-                                  path=p.get_url())
+        comm.fetch_url_withcookies(akamai_url)
+        cookies = utils.cookies_to_string(comm.cj)
+        url_to_play = '{0}|User-Agent={1}&Cookie={2}'.format(akamai_url,
+                                        urllib.quote(config.USER_AGENT),
+                                        urllib.quote(cookies))
+        listitem = xbmcgui.ListItem(label=p.get_list_title(),
+                                    iconImage=p.thumbnail,
+                                    thumbnailImage=p.thumbnail,
+                                    path=url_to_play)
 
         listitem.setInfo('video', p.get_xbmc_list_item())
 
-        #add subtitles if available
-        addon = xbmcaddon.Addon(config.ADDON_ID)
+        # Add subtitles if available
+        addon = xbmcaddon.Addon()
         subtitles = None
         if addon.getSetting('subtitles_enabled') == 'true':
             profile = xbmcaddon.Addon().getAddonInfo('profile')
@@ -57,15 +80,9 @@ def play(url):
             subfile = xbmc.translatePath(os.path.join(path, 'subtitles.eng.srt'))
             if os.path.isfile(subfile):
                 os.remove(subfile)
-            
+
             try:
-                parser = classes.HTMLMetadataParser()
-                htmldata = urllib2.urlopen(p.link).read()
-                parser.feed(htmldata)
-                rawjson = parser.data.strip()[18:parser.data.find('};')-6]
-                utils.log(rawjson)
-                suburl = json.loads(rawjson)['captions']
-                data = urllib2.urlopen(suburl).read()
+                data = urllib2.urlopen(p.subtitle_url).read()
                 f = open(subfile, 'w')
                 f.write(parse.convert_to_srt(data))
                 f.close()

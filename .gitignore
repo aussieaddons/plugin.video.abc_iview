@@ -1,9 +1,8 @@
-# vim
 *.swp
-
-# python pyc
 *.pyc
 *.pyo
-
-# zip file
 *.zip
+.cache
+.deploy
+.tox
+__pycache__

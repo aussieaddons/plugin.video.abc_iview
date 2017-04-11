@@ -25,7 +25,6 @@ import datetime
 import urllib
 import time
 import utils
-from HTMLParser import HTMLParser
 
 class Series(object):
 
@@ -33,6 +32,7 @@ class Series(object):
         self.description = None
         self.num_episodes = 1
         self.thumbnail = None
+        self.series_houseno = None
 
     def __repr__(self):
         return self.title
@@ -117,7 +117,9 @@ class Program(object):
         self.thumbnail = None
         self.url = None
         self.expire = None
-        self.link = None
+        self.subtitle_url = None
+        self.house_number = None
+        self.hq = None
 
     def __repr__(self):
         return self.title
@@ -132,7 +134,7 @@ class Program(object):
         return utils.descape(self.title)
 
     def get_episode_title(self):
-        """ Return a string of the shorttitle entry, unless its not 
+        """ Return a string of the shorttitle entry, unless its not
             available, then we'll just use the program title instead.
         """
         if self.episode_title:
@@ -203,6 +205,13 @@ class Program(object):
         if self.date:
             return self.date.strftime("%Y-%m-%d")
 
+    def get_date_time(self):
+        """ Return string of the date/time in the format
+        2016-09-08 10:00:00 which we can use to sort episodes
+        """
+        if self.date:
+            return self.date.strftime("%Y-%m-%d %H:%M:%S")
+
     def get_year(self):
         """ Return an integer of the year of publish date
         """
@@ -238,6 +247,12 @@ class Program(object):
         """
         if self.expire:
             return self.expire.strftime("%Y-%m-%d %h:%m:%s")
+
+    def get_house_number(self):
+        """ Returns ABC's internal house number of the episode
+        """
+        if self.house_number:
+            return self.house_number
 
     def get_xbmc_list_item(self):
         """ Returns a dict of program information, in the format which
@@ -290,9 +305,14 @@ class Program(object):
             info_dict['duration'] = self.get_duration()
 
         # This information may be incorrect
-        info_dict['codec']  = 'h264'
-        info_dict['width']  = '640'
-        info_dict['height'] = '360'
+        if self.hq:
+            info_dict['codec']  = 'h264'
+            info_dict['width']  = '1024'
+            info_dict['height'] = '576'
+        else:
+            info_dict['codec']  = 'h264'
+            info_dict['width']  = '640'
+            info_dict['height'] = '360'
         return info_dict
 
 
@@ -311,12 +331,14 @@ class Program(object):
         if self.date:          d['date'] = self.date.strftime("%Y-%m-%d %H:%M:%S")
         if self.thumbnail:     d['thumbnail'] = self.thumbnail
         if self.url:           d['url'] = self.url
-        if self.link:          d['link'] = self.link
+        if self.subtitle_url:  d['subtitle_url'] = self.subtitle_url
+        if self.house_number:  d['house_number'] = self.house_number
+        if self.hq:            d['hq'] = self.hq
         return utils.make_url(d)
 
 
     def parse_xbmc_url(self, string):
-        """ Takes a string input which is a URL representation of the 
+        """ Takes a string input which is a URL representation of the
            program object
         """
         d = utils.get_url(string)
@@ -329,13 +351,9 @@ class Program(object):
         self.rating        = d.get('rating')
         self.url           = d.get('url')
         self.thumbnail     = urllib.unquote_plus(d.get('thumbnail'))
-        self.link          = d.get('link')
+        self.subtitle_url  = d.get('subtitle_url')
+        self.house_number  = d.get('house_number')
+        self.hq            = d.get('hq')
         if d.has_key('date'):
            timestamp = time.mktime(time.strptime(d['date'], '%Y-%m-%d %H:%M:%S'))
            self.date = datetime.date.fromtimestamp(timestamp)
-
-class HTMLMetadataParser(HTMLParser):
-    def handle_data(self, data):
-        # Get metadata which includes subtitles link
-        if 'var videoParams' in data:
-            self.data = data

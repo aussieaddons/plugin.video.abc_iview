@@ -19,43 +19,22 @@
 #  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import os
-import version
-
 NAME = 'ABC iView'
 ADDON_ID = 'plugin.video.abc_iview'
-VERSION = version.VERSION
 
 GITHUB_API_URL = 'https://api.github.com/repos/andybotting/xbmc-addon-abc-iview'
 ISSUE_API_URL = GITHUB_API_URL + '/issues'
 ISSUE_API_AUTH = 'eGJtY2JvdDo1OTQxNTJjMTBhZGFiNGRlN2M0YWZkZDYwZGQ5NDFkNWY4YmIzOGFj'
 GIST_API_URL = 'https://api.github.com/gists'
 
-api_version = 383
+USER_AGENT = 'Mozilla/5.0 (PlayStation 4) AppleWebKit/531.3 (KHTML, like Gecko) SCEE/1.0 Nuanti/2.0'
+HEADERS =  {'User-Agent': USER_AGENT,
+            'Origin': 'http://tv.iview.abc.net.au',
+            'Referer': 'http://tv.iview.abc.net.au/playstation.php'}
+SECRET = 'android.content.res.Resources'
 
-# os.uname() is not available on Windows, so we make this optional.
-try:
-    uname = os.uname()
-    os_string = ' (%s %s %s)' % (uname[0], uname[2], uname[4])
-except AttributeError:
-    os_string = ''
-
-user_agent = '%s add-on for XBMC/Kodi %s%s' % (NAME, VERSION, os_string)
-
-base_url     = 'http://www.abc.net.au/iview/'
-config_url   = 'http://www.abc.net.au/iview/xml/config.xml?r=%d' % api_version
-auth_url     = 'http://tviview.abc.net.au/iview/auth/?v2'
-programs_url = 'http://iview.abc.net.au/api/search/programs'
-feed_url     = 'https://tviview.abc.net.au/iview/feed/lg/'
-
-series_url   = 'http://www.abc.net.au/iview/api/series_mrss.htm?id=%s'
-redirect_url = 'http://iview.abc.net.au/redirect/legacy/?url='
-
-akamai_fallback_server = 'rtmp://cp53909.edgefcs.net/ondemand'
-akamai_playpath_prefix = 'flash/playback/_definst_/'
-
-# Used for "SWF verification", a stream obfuscation technique
-swf_hash    = '96cc76f1d5385fb5cda6e2ce5c73323a399043d0bb6c687edd807e5c73c42b37'
-swf_size    = '2122'
-swf_url     = 'http://www.abc.net.au/iview/images/iview.jpg'
-
+BASE_URL = 'http://iview.abc.net.au'
+CONFIG_URL = 'http://iview.abc.net.au/api/navigation/mobile/2/?device=hbb&hbr=1'
+AUTH_URL = '/auth/hls/sign?'
+INDEX_URL = 'http://iview.abc.net.au/api/index?device=hbb&hbr=1&fields=seriesTitle,episodeCount,href'
+FEED_URL = 'http://iview.abc.net.au/api/{0}?device=hbb&hbr=1&sort=az'

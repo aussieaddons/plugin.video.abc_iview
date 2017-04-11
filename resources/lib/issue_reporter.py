@@ -45,7 +45,7 @@ def make_request(url):
     return urllib2.Request(url, headers={
         "Authorization": "Basic %s" % config.ISSUE_API_AUTH,
         "Content-Type": "application/json",
-        "User-Agent": '%s/%s' % (config.ADDON_ID, config.VERSION)
+        "User-Agent": '%s/%s' % (config.ADDON_ID, utils.get_version())
     })
 
 
@@ -180,7 +180,7 @@ def format_issue(issue_data):
         "*Automatic bug report from end-user.*\n## Environment\n"
         "**Plugin Name:** %s" % config.NAME,
         "**Plugin ID:** %s" % config.ADDON_ID,
-        "**Plugin Version:** %s" % config.VERSION,
+        "**Plugin Version:** %s" % utils.get_version(),
         "**XBMC/Kodi Version:** %s" % get_xbmc_version(),
         "**Python Version:** %s" % sys.version.replace('\n', ''),
         "**Operating System:** [%s] %s" % (sys.platform, os_string),
