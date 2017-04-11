@@ -30,8 +30,6 @@ import unicodedata
 import urllib
 import urllib2
 import textwrap
-import hmac
-import hashlib
 
 import xbmc
 import xbmcgui
@@ -46,31 +44,6 @@ PATTERN = re.compile("&(\w+?);")
 def get_version():
     addon = xbmcaddon.Addon()
     return addon.getAddonInfo('version')
-
-
-def get_auth(program):
-    """ Calculate signature and build auth URL for a program"""
-    ts = str(int(time.time()))
-    hn = program.get_house_number()
-    path = config.AUTH_URL + 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)
-    digest = hmac.new(config.SECRET, msg=path,
-                      digestmod=hashlib.sha256).hexdigest()
-    return config.BASE_URL + path + '&sig=' + digest
-
-
-def get_akamai_auth(url):
-    """ Access ABC auth URL and retrieve Akamai authorization data"""
-    res = urllib2.urlopen(url)
-    return res.read()
-
-
-def cookies_to_string(cookiejar):
-    result = ""
-    for cookie in cookiejar:
-        result += '{0}={1}; path={2}; domain={3}; '.format(
-            cookie.name, cookie.value, cookie.path, cookie.domain)
-    result = result[:-1]
-    return result
 
 
 def get_datetime(timestamp):
@@ -136,23 +109,18 @@ def log_error(message=None):
         exc_value = message
     xbmc.log("[%s v%s] ERROR: %s (%d) - %s" %
              (config.NAME, get_version(),
-              exc_traceback.tb_frame.f_code.co_name, exc_traceback.tb_lineno,
-              exc_value), level=xbmc.LOGERROR)
-    xbmc.log(traceback.print_exc(), level=xbmc.LOGERROR)
+              exc_tb.tb_frame.f_code.co_name, exc_tb.tb_lineno, exc_value),
+              level=xbmc.LOGERROR)
 
 
 def dialog_error(err=None):
     # Generate a list of lines for use in XBMC dialog
+    msg = ''
     content = []
     exc_type, exc_value, exc_tb = sys.exc_info()
     content.append("%s v%s Error" % (config.NAME, get_version()))
     content.append(str(exc_value))
-    if err:
-        msg = " - %s" % err
-    content.append("%s (%d) %s" % (exc_traceback.tb_frame.f_code.co_name,
-                                   exc_traceback.tb_lineno, msg))
     return content
-
 
 def dialog_message(msg, title=None):
     if not title:

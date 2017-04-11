@@ -23,8 +23,18 @@ import parse
 import utils
 import ssl
 import json
+import requests
 import threading
+import time
+import hmac
+import hashlib
 import cookielib
+import urllib
+
+from requests.adapters import HTTPAdapter
+
+# Ignore InsecureRequestWarning warnings
+requests.packages.urllib3.disable_warnings()
 
 try:
     import StorageServer
@@ -33,40 +43,31 @@ except:
     import storageserverdummy as StorageServer
 
 cache = StorageServer.StorageServer(config.ADDON_ID, 1)
-cj = cookielib.CookieJar()
-handler = urllib2.HTTPCookieProcessor(cj)
-opener = urllib2.build_opener(handler)
-opener.addheaders = [('User-Agent', config.USER_AGENT)]
 
 
-def fetch_url(url, headers={}):
-    """ Fetches a URL using urllib2 with some basic retry.
-        An exception is raised if an error (e.g. 404) occurs after the max
-        number of retries.
+def fetch_url(url, headers=None):
     """
-    utils.log('Fetching URL: %s' % url)
-    attempts = 10
-    attempt = 0
-    fail_exception = Exception('Unknown failure in URL fetch')
+    Simple function that fetches a URL using requests.
+    An exception is raised if an error (e.g. 404) occurs.
+    """
+    utils.log("Fetching URL: %s" % url)
+    with requests.Session() as session:
+        session.mount('http://', HTTPAdapter(max_retries=5))
+        session.mount('https://', HTTPAdapter(max_retries=5))
+        session.verify = False
 
-    # monkey patch SSL context to fix SSL errors on python >= 2.7.9
-    if hasattr(ssl, '_create_unverified_context'):
-        ssl._create_default_https_context = ssl._create_unverified_context
+        if headers:
+            session.headers.update(headers)
 
-    # Attempt $attempt times and increase the timeout each time
-    while attempt < attempts:
+        request = session.get(url)
+
         try:
-            timeout = 10 * (attempt + 1)
-            http = requests.get(url, headers=config.HEADERS, timeout=timeout)
-            return http.text
+            request.raise_for_status()
         except Exception as e:
-            fail_exception = e
-            attempt += 1
-            utils.log('Error fetching URL: "%s". Attempting to retry '
-                      'URL fetch %d/%d' % (e, attempt, attempts))
-
-    # Pass the last exception though
-    raise fail_exception
+            # Just re-raise for now
+            raise e
+        data = request.text
+    return data
 
 
 def fetch_protected_url(url):
@@ -76,10 +77,47 @@ def fetch_protected_url(url):
     return fetch_url(url, headers)
 
 
-def fetch_url_withcookies(url, data=None):
-    """ Fetches a URL using a cookiejar opener"""
-    http = opener.open(url, data=None)
-    return http.read()
+def get_auth(hn):
+    """ Calculate signature and build auth URL for a program"""
+    ts = str(int(time.time()))
+    path = config.AUTH_URL + 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)
+    digest = hmac.new(config.SECRET, msg=path,
+                      digestmod=hashlib.sha256).hexdigest()
+    return config.BASE_URL + path + '&sig=' + digest
+
+
+def cookies_to_string(cookiejar):
+    cookies = []
+    for cookie in cookiejar:
+        cookies.append('{0}={1}; path={2}; domain={3};'.format(
+            cookie.name, cookie.value, cookie.path, cookie.domain))
+    return ' '.join(cookies)
+
+
+def get_stream_url(hn, url):
+    utils.log("Fetching stream URL: {0}".format(url))
+    with requests.Session() as session:
+        session.mount('http://', HTTPAdapter(max_retries=5))
+        session.mount('https://', HTTPAdapter(max_retries=5))
+        session.verify = False
+
+        auth = get_auth(hn)
+
+        request = session.get(auth)
+        request.raise_for_status()
+        akamai_auth = request.text
+
+        akamai_url = "{0}?hdnea={1}".format(url, akamai_auth)
+        request = session.get(akamai_url)
+        request.raise_for_status()
+
+        cookies = cookies_to_string(request.cookies)
+        utils.log(cookies)
+
+        stream_url = '{0}|User-Agent={1}&Cookie={2}'.format(
+            akamai_url, urllib.quote(config.USER_AGENT), urllib.quote(cookies))
+
+    return stream_url
 
 
 def get_categories():
