@@ -1,5 +1,5 @@
-[B]Version 1.7.6-18-g35a7c86[/B]
-- Merge remote-tracking branch 'origin/mobile-api'
+[B]Version 1.7.6-18-g2673424[/B]
+- Switch to mobile API and update metadata for Kodi v17
 - Remove cookies.dat on each playback
 - Update README.markdown
 - Add 'high quality' streams where available
