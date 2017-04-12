@@ -47,7 +47,7 @@ def parse_categories(config):
 
     return categories_list
 
-def parse_programme_from_feed(data):
+def parse_programme_from_feed(data, keyword):
     jsondata = json.loads(data)
     show_list = []
     href_list = []
@@ -58,40 +58,50 @@ def parse_programme_from_feed(data):
     for section in jsondata[u'index']:
         for item in section[u'episodes']:
 
+            houseno = item['episodeHouseNumber'][:7]
             title = item[u'seriesTitle']
             if title.startswith(u'Trailer'):
                 continue
 
-            show = classes.Series()
+            show = None
+            if keyword == 'category/news' or keyword == 'channel/news24':
+                for s in show_list:
+                    if s.series_houseno == houseno:
+                       show = s
+                       break
+                    if s.title == title:
+                        show = s
+                        break
 
-            show.series_houseno = item['episodeHouseNumber'][:7]
+            if not show:
+                show = classes.Series()
+                show.series_houseno = houseno
+                episode_count = 0
+                for houseno in series_houseno_list:
+                    if houseno[0] == show.series_houseno:
+                        episode_count = houseno[1]
+                        show.num_episodes = episode_count
+                        break
+                #some shows have multiple house no's, try matching titles
+                if episode_count == 0:
+                    for group in show_index['index']:
+                        for listing in group['episodes']:
+                            if listing['seriesTitle'] == title:
+                                show.num_episodes = listing['episodeCount']
+                                break
 
-            episode_count = 0
-            for houseno in series_houseno_list:
-                if houseno[0] == show.series_houseno:
-                    episode_count = houseno[1]
-                    show.num_episodes = episode_count
-                    break
-            #some shows have multiple house no's, try matching titles
-            if episode_count == 0:
-                for group in show_index['index']:
-                    for listing in group['episodes']:
-                        if listing['seriesTitle'] == title:
-                            show.num_episodes = listing['episodeCount']
-                            break
-
-            show.title = title
-            if u'title' in item:
-                show.description = item[u'title']
-                title_match = re.match('^[Ss]eries\s?(?P<series>\w+)', show.description)
-                if title_match:
-                    show.title += ' Series ' + title_match.groups()[0]
-            else:
-                show.description = item[u'seriesTitle']
-            show.thumbnail = item['thumbnail']
-            show.series_url = item['href']
-            href_list.append(item['href'])
-            show_list.append(show)
+                show.title = title
+                if u'title' in item:
+                    show.description = item[u'title']
+                    title_match = re.match('^[Ss]eries\s?(?P<series>\w+)', show.description)
+                    if title_match:
+                        show.title += ' Series ' + title_match.groups()[0]
+                else:
+                    show.description = item[u'seriesTitle']
+                show.thumbnail = item['thumbnail']
+                show.series_url = item['href']
+                href_list.append(item['href'])
+                show_list.append(show)
 
     return show_list
 

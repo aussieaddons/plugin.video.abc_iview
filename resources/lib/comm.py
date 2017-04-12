@@ -139,7 +139,7 @@ def get_feed(keyword):
 def get_programme_from_feed(keyword):
     utils.log('Getting programme from feed (%s)' % keyword)
     feed = get_feed(keyword)
-    shows = parse.parse_programme_from_feed(feed)
+    shows = parse.parse_programme_from_feed(feed, keyword)
     return shows
 
 
