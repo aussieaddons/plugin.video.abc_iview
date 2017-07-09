@@ -16,23 +16,17 @@
 #  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import urllib2
 import requests
 import config
 import parse
 import utils
-import ssl
 import json
-import requests
 import threading
 import time
 import hmac
 import hashlib
-import cookielib
 import urllib
-
 from requests.adapters import HTTPAdapter
-
 # Ignore InsecureRequestWarning warnings
 requests.packages.urllib3.disable_warnings()
 
@@ -77,13 +71,33 @@ def fetch_protected_url(url):
     return fetch_url(url, headers)
 
 
-def get_auth(hn):
+def get_auth(hn, manual_time=False, prev_req=None):
     """ Calculate signature and build auth URL for a program"""
-    ts = str(int(time.time()))
+    if manual_time:
+        print prev_req.headers['Date']
+        print type(prev_req.headers['Date'])
+        ts = utils.get_manual_time(prev_req.headers['Date'])
+    else:
+        ts = str(int(time.time()))
     path = config.AUTH_URL + 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)
     digest = hmac.new(config.SECRET, msg=path,
                       digestmod=hashlib.sha256).hexdigest()
-    return config.BASE_URL + path + '&sig=' + digest
+    auth_url = config.BASE_URL + path + '&sig=' + digest
+    try:
+        res = requests.get(auth_url, verify=False)
+        res.raise_for_status()
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            if not manual_time:
+                auth = get_auth(hn, manual_time=True, prev_req=res)
+                return auth
+            else:
+                utils.xbmcgui.Dialog().ok(
+                    'System time incorrect',
+                    'Please set the correct time/date/timezone for your '
+                    'location and try again.')
+                raise Exception
+    return res.text
 
 
 def cookies_to_string(cookiejar):
@@ -102,13 +116,9 @@ def get_stream_url(hn, url):
         session.verify = False
         session.headers = {'User-Agent': config.USER_AGENT}
 
-        auth = get_auth(hn)
-
-        request = session.get(auth)
-        request.raise_for_status()
-        akamai_auth = request.text
-
+        akamai_auth = get_auth(hn)
         akamai_url = "{0}?hdnea={1}".format(url, akamai_auth)
+
         request = session.get(akamai_url)
         request.raise_for_status()
 
@@ -128,6 +138,18 @@ def get_categories():
     category_data = fetch_url(url)
     categories = parse.parse_categories(category_data)
     return categories
+
+
+def validate_category(keyword):
+    """
+    Checks if keyword is in a list of categories from the old/LG
+    iview API, and updates if required. Maintains compatibility with old
+    favourites links
+    """
+    if keyword in config.CATEGORIES:
+        return config.CATEGORIES[keyword]
+    else:
+        return keyword
 
 
 def get_feed(keyword):

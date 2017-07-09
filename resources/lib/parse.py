@@ -23,13 +23,10 @@ import comm
 import config
 import classes
 import utils
-import sys
 import re
-import datetime
-import time
 import json
-
 import xml.etree.ElementTree as ET
+
 
 def parse_categories(config):
     """ Fetch navigation json file and retrieve channels and categories.
@@ -37,7 +34,7 @@ def parse_categories(config):
     categories_list = []
     data = json.loads(config)
     categories = [x for y in [data[1]['submenus'][0]['channels'],
-                data[1]['submenus'][1]['submenus']] for x in y]
+                  data[1]['submenus'][1]['submenus']] for x in y]
 
     for cat in categories:
         item = {}
@@ -47,13 +44,15 @@ def parse_categories(config):
 
     return categories_list
 
+
 def parse_programme_from_feed(data, keyword):
     jsondata = json.loads(data)
     show_list = []
     href_list = []
     show_index = json.loads(comm.fetch_url(config.INDEX_URL))
     series_houseno_list = [(x['href'][-13:-6], x['episodeCount'])
-                    for item in show_index['index'] for x in item['episodes']]
+                           for item in show_index['index']
+                           for x in item['episodes']]
 
     for section in jsondata[u'index']:
         for item in section[u'episodes']:
@@ -67,8 +66,8 @@ def parse_programme_from_feed(data, keyword):
             if keyword == 'category/news' or keyword == 'channel/news24':
                 for s in show_list:
                     if s.series_houseno == houseno:
-                       show = s
-                       break
+                        show = s
+                        break
                     if s.title == title:
                         show = s
                         break
@@ -82,7 +81,7 @@ def parse_programme_from_feed(data, keyword):
                         episode_count = houseno[1]
                         show.num_episodes = episode_count
                         break
-                #some shows have multiple house no's, try matching titles
+                # some shows have multiple house no's, try matching titles
                 if episode_count == 0:
                     for group in show_index['index']:
                         for listing in group['episodes']:
@@ -93,7 +92,8 @@ def parse_programme_from_feed(data, keyword):
                 show.title = title
                 if u'title' in item:
                     show.description = item[u'title']
-                    title_match = re.match('^[Ss]eries\s?(?P<series>\w+)', show.description)
+                    title_match = re.match(
+                        '^[Ss]eries\s?(?P<series>\w+)', show.description)
                     if title_match:
                         show.title += ' Series ' + title_match.groups()[0]
                 else:
@@ -104,6 +104,7 @@ def parse_programme_from_feed(data, keyword):
                 show_list.append(show)
 
     return show_list
+
 
 def parse_programs_from_feed(data, episode_count):
     jsondata = json.loads(data)
@@ -134,23 +135,30 @@ def parse_programs_from_feed(data, episode_count):
             # Series 2 Episode 25 Home Is Where The Hatch Is
             # Series 4 Ep:11 As A Yoga Yuppie
             # Series 4 Ep 10: Emission Impossible
-            title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s[Ee]p(isode)?:?\s?(?P<episode>\d+):?\s(?P<episode_title>.*)$', subtitle)
+            title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s[Ee]p(is'
+                                    'ode)?:?\s?(?P<episode>\d+):?\s(?P<episod'
+                                    'e_title>.*)$', subtitle)
             if not title_match:
                 # Series 8 Episode 13
                 # Series 8 Episode:13
-                title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s?[Ee]p(isode)?:?\s?(?P<episode>\d+)$', subtitle)
+                title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s?[Ee'
+                                        ']p(isode)?:?\s?(?P<episode>\d+)$',
+                                        subtitle)
             if not title_match:
                 # Episode 34 Shape Shifter
                 # Ep:34 Shape Shifter
-                title_match = re.search('^[Ee]p(isode)?:?\s?(?P<episode>\d+):?\s?(?P<episode_title>.*)$', subtitle)
+                title_match = re.search('^[Ee]p(isode)?:?\s?(?P<episode>\d+):'
+                                        '?\s?(?P<episode_title>.*)$', subtitle)
             if not title_match:
-                # Series 10 Rylan Clark, Joanna Lumley, Ant And Dec, The Vaccines
-                title_match = re.search('^[Ss]eries:?\s?(?P<series>\d+):?\s(?P<episode_title>.*)$', subtitle)
+                # Series 10 Rylan Clark, Joanna Lumley, Ant And Dec
+                title_match = re.search('^[Ss]eries:?\s?(?P<series>\d+):?\s(?'
+                                        'P<episode_title>.*)$', subtitle)
             if not title_match:
                 # Episode 5
                 # Ep 5
                 # Episode:5
-                title_match = re.search('^[Ee]p(isode)?:?\s?(?P<episode>\d+)$', subtitle)
+                title_match = re.search('^[Ee]p(isode)?:?\s?(?P<episode>\d+)$',
+                                        subtitle)
             if not title_match:
                 p.episode_title = subtitle
 
@@ -186,8 +194,11 @@ def parse_programs_from_feed(data, episode_count):
 
         programs_list.append(p)
 
-    sorted_programs = sorted(programs_list, key=lambda x: x.get_date_time(), reverse=True)
+    sorted_programs = sorted(programs_list,
+                             key=lambda x: x.get_date_time(),
+                             reverse=True)
     return sorted_programs
+
 
 def parse_other_episodes(url):
     """ return a list of URLs linking to other shows in series"""
@@ -198,6 +209,7 @@ def parse_other_episodes(url):
     for episode in data['index'][0]['episodes']:
         related_list.append(episode['href'])
     return related_list
+
 
 def parse_m3u8_streams(m3u8, quality):
     """ Parse the retrieved m3u8 stream list into a list of dictionaries
@@ -216,13 +228,14 @@ def parse_m3u8_streams(m3u8, quality):
             line = line[:-1]
         line = line.strip().split(',')
         linelist = [i.split('=') for i in line]
-        linelist.append(['URL',data[count+1]])
+        linelist.append(['URL', data[count+1]])
         m3uList.append(dict((i[0], i[1]) for i in linelist))
         count += 2
 
     sorted_m3uList = sorted(m3uList, key=lambda k: int(k['BANDWIDTH']))
     stream = sorted_m3uList[int(quality)]['URL']
     return stream
+
 
 def convert_timecode(start, end):
     """ convert iview xml timecode attribute to subrip srt standard"""
@@ -236,7 +249,7 @@ def convert_to_srt(data):
     result = ""
     count = 1
     for elem in root.findall('title'):
-        if elem.text == None:
+        if elem.text is None:
             continue
         result += str(count) + '\n'
         result += convert_timecode(elem.get('start'), elem.get('end'))+'\n'
@@ -244,6 +257,5 @@ def convert_to_srt(data):
         for line in st:
             result += line + '\n'
         result += '\n'
-        count +=1
+        count += 1
     return result.encode('utf-8')
-
