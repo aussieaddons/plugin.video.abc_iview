@@ -19,29 +19,40 @@
 #  along with this plugin. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import os, sys
+import os
+import sys
+import xbmcgui
 
 # Add our resources/lib to the python path
 try:
-   current_dir = os.path.dirname(os.path.abspath(__file__))
+    current_dir = os.path.dirname(os.path.abspath(__file__))
 except:
-   current_dir = os.getcwd()
-
+    current_dir = os.getcwd()
 sys.path.append(os.path.join(current_dir, 'resources', 'lib'))
-import utils, categories, series, programs, play
-
+import utils  # noqa: E402
+import categories  # noqa: E402
+import series  # noqa: E402
+import programs  # noqa: E402
+import play  # noqa: E402
 # Print our platform/version debugging information
 utils.log_xbmc_platform_version()
 
-if __name__ == "__main__" :
-   params_str = sys.argv[2]
-   params = utils.get_url(params_str)
+if __name__ == '__main__':
+    params_str = sys.argv[2]
+    params = utils.get_url(params_str)
 
-   if (len(params) == 0):
-      categories.make_category_list()
-   elif params.has_key("play"):
-      play.play(params_str)
-   elif params.has_key("series_url"):
-      programs.make_programs_list(params_str)
-   elif params.has_key("category"):
-      series.make_series_list(params_str)
+    if (len(params) == 0):
+        categories.make_category_list()
+    elif 'series' in params:
+        xbmcgui.Dialog().ok(
+            'Outdated Favourites Link',
+            'The Kodi Favourite item being accessed was created with an '
+            'earlier version of the iView add-on and is no longer '
+            'compatible. Please remove this link and update with a new '
+            'one')
+    elif 'play' in params:
+        play.play(params_str)
+    elif 'series_url' in params:
+        programs.make_programs_list(params_str)
+    elif 'category' in params:
+        series.make_series_list(params_str)

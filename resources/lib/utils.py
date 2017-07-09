@@ -24,20 +24,55 @@ import sys
 import re
 import traceback
 import time
-import datetime
+from datetime import tzinfo, timedelta, datetime
 import htmlentitydefs
 import unicodedata
 import urllib
+import requests
 import textwrap
-
 import xbmc
 import xbmcgui
 import xbmcaddon
-
 import config
 import issue_reporter
 
 PATTERN = re.compile("&(\w+?);")
+
+
+class AUTimeZone(tzinfo):
+
+    def __init__(self, data, reprname, ):
+        self.stdoffset = timedelta(hours=data[0], minutes=data[1])
+        self.reprname = reprname
+        self.data = data
+
+    def __repr__(self):
+        return self.reprname
+
+    def first_sunday_on_or_after(self, dt):
+        days_to_go = 6 - dt.weekday()
+        if days_to_go:
+            dt += timedelta(days_to_go)
+        return dt
+
+    def utcoffset(self, dt):
+        return self.stdoffset + self.dst(dt)
+
+    def dst(self, dt):
+        ZERO = timedelta(0)
+        DELTA = timedelta(hours=self.data[2]-self.data[0],
+                          minutes=self.data[3]-self.data[1])
+        if dt is None or dt.tzinfo is None:
+            return ZERO
+
+        dststart, dstend = datetime(1, 10, 1, 2), datetime(1, 4, 1, 2)
+        start = self.first_sunday_on_or_after(dststart.replace(year=dt.year))
+        end = self.first_sunday_on_or_after(dstend.replace(year=dt.year))
+
+        if end <= dt.replace(tzinfo=None) < start:
+            return ZERO
+        else:
+            return DELTA
 
 
 def get_version():
@@ -45,11 +80,28 @@ def get_version():
     return addon.getAddonInfo('version')
 
 
+def get_manual_time(timestamp):
+    ts_format = '%a, %d %b %Y %H:%M:%S GMT'
+    try:
+        dt = datetime.strptime(timestamp, ts_format)
+    except TypeError:
+        dt = datetime(*(time.strptime(timestamp, ts_format)[0:6]))
+
+    res = requests.get('http://freegeoip.net/json/')
+    tz_string = res.json()['time_zone']
+    tz_data = config.TZ_LIST[tz_string]
+
+    dt += timedelta(hours=tz_data[0], minutes=tz_data[1])
+    timezone = AUTimeZone(tz_data, tz_string)
+    dt = dt.replace(tzinfo=timezone)
+    return str(int(time.mktime(dt.timetuple())))
+
+
 def get_datetime(timestamp):
     # 2016-04-18 07:00:00
     try:
         dt = time.mktime(time.strptime(timestamp, '%Y-%m-%d %H:%M:%S'))
-        return datetime.datetime.fromtimestamp(dt)
+        return datetime.fromtimestamp(dt)
     except:
         log_error("Couldn't parse timestamp: %s" % timestamp)
     return
@@ -109,12 +161,11 @@ def log_error(message=None):
     xbmc.log("[%s v%s] ERROR: %s (%d) - %s" %
              (config.NAME, get_version(),
               exc_tb.tb_frame.f_code.co_name, exc_tb.tb_lineno, exc_value),
-              level=xbmc.LOGERROR)
+             level=xbmc.LOGERROR)
 
 
 def dialog_error(err=None):
     # Generate a list of lines for use in XBMC dialog
-    msg = ''
     content = []
     exc_type, exc_value, exc_tb = sys.exc_info()
     content.append("%s v%s Error" % (config.NAME, get_version()))
@@ -232,7 +283,7 @@ def handle_error(err=None):
     report_issue = False
 
     # Don't show any dialogs when user cancels
-    if traceback_str.find('SystemExit') > 0:
+    if 'SystemExit' in traceback_str:
         return
 
     d = xbmcgui.Dialog()
@@ -243,9 +294,14 @@ def handle_error(err=None):
         send_error = can_send_error(traceback_str)
 
         # Some transient network errors we don't want any reports about
-        if ((traceback_str.find('The read operation timed out') > 0) or
-            (traceback_str.find('IncompleteRead') > 0) or
-            (traceback_str.find('HTTP Error 404: Not Found') > 0)):
+        ignore_errors = ['The read operation timed out',
+                         'IncompleteRead',
+                         'getaddrinfo failed',
+                         'No address associated with hostname',
+                         'Connection reset by peer',
+                         'HTTP Error 404: Not Found']
+
+        if any(s in traceback_str for s in ignore_errors):
             send_error = False
 
         if send_error:

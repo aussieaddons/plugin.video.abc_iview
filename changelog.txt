@@ -1,5 +1,6 @@
-[B]Version 1.7.6-20-gd531a58[/B]
-- Fix authentication and remove some unneeded urllib2 imports
+[B]Version 1.8.0[/B]
+- Fix for duplicate entries in news categories
+- Switch to using requests
 - Add missing requests import
 - Switch to mobile API and update metadata for Kodi v17
 - Remove cookies.dat on each playback
