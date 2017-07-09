@@ -26,6 +26,7 @@ import time
 import hmac
 import hashlib
 import urllib
+from classes import iviewException
 from requests.adapters import HTTPAdapter
 # Ignore InsecureRequestWarning warnings
 requests.packages.urllib3.disable_warnings()
@@ -77,11 +78,11 @@ def get_auth(hn, manual_time=False, prev_req=None):
         try:
             ts = utils.get_manual_time(prev_req.headers['Date'])
         except requests.exceptions.HTTPError as e:
-            utils.xbmcgui.Dialog().ok(
-                'System time incorrect',
-                'Please set the correct time/date/timezone for your '
+            utils.dialog_message(
+                'Accurate system time required for playback. '
+                'Please set the correct system time/date/timezone for your '
                 'location and try again.')
-            raise e
+            raise iviewException(e)
     else:
         ts = str(int(time.time()))
     path = config.AUTH_URL + 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)
@@ -97,10 +98,11 @@ def get_auth(hn, manual_time=False, prev_req=None):
                 utils.log('Auth failed, reattempting with internet time')
                 return get_auth(hn, manual_time=True, prev_req=res)
             else:
-                utils.xbmcgui.Dialog().ok(
-                    'System time incorrect',
-                    'Please set the correct time/date/timezone for your '
-                    'location and try again.')
+                utils.dialog_message(
+                    'Accurate system time required for '
+                    'Playback. Please set the correct system '
+                    'time/date/timezone for your location and try again.')
+                raise iviewException(e)
     return res.text
 
 

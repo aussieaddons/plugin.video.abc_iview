@@ -56,5 +56,5 @@ def make_programs_list(url):
 
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
-    except:
-        utils.handle_error('Unable to fetch program list')
+    except Exception as e:
+        utils.handle_error('Unable to fetch program list', exc=e)

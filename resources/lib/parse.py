@@ -135,24 +135,18 @@ def parse_programs_from_feed(data, episode_count):
             # Series 2 Episode 25 Home Is Where The Hatch Is
             # Series 4 Ep:11 As A Yoga Yuppie
             # Series 4 Ep 10: Emission Impossible
-            title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s[Ee]p(is'
-                                    'ode)?:?\s?(?P<episode>\d+):?\s(?P<episod'
-                                    'e_title>.*)$', subtitle)
+            title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s[Ee]p(isode)?:?\s?(?P<episode>\d+):?\s(?P<episode_title>.*)$', subtitle)  # noqa
             if not title_match:
                 # Series 8 Episode 13
                 # Series 8 Episode:13
-                title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s?[Ee'
-                                        ']p(isode)?:?\s?(?P<episode>\d+)$',
-                                        subtitle)
+                title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s?[Ee]p(isode)?:?\s?(?P<episode>\d+)$', subtitle)  # noqa
             if not title_match:
                 # Episode 34 Shape Shifter
                 # Ep:34 Shape Shifter
-                title_match = re.search('^[Ee]p(isode)?:?\s?(?P<episode>\d+):'
-                                        '?\s?(?P<episode_title>.*)$', subtitle)
+                title_match = re.search('^[Ee]p(isode)?:?\s?(?P<episode>\d+):?\s?(?P<episode_title>.*)$', subtitle)  # noqa
             if not title_match:
                 # Series 10 Rylan Clark, Joanna Lumley, Ant And Dec
-                title_match = re.search('^[Ss]eries:?\s?(?P<series>\d+):?\s(?'
-                                        'P<episode_title>.*)$', subtitle)
+                title_match = re.search('^[Ss]eries:?\s?(?P<series>\d+):?\s(?P<episode_title>.*)$', subtitle)  # noqa
             if not title_match:
                 # Episode 5
                 # Ep 5

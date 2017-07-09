@@ -44,5 +44,5 @@ def make_category_list():
 
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
-    except:
-        utils.handle_error()
+    except Exception as e:
+        utils.handle_error(exc=e)
