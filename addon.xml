@@ -4,6 +4,7 @@
     <import addon="script.common.plugin.cache"/>
     <import addon="script.module.beautifulsoup"/>
     <import addon="script.module.requests"/>
+	<import addon="script.module.issuereporter"/>
   </requires>
   <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
     <provides>video</provides>
