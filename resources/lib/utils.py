@@ -176,13 +176,14 @@ def dialog_error(err=None):
     return content
 
 
-def dialog_message(msg, title=None):
-    if not title:
+def dialog_message(title, msg=None):
+    if not msg:
+        msg = title
         title = "%s v%s" % (config.NAME, get_version())
     # Add title to the first pos of the textwrap list
     content = textwrap.wrap(msg, 60)
     content.insert(0, title)
-    return content
+    xbmcgui.Dialog().ok(*content)
 
 
 def get_platform():
@@ -280,7 +281,7 @@ def can_send_error(trace):
     return False
 
 
-def handle_error(err=None):
+def handle_error(msg, exc=None):
     traceback_str = traceback.format_exc()
     log(traceback_str)
     report_issue = False
@@ -291,7 +292,7 @@ def handle_error(err=None):
 
     d = xbmcgui.Dialog()
     if d:
-        message = dialog_error(err)
+        message = dialog_error(msg)
 
         # Work out if we should allow an error report
         send_error = can_send_error(traceback_str)
@@ -305,6 +306,10 @@ def handle_error(err=None):
                          'HTTP Error 404: Not Found']
 
         if any(s in traceback_str for s in ignore_errors):
+            send_error = False
+
+        # Don't allow reporting for these (mostly) user or service errors
+        if type(exc).__name__ in ['iviewException']:
             send_error = False
 
         if send_error:
