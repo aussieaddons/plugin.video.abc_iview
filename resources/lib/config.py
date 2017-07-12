@@ -40,6 +40,9 @@ AUTH_URL = '/auth/hls/sign?'
 INDEX_URL = 'http://iview.abc.net.au/api/index?device=hbb&hbr=1&fields=seriesTitle,episodeCount,href'
 FEED_URL = 'http://iview.abc.net.au/api/{0}?device=hbb&hbr=1&sort=az'
 
+#  Dictionary for converting LG iview API categories to mobile API categories
+#  Many users have saved 'favourites' in Kodi, this will mitigate a lot of
+#  potential errors
 CATEGORIES = {'arts': 'channel/abcarts',
               'docs': 'category/docs',
               'comedy': 'category/comedy',
@@ -60,27 +63,3 @@ CATEGORIES = {'arts': 'channel/abcarts',
               'featured': 'channel/abc1',
               'recent': 'channel/abc1',
               'last-chance': 'channel/abc1'}
-
-TZ_LIST = {'Australia/ACT': [10, 0, 11, 0],
-           'Australia/Adelaide': [9, 30, 10, 30],
-           'Australia/Brisbane': [10, 0, 10, 0],
-           'Australia/Broken_Hill': [9, 30, 10, 30],
-           'Australia/Canberra': [10, 0, 11, 0],
-           'Australia/Currie': [10, 0, 11, 0],
-           'Australia/Darwin': [9, 30, 9, 30],
-           'Australia/Eucla': [8, 45, 8, 45],
-           'Australia/Hobart': [10, 0, 11, 0],
-           'Australia/LHI': [10, 30, 11, 0],
-           'Australia/Lindeman': [10, 0, 10, 0],
-           'Australia/Lord_Howe': [10, 30, 11, 0],
-           'Australia/Melbourne': [10, 0, 11, 0],
-           'Australia/North': [9, 30, 9, 30],
-           'Australia/NSW': [10, 0, 11, 0],
-           'Australia/Perth': [8, 0, 8, 0],
-           'Australia/Queensland': [10, 0, 10, 0],
-           'Australia/South': [9, 30, 10, 30],
-           'Australia/Sydney': [10, 0, 11, 0],
-           'Australia/Tasmania': [10, 0, 11, 0],
-           'Australia/Victoria': [10, 0, 11, 0],
-           'Australia/West': [8, 0, 8, 0],
-           'Australia/Yancowinna': [9, 30, 10, 30]}

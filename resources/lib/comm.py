@@ -72,19 +72,9 @@ def fetch_protected_url(url):
     return fetch_url(url, headers)
 
 
-def get_auth(hn, manual_time=False, prev_req=None):
+def get_auth(hn):
     """ Calculate signature and build auth URL for a program"""
-    if manual_time:
-        try:
-            ts = utils.get_manual_time(prev_req.headers['Date'])
-        except requests.exceptions.HTTPError as e:
-            utils.dialog_message(
-                'Accurate system time required for playback. '
-                'Please set the correct system time/date/timezone for your '
-                'location and try again.')
-            raise iviewException(e)
-    else:
-        ts = str(int(time.time()))
+    ts = str(int(time.time()))
     path = config.AUTH_URL + 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)
     digest = hmac.new(config.SECRET, msg=path,
                       digestmod=hashlib.sha256).hexdigest()
@@ -94,15 +84,11 @@ def get_auth(hn, manual_time=False, prev_req=None):
         res.raise_for_status()
     except requests.exceptions.HTTPError as e:
         if e.response.status_code == 404:
-            if not manual_time:
-                utils.log('Auth failed, reattempting with internet time')
-                return get_auth(hn, manual_time=True, prev_req=res)
-            else:
-                utils.dialog_message(
-                    'Accurate system time required for '
-                    'Playback. Please set the correct system '
-                    'time/date/timezone for your location and try again.')
-                raise iviewException(e)
+            utils.dialog_message(
+                'Accurate system time required for '
+                'playback. Please set the correct system '
+                'time/date/timezone for your location and try again.')
+            raise iviewException(e)
     return res.text
 
 
@@ -127,10 +113,7 @@ def get_stream_url(hn, url):
 
         request = session.get(akamai_url)
         request.raise_for_status()
-
         cookies = cookies_to_string(request.cookies)
-        utils.log(cookies)
-
         stream_url = '{0}|User-Agent={1}&Cookie={2}'.format(
             akamai_url, urllib.quote(config.USER_AGENT), urllib.quote(cookies))
 

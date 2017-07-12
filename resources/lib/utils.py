@@ -39,65 +39,9 @@ import issue_reporter
 PATTERN = re.compile("&(\w+?);")
 
 
-class AUTimeZone(tzinfo):
-
-    def __init__(self, data, reprname, ):
-        self.stdoffset = timedelta(hours=data[0], minutes=data[1])
-        self.reprname = reprname
-        self.data = data
-
-    def __repr__(self):
-        return self.reprname
-
-    def first_sunday_on_or_after(self, dt):
-        days_to_go = 6 - dt.weekday()
-        if days_to_go:
-            dt += timedelta(days_to_go)
-        return dt
-
-    def utcoffset(self, dt):
-        return self.stdoffset + self.dst(dt)
-
-    def dst(self, dt):
-        ZERO = timedelta(0)
-        DELTA = timedelta(hours=self.data[2]-self.data[0],
-                          minutes=self.data[3]-self.data[1])
-        if dt is None or dt.tzinfo is None:
-            return ZERO
-
-        dststart, dstend = datetime(1, 10, 1, 2), datetime(1, 4, 1, 2)
-        start = self.first_sunday_on_or_after(dststart.replace(year=dt.year))
-        end = self.first_sunday_on_or_after(dstend.replace(year=dt.year))
-
-        if end <= dt.replace(tzinfo=None) < start:
-            return ZERO
-        else:
-            return DELTA
-
-
 def get_version():
     addon = xbmcaddon.Addon()
     return addon.getAddonInfo('version')
-
-
-def get_manual_time(timestamp):
-    ts_format = '%a, %d %b %Y %H:%M:%S GMT'
-    try:
-        res = requests.get('http://freegeoip.net/json/')
-        res.raise_for_status()
-        tz_string = res.json()['time_zone']
-        tz_data = config.TZ_LIST[tz_string]
-        UTC = AUTimeZone([0, 0, 0, 0], 'UTC')
-        local_timezone = AUTimeZone(tz_data, tz_string)
-    except requests.exceptions.HTTPError as e:
-        raise e
-    try:
-        dt = datetime.strptime(timestamp, ts_format, tzinfo=UTC)
-    except TypeError:
-        dt = datetime(*(time.strptime(timestamp, ts_format)[0:6]), tzinfo=UTC)
-
-    dt = dt.astimezone(local_timezone)
-    return str(int(time.mktime(dt.timetuple())))
 
 
 def get_datetime(timestamp):
