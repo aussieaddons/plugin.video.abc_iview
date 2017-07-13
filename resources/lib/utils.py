@@ -24,11 +24,10 @@ import sys
 import re
 import traceback
 import time
-from datetime import tzinfo, timedelta, datetime
+from datetime import datetime
 import htmlentitydefs
 import unicodedata
 import urllib
-import requests
 import textwrap
 import xbmc
 import xbmcgui
@@ -253,7 +252,7 @@ def handle_error(msg, exc=None):
             send_error = False
 
         # Don't allow reporting for these (mostly) user or service errors
-        if type(exc).__name__ in ['iviewException']:
+        if type(exc).__name__ in ['iviewException', 'NonFatalException']:
             send_error = False
 
         if send_error:

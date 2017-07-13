@@ -16,6 +16,7 @@
 #  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
+import custom_session
 import requests
 import config
 import parse
@@ -27,9 +28,6 @@ import hmac
 import hashlib
 import urllib
 from classes import iviewException
-from requests.adapters import HTTPAdapter
-# Ignore InsecureRequestWarning warnings
-requests.packages.urllib3.disable_warnings()
 
 try:
     import StorageServer
@@ -46,16 +44,10 @@ def fetch_url(url, headers=None):
     An exception is raised if an error (e.g. 404) occurs.
     """
     utils.log("Fetching URL: %s" % url)
-    with requests.Session() as session:
-        session.mount('http://', HTTPAdapter(max_retries=5))
-        session.mount('https://', HTTPAdapter(max_retries=5))
-        session.verify = False
-
+    with custom_session.Session() as session:
         if headers:
             session.headers.update(headers)
-
         request = session.get(url)
-
         try:
             request.raise_for_status()
         except Exception as e:
@@ -72,7 +64,7 @@ def fetch_protected_url(url):
     return fetch_url(url, headers)
 
 
-def get_auth(hn):
+def get_auth(hn, session):
     """ Calculate signature and build auth URL for a program"""
     ts = str(int(time.time()))
     path = config.AUTH_URL + 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)
@@ -80,8 +72,7 @@ def get_auth(hn):
                       digestmod=hashlib.sha256).hexdigest()
     auth_url = config.BASE_URL + path + '&sig=' + digest
     try:
-        res = requests.get(auth_url, verify=False)
-        res.raise_for_status()
+        res = session.get(auth_url)
     except requests.exceptions.HTTPError as e:
         if e.response.status_code == 404:
             utils.dialog_message(
@@ -102,17 +93,11 @@ def cookies_to_string(cookiejar):
 
 def get_stream_url(hn, url):
     utils.log("Fetching stream URL: {0}".format(url))
-    with requests.Session() as session:
-        session.mount('http://', HTTPAdapter(max_retries=5))
-        session.mount('https://', HTTPAdapter(max_retries=5))
-        session.verify = False
+    with custom_session.Session() as session:
         session.headers = {'User-Agent': config.USER_AGENT}
-
-        akamai_auth = get_auth(hn)
+        akamai_auth = get_auth(hn, session)
         akamai_url = "{0}?hdnea={1}".format(url, akamai_auth)
-
         request = session.get(akamai_url)
-        request.raise_for_status()
         cookies = cookies_to_string(request.cookies)
         stream_url = '{0}|User-Agent={1}&Cookie={2}'.format(
             akamai_url, urllib.quote(config.USER_AGENT), urllib.quote(cookies))
