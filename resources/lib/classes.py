@@ -19,17 +19,11 @@
 #  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import utils
 import datetime
 import urllib
 import time
 
-
-class iviewException(Exception):
-    """ A Not Fatal Exception is used for certain conditions where we do not
-        want to give users an option to send an error report
-    """
-    pass
+from aussieaddonscommon import utils
 
 
 class Series(object):

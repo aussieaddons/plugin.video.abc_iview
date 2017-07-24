@@ -16,18 +16,19 @@
 #  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import custom_session
 import requests
 import config
 import parse
-import utils
 import json
 import threading
 import time
 import hmac
 import hashlib
 import urllib
-from classes import iviewException
+
+from aussieaddonscommon import exceptions
+from aussieaddonscommon import session
+from aussieaddonscommon import utils
 
 try:
     import StorageServer
@@ -39,15 +40,11 @@ cache = StorageServer.StorageServer(config.ADDON_ID, 1)
 
 
 def fetch_url(url, headers=None):
-    """
-    Simple function that fetches a URL using requests.
-    An exception is raised if an error (e.g. 404) occurs.
-    """
-    utils.log("Fetching URL: %s" % url)
-    with custom_session.Session() as session:
+    """Simple function that fetches a URL using requests."""
+    with session.Session() as sess:
         if headers:
-            session.headers.update(headers)
-        request = session.get(url)
+            sess.headers.update(headers)
+        request = sess.get(url)
         try:
             request.raise_for_status()
         except Exception as e:
@@ -58,28 +55,27 @@ def fetch_url(url, headers=None):
 
 
 def fetch_protected_url(url):
-    """ For protected URLs we add or Auth header when fetching
-    """
+    """For protected URLs we add or Auth header when fetching"""
     headers = {'Authorization': 'Basic ZmVlZHRlc3Q6YWJjMTIz'}
     return fetch_url(url, headers)
 
 
-def get_auth(hn, session):
-    """ Calculate signature and build auth URL for a program"""
+def get_auth(hn, sess):
+    """Calculate signature and build auth URL for a program"""
     ts = str(int(time.time()))
     path = config.AUTH_URL + 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)
     digest = hmac.new(config.SECRET, msg=path,
                       digestmod=hashlib.sha256).hexdigest()
     auth_url = config.BASE_URL + path + '&sig=' + digest
     try:
-        res = session.get(auth_url)
+        res = sess.get(auth_url)
     except requests.exceptions.HTTPError as e:
         if e.response.status_code == 404:
             utils.dialog_message(
                 'Accurate system time required for '
                 'playback. Please set the correct system '
                 'time/date/timezone for your location and try again.')
-            raise iviewException(e)
+            raise AussieAddonsNonFatalException(e)
     return res.text
 
 
@@ -93,11 +89,11 @@ def cookies_to_string(cookiejar):
 
 def get_stream_url(hn, url):
     utils.log("Fetching stream URL: {0}".format(url))
-    with custom_session.Session() as session:
-        session.headers = {'User-Agent': config.USER_AGENT}
-        akamai_auth = get_auth(hn, session)
+    with session.Session() as sess:
+        sess.headers = {'User-Agent': config.USER_AGENT}
+        akamai_auth = get_auth(hn, sess)
         akamai_url = "{0}?hdnea={1}".format(url, akamai_auth)
-        request = session.get(akamai_url)
+        request = sess.get(akamai_url)
         cookies = cookies_to_string(request.cookies)
         stream_url = '{0}|User-Agent={1}&Cookie={2}'.format(
             akamai_url, urllib.quote(config.USER_AGENT), urllib.quote(cookies))
@@ -106,8 +102,7 @@ def get_stream_url(hn, url):
 
 
 def get_categories():
-    """Returns the list of categories
-    """
+    """Returns the list of categories"""
     url = config.CONFIG_URL
     category_data = fetch_url(url)
     categories = parse.parse_categories(category_data)

@@ -22,15 +22,27 @@
 import comm
 import config
 import classes
-import utils
-import re
+import datetime
 import json
+import re
+import time
 import xml.etree.ElementTree as ET
+
+from aussieaddonscommon import utils
+
+
+def get_datetime(timestamp):
+    """Parse timestamp into a datetime"""
+    try:
+        dt = time.mktime(time.strptime(timestamp, '%Y-%m-%d %H:%M:%S'))
+        return datetime.datetime.fromtimestamp(dt)
+    except Exception:
+        utils.log_error("Couldn't parse timestamp: %s" % timestamp)
+    return
 
 
 def parse_categories(config):
-    """ Fetch navigation json file and retrieve channels and categories.
-    """
+    """Fetch navigation json file and retrieve channels and categories."""
     categories_list = []
     data = json.loads(config)
     categories = [x for y in [data[1]['submenus'][0]['channels'],
@@ -183,8 +195,8 @@ def parse_programs_from_feed(data, episode_count):
         except:
             pass
 
-        p.date = utils.get_datetime(item.get('pubDate'))
-        p.expire = utils.get_datetime(item.get('expireDate'))
+        p.date = get_datetime(item.get('pubDate'))
+        p.expire = get_datetime(item.get('expireDate'))
 
         programs_list.append(p)
 
@@ -195,7 +207,7 @@ def parse_programs_from_feed(data, episode_count):
 
 
 def parse_other_episodes(url):
-    """ return a list of URLs linking to other shows in series"""
+    """Return a list of URLs linking to other shows in series"""
     data = json.loads(comm.fetch_url(url))
 
     related_list = []
@@ -206,10 +218,12 @@ def parse_other_episodes(url):
 
 
 def parse_m3u8_streams(m3u8, quality):
-    """ Parse the retrieved m3u8 stream list into a list of dictionaries
-        then return the url for the highest quality stream. Different
-        handling is required of live m3u8 files as they seem to only contain
-        the destination filename and not the domain/path."""
+    """Parse m3u8 streams
+
+    Parse the retrieved m3u8 stream list into a list of dictionaries
+    then return the url for the highest quality stream. Different
+    handling is required of live m3u8 files as they seem to only contain
+    the destination filename and not the domain/path."""
     data = m3u8.splitlines()
     count = 1
     m3uList = []
@@ -232,12 +246,12 @@ def parse_m3u8_streams(m3u8, quality):
 
 
 def convert_timecode(start, end):
-    """ convert iview xml timecode attribute to subrip srt standard"""
+    """Convert iview xml timecode attribute to subrip srt standard"""
     return start[:8]+','+start[9:11]+'0'+' --> '+end[:8]+','+end[9:11]+'0'
 
 
 def convert_to_srt(data):
-    """ convert our iview xml subtitles to subrip SRT format"""
+    """Convert our iview xml subtitles to subrip SRT format"""
     tree = ET.fromstring(data)
     root = tree.find('reel')
     result = ""

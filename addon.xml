@@ -1,11 +1,11 @@
 <?xml version="1.0" ?><addon id="plugin.video.abc_iview" name="ABC iView" version="1.8.0">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.aussieaddonscommon"/>
     <import addon="script.common.plugin.cache"/>
     <import addon="script.module.beautifulsoup"/>
     <import addon="script.module.requests"/>
     <import addon="script.module.issuereporter"/>
-    <import addon="script.module.customsession"/>
   </requires>
   <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
     <provides>video</provides>

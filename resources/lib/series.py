@@ -21,9 +21,10 @@
 
 import sys
 import comm
-import utils
 import xbmcgui
 import xbmcplugin
+
+from aussieaddonscommon import utils
 
 
 def make_series_list(url):
@@ -56,5 +57,5 @@ def make_series_list(url):
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='tvshows')
     except Exception as e:
-        utils.handle_error(
-            'Unable to fetch program list. Please try again later.', exc=e)
+        utils.handle_error('Unable to fetch program list. '
+                           'Please try again later.', exc=e)

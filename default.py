@@ -23,17 +23,20 @@ import os
 import sys
 import xbmcgui
 
+from aussieaddonscommon import utils
+
 # Add our resources/lib to the python path
 try:
     current_dir = os.path.dirname(os.path.abspath(__file__))
-except:
+except Exception:
     current_dir = os.getcwd()
 sys.path.append(os.path.join(current_dir, 'resources', 'lib'))
-import utils  # noqa: E402
+
 import categories  # noqa: E402
-import series  # noqa: E402
-import programs  # noqa: E402
 import play  # noqa: E402
+import programs  # noqa: E402
+import series  # noqa: E402
+
 # Print our platform/version debugging information
 utils.log_xbmc_platform_version()
 

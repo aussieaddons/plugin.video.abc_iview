@@ -25,12 +25,12 @@ import urllib2
 import classes
 import comm
 import parse
-import utils
 import xbmc
 import xbmcgui
 import xbmcplugin
 import xbmcaddon
 
+from aussieaddonscommon import utils
 
 def play(url):
     try:

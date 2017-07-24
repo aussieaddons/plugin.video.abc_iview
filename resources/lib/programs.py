@@ -20,10 +20,11 @@
 #
 
 import sys
-import utils
 import comm
 import xbmcgui
 import xbmcplugin
+
+from aussieaddonscommon import utils
 
 
 def make_programs_list(url):

@@ -21,10 +21,10 @@
 
 import sys
 import comm
-import utils
 import xbmcgui
 import xbmcplugin
 
+from aussieaddonscommon import utils
 
 def make_category_list():
     try:
