@@ -16,14 +16,14 @@
 #  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import requests
 import config
-import parse
+import hashlib
+import hmac
 import json
+import parse
+import requests
 import threading
 import time
-import hmac
-import hashlib
 import urllib
 
 from aussieaddonscommon import exceptions
@@ -32,7 +32,7 @@ from aussieaddonscommon import utils
 
 try:
     import StorageServer
-except:
+except NameError:
     utils.log('script.common.plugin.cache not found!')
     import storageserverdummy as StorageServer
 
@@ -75,7 +75,7 @@ def get_auth(hn, sess):
                 'Accurate system time required for '
                 'playback. Please set the correct system '
                 'time/date/timezone for your location and try again.')
-            raise AussieAddonsNonFatalException(e)
+            raise exceptions.AussieAddonsNonFatalException(e)
     return res.text
 
 
@@ -110,7 +110,8 @@ def get_categories():
 
 
 def validate_category(keyword):
-    """
+    """Validate category
+
     Checks if keyword is in a list of categories from the old/LG
     iview API, and updates if required. Maintains compatibility with old
     favourites links

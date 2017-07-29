@@ -23,6 +23,8 @@
 NAME = 'ABC iView'
 ADDON_ID = 'plugin.video.abc_iview'
 
+GITHUB_REPO = 'andybotting/xbmc-addon-abc-iview'
+
 GITHUB_API_URL = 'https://api.github.com/repos/andybotting/xbmc-addon-abc-iview'
 ISSUE_API_URL = GITHUB_API_URL + '/issues'
 ISSUE_API_AUTH = 'eGJtY2JvdDo1OTQxNTJjMTBhZGFiNGRlN2M0YWZkZDYwZGQ5NDFkNWY4YmIzOGFj'

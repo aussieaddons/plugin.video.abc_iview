@@ -19,18 +19,19 @@
 #  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import sys
-import os
-import urllib2
 import classes
 import comm
+import os
 import parse
+import sys
+import urllib2
 import xbmc
+import xbmcaddon
 import xbmcgui
 import xbmcplugin
-import xbmcaddon
 
 from aussieaddonscommon import utils
+
 
 def play(url):
     try:
@@ -68,7 +69,7 @@ def play(url):
                 f.write(parse.convert_to_srt(data))
                 f.close()
                 listitem.setSubtitles([subfile])
-            except:
+            except Exception:
                 utils.log('Subtitles not available for this program')
 
         if hasattr(listitem, 'addStreamInfo'):
@@ -77,5 +78,5 @@ def play(url):
 
         xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, listitem=listitem)
 
-    except Exception as e:
-        utils.handle_error('Unable to play video', exc=e)
+    except Exception:
+        utils.handle_error('Unable to play video')

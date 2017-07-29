@@ -19,12 +19,13 @@
 #  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import sys
 import comm
+import sys
 import xbmcgui
 import xbmcplugin
 
 from aussieaddonscommon import utils
+
 
 def make_category_list():
     try:
@@ -44,5 +45,5 @@ def make_category_list():
 
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
-    except Exception as e:
-        utils.handle_error(exc=e)
+    except Exception:
+        utils.handle_error('Unable to build category list')

@@ -19,8 +19,8 @@
 #  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import sys
 import comm
+import sys
 import xbmcgui
 import xbmcplugin
 
@@ -56,6 +56,6 @@ def make_series_list(url):
 
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='tvshows')
-    except Exception as e:
+    except Exception:
         utils.handle_error('Unable to fetch program list. '
-                           'Please try again later.', exc=e)
+                           'Please try again later.')

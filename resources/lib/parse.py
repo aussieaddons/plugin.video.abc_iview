@@ -19,9 +19,9 @@
 #  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
+import classes
 import comm
 import config
-import classes
 import datetime
 import json
 import re
@@ -176,7 +176,7 @@ def parse_programs_from_feed(data, episode_count):
             # If we only get series/episode in the subtitle
             p.series = title_parts.get('series')
             p.episode = title_parts.get('episode')
-        except:
+        except Exception:
             pass
 
         p.house_number = item.get('episodeHouseNumber')
@@ -192,7 +192,7 @@ def parse_programs_from_feed(data, episode_count):
 
         try:
             p.subtitle_url = item['playlist'][-1]['captions']['src-xml']
-        except:
+        except Exception:
             pass
 
         p.date = get_datetime(item.get('pubDate'))
@@ -223,7 +223,8 @@ def parse_m3u8_streams(m3u8, quality):
     Parse the retrieved m3u8 stream list into a list of dictionaries
     then return the url for the highest quality stream. Different
     handling is required of live m3u8 files as they seem to only contain
-    the destination filename and not the domain/path."""
+    the destination filename and not the domain/path.
+    """
     data = m3u8.splitlines()
     count = 1
     m3uList = []

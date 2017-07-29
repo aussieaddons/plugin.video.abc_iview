@@ -20,8 +20,8 @@
 #
 
 import datetime
-import urllib
 import time
+import urllib
 
 from aussieaddonscommon import utils
 
@@ -41,22 +41,20 @@ class Series(object):
         return cmp(self.get_sort_title(), other.get_sort_title())
 
     def get_sort_title(self):
-        """ Return a munged version of the title which
-            forces correct sorting behaviour.
-        """
+        """Return a munged version of the title for sorting"""
         sort_title = self.title.lower()
         sort_title = sort_title.replace('the ', '')
         return sort_title
 
     def get_title(self):
-        """ Return the program title, including the Series X part
-            on the end.
-        """
+        """Return the program title, incl the Series X part on the end."""
         return utils.descape(self.title)
 
     def get_list_title(self):
-        """ Return the program title with the number of episodes
-            together for the XBMC list
+        """Return list title
+
+        Return the program title with the number of episodes
+        together suitable for the Kodi list
         """
         return "%s (%d)" % (self.get_title(), self.get_num_episodes())
 
@@ -67,8 +65,7 @@ class Series(object):
         return self.num_episodes
 
     def get_keywords(self):
-        """ Return a list of keywords
-        """
+        """Return a list of keywords"""
         if self.keywords:
             return self.keywords
 
@@ -81,8 +78,7 @@ class Series(object):
             return self.description
 
     def has_keyword(self, keyword):
-        """ Returns true if a keyword is found
-        """
+        """Returns true if a keyword is found"""
         for kw in self.keywords:
             if kw == keyword:
                 return True
@@ -117,21 +113,24 @@ class Program(object):
         return cmp(self.title, other.title)
 
     def get_title(self):
-        """ Return the program title, including the Series X part
-            on the end.
+        """Get program title
+
+        Return the program title, including the Series X part
+        on the end.
         """
         return utils.descape(self.title)
 
     def get_episode_title(self):
-        """ Return a string of the shorttitle entry, unless its not
-            available, then we'll just use the program title instead.
+        """Get episode title
+
+        Return a string of the shorttitle entry, unless its not
+        available, then we'll just use the program title instead.
         """
         if self.episode_title:
             return utils.descape(self.episode_title)
 
     def get_list_title(self):
-        """ Return a string of the title, nicely formatted for XBMC list
-        """
+        """Return a string of the title, nicely formatted for Kodi list"""
         title = self.get_title()
 
         if (self.get_season() and self.get_episode()):
@@ -152,8 +151,10 @@ class Program(object):
         return title
 
     def get_description(self):
-        """ Return a string the program description, after running it through
-            the descape. Add the expires date to the end, if available
+        """Get description
+
+        Return a string the program description, after running it through
+        the descape. Add the expires date to the end, if available
         """
         description = ""
         if self.description:
@@ -164,20 +165,17 @@ class Program(object):
         return utils.descape(description)
 
     def get_category(self):
-        """ Return a string of the category. E.g. Comedy
-        """
+        """Return a string of the category. E.g. Comedy"""
         if self.category:
             return utils.descape(self.category)
 
     def get_rating(self):
-        """ Return a string of the rating. E.g. PG, MA
-        """
+        """Return a string of the rating. E.g. PG, MA"""
         if self.rating:
             return utils.descape(self.rating)
 
     def get_duration(self):
-        """ Return the duration
-        """
+        """Return the duration"""
         if self.duration:
             version = utils.get_xbmc_major_version()
             seconds = int(self.duration)
@@ -190,64 +188,63 @@ class Program(object):
                 return minutes
 
     def get_date(self):
-        """ Return a string of the date in the format 2010-02-28
-            which is useful for XBMC labels.
+        """Get date
+
+        Return a string of the date in the format 2010-02-28
+        which is useful for XBMC labels.
         """
         if self.date:
             return self.date.strftime("%Y-%m-%d")
 
     def get_date_time(self):
-        """ Return string of the date/time in the format
+        """Get date time
+
+        Return string of the date/time in the format
         2016-09-08 10:00:00 which we can use to sort episodes
         """
         if self.date:
             return self.date.strftime("%Y-%m-%d %H:%M:%S")
 
     def get_year(self):
-        """ Return an integer of the year of publish date
-        """
+        """Return an integer of the year of publish date"""
         if self.date:
             return self.date.year
 
     def get_season(self):
-        """ Return an integer of the Series
-        """
+        """Return an integer of the Series"""
         if self.series:
             return int(self.series)
 
     def get_episode(self):
-        """ Return an integer of the Episode
-        """
+        """Return an integer of the Episode"""
         if self.episode:
             return int(self.episode)
 
     def get_thumbnail(self):
-        """ Returns the thumbnail
-        """
+        """Returns the thumbnail"""
         if self.thumbnail:
             return utils.descape(self.thumbnail)
 
     def get_url(self):
-        """ Returns the video url
-        """
+        """Returns the video url"""
         if self.url:
             return utils.descape(self.url)
 
     def get_expire(self):
-        """ Returns the expiry date
-        """
+        """Returns the expiry date"""
         if self.expire:
             return self.expire.strftime("%Y-%m-%d %h:%m:%s")
 
     def get_house_number(self):
-        """ Returns ABC's internal house number of the episode
-        """
+        """Returns ABC's internal house number of the episode"""
         if self.house_number:
             return self.house_number
 
     def get_xbmc_list_item(self):
-        """ Returns a dict of program information, in the format which
-            XBMC requires for video metadata.
+        """Get XBMC list item
+
+        Returns a dict of program information, in the format which
+        Kodi requires for video metadata.
         """
         info_dict = {}
         if self.get_title():
@@ -275,9 +272,7 @@ class Program(object):
         return info_dict
 
     def get_xbmc_audio_stream_info(self):
-        """
-            Return an audio stream info dict
-        """
+        """Return an audio stream info dict"""
         info_dict = {}
         # This information may be incorrect
         info_dict['codec'] = 'aac'
@@ -286,9 +281,7 @@ class Program(object):
         return info_dict
 
     def get_xbmc_video_stream_info(self):
-        """
-            Return a video stream info dict
-        """
+        """Return a video stream info dict"""
         info_dict = {}
         if self.get_duration():
             info_dict['duration'] = self.get_duration()
@@ -305,8 +298,10 @@ class Program(object):
         return info_dict
 
     def make_xbmc_url(self):
-        """ Returns a string which represents the program object, but in
-            a format suitable for passing as a URL.
+        """Make XBMC url
+
+        Returns a string which represents the program object, but in
+        a format suitable for passing as a URL.
         """
         d = {}
         if self.id:
@@ -338,8 +333,10 @@ class Program(object):
         return utils.make_url(d)
 
     def parse_xbmc_url(self, string):
-        """ Takes a string input which is a URL representation of the
-           program object
+        """Parse XBMC URL
+
+        Takes a string input which is a URL representation of the
+        program object
         """
         d = utils.get_url(string)
         self.id = d.get('id')
