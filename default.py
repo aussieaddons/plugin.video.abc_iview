@@ -21,16 +21,14 @@
 
 import os
 import sys
+import xbmcaddon
 import xbmcgui
 
 from aussieaddonscommon import utils
 
 # Add our resources/lib to the python path
-try:
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-except Exception:
-    current_dir = os.getcwd()
-sys.path.append(os.path.join(current_dir, 'resources', 'lib'))
+addon_dir = xbmcaddon.Addon().getAddonInfo('path')
+sys.path.insert(0, os.path.join(addon_dir, 'resources', 'lib'))
 
 import categories  # noqa: E402
 import play  # noqa: E402
@@ -59,3 +57,6 @@ if __name__ == '__main__':
         programs.make_programs_list(params_str)
     elif 'category' in params:
         series.make_series_list(params_str)
+    elif 'action' in params:
+        if params['action'] == 'sendreport':
+            utils.user_report()

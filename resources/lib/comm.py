@@ -32,11 +32,11 @@ from aussieaddonscommon import utils
 
 try:
     import StorageServer
-except NameError:
+except ImportError:
     utils.log('script.common.plugin.cache not found!')
     import storageserverdummy as StorageServer
 
-cache = StorageServer.StorageServer(config.ADDON_ID, 1)
+cache = StorageServer.StorageServer(utils.get_addon_id(), 1)
 
 
 def fetch_url(url, headers=None):
@@ -75,7 +75,7 @@ def get_auth(hn, sess):
                 'Accurate system time required for '
                 'playback. Please set the correct system '
                 'time/date/timezone for your location and try again.')
-            raise exceptions.AussieAddonsNonFatalException(e)
+            raise exceptions.AussieAddonsException(e)
     return res.text
 
 

@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
-    <string id="10000">ABC iView</string>
+    <string id="1000">ABC iView</string>
 
     <!-- Categories -->
-    <string id="10080">Settings</string>
+    <string id="2000">Settings</string>
+    <string id="9000">Debugging</string>
 
-    <!-- Video Transport -->
-    <string id="10090">Video Transport</string>
-    <string id="10091">RTMP</string>
-    <string id="10092">HTTP</string>
-    <string id="10093">Enable Subtitles</string>
-    <string id="10094">Stream Quality</string>
+    <!-- Settings -->
+    <string id="2100">Enable Subtitles</string>
+
+    <!-- Debugging -->
+    <string id="9100">Send error report</string>
 </strings>

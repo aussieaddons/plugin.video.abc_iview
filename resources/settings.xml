@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
-  <category label="10080">
-    <!-- Subtitles -->
-    <setting id="subtitles_enabled" type="bool" label="10093" default="false" />
+  <!-- Settings -->
+  <category label="2000">
+    <setting id="subtitles_enabled" label="2100" type="bool" default="false" />
+  </category>
+  <!-- Debugging -->
+  <category label="9000">
+    <setting label="9100" type="action" action="RunPlugin(plugin://plugin.video.abc_iview/?action=sendreport)"/>
   </category>
 </settings>
