@@ -240,7 +240,7 @@ class Program(object):
         if self.house_number:
             return self.house_number
 
-    def get_xbmc_list_item(self):
+    def get_kodi_list_item(self):
         """Get XBMC list item
 
         Returns a dict of program information, in the format which
@@ -271,7 +271,7 @@ class Program(object):
             info_dict['mpaa'] = self.get_rating()
         return info_dict
 
-    def get_xbmc_audio_stream_info(self):
+    def get_kodi_audio_stream_info(self):
         """Return an audio stream info dict"""
         info_dict = {}
         # This information may be incorrect
@@ -280,7 +280,7 @@ class Program(object):
         info_dict['channels'] = 2
         return info_dict
 
-    def get_xbmc_video_stream_info(self):
+    def get_kodi_video_stream_info(self):
         """Return a video stream info dict"""
         info_dict = {}
         if self.get_duration():

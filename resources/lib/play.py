@@ -49,7 +49,7 @@ def play(url):
                                     thumbnailImage=p.thumbnail,
                                     path=stream)
 
-        listitem.setInfo('video', p.get_xbmc_list_item())
+        listitem.setInfo('video', p.get_kodi_list_item())
 
         # Add subtitles if available
         addon = xbmcaddon.Addon()
@@ -73,8 +73,8 @@ def play(url):
                 utils.log('Subtitles not available for this program')
 
         if hasattr(listitem, 'addStreamInfo'):
-            listitem.addStreamInfo('audio', p.get_xbmc_audio_stream_info())
-            listitem.addStreamInfo('video', p.get_xbmc_video_stream_info())
+            listitem.addStreamInfo('audio', p.get_kodi_audio_stream_info())
+            listitem.addStreamInfo('video', p.get_kodi_video_stream_info())
 
         xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, listitem=listitem)
 

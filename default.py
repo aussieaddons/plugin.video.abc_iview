@@ -36,7 +36,7 @@ import programs  # noqa: E402
 import series  # noqa: E402
 
 # Print our platform/version debugging information
-utils.log_xbmc_platform_version()
+utils.log_kodi_platform_version()
 
 if __name__ == '__main__':
     params_str = sys.argv[2]
