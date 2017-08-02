@@ -177,7 +177,7 @@ class Program(object):
     def get_duration(self):
         """Return the duration"""
         if self.duration:
-            version = utils.get_xbmc_major_version()
+            version = utils.get_kodi_major_version()
             seconds = int(self.duration)
             if version >= 15:
                 # Kodi v15 uses seconds
