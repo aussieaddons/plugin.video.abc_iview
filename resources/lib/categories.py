@@ -36,6 +36,8 @@ def make_category_list():
         for g in categories:
             url = "%s?category=%s" % (sys.argv[0], g['path'])
             listitem = xbmcgui.ListItem(g['name'])
+            if u'thumbnail' in g:
+                listitem.setArt({'thumb': g['thumbnail']})
 
             # Add the program item to the list
             ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),
