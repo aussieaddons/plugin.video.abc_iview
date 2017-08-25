@@ -52,8 +52,7 @@ def play(url):
         listitem.setInfo('video', p.get_kodi_list_item())
 
         # Add subtitles if available
-        addon = xbmcaddon.Addon()
-        if addon.getSetting('subtitles_enabled') == 'true':
+        if p.subtitle_url:
             profile = xbmcaddon.Addon().getAddonInfo('profile')
             path = xbmc.translatePath(profile).decode('utf-8')
             if not os.path.isdir(path):

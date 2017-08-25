@@ -2,7 +2,7 @@
 <settings>
   <!-- Settings -->
   <category label="2000">
-    <setting id="subtitles_enabled" label="2100" type="bool" default="false" />
+    <setting id="hd_streams" label="2100" type="bool" default="true" />
   </category>
   <!-- Debugging -->
   <category label="9000">
