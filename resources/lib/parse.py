@@ -26,6 +26,7 @@ import datetime
 import json
 import re
 import time
+import xbmcaddon
 import xml.etree.ElementTree as ET
 
 from aussieaddonscommon import utils
@@ -184,7 +185,9 @@ def parse_programs_from_feed(data, episode_count):
         p.house_number = item.get('episodeHouseNumber')
         p.description = item.get('description')
         p.thumbnail = item.get('thumbnail')
-        if 'hls-plus' in item['playlist'][-1]:
+        addon = xbmcaddon.Addon()
+        if ('hls-plus' in item['playlist'][-1] and
+           addon.getSetting('hd_streams') == 'true'):
             p.url = item['playlist'][-1]['hls-plus']
             p.hq = True
         else:
