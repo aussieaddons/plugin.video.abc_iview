@@ -36,19 +36,40 @@ from aussieaddonscommon import utils
 def play(url):
     try:
         # Remove cookies.dat for Kodi < 17.0 - causes issues with playback
+        addon = xbmcaddon.Addon()
         cookies_dat = xbmc.translatePath('special://home/cache/cookies.dat')
         if os.path.isfile(cookies_dat):
             os.remove(cookies_dat)
-
         p = classes.Program()
         p.parse_xbmc_url(url)
         stream = comm.get_stream_url(p.get_house_number(), p.get_url())
+        use_ia = addon.getSetting('use_ia') == 'true'
+        if use_ia:
+            if addon.getSetting('ignore_drm') == 'false':
+                try:
+                    import drmhelper
+                    if not drmhelper.check_inputstream(drm=False):
+                        return
+                except ImportError:
+                    utils.log("Failed to import drmhelper")
+                    utils.dialog_message(
+                        'DRM Helper is needed for inputstream.adaptive '
+                        'playback. Disable "Use inputstream.adaptive for '
+                        'playback" in settings or install drmhelper. For '
+                        'more information, please visit: '
+                        'http://aussieaddons.com/drm')
+                    return
+            hdrs = stream[stream.find('|') + 1:]
 
         listitem = xbmcgui.ListItem(label=p.get_list_title(),
                                     iconImage=p.thumbnail,
                                     thumbnailImage=p.thumbnail,
                                     path=stream)
-
+        if use_ia:
+            listitem.setProperty('inputstreamaddon', 'inputstream.adaptive')
+            listitem.setProperty('inputstream.adaptive.manifest_type', 'hls')
+            listitem.setProperty('inputstream.adaptive.stream_headers', hdrs)
+            listitem.setProperty('inputstream.adaptive.license_key', stream)
         listitem.setInfo('video', p.get_kodi_list_item())
 
         # Add subtitles if available

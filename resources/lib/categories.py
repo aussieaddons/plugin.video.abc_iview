@@ -31,6 +31,7 @@ def make_category_list():
     try:
         categories = comm.get_categories()
         categories = sorted(categories, key=lambda k: k['name'].lower())
+        categories.append({'path': 'Settings', 'name': 'Settings'})
 
         ok = True
         for g in categories:
