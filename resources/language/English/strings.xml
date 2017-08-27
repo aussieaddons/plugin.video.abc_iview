@@ -12,6 +12,6 @@
 
     <!-- Debugging -->
     <string id="9100">Send error report</string>
-	<string id="9200">Update inputstream.adaptive</string>
-	<string id="9300">Ignore drmhelper on playback</string>
+    <string id="9200">Update inputstream.adaptive</string>
+    <string id="9300">Ignore drmhelper on playback</string>
 </strings>
