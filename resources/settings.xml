@@ -3,12 +3,12 @@
   <!-- Settings -->
   <category label="2000">
     <setting id="hd_streams" label="2100" type="bool" default="true" />
-	<setting id="use_ia" label="2200" type="bool" default="false" />
+    <setting id="use_ia" label="2200" type="bool" default="false" />
   </category>
   <!-- Debugging -->
   <category label="9000">
     <setting label="9100" type="action" action="RunPlugin(plugin://plugin.video.abc_iview/?action=sendreport)"/>
-	<setting label="9200" type="action" action="RunPlugin(plugin://plugin.video.abc_iview/?action=update_ia)"/>
-	<setting id="ignore_drm" label="9300" type="bool" default="false" />
+    <setting label="9200" type="action" action="RunPlugin(plugin://plugin.video.abc_iview/?action=update_ia)"/>
+    <setting id="ignore_drm" label="9300" type="bool" default="false" />
   </category>
 </settings>
