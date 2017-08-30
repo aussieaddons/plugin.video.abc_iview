@@ -1,4 +1,14 @@
-[B]Version 1.8.1[/B]
+[B]Version 1.8.2[/B]
+- formatting pt. 2
+- fix formatting
+- Add support for inputstream.adaptive playback
+- Add setting to toggle HD streams, remove subtitle setting
+- Update categories.py
+- Update parse.py
+- Method name updates
+- Fix method name from utils
+- Code cleanups and add user reporting to settings
+- Code clean ups
 - Use aussie add-ons common module
 - Use customsession module
 - Validate categories
@@ -7,7 +17,7 @@
 - Correct implementation of DST calculation, handle exceptions
 - 404 error fixes, Flake8, other small changes
 
-[B]Version 1.8.0[/B]
+[B]Version v1.8.0[/B]
 - Fix for duplicate entries in news categories
 - Switch to using requests
 - Add missing requests import
