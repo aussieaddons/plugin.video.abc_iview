@@ -196,7 +196,7 @@ def parse_programs_from_feed(data, episode_count):
         p.duration = item.get('duration')
 
         try:
-            p.subtitle_url = item['playlist'][-1]['captions']['src-xml']
+            p.subtitle_url = item['playlist'][-1]['captions']['src-vtt']
         except Exception:
             pass
 
