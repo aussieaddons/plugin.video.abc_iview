@@ -31,6 +31,8 @@ import xbmcgui
 import xbmcplugin
 
 from aussieaddonscommon import utils
+from aussieaddonscommon.pycaption import SRTWriter
+from aussieaddonscommon.pycaption import WebVTTReader
 
 
 def play(url):
@@ -84,13 +86,19 @@ def play(url):
                 os.remove(subfile)
 
             try:
-                data = urllib2.urlopen(p.subtitle_url).read()
-                f = open(subfile, 'w')
-                f.write(parse.convert_to_srt(data))
-                f.close()
-                listitem.setSubtitles([subfile])
-            except Exception:
-                utils.log('Subtitles not available for this program')
+                webvtt_data = urllib2.urlopen(
+                    p.subtitle_url).read().decode('utf-8')
+                if webvtt_data:
+                    with open(subfile, 'w') as f:
+                        webvtt_subtitle = WebVTTReader().read(webvtt_data)
+                        srt_subtitle = SRTWriter().write(webvtt_subtitle)
+                        srt_unicode = srt_subtitle.encode('utf-8')
+                        f.write(srt_unicode)
+                if hasattr(listitem, 'setSubtitles'):
+                    listitem.setSubtitles([subfile])
+            except Exception as e:
+                utils.log(
+                    'Subtitles not available for this program {0}'.format(e))
 
         if hasattr(listitem, 'addStreamInfo'):
             listitem.addStreamInfo('audio', p.get_kodi_audio_stream_info())
