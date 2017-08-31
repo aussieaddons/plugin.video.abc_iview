@@ -56,7 +56,7 @@ if __name__ == '__main__':
     elif 'series_url' in params:
         programs.make_programs_list(params_str)
     elif 'category' in params:
-        if params['category'] == 'Settings':
+        if params['category'] == 'settings':
             xbmcaddon.Addon().openSettings()
         else:
             series.make_series_list(params_str)
