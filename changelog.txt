@@ -1,4 +1,8 @@
-[B]Version 1.8.2[/B]
+[B]Version 1.8.3[/B]
+- Make the Settings item consistent as captials
+- Fix subtitles, remove optional tag for drmhelper
+
+[B]Version v1.8.2[/B]
 - formatting pt. 2
 - fix formatting
 - Add support for inputstream.adaptive playback
