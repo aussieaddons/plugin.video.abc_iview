@@ -74,9 +74,14 @@ def fetch_protected_url(url):
 def get_auth(hn, manual_time=False, prev_req=None):
     """ Calculate signature and build auth URL for a program"""
     if manual_time:
-        print prev_req.headers['Date']
-        print type(prev_req.headers['Date'])
-        ts = utils.get_manual_time(prev_req.headers['Date'])
+        try:
+            ts = utils.get_manual_time(prev_req.headers['Date'])
+        except requests.exceptions.HTTPError as e:
+            utils.xbmcgui.Dialog().ok(
+                'System time incorrect',
+                'Please set the correct time/date/timezone for your '
+                'location and try again.')
+            raise e
     else:
         ts = str(int(time.time()))
     path = config.AUTH_URL + 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)
@@ -89,14 +94,13 @@ def get_auth(hn, manual_time=False, prev_req=None):
     except requests.exceptions.HTTPError as e:
         if e.response.status_code == 404:
             if not manual_time:
-                auth = get_auth(hn, manual_time=True, prev_req=res)
-                return auth
+                utils.log('Auth failed, reattempting with internet time')
+                return get_auth(hn, manual_time=True, prev_req=res)
             else:
                 utils.xbmcgui.Dialog().ok(
                     'System time incorrect',
                     'Please set the correct time/date/timezone for your '
                     'location and try again.')
-                raise Exception
     return res.text
 
 

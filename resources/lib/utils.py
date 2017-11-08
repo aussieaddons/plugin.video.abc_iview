@@ -83,17 +83,20 @@ def get_version():
 def get_manual_time(timestamp):
     ts_format = '%a, %d %b %Y %H:%M:%S GMT'
     try:
-        dt = datetime.strptime(timestamp, ts_format)
+        res = requests.get('http://freegeoip.net/json/')
+        res.raise_for_status()
+        tz_string = res.json()['time_zone']
+        tz_data = config.TZ_LIST[tz_string]
+        UTC = AUTimeZone([0, 0, 0, 0], 'UTC')
+        local_timezone = AUTimeZone(tz_data, tz_string)
+    except requests.exceptions.HTTPError as e:
+        raise e
+    try:
+        dt = datetime.strptime(timestamp, ts_format, tzinfo=UTC)
     except TypeError:
-        dt = datetime(*(time.strptime(timestamp, ts_format)[0:6]))
+        dt = datetime(*(time.strptime(timestamp, ts_format)[0:6]), tzinfo=UTC)
 
-    res = requests.get('http://freegeoip.net/json/')
-    tz_string = res.json()['time_zone']
-    tz_data = config.TZ_LIST[tz_string]
-
-    dt += timedelta(hours=tz_data[0], minutes=tz_data[1])
-    timezone = AUTimeZone(tz_data, tz_string)
-    dt = dt.replace(tzinfo=timezone)
+    dt = dt.astimezone(local_timezone)
     return str(int(time.mktime(dt.timetuple())))
 
 
