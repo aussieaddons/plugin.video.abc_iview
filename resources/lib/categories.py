@@ -20,14 +20,13 @@
 #
 
 import sys
-import os
 import comm
 import utils
 import xbmcgui
 import xbmcplugin
 
-def make_category_list():
 
+def make_category_list():
     try:
         categories = comm.get_categories()
         categories = sorted(categories, key=lambda k: k['name'].lower())
@@ -38,7 +37,10 @@ def make_category_list():
             listitem = xbmcgui.ListItem(g['name'])
 
             # Add the program item to the list
-            ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=url, listitem=listitem, isFolder=True)
+            ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),
+                                             url=url,
+                                             listitem=listitem,
+                                             isFolder=True)
 
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')

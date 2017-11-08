@@ -19,12 +19,11 @@
 #  along with this addon. If not, see <http://www.gnu.org/licenses/>.
 #
 
-import re
 import utils
 import datetime
 import urllib
 import time
-import utils
+
 
 class Series(object):
 
@@ -60,16 +59,6 @@ class Series(object):
         """
         return "%s (%d)" % (self.get_title(), self.get_num_episodes())
 
-    def get_season(self):
-        """ Return an integer of the Series, discovered by a regular
-            expression from the original title, unless its not available,
-            then a 0 will be returned.
-        """
-        season = re.search('^.* Series (?P<season>\d+)$', self.get_title())
-        if title is None:
-            return 0
-        return int(series.group('season'))
-
     def increment_num_episodes(self):
         self.num_episodes += 1
 
@@ -97,7 +86,6 @@ class Series(object):
             if kw == keyword:
                 return True
         return False
-
 
 
 class Program(object):
@@ -147,7 +135,9 @@ class Program(object):
 
         if (self.get_season() and self.get_episode()):
             # Series and episode information
-            title = "%s (S%02dE%02d)" % (title, self.get_season(), self.get_episode())
+            title = "%s (S%02dE%02d)" % (title,
+                                         self.get_season(),
+                                         self.get_episode())
         elif self.get_episode():
             # Only episode information
             title = "%s (E%02d)" % (title, self.get_episode())
@@ -283,18 +273,16 @@ class Program(object):
             info_dict['mpaa'] = self.get_rating()
         return info_dict
 
-
     def get_xbmc_audio_stream_info(self):
         """
             Return an audio stream info dict
         """
         info_dict = {}
         # This information may be incorrect
-        info_dict['codec']    = 'aac'
+        info_dict['codec'] = 'aac'
         info_dict['language'] = 'en'
         info_dict['channels'] = 2
         return info_dict
-
 
     def get_xbmc_video_stream_info(self):
         """
@@ -306,54 +294,66 @@ class Program(object):
 
         # This information may be incorrect
         if self.hq:
-            info_dict['codec']  = 'h264'
-            info_dict['width']  = '1024'
+            info_dict['codec'] = 'h264'
+            info_dict['width'] = '1024'
             info_dict['height'] = '576'
         else:
-            info_dict['codec']  = 'h264'
-            info_dict['width']  = '640'
+            info_dict['codec'] = 'h264'
+            info_dict['width'] = '640'
             info_dict['height'] = '360'
         return info_dict
-
 
     def make_xbmc_url(self):
         """ Returns a string which represents the program object, but in
             a format suitable for passing as a URL.
         """
         d = {}
-        if self.id:            d['id'] = self.id
-        if self.title:         d['title'] = self.title
-        if self.episode_title: d['episode_title'] = self.episode_title
-        if self.description:   d['description'] = self.description
-        if self.duration:      d['duration'] = self.duration
-        if self.category:      d['category'] = self.category
-        if self.rating:        d['rating'] = self.rating
-        if self.date:          d['date'] = self.date.strftime("%Y-%m-%d %H:%M:%S")
-        if self.thumbnail:     d['thumbnail'] = self.thumbnail
-        if self.url:           d['url'] = self.url
-        if self.subtitle_url:  d['subtitle_url'] = self.subtitle_url
-        if self.house_number:  d['house_number'] = self.house_number
-        if self.hq:            d['hq'] = self.hq
+        if self.id:
+            d['id'] = self.id
+        if self.title:
+            d['title'] = self.title
+        if self.episode_title:
+            d['episode_title'] = self.episode_title
+        if self.description:
+            d['description'] = self.description
+        if self.duration:
+            d['duration'] = self.duration
+        if self.category:
+            d['category'] = self.category
+        if self.rating:
+            d['rating'] = self.rating
+        if self.date:
+            d['date'] = self.date.strftime("%Y-%m-%d %H:%M:%S")
+        if self.thumbnail:
+            d['thumbnail'] = self.thumbnail
+        if self.url:
+            d['url'] = self.url
+        if self.subtitle_url:
+            d['subtitle_url'] = self.subtitle_url
+        if self.house_number:
+            d['house_number'] = self.house_number
+        if self.hq:
+            d['hq'] = self.hq
         return utils.make_url(d)
-
 
     def parse_xbmc_url(self, string):
         """ Takes a string input which is a URL representation of the
            program object
         """
         d = utils.get_url(string)
-        self.id            = d.get('id')
-        self.title         = d.get('title')
+        self.id = d.get('id')
+        self.title = d.get('title')
         self.episode_title = d.get('episode_title')
-        self.description   = d.get('description')
-        self.duration      = d.get('duration')
-        self.category      = d.get('category')
-        self.rating        = d.get('rating')
-        self.url           = d.get('url')
-        self.thumbnail     = urllib.unquote_plus(d.get('thumbnail'))
-        self.subtitle_url  = d.get('subtitle_url')
-        self.house_number  = d.get('house_number')
-        self.hq            = d.get('hq')
-        if d.has_key('date'):
-           timestamp = time.mktime(time.strptime(d['date'], '%Y-%m-%d %H:%M:%S'))
-           self.date = datetime.date.fromtimestamp(timestamp)
+        self.description = d.get('description')
+        self.duration = d.get('duration')
+        self.category = d.get('category')
+        self.rating = d.get('rating')
+        self.url = d.get('url')
+        self.thumbnail = urllib.unquote_plus(d.get('thumbnail'))
+        self.subtitle_url = d.get('subtitle_url')
+        self.house_number = d.get('house_number')
+        self.hq = d.get('hq')
+        if 'date' in d:
+            timestamp = time.mktime(time.strptime(d['date'],
+                                                  '%Y-%m-%d %H:%M:%S'))
+            self.date = datetime.date.fromtimestamp(timestamp)

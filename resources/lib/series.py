@@ -20,12 +20,11 @@
 #
 
 import sys
-import os
 import comm
 import utils
-import xbmc
 import xbmcgui
 import xbmcplugin
+
 
 def make_series_list(url):
     params = utils.get_url(url)
@@ -43,14 +42,19 @@ def make_series_list(url):
             url = "{0}?{1}".format(sys.argv[0], p)
 
             thumbnail = s.get_thumbnail()
-            listitem = xbmcgui.ListItem(s.get_list_title(), iconImage=thumbnail, thumbnailImage=thumbnail)
+            listitem = xbmcgui.ListItem(s.get_list_title(),
+                                        iconImage=thumbnail,
+                                        thumbnailImage=thumbnail)
             listitem.setInfo('video', {'plot': s.get_description()})
 
             # add the item to the media list
-            ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=url, listitem=listitem, isFolder=True)
+            ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),
+                                             url=url,
+                                             listitem=listitem,
+                                             isFolder=True)
 
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='tvshows')
     except:
-        utils.handle_error('Unable to fetch program list. Please try again later.')
-
+        utils.handle_error(
+            'Unable to fetch program list. Please try again later.')

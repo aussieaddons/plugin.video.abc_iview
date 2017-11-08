@@ -20,19 +20,23 @@
 #
 
 import sys
-import config
 import utils
 import comm
-import xbmc, xbmcgui, xbmcplugin
+import xbmcgui
+import xbmcplugin
+
 
 def make_programs_list(url):
     try:
         params = utils.get_url(url)
-        programs = comm.get_series_from_feed(params['series_url'], params['episode_count'])
+        programs = comm.get_series_from_feed(params['series_url'],
+                                             params['episode_count'])
 
         ok = True
         for p in programs:
-            listitem = xbmcgui.ListItem(label=p.get_list_title(), iconImage=p.get_thumbnail(), thumbnailImage=p.get_thumbnail())
+            listitem = xbmcgui.ListItem(label=p.get_list_title(),
+                                        iconImage=p.get_thumbnail(),
+                                        thumbnailImage=p.get_thumbnail())
             listitem.setInfo('video', p.get_xbmc_list_item())
             listitem.setProperty('IsPlayable', 'true')
 
@@ -44,7 +48,11 @@ def make_programs_list(url):
             url = "%s?play=true&%s" % (sys.argv[0], p.make_xbmc_url())
 
             # Add the program item to the list
-            ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=url, listitem=listitem, isFolder=False, totalItems=len(programs))
+            ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),
+                                             url=url,
+                                             listitem=listitem,
+                                             isFolder=False,
+                                             totalItems=len(programs))
 
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
