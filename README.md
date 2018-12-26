@@ -46,7 +46,7 @@ Good luck and happy viewing.
 
 [python_iview]: https://jeremy.visser.name/2009/08/python-iview/
 [repository]: https://github.com/xbmc-catchuptv-au/repo
-[download]: https://github.com/xbmc-catchuptv-au/repo/tree/master/plugin.video.abc_iview
+[download]: http://r.aussieaddons.com/repo.zip
 [issues]: https://github.com/andybotting/xbmc-addon-abc-iview/issues
 [installzip]: http://kodi.wiki/view/HOW-TO:Install_add-ons_from_zip_files
 [addonmanager]: http://kodi.wiki/view/Add-on_manager
