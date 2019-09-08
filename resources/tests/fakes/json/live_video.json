@@ -1,0 +1,111 @@
+{
+  "channel": "news",
+  "channelTitle": "ABC News",
+  "type": "livestream",
+  "houseNumber": "NS1413V001S00",
+  "title": "ABC News Live Stream",
+  "showTitle": "ABC NEWS Live Stream",
+  "seriesTitle": "ABC News Live Stream",
+  "displayTitle": "ABC NEWS Live Stream",
+  "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ns\/NS1413V001S00_5d675fc5f33f1_1020.jpg",
+  "description": "ABC News features continuous, commercial-free coverage of major breaking stories in Australia and around the world.",
+  "pubDate": "2019-08-31 00:00:00",
+  "expireDate": "2019-09-30 00:00:00",
+  "tags": [
+    "news",
+    "news24",
+    "livestream",
+    "continuous"
+  ],
+  "status": {
+    "title": "LIVE",
+    "theme": "live"
+  },
+  "captions": true,
+  "captionsOnAkamai": false,
+  "availability": "Watching this stream will consume up to 700 MB per hour.",
+  "analytics": {
+    "oztam": {
+      "publisherId": "26E063A7-E60C-452E-B446-3E3484F339BB",
+      "mediaId": "NS1413V001S00",
+      "classification": "",
+      "seriesName": "ABC NEWS Live Stream",
+      "seriesId": "NS1413V001S00",
+      "episodeId": "NS1413V001S00",
+      "channel": "news",
+      "demo1": "",
+      "url": "\/video\/NS1413V001S00",
+      "mediaDuration": 0,
+      "mediaType": "live"
+    },
+    "dataLayer": {
+      "d_id": "NS1413V001S00",
+      "d_contentType": "video",
+      "d_contentSource": "iview",
+      "d_uri": "iview:\/\/video\/NS1413V001S00",
+      "d_program_name": "ABC NEWS Live Stream",
+      "d_program_id": "169177",
+      "d_episode_name": null,
+      "d_episode_id": "NS1413V001S00",
+      "d_language": "null",
+      "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/NS1413V001S00",
+      "d_classification": "none",
+      "d_captionsAvailable": "true",
+      "d_streamType": "live",
+      "d_videoType": "feature",
+      "d_title_title": "ABC NEWS Live Stream",
+      "d_categories": "ABC News"
+    }
+  },
+  "playable": true,
+  "shareUrl": "https:\/\/iview.abc.net.au\/show\/abc-news-24\/video\/NS1413V001S00",
+  "_entity": "video",
+  "_links": {
+    "self": {
+      "href": "\/video\/NS1413V001S00"
+    },
+    "deeplink": {
+      "id": "NS1413V001S00",
+      "href": "\/show\/abc-news-24\/video\/NS1413V001S00"
+    },
+    "show": {
+      "id": 169177,
+      "href": "\/show\/abc-news-24"
+    },
+    "categories": [
+      {
+        "id": "news",
+        "title": "ABC NEWS",
+        "href": "\/channel\/news"
+      }
+    ]
+  },
+  "_embedded": {
+    "playlist": [
+      {
+        "type": "livestream",
+        "stream-labels": {
+          "sd-low": "SD - 650k",
+          "sd": "SD - HBR"
+        },
+        "streams": {
+          "mpegdash": {
+            "protected": true,
+            "sd-low": "https:\/\/abc-iview-mediapackagestreams-1.akamaized.net\/out\/v1\/133c709283de40dca9e32a30ce75c807\/index.mpd",
+            "sd": "https:\/\/abc-iview-mediapackagestreams-1.akamaized.net\/out\/v1\/133c709283de40dca9e32a30ce75c807\/index.mpd"
+          },
+          "fairplay": {
+            "protected": true,
+            "sd-low": "https:\/\/abc-iview-mediapackagestreams-1.akamaized.net\/out\/v1\/b3604240883b4ef3b7fddf6a1ef8989b\/index.m3u8",
+            "sd": "https:\/\/abc-iview-mediapackagestreams-1.akamaized.net\/out\/v1\/b3604240883b4ef3b7fddf6a1ef8989b\/index.m3u8"
+          },
+          "hls": {
+            "protected": false,
+            "sd-low": "https:\/\/abc-iview-mediapackagestreams-1.akamaized.net\/out\/v1\/6ee5066dcc704c47a663eaf854562e8e\/index.m3u8",
+            "sd": "https:\/\/abc-iview-mediapackagestreams-1.akamaized.net\/out\/v1\/6ee5066dcc704c47a663eaf854562e8e\/index.m3u8"
+          }
+        }
+      }
+    ]
+  }
+}

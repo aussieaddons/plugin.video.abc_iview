@@ -1,0 +1,4402 @@
+{
+  "id": "home",
+  "title": "Home",
+  "banner": {
+    "large": "https:\/\/cdn.iview.abc.net.au\/banners\/i\/banners\/IVB531_5d228548d3945_2048.jpg",
+    "small": "https:\/\/cdn.iview.abc.net.au\/banners\/i\/banners\/IVB531_5d228548d3945_640.jpg",
+    "altText": "Squinters: Watch Now",
+    "link": "\/show\/squinters"
+  },
+  "seo": {
+    "title": "ABC iview",
+    "description": "Catch up with all your favourite ABC TV programs on ABC iview for free. Watch the best of ABC TV shows, documentaries, exclusive programs & more on iview."
+  },
+  "_entity": "category",
+  "_links": {
+    "self": {
+      "href": "\/home"
+    }
+  },
+  "_embedded": {
+    "featuredCollection": {
+      "title": "Featured",
+      "items": [
+        {
+          "id": 179215,
+          "slug": "les-norton",
+          "type": "series",
+          "title": "Les Norton",
+          "displayTitle": "Les Norton",
+          "description": "Based on Robert G. Barrett's classic Australian novels, Les Norton is the story of a country lad's misadventures as a bouncer at a Kings Cross gambling den in the raucous 1980s.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/dr\/DR1801H_5d48f20612373_1280.jpg",
+          "episodeCount": 2,
+          "broadcastInfo": "Sundays 8.40pm on ABC",
+          "updated": "2019-08-13 11:30:33",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/les-norton"
+            },
+            "deeplink": {
+              "href": "\/show\/les-norton"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "drama",
+                "title": "DRAMA",
+                "href": "\/category\/drama"
+              },
+              {
+                "id": "comedy",
+                "title": "COMEDY",
+                "href": "\/category\/comedy"
+              }
+            ]
+          }
+        },
+        {
+          "type": "episode",
+          "houseNumber": "NC1902Q017S00",
+          "title": "Series 2019 An Innocent Abroad (Part 1)",
+          "showTitle": "Australian Story",
+          "seriesTitle": "Australian Story",
+          "displayTitle": "Australian Story",
+          "displaySubtitle": "Series 2019 An Innocent Abroad (Part 1)",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1902Q017S00_5d47858871bea_1280.jpg",
+          "description": "Australian Story returns with a two-part exclusive program on the shocking story of Yoshe Taylor - a Queensland mother duped into smuggling drugs for an international syndicate.",
+          "duration": 1858,
+          "displayDuration": "31m",
+          "displayDurationAccessible": "31 minutes",
+          "captions": false,
+          "captionsOnAkamai": true,
+          "availability": "Broadcast 8:00pm Mon 12 Aug 2019. Published 17 hours ago, available until 8:32pm on 11 Sep 2019.",
+          "_entity": "video",
+          "_links": {
+            "self": {
+              "href": "\/video\/NC1902Q017S00"
+            },
+            "deeplink": {
+              "id": "NC1902Q017S00",
+              "href": "\/show\/australian-story\/series\/2019\/video\/NC1902Q017S00"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "news",
+                "title": "ABC NEWS",
+                "href": "\/channel\/news"
+              },
+              {
+                "id": "docs",
+                "title": "DOCUMENTARY",
+                "href": "\/category\/docs"
+              }
+            ]
+          }
+        },
+        {
+          "type": "episode",
+          "houseNumber": "NC1901H125S00",
+          "title": "Let Her Speak 12\/8\/2019",
+          "showTitle": "7.30",
+          "seriesTitle": "7.30",
+          "displayTitle": "7.30",
+          "displaySubtitle": "Let Her Speak 12\/8\/2019",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1901H125S00_5d5103415971e_1920.jpg",
+          "description": "An archaic law in Tasmania meant Grace Tame was the only person who couldn't talk about her experience of sexual assault. Now she has won the right to speak for herself. Plus Australia's hidden drug problem - benzodiazepines.",
+          "duration": 1960,
+          "displayDuration": "33m",
+          "displayDurationAccessible": "33 minutes",
+          "captions": false,
+          "captionsOnAkamai": true,
+          "availability": "Broadcast 7:30pm Mon 12 Aug 2019. Published 18 hours ago, available until 8:00pm on 11 Sep 2019.",
+          "_entity": "video",
+          "_links": {
+            "self": {
+              "href": "\/video\/NC1901H125S00"
+            },
+            "deeplink": {
+              "id": "NC1901H125S00",
+              "href": "\/show\/7-30\/series\/0\/video\/NC1901H125S00"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "news",
+                "title": "ABC NEWS",
+                "href": "\/channel\/news"
+              }
+            ]
+          }
+        },
+        {
+          "type": "episode",
+          "houseNumber": "NC1903H027S00",
+          "title": "Series 2019 Betting On Boris",
+          "showTitle": "Four Corners",
+          "seriesTitle": "Four Corners",
+          "displayTitle": "Four Corners",
+          "displaySubtitle": "Series 2019 Betting On Boris",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1903H027S00_5d50de46a2ca9_1376.jpg",
+          "description": "Can Boris Johnson deliver Brexit and keep the Kingdom together? Phil Williams explores his career from journalist to politician, through epic gaffes, scandals and a colourful turn of phrase to become Britain's 77th PM.",
+          "duration": 2585,
+          "displayDuration": "43m",
+          "displayDurationAccessible": "43 minutes",
+          "captions": false,
+          "captionsOnAkamai": true,
+          "availability": "Broadcast 8:30pm Mon 12 Aug 2019. Published 17 hours ago, available until 9:20pm on 11 Sep 2019.",
+          "_entity": "video",
+          "_links": {
+            "self": {
+              "href": "\/video\/NC1903H027S00"
+            },
+            "deeplink": {
+              "id": "NC1903H027S00",
+              "href": "\/show\/four-corners\/series\/2019\/video\/NC1903H027S00"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "news",
+                "title": "ABC NEWS",
+                "href": "\/channel\/news"
+              }
+            ]
+          }
+        },
+        {
+          "type": "feature",
+          "houseNumber": "ZW2018A001S00",
+          "title": "Climate Change: The Facts",
+          "showTitle": "Climate Change: The Facts",
+          "displayTitle": "Climate Change: The Facts",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW2018A001S00_5d3fa73889201.jpg",
+          "description": "Sir David Attenborough looks at a planet on the verge of climate catastrophe. With intimate stories of people's lives affected by climate change, the documentary takes a look at one of the greatest challenges we face today.",
+          "status": {
+            "title": "SPECIAL",
+            "theme": "default"
+          },
+          "duration": 3459,
+          "displayDuration": "58m",
+          "displayDurationAccessible": "58 minutes",
+          "classification": "G",
+          "captions": false,
+          "captionsOnAkamai": true,
+          "availability": "Broadcast 7:45pm Sun 11 Aug 2019. Published 2 days ago.",
+          "_entity": "video",
+          "_links": {
+            "self": {
+              "href": "\/video\/ZW2018A001S00"
+            },
+            "deeplink": {
+              "id": "ZW2018A001S00",
+              "href": "\/show\/climate-change-the-facts\/video\/ZW2018A001S00"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "docs",
+                "title": "DOCUMENTARY",
+                "href": "\/category\/docs"
+              }
+            ]
+          }
+        },
+        {
+          "id": 171228,
+          "slug": "agatha-christie-s-and-then-there-were-none",
+          "type": "series",
+          "title": "Agatha Christie's And Then There Were None",
+          "displayTitle": "Agatha Christie's And Then There Were None",
+          "description": "Based on the best-selling crime novel by Agatha Christie. Ten strangers are invited to an island, with their hosts mysteriously absent and members of the party getting killed one by one, could one of them be the murderer?",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1545A_5d3678e9bd01c.jpg",
+          "episodeCount": 1,
+          "broadcastInfo": "Saturdays 7.30pm on ABC",
+          "updated": "2019-08-13 11:30:59",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/agatha-christie-s-and-then-there-were-none"
+            },
+            "deeplink": {
+              "href": "\/show\/agatha-christie-s-and-then-there-were-none"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "drama",
+                "title": "DRAMA",
+                "href": "\/category\/drama"
+              }
+            ]
+          }
+        },
+        {
+          "type": "episode",
+          "houseNumber": "NC1904H027S00",
+          "title": "How Good is Democracy?",
+          "showTitle": "Q&A",
+          "seriesTitle": "Q&A",
+          "displayTitle": "Q&A",
+          "displaySubtitle": "How Good is Democracy?",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1904H027S00_5d4b79ef9e090_1280.jpg",
+          "description": "Tony Jones joins philosopher\/author A. C. Grayling, Minister for Population & Cities Alan Tudge, Shadow Minister for the Environment & Water Terri Butler, historian\/broadcaster Clare Wright and people's panellist Li Shee Su.",
+          "duration": 3799,
+          "displayDuration": "1h 3m",
+          "displayDurationAccessible": "1 hour 3 minutes",
+          "captions": false,
+          "captionsOnAkamai": true,
+          "availability": "Broadcast 9:35pm Mon 12 Aug 2019. Published 15 hours ago, available until 10:45pm on 11 Sep 2019.",
+          "_entity": "video",
+          "_links": {
+            "self": {
+              "href": "\/video\/NC1904H027S00"
+            },
+            "deeplink": {
+              "id": "NC1904H027S00",
+              "href": "\/show\/qanda\/series\/0\/video\/NC1904H027S00"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "news",
+                "title": "ABC NEWS",
+                "href": "\/channel\/news"
+              },
+              {
+                "id": "panel",
+                "title": "PANEL & DISCUSSION",
+                "href": "\/category\/panel"
+              }
+            ]
+          }
+        },
+        {
+          "id": 123573,
+          "slug": "shaun-micallef-s-mad-as-hell",
+          "type": "series",
+          "title": "Shaun Micallef's MAD AS HELL",
+          "displayTitle": "Shaun Micallef's MAD AS HELL",
+          "description": "Shaun Micallef is that Stentor, Sage, Seer, Saint and Someone. Behold his Flaming Chariot! It's back. And it's madder and hellier than ever before.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/le\/LE1815V_5d12b65437635_1280.jpg",
+          "episodeCount": 20,
+          "broadcastInfo": "Wednesdays 8.30pm on ABC",
+          "updated": "2019-08-07 21:06:02",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/shaun-micallef-s-mad-as-hell"
+            },
+            "deeplink": {
+              "href": "\/show\/shaun-micallef-s-mad-as-hell"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "comedy",
+                "title": "COMEDY",
+                "href": "\/category\/comedy"
+              },
+              {
+                "id": "panel",
+                "title": "PANEL & DISCUSSION",
+                "href": "\/category\/panel"
+              }
+            ]
+          }
+        },
+        {
+          "id": 166320,
+          "slug": "squinters",
+          "type": "series",
+          "title": "Squinters",
+          "displayTitle": "Squinters",
+          "description": "A comic celebration of the mundane peak-hour ritual for workers of despatch centre K2, dealing with a US takeover and the appointment of a new CEO, a prodigious leader doing everything she can to disguise the human within.",
+          "status": {
+            "title": "SERIES 2",
+            "theme": "default"
+          },
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/co\/CO1805H_5d117a484a743.jpg",
+          "episodeCount": 6,
+          "broadcastInfo": "Wednesdays 9pm on ABC",
+          "updated": "2019-08-13 11:30:16",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/squinters"
+            },
+            "deeplink": {
+              "href": "\/show\/squinters"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "abc2",
+                "title": "ABC COMEDY",
+                "href": "\/channel\/abc2"
+              },
+              {
+                "id": "comedy",
+                "title": "COMEDY",
+                "href": "\/category\/comedy"
+              }
+            ]
+          }
+        },
+        {
+          "id": 124336,
+          "slug": "foreign-correspondent",
+          "type": "series",
+          "title": "Foreign Correspondent",
+          "displayTitle": "Foreign Correspondent",
+          "description": "The show that takes you around the globe to uncover fascinating, in-depth stories returns for a new season. The ABC's unrivalled network of foreign correspondents report on real international stories and the people involved.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1926H_5d4a29eb6763f_1280.jpg",
+          "episodeCount": 28,
+          "broadcastInfo": "Tuesdays 8pm on ABC",
+          "updated": "2019-08-07 10:24:02",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/foreign-correspondent"
+            },
+            "deeplink": {
+              "href": "\/show\/foreign-correspondent"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "news",
+                "title": "ABC NEWS",
+                "href": "\/channel\/news"
+              }
+            ]
+          }
+        },
+        {
+          "id": 167951,
+          "slug": "heights",
+          "type": "series",
+          "title": "The Heights",
+          "displayTitle": "The Heights",
+          "description": "Welcome to Arcadia Heights. Whether it's the high-rise or the high life - where we live doesn't define who we are. We follow six families, navigating the challenges of everyday life in an ever-changing urban community.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/dr\/DR1701W_5cca34a85be26_1280.jpg",
+          "episodeCount": 28,
+          "broadcastInfo": "New episodes Friday 8.30pm on ABC",
+          "updated": "2019-08-09 22:00:39",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/heights"
+            },
+            "deeplink": {
+              "href": "\/show\/heights"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "drama",
+                "title": "DRAMA",
+                "href": "\/category\/drama"
+              }
+            ]
+          }
+        },
+        {
+          "id": 172831,
+          "slug": "killing-eve",
+          "type": "series",
+          "title": "Killing Eve",
+          "displayTitle": "Killing Eve",
+          "description": "BAFTA Award winning, Emmy nominated drama. Bound by their obsession and a brutal act; Eve is reeling, Villanelle has disappeared and both of them are in deep trouble. Eve's hunt for Villanelle begins, and the stakes have never been higher.",
+          "status": {
+            "title": "SERIES 2",
+            "theme": "default"
+          },
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1911A_5ca59144d9ec2_1280.jpg",
+          "episodeCount": 8,
+          "updated": "2019-08-09 16:07:25",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/killing-eve"
+            },
+            "deeplink": {
+              "href": "\/show\/killing-eve"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "drama",
+                "title": "DRAMA",
+                "href": "\/category\/drama"
+              }
+            ]
+          }
+        },
+        {
+          "id": 187010,
+          "slug": "planets",
+          "type": "series",
+          "title": "The Planets",
+          "displayTitle": "The Planets",
+          "description": "This stunningly ambitious series brings to life the most memorable events in the history of the solar system, by using ground breaking visual effects to tell the thrilling story of all eight planets.",
+          "status": {
+            "title": "ALL EPISODES",
+            "theme": "default"
+          },
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1995A_5d43b6c46e8be_1280.jpg",
+          "episodeCount": 5,
+          "updated": "2019-08-05 23:00:00",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/planets"
+            },
+            "deeplink": {
+              "href": "\/show\/planets"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "docs",
+                "title": "DOCUMENTARY",
+                "href": "\/category\/docs"
+              }
+            ]
+          }
+        },
+        {
+          "id": 183815,
+          "slug": "women-on-the-verge",
+          "type": "series",
+          "title": "Women on the Verge",
+          "displayTitle": "Women on the Verge",
+          "description": "This comedy drama set in Dublin follows three flawed and complex friends as they navigate the challenges of life, love and relationships.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1908A_5ca41f9777d49.jpg",
+          "episodeCount": 4,
+          "broadcastInfo": "Thursday 9.40pm on ABC COMEDY",
+          "updated": "2019-08-09 16:04:57",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/women-on-the-verge"
+            },
+            "deeplink": {
+              "href": "\/show\/women-on-the-verge"
+            },
+            "categories": [
+              {
+                "id": "abc2",
+                "title": "ABC COMEDY",
+                "href": "\/channel\/abc2"
+              },
+              {
+                "id": "comedy",
+                "title": "COMEDY",
+                "href": "\/category\/comedy"
+              },
+              {
+                "id": "drama",
+                "title": "DRAMA",
+                "href": "\/category\/drama"
+              }
+            ]
+          }
+        },
+        {
+          "id": 123625,
+          "slug": "poldark",
+          "type": "series",
+          "title": "Poldark",
+          "displayTitle": "Poldark",
+          "description": "In Cornwall, George Warleggan continues to build his empire in a bid to crush the Poldarks, and Elizabeth resolves to forge a new life for herself as his wife and a Warleggan, burying her past and Ross with it.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1543A_5b161f2b9e15b.jpg",
+          "episodeCount": 4,
+          "broadcastInfo": "New series starts August 17 at 8.30pm on ABC",
+          "updated": "2019-08-13 00:30:09",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/poldark"
+            },
+            "deeplink": {
+              "href": "\/show\/poldark"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "drama",
+                "title": "DRAMA",
+                "href": "\/category\/drama"
+              }
+            ]
+          }
+        },
+        {
+          "id": 183004,
+          "slug": "waltzing-the-dragon-with-benjamin-law",
+          "type": "series",
+          "title": "Waltzing The Dragon With Benjamin Law",
+          "displayTitle": "Waltzing The Dragon With Benjamin Law",
+          "description": "A documentary to the 'sweet and the sour' of the China-Australia relationship, digging deep into overlapping histories of the countries, unpacking the present and looking to the future of Australia's waltz with the dragon.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1810H_5d31159c2f945_1280.jpg",
+          "episodeCount": 2,
+          "updated": "2019-08-09 16:06:21",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/waltzing-the-dragon-with-benjamin-law"
+            },
+            "deeplink": {
+              "href": "\/show\/waltzing-the-dragon-with-benjamin-law"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "docs",
+                "title": "DOCUMENTARY",
+                "href": "\/category\/docs"
+              }
+            ]
+          }
+        },
+        {
+          "id": 184179,
+          "slug": "community",
+          "type": "series",
+          "title": "Community",
+          "displayTitle": "Community",
+          "description": "As classes resume at Greendale Community College, the misadventures continue for Jeff and his study group.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1929A_5d1ad68a4df24.jpg",
+          "episodeCount": 5,
+          "broadcastInfo": "Weeknights at 9pm on ABC Comedy",
+          "updated": "2019-08-12 22:25:40",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/community"
+            },
+            "deeplink": {
+              "href": "\/show\/community"
+            },
+            "categories": [
+              {
+                "id": "abc2",
+                "title": "ABC COMEDY",
+                "href": "\/channel\/abc2"
+              },
+              {
+                "id": "comedy",
+                "title": "COMEDY",
+                "href": "\/category\/comedy"
+              }
+            ]
+          }
+        },
+        {
+          "id": 159355,
+          "slug": "hard-quiz",
+          "type": "series",
+          "title": "Hard Quiz",
+          "displayTitle": "Hard Quiz",
+          "description": "The hardest man in television returns with Australia's favourite TV quiz show. Tom Gleeson sets out to find Australia's hardest quiz champion, pitting four contestants against each other in a battle of attrition.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/le\/LE1831V_5d2bdf8e566aa_1280.jpg",
+          "episodeCount": 44,
+          "broadcastInfo": "Wednesday 8pm on ABC",
+          "updated": "2019-08-12 15:33:42",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/hard-quiz"
+            },
+            "deeplink": {
+              "href": "\/show\/hard-quiz"
+            },
+            "categories": [
+              {
+                "id": "abc1",
+                "title": "ABC",
+                "href": "\/channel\/abc1"
+              },
+              {
+                "id": "abc2",
+                "title": "ABC COMEDY",
+                "href": "\/channel\/abc2"
+              },
+              {
+                "id": "comedy",
+                "title": "COMEDY",
+                "href": "\/category\/comedy"
+              },
+              {
+                "id": "panel",
+                "title": "PANEL & DISCUSSION",
+                "href": "\/category\/panel"
+              }
+            ]
+          }
+        },
+        {
+          "id": 183000,
+          "slug": "kgb",
+          "type": "series",
+          "title": "KGB",
+          "displayTitle": "KGB",
+          "description": "Two Indigenous detectives race to solve a major case in their sketchy neighbourhood, but find their loyalties compromised when they discover that most of the suspects are family.",
+          "status": {
+            "title": "ALL EPISODES",
+            "theme": "default"
+          },
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ip\/IP1809W_5d1171d9c4bd6.jpg",
+          "episodeCount": 5,
+          "updated": "2019-07-08 10:46:14",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/kgb"
+            },
+            "deeplink": {
+              "href": "\/show\/kgb"
+            },
+            "categories": [
+              {
+                "id": "abc2",
+                "title": "ABC COMEDY",
+                "href": "\/channel\/abc2"
+              },
+              {
+                "id": "comedy",
+                "title": "COMEDY",
+                "href": "\/category\/comedy"
+              }
+            ]
+          }
+        },
+        {
+          "type": "feature",
+          "houseNumber": "ZW1671A001S00",
+          "title": "Chris Ramsey All Growed Up",
+          "showTitle": "Chris Ramsey All Growed Up",
+          "displayTitle": "Chris Ramsey All Growed Up",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1671A001S00_5bce734879fee.jpg",
+          "description": "The comedian explores growing up, getting older, taking responsibility and all of the other terrifying realisations that come with being dragged into modern adulthood.",
+          "duration": 2616,
+          "displayDuration": "44m",
+          "displayDurationAccessible": "44 minutes",
+          "classification": "M",
+          "captions": false,
+          "captionsOnAkamai": true,
+          "availability": "Broadcast 9:15pm Sun 11 Aug 2019. Published 2 days ago, available until 9:58pm on 10 Sep 2019.",
+          "_entity": "video",
+          "_links": {
+            "self": {
+              "href": "\/video\/ZW1671A001S00"
+            },
+            "deeplink": {
+              "id": "ZW1671A001S00",
+              "href": "\/show\/chris-ramsey-all-growed-up\/video\/ZW1671A001S00"
+            },
+            "categories": [
+              {
+                "id": "abc2",
+                "title": "ABC COMEDY",
+                "href": "\/channel\/abc2"
+              },
+              {
+                "id": "comedy",
+                "title": "COMEDY",
+                "href": "\/category\/comedy"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": "959",
+        "title": "Watch ABC Channels Live ",
+        "items": [
+          {
+            "type": "livestream",
+            "houseNumber": "NS1413V001S00",
+            "title": "ABC News Live Stream",
+            "showTitle": "ABC NEWS Live Stream",
+            "displayTitle": "ABC NEWS Live Stream",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ns\/NS1413V001S00_5d0311f72f043_1020.jpg",
+            "status": {
+              "title": "LIVE",
+              "theme": "live"
+            },
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NS1413V001S00"
+              },
+              "deeplink": {
+                "id": "NS1413V001S00",
+                "href": "\/show\/abc-news-24\/video\/NS1413V001S00"
+              }
+            }
+          },
+          {
+            "type": "livestream",
+            "houseNumber": "LS1604H001S00",
+            "title": "ABC KIDS Live Stream: 5:00am to 7:30pm AEDT",
+            "showTitle": "ABC KIDS Live Stream",
+            "displayTitle": "ABC KIDS Live Stream",
+            "displaySubtitle": "5:00am to 7:30pm AEDT",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ls\/LS1604H001S00_5cca444029c3a_1020.jpg",
+            "status": {
+              "title": "LIVE",
+              "theme": "live"
+            },
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/LS1604H001S00"
+              },
+              "deeplink": {
+                "id": "LS1604H001S00",
+                "href": "\/show\/abc-kids-live-stream\/video\/LS1604H001S00"
+              }
+            }
+          },
+          {
+            "type": "livestream",
+            "houseNumber": "LS1603H001S00",
+            "title": "ABC ME Live Stream: 5:00am to 9:45pm AEDT",
+            "showTitle": "ABC ME Live Stream",
+            "displayTitle": "ABC ME Live Stream",
+            "displaySubtitle": "5:00am to 9:45pm AEDT",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ls\/LS1603H001S00_5cca44364a0b8_1020.jpg",
+            "status": {
+              "title": "LIVE",
+              "theme": "live"
+            },
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/LS1603H001S00"
+              },
+              "deeplink": {
+                "id": "LS1603H001S00",
+                "href": "\/show\/abc3-live-stream\/video\/LS1603H001S00"
+              }
+            }
+          },
+          {
+            "type": "livestream",
+            "houseNumber": "IV1512H001S00",
+            "title": "ABC Live Stream ",
+            "showTitle": "ABC TV Live Stream",
+            "displayTitle": "ABC TV Live Stream",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1512H001S00_5d031951e237d_1020.jpg",
+            "status": {
+              "title": "LIVE",
+              "theme": "live"
+            },
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/IV1512H001S00"
+              },
+              "deeplink": {
+                "id": "IV1512H001S00",
+                "href": "\/show\/abc-live-stream\/video\/IV1512H001S00"
+              }
+            }
+          },
+          {
+            "type": "livestream",
+            "houseNumber": "LS1602H001S00",
+            "title": "ABC COMEDY Live Stream: 8pm to 2:00am AEDT",
+            "showTitle": "ABC COMEDY Live Stream",
+            "displayTitle": "ABC COMEDY Live Stream",
+            "displaySubtitle": "8pm to 2:00am AEDT",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ls\/LS1602H001S00_5d2c683912277_1020.jpg",
+            "status": {
+              "title": "LIVE",
+              "theme": "live"
+            },
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/LS1602H001S00"
+              },
+              "deeplink": {
+                "id": "LS1602H001S00",
+                "href": "\/show\/abc2-live-stream\/video\/LS1602H001S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/959"
+          }
+        }
+      },
+      {
+        "id": "2121",
+        "title": "Last Night's TV",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "ZW1963A003S00",
+            "title": "Series 6 Episode 3 Digging with the Murderer",
+            "showTitle": "Reno 911!",
+            "displayTitle": "Reno 911!",
+            "displaySubtitle": "Series 6 Episode 3 Digging with the Murderer",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1963A003S00_5d3fb0977b9e7.jpg",
+            "duration": 1283,
+            "displayDuration": "21m",
+            "displayDurationAccessible": "21 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1963A003S00"
+              },
+              "deeplink": {
+                "id": "ZW1963A003S00",
+                "href": "\/show\/reno-911\/series\/6\/video\/ZW1963A003S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1763A005S00",
+            "title": "Series 2 Episode 5",
+            "showTitle": "Flowers",
+            "displayTitle": "Flowers",
+            "displaySubtitle": "Series 2 Episode 5",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1763A005S00_5c90852e54139.jpg",
+            "duration": 1545,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1763A005S00"
+              },
+              "deeplink": {
+                "id": "ZW1763A005S00",
+                "href": "\/show\/flowers\/series\/2\/video\/ZW1763A005S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1493A006S00",
+            "title": "Series 4 Episode 6 Lupercalia",
+            "showTitle": "Plebs",
+            "displayTitle": "Plebs",
+            "displaySubtitle": "Series 4 Episode 6 Lupercalia",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1493A006S00_5b051137e7bd7.jpg",
+            "duration": 1346,
+            "displayDuration": "22m",
+            "displayDurationAccessible": "22 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1493A006S00"
+              },
+              "deeplink": {
+                "id": "ZW1493A006S00",
+                "href": "\/show\/plebs\/series\/4\/video\/ZW1493A006S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NC1904H027S00",
+            "title": "How Good is Democracy?",
+            "showTitle": "Q&A",
+            "displayTitle": "Q&A",
+            "displaySubtitle": "How Good is Democracy?",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1904H027S00_5d4b79ef9e090_1280.jpg",
+            "duration": 3799,
+            "displayDuration": "1h 3m",
+            "displayDurationAccessible": "1 hour 3 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NC1904H027S00"
+              },
+              "deeplink": {
+                "id": "NC1904H027S00",
+                "href": "\/show\/qanda\/series\/0\/video\/NC1904H027S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZY9856A004S00",
+            "title": "Series 4 Episode 4 Handyman",
+            "showTitle": "Peep Show",
+            "displayTitle": "Peep Show",
+            "displaySubtitle": "Series 4 Episode 4 Handyman",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY9856A004S00_58532efc5acba_1280.jpg",
+            "duration": 1500,
+            "displayDuration": "25m",
+            "displayDurationAccessible": "25 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZY9856A004S00"
+              },
+              "deeplink": {
+                "id": "ZY9856A004S00",
+                "href": "\/show\/peep-show\/series\/4\/video\/ZY9856A004S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0194A002S00",
+            "title": "Series 3 Episode 2 The Gig And The Girlfriend",
+            "showTitle": "The Inbetweeners",
+            "displayTitle": "The Inbetweeners",
+            "displaySubtitle": "Series 3 Episode 2 The Gig And The Girlfriend",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0194A002S005525c4fb599634.83728857_1280.jpg",
+            "duration": 1505,
+            "displayDuration": "25m",
+            "displayDurationAccessible": "25 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0194A002S00"
+              },
+              "deeplink": {
+                "id": "ZW0194A002S00",
+                "href": "\/show\/inbetweeners\/series\/3\/video\/ZW0194A002S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "FA1835H027S00",
+            "title": "Monday 12\/8\/2019",
+            "showTitle": "Media Watch",
+            "displayTitle": "Media Watch",
+            "displaySubtitle": "Monday 12\/8\/2019",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/fa\/FA1835H027S00_5d51f64f0482f_1680.jpg",
+            "duration": 892,
+            "displayDuration": "15m",
+            "displayDurationAccessible": "15 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/FA1835H027S00"
+              },
+              "deeplink": {
+                "id": "FA1835H027S00",
+                "href": "\/show\/media-watch\/series\/0\/video\/FA1835H027S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1929A020S00",
+            "title": "Series 2 Episode 20 Competitive Wine Tasting",
+            "showTitle": "Community",
+            "displayTitle": "Community",
+            "displaySubtitle": "Series 2 Episode 20 Competitive Wine Tasting",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1929A020S00_5d3fa9199531a.jpg",
+            "duration": 1210,
+            "displayDuration": "20m",
+            "displayDurationAccessible": "20 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1929A020S00"
+              },
+              "deeplink": {
+                "id": "ZW1929A020S00",
+                "href": "\/show\/community\/series\/2\/video\/ZW1929A020S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2121"
+          }
+        }
+      },
+      {
+        "id": "2237",
+        "title": "Science Week 2019",
+        "items": [
+          {
+            "type": "feature",
+            "houseNumber": "ZW2018A001S00",
+            "title": "Climate Change: The Facts",
+            "showTitle": "Climate Change: The Facts",
+            "displayTitle": "Climate Change: The Facts",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW2018A001S00_5d3fa73889201.jpg",
+            "status": {
+              "title": "SPECIAL",
+              "theme": "default"
+            },
+            "duration": 3459,
+            "displayDuration": "58m",
+            "displayDurationAccessible": "58 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW2018A001S00"
+              },
+              "deeplink": {
+                "id": "ZW2018A001S00",
+                "href": "\/show\/climate-change-the-facts\/video\/ZW2018A001S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "SC1702H008S00",
+            "title": "Series 19 Bionic Revolution",
+            "showTitle": "Catalyst",
+            "displayTitle": "Catalyst",
+            "displaySubtitle": "Series 19 Bionic Revolution",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/sc\/SC1702H008S00_5bc5602a256f8.jpg",
+            "duration": 3356,
+            "displayDuration": "56m",
+            "displayDurationAccessible": "56 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/SC1702H008S00"
+              },
+              "deeplink": {
+                "id": "SC1702H008S00",
+                "href": "\/show\/catalyst\/series\/19\/video\/SC1702H008S00"
+              }
+            }
+          },
+          {
+            "id": 187010,
+            "type": "series",
+            "title": "The Planets",
+            "displayTitle": "The Planets",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1995A_5d43b6c46e8be_1280.jpg",
+            "status": {
+              "title": "ALL EPISODES",
+              "theme": "default"
+            },
+            "episodeCount": 5,
+            "updated": "2019-08-05 23:00:00",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/planets"
+              },
+              "deeplink": {
+                "href": "\/show\/planets"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "DO1708V002S00",
+            "title": "Series 2 Ageing Well",
+            "showTitle": "Ask The Doctor",
+            "displayTitle": "Ask The Doctor",
+            "displaySubtitle": "Series 2 Ageing Well",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1708V002S00_5bb2e1ca8b084.jpg",
+            "duration": 1655,
+            "displayDuration": "28m",
+            "displayDurationAccessible": "28 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/DO1708V002S00"
+              },
+              "deeplink": {
+                "id": "DO1708V002S00",
+                "href": "\/show\/ask-the-doctor\/series\/2\/video\/DO1708V002S00"
+              }
+            }
+          },
+          {
+            "id": "156083-2",
+            "title": "Series 2",
+            "displayTitle": "War On Waste",
+            "displaySubtitle": "Series 2",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1724H_5b4d7a6981d91.jpg",
+            "episodeCount": 3,
+            "_entity": "series",
+            "_links": {
+              "self": {
+                "href": "\/series\/war-on-waste\/2"
+              },
+              "deeplink": {
+                "href": "\/show\/war-on-waste\/series\/2"
+              },
+              "show": {
+                "href": "\/show\/war-on-waste"
+              }
+            }
+          },
+          {
+            "id": 179220,
+            "type": "series",
+            "title": "Art Bites: Biogenesis",
+            "displayTitle": "Art Bites: Biogenesis",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1810H_5d367ac6b77bc.jpg",
+            "episodeCount": 6,
+            "updated": "2019-08-10 10:11:34",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/art-bites-biogenesis"
+              },
+              "deeplink": {
+                "href": "\/show\/art-bites-biogenesis"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "SC1702H002S00",
+            "title": "Series 19 Feeding Australia (Part 1) Foods of Tomorrow",
+            "showTitle": "Catalyst",
+            "displayTitle": "Catalyst",
+            "displaySubtitle": "Series 19 Feeding Australia (Part 1) Foods of Tomorrow",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/sc\/SC1702H002S00_5b712c0aa9cb4_1280.jpg",
+            "duration": 3366,
+            "displayDuration": "56m",
+            "displayDurationAccessible": "56 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/SC1702H002S00"
+              },
+              "deeplink": {
+                "id": "SC1702H002S00",
+                "href": "\/show\/catalyst\/series\/19\/video\/SC1702H002S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "SC1702H003S00",
+            "title": "Series 19 Feeding Australia (Part 2) A Sustainable Future",
+            "showTitle": "Catalyst",
+            "displayTitle": "Catalyst",
+            "displaySubtitle": "Series 19 Feeding Australia (Part 2) A Sustainable Future",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/sc\/SC1702H003S00_5b72385a601b1.jpg",
+            "duration": 3439,
+            "displayDuration": "57m",
+            "displayDurationAccessible": "57 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/SC1702H003S00"
+              },
+              "deeplink": {
+                "id": "SC1702H003S00",
+                "href": "\/show\/catalyst\/series\/19\/video\/SC1702H003S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2237"
+          }
+        }
+      },
+      {
+        "id": "538",
+        "title": "Monday Night News & Current Affairs",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "NC1902Q017S00",
+            "title": "Series 2019 An Innocent Abroad (Part 1)",
+            "showTitle": "Australian Story",
+            "displayTitle": "Australian Story",
+            "displaySubtitle": "Series 2019 An Innocent Abroad (Part 1)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1902Q017S00_5d47858871bea_1280.jpg",
+            "duration": 1858,
+            "displayDuration": "31m",
+            "displayDurationAccessible": "31 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NC1902Q017S00"
+              },
+              "deeplink": {
+                "id": "NC1902Q017S00",
+                "href": "\/show\/australian-story\/series\/2019\/video\/NC1902Q017S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NC1903H027S00",
+            "title": "Series 2019 Betting On Boris",
+            "showTitle": "Four Corners",
+            "displayTitle": "Four Corners",
+            "displaySubtitle": "Series 2019 Betting On Boris",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1903H027S00_5d50de46a2ca9_1376.jpg",
+            "duration": 2585,
+            "displayDuration": "43m",
+            "displayDurationAccessible": "43 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NC1903H027S00"
+              },
+              "deeplink": {
+                "id": "NC1903H027S00",
+                "href": "\/show\/four-corners\/series\/2019\/video\/NC1903H027S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NC1904H027S00",
+            "title": "How Good is Democracy?",
+            "showTitle": "Q&A",
+            "displayTitle": "Q&A",
+            "displaySubtitle": "How Good is Democracy?",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1904H027S00_5d4b79ef9e090_1280.jpg",
+            "duration": 3799,
+            "displayDuration": "1h 3m",
+            "displayDurationAccessible": "1 hour 3 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NC1904H027S00"
+              },
+              "deeplink": {
+                "id": "NC1904H027S00",
+                "href": "\/show\/qanda\/series\/0\/video\/NC1904H027S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "FA1835H027S00",
+            "title": "Monday 12\/8\/2019",
+            "showTitle": "Media Watch",
+            "displayTitle": "Media Watch",
+            "displaySubtitle": "Monday 12\/8\/2019",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/fa\/FA1835H027S00_5d51f64f0482f_1680.jpg",
+            "duration": 892,
+            "displayDuration": "15m",
+            "displayDurationAccessible": "15 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/FA1835H027S00"
+              },
+              "deeplink": {
+                "id": "FA1835H027S00",
+                "href": "\/show\/media-watch\/series\/0\/video\/FA1835H027S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NC1903H026S00",
+            "title": "Series 2019 Britain's Brexit Crisis",
+            "showTitle": "Four Corners",
+            "displayTitle": "Four Corners",
+            "displaySubtitle": "Series 2019 Britain's Brexit Crisis",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1903H026S00_5d47ae5b2683b_1920.jpg",
+            "duration": 2720,
+            "displayDuration": "45m",
+            "displayDurationAccessible": "45 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NC1903H026S00"
+              },
+              "deeplink": {
+                "id": "NC1903H026S00",
+                "href": "\/show\/four-corners\/series\/2019\/video\/NC1903H026S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NC1904H026S00",
+            "title": "Zali's Political Slalom",
+            "showTitle": "Q&A",
+            "displayTitle": "Q&A",
+            "displaySubtitle": "Zali's Political Slalom",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1904H026S00_5d4123453baba_1280.jpg",
+            "duration": 3692,
+            "displayDuration": "1h 2m",
+            "displayDurationAccessible": "1 hour 2 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NC1904H026S00"
+              },
+              "deeplink": {
+                "id": "NC1904H026S00",
+                "href": "\/show\/qanda\/series\/0\/video\/NC1904H026S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "FA1835H026S00",
+            "title": "Monday 5\/8\/2019",
+            "showTitle": "Media Watch",
+            "displayTitle": "Media Watch",
+            "displaySubtitle": "Monday 5\/8\/2019",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/fa\/FA1835H026S00_5d48d6f0ceda7_1680.jpg",
+            "duration": 925,
+            "displayDuration": "15m",
+            "displayDurationAccessible": "15 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/FA1835H026S00"
+              },
+              "deeplink": {
+                "id": "FA1835H026S00",
+                "href": "\/show\/media-watch\/series\/0\/video\/FA1835H026S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "RF1827V008S00",
+            "title": "Series 5 Episode 8 Riverina, NSW",
+            "showTitle": "Back Roads",
+            "displayTitle": "Back Roads",
+            "displaySubtitle": "Series 5 Episode 8 Riverina, NSW",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1827V008S00_5d36707ba15bc.jpg",
+            "duration": 1688,
+            "displayDuration": "28m",
+            "displayDurationAccessible": "28 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/RF1827V008S00"
+              },
+              "deeplink": {
+                "id": "RF1827V008S00",
+                "href": "\/show\/back-roads\/series\/5\/video\/RF1827V008S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/538"
+          }
+        }
+      },
+      {
+        "id": "2010",
+        "title": "Drama",
+        "items": [
+          {
+            "id": 179215,
+            "type": "series",
+            "title": "Les Norton",
+            "displayTitle": "Les Norton",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/dr\/DR1801H_5d48f20612373_1280.jpg",
+            "episodeCount": 2,
+            "updated": "2019-08-13 11:30:33",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/les-norton"
+              },
+              "deeplink": {
+                "href": "\/show\/les-norton"
+              }
+            }
+          },
+          {
+            "id": 167951,
+            "type": "series",
+            "title": "The Heights",
+            "displayTitle": "The Heights",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/dr\/DR1701W_5cca34a85be26_1280.jpg",
+            "episodeCount": 28,
+            "updated": "2019-08-09 22:00:39",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/heights"
+              },
+              "deeplink": {
+                "href": "\/show\/heights"
+              }
+            }
+          },
+          {
+            "id": 171228,
+            "type": "series",
+            "title": "Agatha Christie's And Then There Were None",
+            "displayTitle": "Agatha Christie's And Then There Were None",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1545A_5d3678e9bd01c.jpg",
+            "episodeCount": 1,
+            "updated": "2019-08-13 11:30:59",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/agatha-christie-s-and-then-there-were-none"
+              },
+              "deeplink": {
+                "href": "\/show\/agatha-christie-s-and-then-there-were-none"
+              }
+            }
+          },
+          {
+            "id": 172268,
+            "type": "series",
+            "title": "Shakespeare And Hathaway",
+            "displayTitle": "Shakespeare And Hathaway",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1955A_5cda5ddd6bfe1.jpg",
+            "episodeCount": 10,
+            "updated": "2019-08-03 20:18:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/shakespeare-and-hathaway"
+              },
+              "deeplink": {
+                "href": "\/show\/shakespeare-and-hathaway"
+              }
+            }
+          },
+          {
+            "id": 123344,
+            "type": "series",
+            "title": "Father Brown",
+            "displayTitle": "Father Brown",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1954A_5ce4a1ad93df7.jpg",
+            "episodeCount": 10,
+            "updated": "2019-08-12 09:43:59",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/father-brown"
+              },
+              "deeplink": {
+                "href": "\/show\/father-brown"
+              }
+            }
+          },
+          {
+            "id": 124614,
+            "type": "series",
+            "title": "No Offence",
+            "displayTitle": "No Offence",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1839A_5cda5dd9cfba3.jpg",
+            "status": {
+              "title": "ALL EPISODES",
+              "theme": "default"
+            },
+            "episodeCount": 21,
+            "updated": "2019-06-04 13:11:04",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/no-offence"
+              },
+              "deeplink": {
+                "href": "\/show\/no-offence"
+              }
+            }
+          },
+          {
+            "id": "172831-2",
+            "title": "Series 2",
+            "displayTitle": "Killing Eve",
+            "displaySubtitle": "Series 2",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1911A_5ca59144d9ec2_1280.jpg",
+            "episodeCount": 8,
+            "status": {
+              "title": "SERIES 2",
+              "theme": "default"
+            },
+            "_entity": "series",
+            "_links": {
+              "self": {
+                "href": "\/series\/killing-eve\/2"
+              },
+              "deeplink": {
+                "href": "\/show\/killing-eve\/series\/2"
+              },
+              "show": {
+                "href": "\/show\/killing-eve"
+              }
+            }
+          },
+          {
+            "id": 123625,
+            "type": "series",
+            "title": "Poldark",
+            "displayTitle": "Poldark",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1543A_5b161f2b9e15b.jpg",
+            "episodeCount": 4,
+            "updated": "2019-08-13 00:30:09",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/poldark"
+              },
+              "deeplink": {
+                "href": "\/show\/poldark"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2010"
+          }
+        }
+      },
+      {
+        "id": "2011",
+        "title": "Comedy ",
+        "items": [
+          {
+            "id": 123573,
+            "type": "series",
+            "title": "Shaun Micallef's MAD AS HELL",
+            "displayTitle": "Shaun Micallef's MAD AS HELL",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/le\/LE1815V_5d12b65437635_1280.jpg",
+            "episodeCount": 20,
+            "updated": "2019-08-07 21:06:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/shaun-micallef-s-mad-as-hell"
+              },
+              "deeplink": {
+                "href": "\/show\/shaun-micallef-s-mad-as-hell"
+              }
+            }
+          },
+          {
+            "id": 175553,
+            "type": "series",
+            "title": "Schitt's Creek",
+            "displayTitle": "Schitt's Creek",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1746A_5bbc3ff1a06df.jpg",
+            "episodeCount": 8,
+            "updated": "2019-08-11 00:35:31",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/schitt-s-creek"
+              },
+              "deeplink": {
+                "href": "\/show\/schitt-s-creek"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "ZW1671A001S00",
+            "title": "Chris Ramsey All Growed Up",
+            "showTitle": "Chris Ramsey All Growed Up",
+            "displayTitle": "Chris Ramsey All Growed Up",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1671A001S00_5bce734879fee.jpg",
+            "duration": 2616,
+            "displayDuration": "44m",
+            "displayDurationAccessible": "44 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1671A001S00"
+              },
+              "deeplink": {
+                "id": "ZW1671A001S00",
+                "href": "\/show\/chris-ramsey-all-growed-up\/video\/ZW1671A001S00"
+              }
+            }
+          },
+          {
+            "id": 183815,
+            "type": "series",
+            "title": "Women on the Verge",
+            "displayTitle": "Women on the Verge",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1908A_5ca41f9777d49.jpg",
+            "episodeCount": 4,
+            "updated": "2019-08-09 16:04:57",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/women-on-the-verge"
+              },
+              "deeplink": {
+                "href": "\/show\/women-on-the-verge"
+              }
+            }
+          },
+          {
+            "id": 166320,
+            "type": "series",
+            "title": "Squinters",
+            "displayTitle": "Squinters",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/co\/CO1805H_5d117a484a743.jpg",
+            "status": {
+              "title": "SERIES 2",
+              "theme": "default"
+            },
+            "episodeCount": 6,
+            "updated": "2019-08-13 11:30:16",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/squinters"
+              },
+              "deeplink": {
+                "href": "\/show\/squinters"
+              }
+            }
+          },
+          {
+            "id": 168072,
+            "type": "series",
+            "title": "Sammy J",
+            "displayTitle": "Sammy J",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/le\/LE1806V_5c5b9ce661d19_1280.jpg",
+            "episodeCount": 65,
+            "updated": "2019-08-08 18:02:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/sammy-j"
+              },
+              "deeplink": {
+                "href": "\/show\/sammy-j"
+              }
+            }
+          },
+          {
+            "id": 184179,
+            "type": "series",
+            "title": "Community",
+            "displayTitle": "Community",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1929A_5d1ad68a4df24.jpg",
+            "episodeCount": 5,
+            "updated": "2019-08-12 22:25:40",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/community"
+              },
+              "deeplink": {
+                "href": "\/show\/community"
+              }
+            }
+          },
+          {
+            "id": 183378,
+            "type": "series",
+            "title": "State Of The Union",
+            "displayTitle": "State Of The Union",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1901A_5cd911c013a10_1280.jpg",
+            "status": {
+              "title": "ALL EPISODES",
+              "theme": "default"
+            },
+            "episodeCount": 10,
+            "updated": "2019-08-09 16:11:35",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/state-of-the-union"
+              },
+              "deeplink": {
+                "href": "\/show\/state-of-the-union"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2011"
+          }
+        }
+      },
+      {
+        "id": "2097",
+        "title": "Documentary & Factual",
+        "items": [
+          {
+            "type": "feature",
+            "houseNumber": "ZW2018A001S00",
+            "title": "Climate Change: The Facts",
+            "showTitle": "Climate Change: The Facts",
+            "displayTitle": "Climate Change: The Facts",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW2018A001S00_5d3fa73889201.jpg",
+            "status": {
+              "title": "SPECIAL",
+              "theme": "default"
+            },
+            "duration": 3459,
+            "displayDuration": "58m",
+            "displayDurationAccessible": "58 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW2018A001S00"
+              },
+              "deeplink": {
+                "id": "ZW2018A001S00",
+                "href": "\/show\/climate-change-the-facts\/video\/ZW2018A001S00"
+              }
+            }
+          },
+          {
+            "id": 187010,
+            "type": "series",
+            "title": "The Planets",
+            "displayTitle": "The Planets",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1995A_5d43b6c46e8be_1280.jpg",
+            "status": {
+              "title": "ALL EPISODES",
+              "theme": "default"
+            },
+            "episodeCount": 5,
+            "updated": "2019-08-05 23:00:00",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/planets"
+              },
+              "deeplink": {
+                "href": "\/show\/planets"
+              }
+            }
+          },
+          {
+            "id": 183004,
+            "type": "series",
+            "title": "Waltzing The Dragon With Benjamin Law",
+            "displayTitle": "Waltzing The Dragon With Benjamin Law",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1810H_5d31159c2f945_1280.jpg",
+            "episodeCount": 2,
+            "updated": "2019-08-09 16:06:21",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/waltzing-the-dragon-with-benjamin-law"
+              },
+              "deeplink": {
+                "href": "\/show\/waltzing-the-dragon-with-benjamin-law"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "NC1931H001S00",
+            "title": "Fly Me To The Moon",
+            "showTitle": "Fly Me To The Moon",
+            "displayTitle": "Fly Me To The Moon",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1931H001S00_5d1b06eff324c_1280.jpg",
+            "status": {
+              "title": "SPECIAL",
+              "theme": "default"
+            },
+            "duration": 3480,
+            "displayDuration": "58m",
+            "displayDurationAccessible": "58 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NC1931H001S00"
+              },
+              "deeplink": {
+                "id": "NC1931H001S00",
+                "href": "\/show\/fly-me-to-the-moon\/video\/NC1931H001S00"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "ZW2027A001S00",
+            "title": "Pangolins: Narrated by David Attenborough",
+            "showTitle": "Pangolins: Narrated by David Attenborough",
+            "displayTitle": "Pangolins: Narrated by David Attenborough",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW2027A001S00_5d2ec55682e29.jpg",
+            "status": {
+              "title": "SPECIAL",
+              "theme": "default"
+            },
+            "duration": 3519,
+            "displayDuration": "59m",
+            "displayDurationAccessible": "59 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW2027A001S00"
+              },
+              "deeplink": {
+                "id": "ZW2027A001S00",
+                "href": "\/show\/pangolins-narrated-by-david-attenborough\/video\/ZW2027A001S00"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "ZW1593A001S00",
+            "title": "Louis Theroux: Savile",
+            "showTitle": "Louis Theroux: Savile",
+            "displayTitle": "Louis Theroux: Savile",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1593A001S00_5acaeb96898c5.jpg",
+            "duration": 4503,
+            "displayDuration": "1h 15m",
+            "displayDurationAccessible": "1 hour 15 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1593A001S00"
+              },
+              "deeplink": {
+                "id": "ZW1593A001S00",
+                "href": "\/show\/louis-theroux-savile\/video\/ZW1593A001S00"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "ZW1959A001S00",
+            "title": "David Bowie: Finding Fame",
+            "showTitle": "David Bowie: Finding Fame",
+            "displayTitle": "David Bowie: Finding Fame",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1959A001S00_5d366807f3a9b.jpg",
+            "duration": 5420,
+            "displayDuration": "1h 30m",
+            "displayDurationAccessible": "1 hour 30 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1959A001S00"
+              },
+              "deeplink": {
+                "id": "ZW1959A001S00",
+                "href": "\/show\/david-bowie-finding-fame\/video\/ZW1959A001S00"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "AC1806V001S00",
+            "title": "The Bikes Of Wrath",
+            "showTitle": "The Bikes Of Wrath",
+            "displayTitle": "The Bikes Of Wrath",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1806V001S00_5d083a2724d19.jpg",
+            "duration": 4862,
+            "displayDuration": "1h 21m",
+            "displayDurationAccessible": "1 hour 21 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/AC1806V001S00"
+              },
+              "deeplink": {
+                "id": "AC1806V001S00",
+                "href": "\/show\/bikes-of-wrath\/video\/AC1806V001S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2097"
+          }
+        }
+      },
+      {
+        "id": "1894",
+        "title": "Investigative and In-Depth Reporting",
+        "items": [
+          {
+            "id": 122725,
+            "type": "series",
+            "title": "7.30",
+            "displayTitle": "7.30",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1901H_5c18c3070ef66.jpg",
+            "episodeCount": 17,
+            "updated": "2019-08-12 20:18:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/7-30"
+              },
+              "deeplink": {
+                "href": "\/show\/7-30"
+              }
+            }
+          },
+          {
+            "id": 122486,
+            "type": "series",
+            "title": "Four Corners",
+            "displayTitle": "Four Corners",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1903H_5c49381781e72_1280.jpg",
+            "episodeCount": 20,
+            "updated": "2019-08-12 21:22:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/four-corners"
+              },
+              "deeplink": {
+                "href": "\/show\/four-corners"
+              }
+            }
+          },
+          {
+            "id": 124336,
+            "type": "series",
+            "title": "Foreign Correspondent",
+            "displayTitle": "Foreign Correspondent",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1926H_5d4a29eb6763f_1280.jpg",
+            "episodeCount": 28,
+            "updated": "2019-08-07 10:24:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/foreign-correspondent"
+              },
+              "deeplink": {
+                "href": "\/show\/foreign-correspondent"
+              }
+            }
+          },
+          {
+            "id": 122716,
+            "type": "series",
+            "title": "Australian Story",
+            "displayTitle": "Australian Story",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1902Q_5cef304650a1f_1280.jpg",
+            "episodeCount": 49,
+            "updated": "2019-08-12 20:34:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/australian-story"
+              },
+              "deeplink": {
+                "href": "\/show\/australian-story"
+              }
+            }
+          },
+          {
+            "id": 181604,
+            "type": "series",
+            "title": "7.30: The Interviews",
+            "displayTitle": "7.30: The Interviews",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1902H_5c4fd348a932d_1280.jpg",
+            "episodeCount": 3,
+            "updated": "2019-08-08 11:26:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/7-30-the-interviews"
+              },
+              "deeplink": {
+                "href": "\/show\/7-30-the-interviews"
+              }
+            }
+          },
+          {
+            "id": 122516,
+            "type": "series",
+            "title": "Landline",
+            "displayTitle": "Landline",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ra\/RA1901Q_5c525632346e6_1280.jpg",
+            "episodeCount": 4,
+            "updated": "2019-08-13 13:34:04",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/landline"
+              },
+              "deeplink": {
+                "href": "\/show\/landline"
+              }
+            }
+          },
+          {
+            "id": 181410,
+            "type": "series",
+            "title": "A Dog Act: The Disappearance Of Paddy Moriarty",
+            "displayTitle": "A Dog Act: The Disappearance Of Paddy Moriarty",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ns\/NS1803H_5c0089640e269_1280.jpg",
+            "episodeCount": 4,
+            "updated": "2018-12-14 15:52:08",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/dog-act-the-disappearance-of-paddy-moriarty"
+              },
+              "deeplink": {
+                "href": "\/show\/dog-act-the-disappearance-of-paddy-moriarty"
+              }
+            }
+          },
+          {
+            "id": 172847,
+            "type": "series",
+            "title": "Barrenjoey Road",
+            "displayTitle": "Barrenjoey Road",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1714H_5bebaaac8dafc_1280.jpg",
+            "status": {
+              "title": "ALL EPISODES",
+              "theme": "default"
+            },
+            "episodeCount": 3,
+            "updated": "2018-11-26 13:38:17",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/barrenjoey-road"
+              },
+              "deeplink": {
+                "href": "\/show\/barrenjoey-road"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1894"
+          }
+        }
+      },
+      {
+        "id": "2157",
+        "title": "Lifestyle",
+        "items": [
+          {
+            "id": 182133,
+            "type": "series",
+            "title": "The Repair Shop",
+            "displayTitle": "The Repair Shop",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1847A_5d2427b646102_1280.jpg",
+            "episodeCount": 25,
+            "updated": "2019-08-11 19:05:39",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/repair-shop"
+              },
+              "deeplink": {
+                "href": "\/show\/repair-shop"
+              }
+            }
+          },
+          {
+            "id": 122768,
+            "type": "series",
+            "title": "Gardening Australia",
+            "displayTitle": "Gardening Australia",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1805V_5d2bdefe99da6_1280.jpg",
+            "episodeCount": 142,
+            "updated": "2019-08-09 20:34:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/gardening-australia"
+              },
+              "deeplink": {
+                "href": "\/show\/gardening-australia"
+              }
+            }
+          },
+          {
+            "id": 160294,
+            "type": "series",
+            "title": "Building Australia",
+            "displayTitle": "Building Australia",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1210A_5927b8e54fc11.jpg",
+            "episodeCount": 1,
+            "updated": "2019-08-12 17:34:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/building-australia"
+              },
+              "deeplink": {
+                "href": "\/show\/building-australia"
+              }
+            }
+          },
+          {
+            "id": 172029,
+            "type": "series",
+            "title": "Escape From The City",
+            "displayTitle": "Escape From The City",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/le\/LE1712H_5c2ecc44d0a70_1280.jpg",
+            "episodeCount": 30,
+            "updated": "2019-08-09 16:08:01",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/escape-from-the-city"
+              },
+              "deeplink": {
+                "href": "\/show\/escape-from-the-city"
+              }
+            }
+          },
+          {
+            "id": 159326,
+            "type": "series",
+            "title": "Ask The Doctor",
+            "displayTitle": "Ask The Doctor",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1708V_5ba98ee875b14.jpg",
+            "episodeCount": 24,
+            "updated": "2019-07-30 20:34:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/ask-the-doctor"
+              },
+              "deeplink": {
+                "href": "\/show\/ask-the-doctor"
+              }
+            }
+          },
+          {
+            "id": 124543,
+            "type": "series",
+            "title": "Restoration Australia",
+            "displayTitle": "Restoration Australia",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1529H_5c78c2a5b9269.jpg",
+            "status": {
+              "title": "ALL EPISODES",
+              "theme": "default"
+            },
+            "episodeCount": 13,
+            "updated": "2019-05-23 08:54:07",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/restoration-australia"
+              },
+              "deeplink": {
+                "href": "\/show\/restoration-australia"
+              }
+            }
+          },
+          {
+            "id": 159591,
+            "type": "series",
+            "title": "Dream Gardens",
+            "displayTitle": "Dream Gardens",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/fa\/FA1506V_5892bf680f876.jpg",
+            "episodeCount": 8,
+            "updated": "2019-01-11 13:44:52",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/dream-gardens"
+              },
+              "deeplink": {
+                "href": "\/show\/dream-gardens"
+              }
+            }
+          },
+          {
+            "id": 159409,
+            "type": "series",
+            "title": "Silvia's Italian Table",
+            "displayTitle": "Silvia's Italian Table",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1513H_57eb58671bb16.jpg",
+            "episodeCount": 1,
+            "updated": "2019-08-12 15:26:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/silvia-s-italian-table"
+              },
+              "deeplink": {
+                "href": "\/show\/silvia-s-italian-table"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2157"
+          }
+        }
+      },
+      {
+        "id": "2066",
+        "title": "Stories From ABC News",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "NN1940H043S00",
+            "title": "Gold Mining Towns Struggle to Strike It Rich",
+            "showTitle": "ABC News Stories",
+            "displayTitle": "ABC News Stories",
+            "displaySubtitle": "Gold Mining Towns Struggle to Strike It Rich",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1940H043S00_5d50fcaadea69_1280.jpg",
+            "duration": 266,
+            "displayDuration": "4m 26s",
+            "displayDurationAccessible": "4 minutes 26 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1940H043S00"
+              },
+              "deeplink": {
+                "id": "NN1940H043S00",
+                "href": "\/show\/abc-news-stories\/series\/0\/video\/NN1940H043S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NN1940H042S00",
+            "title": "Knitted Jumpers for Phillip Island's Penguins",
+            "showTitle": "ABC News Stories",
+            "displayTitle": "ABC News Stories",
+            "displaySubtitle": "Knitted Jumpers for Phillip Island's Penguins",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1940H042S00_5d50ce923d107_1280.jpg",
+            "duration": 117,
+            "displayDuration": "1m 57s",
+            "displayDurationAccessible": "1 minute 57 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1940H042S00"
+              },
+              "deeplink": {
+                "id": "NN1940H042S00",
+                "href": "\/show\/abc-news-stories\/series\/0\/video\/NN1940H042S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NN1940H041S00",
+            "title": "Abbey Road Image Turns 50",
+            "showTitle": "ABC News Stories",
+            "displayTitle": "ABC News Stories",
+            "displaySubtitle": "Abbey Road Image Turns 50",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1940H041S00_5d4cd91155dca_1280.jpg",
+            "duration": 123,
+            "displayDuration": "2m 3s",
+            "displayDurationAccessible": "2 minutes 3 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1940H041S00"
+              },
+              "deeplink": {
+                "id": "NN1940H041S00",
+                "href": "\/show\/abc-news-stories\/series\/0\/video\/NN1940H041S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NN1929V022S00",
+            "title": "Series 2019 Tough Talk on China",
+            "showTitle": "Insiders Extra",
+            "displayTitle": "Insiders Extra",
+            "displaySubtitle": "Series 2019 Tough Talk on China",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1929V022S00_5d4ce2f11e60e_1022.jpg",
+            "status": {
+              "title": "EXTRA",
+              "theme": "default"
+            },
+            "duration": 128,
+            "displayDuration": "2m 8s",
+            "displayDurationAccessible": "2 minutes 8 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1929V022S00"
+              },
+              "deeplink": {
+                "id": "NN1929V022S00",
+                "href": "\/show\/insiders-extra\/series\/2019\/video\/NN1929V022S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NN1901H044S00",
+            "title": "Bollywood Superstar Shah Rukh Khan",
+            "showTitle": "News Breakfast: Short Cuts",
+            "displayTitle": "News Breakfast: Short Cuts",
+            "displaySubtitle": "Bollywood Superstar Shah Rukh Khan",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1901H044S00_5d4cca3400ff4_1280.jpg",
+            "duration": 333,
+            "displayDuration": "6m",
+            "displayDurationAccessible": "6 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1901H044S00"
+              },
+              "deeplink": {
+                "id": "NN1901H044S00",
+                "href": "\/show\/news-breakfast-short-cuts\/series\/0\/video\/NN1901H044S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NN1906H043S00",
+            "title": "Series 2019 What Didn't Make It Into The Show",
+            "showTitle": "Planet America",
+            "displayTitle": "Planet America",
+            "displaySubtitle": "Series 2019 What Didn't Make It Into The Show",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1906H043S00_5d4d1326108c6_1280.jpg",
+            "status": {
+              "title": "EXTRA",
+              "theme": "default"
+            },
+            "duration": 3319,
+            "displayDuration": "55m",
+            "displayDurationAccessible": "55 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1906H043S00"
+              },
+              "deeplink": {
+                "id": "NN1906H043S00",
+                "href": "\/show\/planet-america\/series\/2019\/video\/NN1906H043S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NN1936H015S00",
+            "title": "Violinists Richard Tognetti and Satu Vanska",
+            "showTitle": "7.30 Presents: It Takes Two",
+            "displayTitle": "7.30 Presents: It Takes Two",
+            "displaySubtitle": "Violinists Richard Tognetti and Satu Vanska",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1936H015S00_5d4b5a0266c20_1024.jpg",
+            "duration": 280,
+            "displayDuration": "4m 40s",
+            "displayDurationAccessible": "4 minutes 40 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1936H015S00"
+              },
+              "deeplink": {
+                "id": "NN1936H015S00",
+                "href": "\/show\/7-30-presents-it-takes-two\/series\/0\/video\/NN1936H015S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NN1902H009S00",
+            "title": "Paul Keating",
+            "showTitle": "7.30: The Interviews",
+            "displayTitle": "7.30: The Interviews",
+            "displaySubtitle": "Paul Keating",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1902H009S00_5d4a187b8fac8_1024.jpg",
+            "duration": 726,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1902H009S00"
+              },
+              "deeplink": {
+                "id": "NN1902H009S00",
+                "href": "\/show\/7-30-the-interviews\/series\/0\/video\/NN1902H009S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2066"
+          }
+        }
+      },
+      {
+        "id": "1150",
+        "title": "Indigenous",
+        "items": [
+          {
+            "id": 183000,
+            "type": "series",
+            "title": "KGB",
+            "displayTitle": "KGB",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ip\/IP1809W_5d1171d9c4bd6.jpg",
+            "status": {
+              "title": "ALL EPISODES",
+              "theme": "default"
+            },
+            "episodeCount": 5,
+            "updated": "2019-07-08 10:46:14",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/kgb"
+              },
+              "deeplink": {
+                "href": "\/show\/kgb"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "AC1827S001S00",
+            "title": "Deadly Family Portraits: Crombie Crew",
+            "showTitle": "Deadly Family Portraits: Crombie Crew",
+            "displayTitle": "Deadly Family Portraits: Crombie Crew",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1827S001S00_5d47ca559d0c9.jpg",
+            "duration": 603,
+            "displayDuration": "10m",
+            "displayDurationAccessible": "10 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/AC1827S001S00"
+              },
+              "deeplink": {
+                "id": "AC1827S001S00",
+                "href": "\/show\/deadly-family-portraits-crombie-crew\/video\/AC1827S001S00"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "IP1808W001S00",
+            "title": "Will Australia Ever Have A Black Prime Minister?",
+            "showTitle": "Will Australia Ever Have A Black Prime Minister?",
+            "displayTitle": "Will Australia Ever Have A Black Prime Minister?",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ip\/IP1808W001S00_5cb3ffa80369b.jpg",
+            "duration": 3342,
+            "displayDuration": "56m",
+            "displayDurationAccessible": "56 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/IP1808W001S00"
+              },
+              "deeplink": {
+                "id": "IP1808W001S00",
+                "href": "\/show\/will-australia-ever-have-a-black-prime-minister\/video\/IP1808W001S00"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "ZW1112A001S00",
+            "title": "Tanna",
+            "showTitle": "Tanna",
+            "displayTitle": "Tanna",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1112A001S00_5a3b37c49bb84_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "default"
+            },
+            "duration": 5978,
+            "displayDuration": "1h 40m",
+            "displayDurationAccessible": "1 hour 40 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1112A001S00"
+              },
+              "deeplink": {
+                "id": "ZW1112A001S00",
+                "href": "\/show\/tanna\/video\/ZW1112A001S00"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "AC1828H001S00",
+            "title": "Deadly Family Portraits: Sansbury Sisters",
+            "showTitle": "Deadly Family Portraits: Sansbury Sisters",
+            "displayTitle": "Deadly Family Portraits: Sansbury Sisters",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1828H001S00_5d47ca56388ba.jpg",
+            "duration": 686,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/AC1828H001S00"
+              },
+              "deeplink": {
+                "id": "AC1828H001S00",
+                "href": "\/show\/deadly-family-portraits-sansbury-sisters\/video\/AC1828H001S00"
+              }
+            }
+          },
+          {
+            "id": 159541,
+            "type": "series",
+            "title": "Blue Water Empire",
+            "displayTitle": "Blue Water Empire",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ip\/IP1505Q_5d09b5345eb62_1280.jpg",
+            "status": {
+              "title": "ALL EPISODES",
+              "theme": "default"
+            },
+            "episodeCount": 3,
+            "updated": "2019-07-10 07:57:05",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/blue-water-empire"
+              },
+              "deeplink": {
+                "href": "\/show\/blue-water-empire"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "AC1830S001S00",
+            "title": "Deadly Family Portraits: Electric Mimili",
+            "showTitle": "Deadly Family Portraits: Electric Mimili",
+            "displayTitle": "Deadly Family Portraits: Electric Mimili",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1830S001S00_5d47ca568feef.jpg",
+            "duration": 555,
+            "displayDuration": "9m",
+            "displayDurationAccessible": "9 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/AC1830S001S00"
+              },
+              "deeplink": {
+                "id": "AC1830S001S00",
+                "href": "\/show\/deadly-family-portraits-electric-mimili\/video\/AC1830S001S00"
+              }
+            }
+          },
+          {
+            "id": 187611,
+            "type": "series",
+            "title": "Back Roads Dreaming and Other Stories",
+            "displayTitle": "Back Roads Dreaming and Other Stories",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rk\/RK1827V_5d033b960f4d0_1280.jpg",
+            "episodeCount": 6,
+            "updated": "2019-07-29 14:30:36",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/back-roads-dreaming-and-other-stories"
+              },
+              "deeplink": {
+                "href": "\/show\/back-roads-dreaming-and-other-stories"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1150"
+          }
+        }
+      },
+      {
+        "id": "2156",
+        "title": "Arts",
+        "items": [
+          {
+            "id": 179220,
+            "type": "series",
+            "title": "Art Bites: Biogenesis",
+            "displayTitle": "Art Bites: Biogenesis",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1810H_5d367ac6b77bc.jpg",
+            "episodeCount": 6,
+            "updated": "2019-08-10 10:11:34",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/art-bites-biogenesis"
+              },
+              "deeplink": {
+                "href": "\/show\/art-bites-biogenesis"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "AC1806V001S00",
+            "title": "The Bikes Of Wrath",
+            "showTitle": "The Bikes Of Wrath",
+            "displayTitle": "The Bikes Of Wrath",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1806V001S00_5d083a2724d19.jpg",
+            "duration": 4862,
+            "displayDuration": "1h 21m",
+            "displayDurationAccessible": "1 hour 21 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/AC1806V001S00"
+              },
+              "deeplink": {
+                "id": "AC1806V001S00",
+                "href": "\/show\/bikes-of-wrath\/video\/AC1806V001S00"
+              }
+            }
+          },
+          {
+            "id": 178416,
+            "type": "series",
+            "title": "Art Bites: The Unmissables",
+            "displayTitle": "Art Bites: The Unmissables",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1807V_5d23ff37cc43d.jpg",
+            "episodeCount": 6,
+            "updated": "2019-07-27 03:05:30",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/art-bites-the-unmissables"
+              },
+              "deeplink": {
+                "href": "\/show\/art-bites-the-unmissables"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "AC1826H030S00",
+            "title": "ACDC: Next Stop London",
+            "showTitle": "Rewind",
+            "displayTitle": "Rewind",
+            "displaySubtitle": "ACDC: Next Stop London",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1826H030S00_5d23f1275b661.jpg",
+            "duration": 144,
+            "displayDuration": "2m 24s",
+            "displayDurationAccessible": "2 minutes 24 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/AC1826H030S00"
+              },
+              "deeplink": {
+                "id": "AC1826H030S00",
+                "href": "\/show\/rewind\/series\/0\/video\/AC1826H030S00"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "AC1811H001S00",
+            "title": "China's Artful Dissident",
+            "showTitle": "China's Artful Dissident",
+            "displayTitle": "China's Artful Dissident",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1811H001S00_5ce746e8375c1_1280.jpg",
+            "duration": 3420,
+            "displayDuration": "57m",
+            "displayDurationAccessible": "57 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/AC1811H001S00"
+              },
+              "deeplink": {
+                "id": "AC1811H001S00",
+                "href": "\/show\/china-s-artful-dissident\/video\/AC1811H001S00"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "ZW1051A001S00",
+            "title": "David Bowie: The Last Five Years",
+            "showTitle": "David Bowie: The Last Five Years",
+            "displayTitle": "David Bowie: The Last Five Years",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1051A001S00_58a3f4b77ba99.jpg",
+            "duration": 5374,
+            "displayDuration": "1h 30m",
+            "displayDurationAccessible": "1 hour 30 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1051A001S00"
+              },
+              "deeplink": {
+                "id": "ZW1051A001S00",
+                "href": "\/show\/david-bowie-the-last-five-years\/video\/ZW1051A001S00"
+              }
+            }
+          },
+          {
+            "id": 165024,
+            "type": "series",
+            "title": "Everyone's A Critic",
+            "displayTitle": "Everyone's A Critic",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1707H_5b3478580e5be_1280.jpg",
+            "episodeCount": 5,
+            "updated": "2019-08-11 17:02:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/everyone-s-a-critic"
+              },
+              "deeplink": {
+                "href": "\/show\/everyone-s-a-critic"
+              }
+            }
+          },
+          {
+            "id": 124638,
+            "type": "series",
+            "title": "triple j Like A Version",
+            "displayTitle": "triple j Like A Version",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1701H_5c3fbbe6c174a.jpg",
+            "episodeCount": 5,
+            "updated": "2019-08-11 18:02:04",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/triple-j-like-a-version"
+              },
+              "deeplink": {
+                "href": "\/show\/triple-j-like-a-version"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2156"
+          }
+        }
+      },
+      {
+        "id": "2230",
+        "title": "Play School: Beginnings & Endings ",
+        "items": [
+          {
+            "type": "feature",
+            "houseNumber": "CK1913H001S00",
+            "title": "Play School: Beginnings and Endings",
+            "showTitle": "Play School: Beginnings and Endings",
+            "displayTitle": "Play School: Beginnings and Endings",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1913H001S00_5d42200ab1260_1280.jpg",
+            "duration": 1782,
+            "displayDuration": "30m",
+            "displayDurationAccessible": "30 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1913H001S00"
+              },
+              "deeplink": {
+                "id": "CK1913H001S00",
+                "href": "\/show\/play-school-beginnings-and-endings\/video\/CK1913H001S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1702Q048S00",
+            "title": "Copycat",
+            "showTitle": "Bluey",
+            "displayTitle": "Bluey",
+            "displaySubtitle": "Copycat",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1702Q048S00_5c99c63896682.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1702Q048S00"
+              },
+              "deeplink": {
+                "id": "CH1702Q048S00",
+                "href": "\/show\/bluey\/series\/0\/video\/CH1702Q048S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1790A012S00",
+            "title": "Growling Up",
+            "showTitle": "School Of Roars",
+            "displayTitle": "School Of Roars",
+            "displaySubtitle": "Growling Up",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1790A012S00_5c48138ac7b05.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1790A012S00"
+              },
+              "deeplink": {
+                "id": "ZW1790A012S00",
+                "href": "\/show\/school-of-roars\/series\/0\/video\/ZW1790A012S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1561H009S00",
+            "title": "New Baby Sibling",
+            "showTitle": "Maurice's Big Adventure",
+            "displayTitle": "Maurice's Big Adventure",
+            "displaySubtitle": "New Baby Sibling",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1561H009S0056c2a66275b3a0.40230952_1280.jpg",
+            "duration": 315,
+            "displayDuration": "5m",
+            "displayDurationAccessible": "5 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1561H009S00"
+              },
+              "deeplink": {
+                "id": "CH1561H009S00",
+                "href": "\/show\/maurices-big-adventure\/series\/0\/video\/CH1561H009S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0660A025S00",
+            "title": "Goodbye",
+            "showTitle": "WildWoods",
+            "displayTitle": "WildWoods",
+            "displaySubtitle": "Goodbye",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0660A025S00_5ab1c1197567e.jpg",
+            "duration": 661,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0660A025S00"
+              },
+              "deeplink": {
+                "id": "ZW0660A025S00",
+                "href": "\/show\/wildwoods\/series\/0\/video\/ZW0660A025S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0660A026S00",
+            "title": "Hello",
+            "showTitle": "WildWoods",
+            "displayTitle": "WildWoods",
+            "displaySubtitle": "Hello",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0660A026S00_5abb1b7ceb12c.jpg",
+            "duration": 661,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0660A026S00"
+              },
+              "deeplink": {
+                "id": "ZW0660A026S00",
+                "href": "\/show\/wildwoods\/series\/0\/video\/ZW0660A026S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1642A004S00",
+            "title": "Baby In Mum's Tummy",
+            "showTitle": "Teeny Tiny Stevies",
+            "displayTitle": "Teeny Tiny Stevies",
+            "displaySubtitle": "Baby In Mum's Tummy",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1642A004S00_5b20a2d6dac15_1280.jpg",
+            "duration": 178,
+            "displayDuration": "2m 58s",
+            "displayDurationAccessible": "2 minutes 58 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1642A004S00"
+              },
+              "deeplink": {
+                "id": "ZW1642A004S00",
+                "href": "\/show\/teeny-tiny-stevies\/series\/0\/video\/ZW1642A004S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZX9945A046S00",
+            "title": "This Is Scarlett Taking Care Of Her Little Brother",
+            "showTitle": "This Is Scarlett And Isaiah",
+            "displayTitle": "This Is Scarlett And Isaiah",
+            "displaySubtitle": "This Is Scarlett Taking Care Of Her Little Brother",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9945A046S0055650ffb2891a7.88746065_1280.jpg",
+            "duration": 361,
+            "displayDuration": "6m",
+            "displayDurationAccessible": "6 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX9945A046S00"
+              },
+              "deeplink": {
+                "id": "ZX9945A046S00",
+                "href": "\/show\/this-is-scarlett-and-isaiah\/series\/0\/video\/ZX9945A046S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2230"
+          }
+        }
+      },
+      {
+        "id": "1987",
+        "title": "Science Week on ABC KIDS",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "CH1412H022S00",
+            "title": "Let's Experiment 2",
+            "showTitle": "Play School",
+            "displayTitle": "Play School",
+            "displaySubtitle": "Let's Experiment 2",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1412H022S0056e2405071d487.56143758_1280.jpg",
+            "duration": 1715,
+            "displayDuration": "29m",
+            "displayDurationAccessible": "29 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1412H022S00"
+              },
+              "deeplink": {
+                "id": "CH1412H022S00",
+                "href": "\/show\/play-school\/series\/0\/video\/CH1412H022S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1224A006S00",
+            "title": "The Fossil Badge",
+            "showTitle": "Hey Duggee",
+            "displayTitle": "Hey Duggee",
+            "displaySubtitle": "The Fossil Badge",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1224A006S00_5993933a94827.jpg",
+            "duration": 425,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1224A006S00"
+              },
+              "deeplink": {
+                "id": "ZW1224A006S00",
+                "href": "\/show\/hey-duggee\/series\/0\/video\/ZW1224A006S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0888A045S00",
+            "title": "Project: Sand",
+            "showTitle": "Floogals",
+            "displayTitle": "Floogals",
+            "displaySubtitle": "Project: Sand",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0888A045S00_5b6d1f2aca434_1280.jpg",
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0888A045S00"
+              },
+              "deeplink": {
+                "id": "ZW0888A045S00",
+                "href": "\/show\/floogals\/series\/0\/video\/ZW0888A045S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0620A043S00",
+            "title": "Cappadocia, Turkey",
+            "showTitle": "Go Jetters",
+            "displayTitle": "Go Jetters",
+            "displaySubtitle": "Cappadocia, Turkey",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0620A043S00_58d49401c535e.jpg",
+            "duration": 664,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0620A043S00"
+              },
+              "deeplink": {
+                "id": "ZW0620A043S00",
+                "href": "\/show\/go-jetters\/series\/0\/video\/ZW0620A043S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1191A007S00",
+            "title": "Catboy And The Shrinker",
+            "showTitle": "PJ Masks",
+            "displayTitle": "PJ Masks",
+            "displaySubtitle": "Catboy And The Shrinker",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1191A007S00_595ca4d922116.jpg",
+            "duration": 714,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1191A007S00"
+              },
+              "deeplink": {
+                "id": "ZW1191A007S00",
+                "href": "\/show\/pj-masks\/series\/0\/video\/ZW1191A007S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZX0510A029S00",
+            "title": "The Octonauts And The Seahorse Tale",
+            "showTitle": "Octonauts",
+            "displayTitle": "Octonauts",
+            "displaySubtitle": "The Octonauts And The Seahorse Tale",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX0510A029S0055405dcca91cd3.95909768_1280.jpg",
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX0510A029S00"
+              },
+              "deeplink": {
+                "id": "ZX0510A029S00",
+                "href": "\/show\/octonauts\/series\/0\/video\/ZX0510A029S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0310A030S00",
+            "title": "Stargazing",
+            "showTitle": "Becca's Bunch",
+            "displayTitle": "Becca's Bunch",
+            "displaySubtitle": "Stargazing",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0310A030S00_5bea547c81663.jpg",
+            "duration": 684,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0310A030S00"
+              },
+              "deeplink": {
+                "id": "ZW0310A030S00",
+                "href": "\/show\/becca-s-bunch\/series\/0\/video\/ZW0310A030S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1465H071S00",
+            "title": "Honestly, Monty",
+            "showTitle": "Kazoops!",
+            "displayTitle": "Kazoops!",
+            "displaySubtitle": "Honestly, Monty",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1465H071S00_59004f89718b4.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1465H071S00"
+              },
+              "deeplink": {
+                "id": "CH1465H071S00",
+                "href": "\/show\/kazoops\/series\/0\/video\/CH1465H071S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1987"
+          }
+        }
+      },
+      {
+        "id": "949",
+        "title": "Science Week on ABC ME",
+        "items": [
+          {
+            "id": 187031,
+            "type": "series",
+            "title": "Mythbusters Junior",
+            "displayTitle": "Mythbusters Junior",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1999A_5d367e8b2a274.jpg",
+            "episodeCount": 2,
+            "updated": "2019-08-11 19:26:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/mythbusters-junior"
+              },
+              "deeplink": {
+                "href": "\/show\/mythbusters-junior"
+              }
+            }
+          },
+          {
+            "id": 123205,
+            "type": "series",
+            "title": "Horrible Science",
+            "displayTitle": "Horrible Science",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/publicity_ZW0053A.jpg",
+            "episodeCount": 1,
+            "updated": "2019-08-12 16:10:13",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/horrible-science"
+              },
+              "deeplink": {
+                "href": "\/show\/horrible-science"
+              }
+            }
+          },
+          {
+            "id": 123275,
+            "type": "series",
+            "title": "Wallace & Gromit's World Of Invention",
+            "displayTitle": "Wallace & Gromit's World Of Invention",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX0712A_5acdac11b2d76_1280.jpg",
+            "episodeCount": 1,
+            "updated": "2019-08-12 19:26:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/wallace-and-gromit-s-world-of-invention"
+              },
+              "deeplink": {
+                "href": "\/show\/wallace-and-gromit-s-world-of-invention"
+              }
+            }
+          },
+          {
+            "id": 164164,
+            "type": "series",
+            "title": "Wow That's Amazing",
+            "displayTitle": "Wow That's Amazing",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1301A_5caa94ba88a18_1280.jpg",
+            "episodeCount": 26,
+            "updated": "2019-03-25 17:06:26",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/wow-that-s-amazing"
+              },
+              "deeplink": {
+                "href": "\/show\/wow-that-s-amazing"
+              }
+            }
+          },
+          {
+            "id": 171899,
+            "type": "series",
+            "title": "Fierce Earth",
+            "displayTitle": "Fierce Earth",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1569A_5b56a407d2a48.jpg",
+            "episodeCount": 4,
+            "updated": "2019-08-12 19:54:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/fierce-earth"
+              },
+              "deeplink": {
+                "href": "\/show\/fierce-earth"
+              }
+            }
+          },
+          {
+            "id": 172505,
+            "type": "series",
+            "title": "Atom Bond",
+            "displayTitle": "Atom Bond",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1620A_5afa853d16153.jpg",
+            "episodeCount": 4,
+            "updated": "2019-08-12 11:42:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/atom-bond"
+              },
+              "deeplink": {
+                "href": "\/show\/atom-bond"
+              }
+            }
+          },
+          {
+            "id": 159391,
+            "type": "series",
+            "title": "Physics House",
+            "displayTitle": "Physics House",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1122A_5ce4af60ddbf9_1280.jpg",
+            "episodeCount": 4,
+            "updated": "2019-08-12 11:38:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/physics-house"
+              },
+              "deeplink": {
+                "href": "\/show\/physics-house"
+              }
+            }
+          },
+          {
+            "id": 159457,
+            "type": "series",
+            "title": "Thunderbirds Are Go",
+            "displayTitle": "Thunderbirds Are Go",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1567A_5b39b1b60a4fe_1280.jpg",
+            "episodeCount": 20,
+            "updated": "2019-08-13 06:34:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/thunderbirds-are-go"
+              },
+              "deeplink": {
+                "href": "\/show\/thunderbirds-are-go"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/949"
+          }
+        }
+      },
+      {
+        "id": "895",
+        "title": "Education",
+        "items": [
+          {
+            "id": 184066,
+            "type": "series",
+            "title": "You Can't Ask That In The Classroom",
+            "displayTitle": "You Can't Ask That In The Classroom",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1919H_5ca42176565de.jpg",
+            "episodeCount": 3,
+            "updated": "2019-04-03 22:26:12",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/you-can-t-ask-that-in-the-classroom"
+              },
+              "deeplink": {
+                "href": "\/show\/you-can-t-ask-that-in-the-classroom"
+              }
+            }
+          },
+          {
+            "id": 123408,
+            "type": "series",
+            "title": "Horrible Histories",
+            "displayTitle": "Horrible Histories",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0381A55fba0037c4fa3.43182642_1280.jpg",
+            "episodeCount": 30,
+            "updated": "2019-08-10 13:18:04",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/horrible-histories"
+              },
+              "deeplink": {
+                "href": "\/show\/horrible-histories"
+              }
+            }
+          },
+          {
+            "id": 175768,
+            "type": "series",
+            "title": "Back In Time For Dinner: Education Shorts",
+            "displayTitle": "Back In Time For Dinner: Education Shorts",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1896H_5c490e1dd1ec1_1280.jpg",
+            "episodeCount": 5,
+            "updated": "2019-07-12 11:38:17",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/back-in-time-for-dinner-education-shorts"
+              },
+              "deeplink": {
+                "href": "\/show\/back-in-time-for-dinner-education-shorts"
+              }
+            }
+          },
+          {
+            "id": 179420,
+            "type": "series",
+            "title": "Kids of Courage",
+            "displayTitle": "Kids of Courage",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1798A_5c48138f0f2fb.jpg",
+            "episodeCount": 8,
+            "updated": "2019-03-20 13:16:47",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/kids-of-courage"
+              },
+              "deeplink": {
+                "href": "\/show\/kids-of-courage"
+              }
+            }
+          },
+          {
+            "id": 177389,
+            "type": "series",
+            "title": "Look Kool",
+            "displayTitle": "Look Kool",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1756A_5c3d314daa8c7.jpg",
+            "episodeCount": 29,
+            "updated": "2019-01-28 07:03:42",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/look-kool"
+              },
+              "deeplink": {
+                "href": "\/show\/look-kool"
+              }
+            }
+          },
+          {
+            "id": 122847,
+            "type": "series",
+            "title": "In My Shoes: China",
+            "displayTitle": "In My Shoes: China",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9514A55beef3bad6cd5.91569717_1280.jpg",
+            "episodeCount": 4,
+            "updated": "2019-08-13 10:58:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/in-my-shoes-china"
+              },
+              "deeplink": {
+                "href": "\/show\/in-my-shoes-china"
+              }
+            }
+          },
+          {
+            "id": 167320,
+            "type": "series",
+            "title": "BTN",
+            "displayTitle": "BTN",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ne\/NE1901S_5c47e0e955bf1.jpg",
+            "episodeCount": 4,
+            "updated": "2019-08-13 10:26:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/btn"
+              },
+              "deeplink": {
+                "href": "\/show\/btn"
+              }
+            }
+          },
+          {
+            "id": 171899,
+            "type": "series",
+            "title": "Fierce Earth",
+            "displayTitle": "Fierce Earth",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1569A_5b56a407d2a48.jpg",
+            "episodeCount": 4,
+            "updated": "2019-08-12 19:54:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/fierce-earth"
+              },
+              "deeplink": {
+                "href": "\/show\/fierce-earth"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/895"
+          }
+        }
+      },
+      {
+        "id": "1124",
+        "title": "Regional",
+        "items": [
+          {
+            "id": 122516,
+            "type": "series",
+            "title": "Landline",
+            "displayTitle": "Landline",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ra\/RA1901Q_5c525632346e6_1280.jpg",
+            "episodeCount": 4,
+            "updated": "2019-08-13 13:34:04",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/landline"
+              },
+              "deeplink": {
+                "href": "\/show\/landline"
+              }
+            }
+          },
+          {
+            "id": 148821,
+            "type": "series",
+            "title": "Back Roads",
+            "displayTitle": "Back Roads",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1827V_5cf5d8dadae0a.jpg",
+            "episodeCount": 53,
+            "updated": "2019-08-05 20:34:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/back-roads"
+              },
+              "deeplink": {
+                "href": "\/show\/back-roads"
+              }
+            }
+          },
+          {
+            "id": 168545,
+            "type": "series",
+            "title": "Gun Ringer",
+            "displayTitle": "Gun Ringer",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1710H_5afa7b31630fc_1280.jpg",
+            "episodeCount": 3,
+            "updated": "2018-07-23 17:54:44",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/gun-ringer"
+              },
+              "deeplink": {
+                "href": "\/show\/gun-ringer"
+              }
+            }
+          },
+          {
+            "id": 166328,
+            "type": "series",
+            "title": "The Road Back Home",
+            "displayTitle": "The Road Back Home",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1742H_59efc972a5cb7_1280.jpg",
+            "episodeCount": 12,
+            "updated": "2018-07-23 17:58:16",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/road-back-home"
+              },
+              "deeplink": {
+                "href": "\/show\/road-back-home"
+              }
+            }
+          },
+          {
+            "id": 124608,
+            "type": "series",
+            "title": "Wild Rides",
+            "displayTitle": "Wild Rides",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ra\/RA1909Q_5d3a53264b7a9.jpg",
+            "episodeCount": 5,
+            "updated": "2019-07-26 18:05:24",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/wild-rides"
+              },
+              "deeplink": {
+                "href": "\/show\/wild-rides"
+              }
+            }
+          },
+          {
+            "id": 124623,
+            "type": "series",
+            "title": "Heywire",
+            "displayTitle": "Heywire",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ra\/RA1907H_5d2d7c46c0838.jpg",
+            "episodeCount": 40,
+            "updated": "2019-07-19 14:20:07",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/heywire"
+              },
+              "deeplink": {
+                "href": "\/show\/heywire"
+              }
+            }
+          },
+          {
+            "id": 187611,
+            "type": "series",
+            "title": "Back Roads Dreaming and Other Stories",
+            "displayTitle": "Back Roads Dreaming and Other Stories",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rk\/RK1827V_5d033b960f4d0_1280.jpg",
+            "episodeCount": 6,
+            "updated": "2019-07-29 14:30:36",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/back-roads-dreaming-and-other-stories"
+              },
+              "deeplink": {
+                "href": "\/show\/back-roads-dreaming-and-other-stories"
+              }
+            }
+          },
+          {
+            "id": 186841,
+            "type": "series",
+            "title": "This Place",
+            "displayTitle": "This Place",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ra\/RA1908H_5ceb348e69121_1280.jpg",
+            "episodeCount": 28,
+            "updated": "2019-08-09 23:50:39",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/this-place"
+              },
+              "deeplink": {
+                "href": "\/show\/this-place"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1124"
+          }
+        }
+      },
+      {
+        "id": "352",
+        "title": "iview Shorts",
+        "items": [
+          {
+            "id": 168072,
+            "type": "series",
+            "title": "Sammy J",
+            "displayTitle": "Sammy J",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/le\/LE1806V_5c5b9ce661d19_1280.jpg",
+            "episodeCount": 65,
+            "updated": "2019-08-08 18:02:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/sammy-j"
+              },
+              "deeplink": {
+                "href": "\/show\/sammy-j"
+              }
+            }
+          },
+          {
+            "id": 123126,
+            "type": "series",
+            "title": "Good Game",
+            "displayTitle": "Good Game",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1861H_5c80bb9744c98.jpg",
+            "episodeCount": 28,
+            "updated": "2019-08-13 08:05:25",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/good-game"
+              },
+              "deeplink": {
+                "href": "\/show\/good-game"
+              }
+            }
+          },
+          {
+            "id": 186843,
+            "type": "series",
+            "title": "The Science Of Harrow",
+            "displayTitle": "The Science Of Harrow",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/dm\/DM1809Q_5ce494fa1dde2_1280.jpg",
+            "episodeCount": 5,
+            "updated": "2019-06-23 21:38:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/science-of-harrow"
+              },
+              "deeplink": {
+                "href": "\/show\/science-of-harrow"
+              }
+            }
+          },
+          {
+            "id": 169589,
+            "type": "series",
+            "title": "The Twist",
+            "displayTitle": "The Twist",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1713H_5be6bc923fe92_1280.jpg",
+            "episodeCount": 10,
+            "updated": "2019-01-07 14:48:32",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/twist"
+              },
+              "deeplink": {
+                "href": "\/show\/twist"
+              }
+            }
+          },
+          {
+            "id": 159299,
+            "type": "series",
+            "title": "When TV Was Awesome",
+            "displayTitle": "When TV Was Awesome",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/le\/LE1621V_5a1cf58939662.jpg",
+            "status": {
+              "title": "ALL EPISODES",
+              "theme": "default"
+            },
+            "episodeCount": 22,
+            "updated": "2019-06-30 08:05:13",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/when-tv-was-awesome"
+              },
+              "deeplink": {
+                "href": "\/show\/when-tv-was-awesome"
+              }
+            }
+          },
+          {
+            "id": 177787,
+            "type": "series",
+            "title": "Art Bites: Third Culture Kids",
+            "displayTitle": "Art Bites: Third Culture Kids",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1805V_5cda10f8b2b13.jpg",
+            "episodeCount": 6,
+            "updated": "2019-05-25 03:02:15",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/art-bites-third-culture-kids"
+              },
+              "deeplink": {
+                "href": "\/show\/art-bites-third-culture-kids"
+              }
+            }
+          },
+          {
+            "id": 159556,
+            "type": "series",
+            "title": "#CelesteChallengeAccepted",
+            "displayTitle": "#CelesteChallengeAccepted",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/le\/LE1623H_5c81f3f238df9_1280.jpg",
+            "episodeCount": 6,
+            "updated": "2018-07-23 17:55:11",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/celestechallengeaccepted"
+              },
+              "deeplink": {
+                "href": "\/show\/celestechallengeaccepted"
+              }
+            }
+          },
+          {
+            "id": 178416,
+            "type": "series",
+            "title": "Art Bites: The Unmissables",
+            "displayTitle": "Art Bites: The Unmissables",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1807V_5d23ff37cc43d.jpg",
+            "episodeCount": 6,
+            "updated": "2019-07-27 03:05:30",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/art-bites-the-unmissables"
+              },
+              "deeplink": {
+                "href": "\/show\/art-bites-the-unmissables"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/352"
+          }
+        }
+      },
+      {
+        "id": "1714",
+        "title": "ABC Favourites in Chinese",
+        "items": [
+          {
+            "id": 190841,
+            "type": "series",
+            "title": "Waltzing The Dragon With Benjamin Law  (Simplified Chinese Subtitles)",
+            "displayTitle": "Waltzing The Dragon With Benjamin Law  (Simplified Chinese Subtitles)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1914H_5d3fdac5f08f9.jpg",
+            "episodeCount": 2,
+            "updated": "2019-08-06 21:34:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/waltzing-the-dragon-with-benjamin-law-simplified-chinese-subtitles"
+              },
+              "deeplink": {
+                "href": "\/show\/waltzing-the-dragon-with-benjamin-law-simplified-chinese-subtitles"
+              }
+            }
+          },
+          {
+            "id": 185620,
+            "type": "series",
+            "title": "The Heights (Simplified Chinese Subtitles)",
+            "displayTitle": "The Heights (Simplified Chinese Subtitles)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1910W_5cca3761162d6_1280.jpg",
+            "episodeCount": 28,
+            "updated": "2019-08-09 22:05:39",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/heights-simplified-chinese-subtitles"
+              },
+              "deeplink": {
+                "href": "\/show\/heights-simplified-chinese-subtitles"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "IV1846H023S00",
+            "title": "Series 2019 Tell The World",
+            "showTitle": "Four Corners (Simplified Chinese Subtitles)",
+            "displayTitle": "Four Corners (Simplified Chinese Subtitles)",
+            "displaySubtitle": "Series 2019 Tell The World",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1846H023S00_5d438dd515e5a_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "default"
+            },
+            "duration": 2746,
+            "displayDuration": "46m",
+            "displayDurationAccessible": "46 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/IV1846H023S00"
+              },
+              "deeplink": {
+                "id": "IV1846H023S00",
+                "href": "\/show\/four-corners-simplified-chinese-subtitles\/series\/2019\/video\/IV1846H023S00"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "IV1913H001S00",
+            "title": "China's Artful Dissident  (Simplified Chinese Subtitles)",
+            "showTitle": "China's Artful Dissident  (Simplified Chinese Subtitles)",
+            "displayTitle": "China's Artful Dissident  (Simplified Chinese Subtitles)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1913H001S00_5d1ea566469c3_1280.jpg",
+            "duration": 3420,
+            "displayDuration": "57m",
+            "displayDurationAccessible": "57 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/IV1913H001S00"
+              },
+              "deeplink": {
+                "id": "IV1913H001S00",
+                "href": "\/show\/china-s-artful-dissident-simplified-chinese-subtitles\/video\/IV1913H001S00"
+              }
+            }
+          },
+          {
+            "id": 175602,
+            "type": "series",
+            "title": "Ask The Doctor (Simplified Chinese Subtitles)",
+            "displayTitle": "Ask The Doctor (Simplified Chinese Subtitles)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1908V_5c6e3938d3a31_1280.jpg",
+            "episodeCount": 24,
+            "updated": "2019-07-30 20:34:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/ask-the-doctor-simplified-chinese-subtitles"
+              },
+              "deeplink": {
+                "href": "\/show\/ask-the-doctor-simplified-chinese-subtitles"
+              }
+            }
+          },
+          {
+            "id": 182702,
+            "type": "series",
+            "title": "War On Waste (Simplified Chinese Subtitles)",
+            "displayTitle": "War On Waste (Simplified Chinese Subtitles)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1903H_5c52343c139fa_1280.jpg",
+            "episodeCount": 3,
+            "updated": "2019-02-03 22:50:12",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/war-on-waste-simplified-chinese-subtitles"
+              },
+              "deeplink": {
+                "href": "\/show\/war-on-waste-simplified-chinese-subtitles"
+              }
+            }
+          },
+          {
+            "id": 169397,
+            "type": "series",
+            "title": "Four Corners (Simplified Chinese Subtitles)",
+            "displayTitle": "Four Corners (Simplified Chinese Subtitles)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1846H_5cc91ccf3678f_1280.jpg",
+            "episodeCount": 4,
+            "updated": "2019-08-02 17:10:08",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/four-corners-simplified-chinese-subtitles"
+              },
+              "deeplink": {
+                "href": "\/show\/four-corners-simplified-chinese-subtitles"
+              }
+            }
+          },
+          {
+            "id": 169413,
+            "type": "series",
+            "title": "Catalyst (Simplified Chinese Subtitles)",
+            "displayTitle": "Catalyst (Simplified Chinese Subtitles)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1909H_5cf487767de91_1280.jpg",
+            "episodeCount": 18,
+            "updated": "2019-04-12 20:02:14",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/catalyst-simplified-chinese-subtitles"
+              },
+              "deeplink": {
+                "href": "\/show\/catalyst-simplified-chinese-subtitles"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1714"
+          }
+        }
+      },
+      {
+        "id": "334",
+        "title": "Recently Added",
+        "items": [
+          {
+            "id": 123126,
+            "type": "series",
+            "title": "Good Game",
+            "displayTitle": "Good Game",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1861H_5c80bb9744c98.jpg",
+            "episodeCount": 28,
+            "updated": "2019-08-13 08:05:25",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/good-game"
+              },
+              "deeplink": {
+                "href": "\/show\/good-game"
+              }
+            }
+          },
+          {
+            "id": 124050,
+            "type": "series",
+            "title": "Rewind",
+            "displayTitle": "Rewind",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1826H_5c4fdf7bab34f_1280.jpg",
+            "episodeCount": 110,
+            "updated": "2019-08-13 02:02:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/rewind"
+              },
+              "deeplink": {
+                "href": "\/show\/rewind"
+              }
+            }
+          },
+          {
+            "id": 123886,
+            "type": "series",
+            "title": "Call The Midwife",
+            "displayTitle": "Call The Midwife",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0898A_58884da87e5b0.jpg",
+            "episodeCount": 6,
+            "updated": "2019-08-13 01:26:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/call-the-midwife"
+              },
+              "deeplink": {
+                "href": "\/show\/call-the-midwife"
+              }
+            }
+          },
+          {
+            "id": 177837,
+            "type": "series",
+            "title": "Reno 911!",
+            "displayTitle": "Reno 911!",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1963A_5d36761a1fe64.jpg",
+            "episodeCount": 21,
+            "updated": "2019-08-13 00:38:04",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/reno-911"
+              },
+              "deeplink": {
+                "href": "\/show\/reno-911"
+              }
+            }
+          },
+          {
+            "id": 177809,
+            "type": "series",
+            "title": "Flowers",
+            "displayTitle": "Flowers",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1763A_5cc9240f61b7a_1280.jpg",
+            "episodeCount": 5,
+            "updated": "2019-08-12 23:30:39",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/flowers"
+              },
+              "deeplink": {
+                "href": "\/show\/flowers"
+              }
+            }
+          },
+          {
+            "id": 123623,
+            "type": "series",
+            "title": "Plebs",
+            "displayTitle": "Plebs",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1493A_5ad6bb0e1dd4c.jpg",
+            "episodeCount": 27,
+            "updated": "2019-08-12 23:02:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/plebs"
+              },
+              "deeplink": {
+                "href": "\/show\/plebs"
+              }
+            }
+          },
+          {
+            "id": 124573,
+            "type": "series",
+            "title": "Q&A",
+            "displayTitle": "Q&A",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1904H_5c47d69a12383.jpg",
+            "episodeCount": 5,
+            "updated": "2019-08-13 00:38:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/qanda"
+              },
+              "deeplink": {
+                "href": "\/show\/qanda"
+              }
+            }
+          },
+          {
+            "id": 123951,
+            "type": "series",
+            "title": "Peep Show",
+            "displayTitle": "Peep Show",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY9856A54640b9ec93cf4.18728364_1280.jpg",
+            "episodeCount": 10,
+            "updated": "2019-08-12 22:38:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/peep-show"
+              },
+              "deeplink": {
+                "href": "\/show\/peep-show"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/334"
+          }
+        }
+      },
+      {
+        "id": "333",
+        "title": "Last Chance",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "NN1931H013S00",
+            "title": "Education",
+            "showTitle": "Australia Votes: The Issues",
+            "displayTitle": "Australia Votes: The Issues",
+            "displaySubtitle": "Education",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1931H013S00_5cdb5ca287d79_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "default"
+            },
+            "duration": 325,
+            "displayDuration": "5m",
+            "displayDurationAccessible": "5 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1931H013S00"
+              },
+              "deeplink": {
+                "id": "NN1931H013S00",
+                "href": "\/show\/australia-votes-the-issues\/series\/0\/video\/NN1931H013S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NN1931H014S00",
+            "title": "Wages",
+            "showTitle": "Australia Votes: The Issues",
+            "displayTitle": "Australia Votes: The Issues",
+            "displaySubtitle": "Wages",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1931H014S00_5cdb5c73c908b_1024.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "default"
+            },
+            "duration": 127,
+            "displayDuration": "2m 7s",
+            "displayDurationAccessible": "2 minutes 7 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1931H014S00"
+              },
+              "deeplink": {
+                "id": "NN1931H014S00",
+                "href": "\/show\/australia-votes-the-issues\/series\/0\/video\/NN1931H014S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NN1931H015S00",
+            "title": "Aged Care",
+            "showTitle": "Australia Votes: The Issues",
+            "displayTitle": "Australia Votes: The Issues",
+            "displaySubtitle": "Aged Care",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1931H015S00_5cdb8c8296b06_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "default"
+            },
+            "duration": 159,
+            "displayDuration": "2m 39s",
+            "displayDurationAccessible": "2 minutes 39 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1931H015S00"
+              },
+              "deeplink": {
+                "id": "NN1931H015S00",
+                "href": "\/show\/australia-votes-the-issues\/series\/0\/video\/NN1931H015S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "NN1933H009S00",
+            "title": "Climate Change Shift",
+            "showTitle": "Australia Votes: Vote Compass",
+            "displayTitle": "Australia Votes: Vote Compass",
+            "displaySubtitle": "Climate Change Shift",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nn\/NN1933H009S00_5cdcdac707cbb_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "default"
+            },
+            "duration": 104,
+            "displayDuration": "1m 44s",
+            "displayDurationAccessible": "1 minute 44 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/NN1933H009S00"
+              },
+              "deeplink": {
+                "id": "NN1933H009S00",
+                "href": "\/show\/australia-votes-vote-compass\/series\/0\/video\/NN1933H009S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "DO1628H001S00",
+            "title": "Series 1 Episode 1 The Apprenticeship",
+            "showTitle": "Hawke: The Larrikin And The Leader",
+            "displayTitle": "Hawke: The Larrikin And The Leader",
+            "displaySubtitle": "Series 1 Episode 1 The Apprenticeship",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1628H001S00_5a7d1189af67c_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "default"
+            },
+            "duration": 3515,
+            "displayDuration": "59m",
+            "displayDurationAccessible": "59 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/DO1628H001S00"
+              },
+              "deeplink": {
+                "id": "DO1628H001S00",
+                "href": "\/show\/hawke-the-larrikin-and-the-leader\/series\/1\/video\/DO1628H001S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "DO1628H002S00",
+            "title": "Series 1 Episode 2 The Prime Ministership",
+            "showTitle": "Hawke: The Larrikin And The Leader",
+            "displayTitle": "Hawke: The Larrikin And The Leader",
+            "displaySubtitle": "Series 1 Episode 2 The Prime Ministership",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/do\/DO1628H002S00_5a8a47dab0b60_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "default"
+            },
+            "duration": 3512,
+            "displayDuration": "59m",
+            "displayDurationAccessible": "59 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/DO1628H002S00"
+              },
+              "deeplink": {
+                "id": "DO1628H002S00",
+                "href": "\/show\/hawke-the-larrikin-and-the-leader\/series\/1\/video\/DO1628H002S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZY8920A001S00",
+            "title": "Series 3 Episode 1 Mugging",
+            "showTitle": "Peep Show",
+            "displayTitle": "Peep Show",
+            "displaySubtitle": "Series 3 Episode 1 Mugging",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY8920A001S00_584777e089747_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "default"
+            },
+            "duration": 1473,
+            "displayDuration": "25m",
+            "displayDurationAccessible": "25 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZY8920A001S00"
+              },
+              "deeplink": {
+                "id": "ZY8920A001S00",
+                "href": "\/show\/peep-show\/series\/3\/video\/ZY8920A001S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZY8920A002S00",
+            "title": "Series 3 Episode 2 Sectioning",
+            "showTitle": "Peep Show",
+            "displayTitle": "Peep Show",
+            "displaySubtitle": "Series 3 Episode 2 Sectioning",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY8920A002S00_5cb670ec7dcac_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "default"
+            },
+            "duration": 1432,
+            "displayDuration": "24m",
+            "displayDurationAccessible": "24 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZY8920A002S00"
+              },
+              "deeplink": {
+                "id": "ZY8920A002S00",
+                "href": "\/show\/peep-show\/series\/3\/video\/ZY8920A002S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/333"
+          }
+        }
+      }
+    ]
+  }
+}
