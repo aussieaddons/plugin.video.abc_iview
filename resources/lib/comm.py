@@ -1,11 +1,14 @@
-import config
 import hashlib
 import hmac
 import json
-import parse
-import requests
 import time
 import urllib
+
+import config
+
+import parse
+
+import requests
 
 from aussieaddonscommon import exceptions
 from aussieaddonscommon import session
@@ -76,7 +79,8 @@ def get_stream_url(hn, path):
                 continue
             if 'hls' in playlist.get('streams'):
                 hls_streams = playlist['streams'].get('hls')
-                stream_url_base = hls_streams.get('sd', hls_streams.get('sd-low'))
+                stream_url_base = hls_streams.get('sd',
+                                                  hls_streams.get('sd-low'))
             if stream_url_base:
                 captions_url = playlist.get('captions', {}).get('src-vtt')
                 utils.log(captions_url)
@@ -85,7 +89,8 @@ def get_stream_url(hn, path):
         request = sess.get(stream_url_base, params={'hdnea': akamai_auth})
         cookies = cookies_to_string(request.cookies)
         stream_url = '{0}|User-Agent={1}&Cookie={2}'.format(
-            request.url, urllib.quote_plus(config.USER_AGENT), urllib.quote_plus(cookies))
+            request.url, urllib.quote_plus(config.USER_AGENT),
+            urllib.quote_plus(cookies))
 
     return {'stream_url': stream_url, 'captions_url': captions_url}
 
@@ -110,12 +115,14 @@ def validate_category(keyword):
     else:
         return keyword
 
+
 """ not needed???
 def get_feed(keyword):
     url = config.FEED_URL.format(keyword)
     feed = cache.cacheFunction(fetch_url, url)
     return feed
 """
+
 
 def get_programme_from_feed(keyword):
     keyword = validate_category(keyword)
@@ -136,6 +143,7 @@ def get_livestreams_from_feed():
     utils.log('Fetching livestreams from feed')
     feed = fetch_url(config.API_BASE_URL.format(path='/v2{0}'.format('/home')))
     return parse.parse_livestreams_from_feed(feed)
+
 
 def get_search_results(search_string):
     utils.log('Fetching search results')

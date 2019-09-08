@@ -1,11 +1,11 @@
-import requests
-import urllib
 # coding=utf-8
+import urllib
+
 from past.builtins import basestring
 
-import xbmcaddon
+import requests
+
 import xbmcgui
-import xbmcplugin
 
 
 class FakeListItem(xbmcgui.ListItem):
@@ -167,7 +167,7 @@ PROGRAM_ATTRS = {
     'video_url': '/video/NC1906H140S00'
 }
 
-PROGRAM_URL = '&captions=True&desc=JB+Hi-Fi+turns+up+the+volume...&duration=902&episode_title=Monday+12%2F8%2F2019&rating=PG&series=The+Business&thumb=https%3A%2F%2Ffoo.com%2Fbar.jpg&time=2019-08-12+22%3A15%3A00&title=The+Business&type=Program&video_url=%2Fvideo%2FNC1906H140S00'
+PROGRAM_URL = '&captions=True&desc=JB+Hi-Fi+turns+up+the+volume...&duration=902&episode_title=Monday+12%2F8%2F2019&rating=PG&series=The+Business&thumb=https%3A%2F%2Ffoo.com%2Fbar.jpg&time=2019-08-12+22%3A15%3A00&title=The+Business&type=Program&video_url=%2Fvideo%2FNC1906H140S00'  # noqa: E501
 
 INFO_DICT = {
     'tvshowtitle': 'Foo',
@@ -181,29 +181,27 @@ INFO_DICT = {
 
 HN = 'NC1906H140S00'
 
-#EXPECTED_AUTH_URL = 'https://api.iview.abc.net.au/auth/hls/sign?ts=1565672000&hn=NC1906H140S00&d=android-mobile&sig=224aeeb79785f5a2bdd712ac58d61264961b6b0d3ba4231d4fba53d7dad5d6cf'
+EXPECTED_AUTH_URL = 'https://api.iview.abc.net.au/auth/hls/sign?ts=1565669764&hn=ZW1939A016S00&d=android-mobile&sig=45eb772f935e4cc35b7799ad99a9fc226aa3fe01bb440dea00388a38e8d13908'  # noqa: E501
 
-EXPECTED_AUTH_URL = 'https://api.iview.abc.net.au/auth/hls/sign?ts=1565669764&hn=ZW1939A016S00&d=android-mobile&sig=45eb772f935e4cc35b7799ad99a9fc226aa3fe01bb440dea00388a38e8d13908'
+EXPECTED_HLS_URL = 'https://iviewhlsvod-vh.akamaihd.net/i/playback/_definst_/_video/zw1/ZW1939A016S00MA1D1_20190731135521_,1500000,1000000,650000,500000,220000,.mp4.csmil/master.m3u8?subtitle_file_pattern=identifier_langcode&subtitle_identifier=ZW1939A016S00MA1D1_5d4e903d4a700&subtitle_location=%2Fplayback%2Fcaptions%2Fprod%2Fzw'  # noqa: E501
 
-EXPECTED_HLS_URL = 'https://iviewhlsvod-vh.akamaihd.net/i/playback/_definst_/_video/zw1/ZW1939A016S00MA1D1_20190731135521_,1500000,1000000,650000,500000,220000,.mp4.csmil/master.m3u8?subtitle_file_pattern=identifier_langcode&subtitle_identifier=ZW1939A016S00MA1D1_5d4e903d4a700&subtitle_location=%2Fplayback%2Fcaptions%2Fprod%2Fzw'
+EXPECTED_LIVE_HLS_URL = 'https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/6ee5066dcc704c47a663eaf854562e8e/index.m3u8'  # noqa: E501
 
-EXPECTED_LIVE_HLS_URL = 'https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/6ee5066dcc704c47a663eaf854562e8e/index.m3u8'
+EXPECTED_SUB_URL = 'https://iview.abc.net.au/cc/zw/ZW1939A016S00MA1D1_5d4e903d4a700.vtt'  # noqa: E501
 
-EXPECTED_SUB_URL = 'https://iview.abc.net.au/cc/zw/ZW1939A016S00MA1D1_5d4e903d4a700.vtt'
+AUTH_URL_DEFAULT_TEST = 'https://api.iview.abc.net.au/auth/hls/sign?ts=1565672000&hn=ZW1939A025S00&d=android-mobile&sig=18ddf0fcb0f18572fa00667691d5b2889a6450520e7579f5d5126dad73c53ff5'  # noqa: E501
 
-AUTH_URL_DEFAULT_TEST = 'https://api.iview.abc.net.au/auth/hls/sign?ts=1565672000&hn=ZW1939A025S00&d=android-mobile&sig=18ddf0fcb0f18572fa00667691d5b2889a6450520e7579f5d5126dad73c53ff5'
+AUTH_URL_DEFAULT_FEATURE_TEST = 'https://api.iview.abc.net.au/auth/hls/sign?ts=1565672000&hn=ZW0659A001S00&d=android-mobile&sig=210e25f82da7bfd5afac8cf9bed7be80152c573bee6c2f82020b870de9f8569a'  # noqa: E501
 
-AUTH_URL_DEFAULT_FEATURE_TEST = 'https://api.iview.abc.net.au/auth/hls/sign?ts=1565672000&hn=ZW0659A001S00&d=android-mobile&sig=210e25f82da7bfd5afac8cf9bed7be80152c573bee6c2f82020b870de9f8569a'
+AUTH_URL_DEFAULT_LIVE_TEST = 'https://api.iview.abc.net.au/auth/hls/sign?ts=1565672000&hn=NS1413V001S00&d=android-mobile&sig=eca18ee0e559a33dab913c42b9469b41c06a0ef0c8f9a28a77f9e4878b7b41e3'  # noqa: E501
 
-AUTH_URL_DEFAULT_LIVE_TEST = 'https://api.iview.abc.net.au/auth/hls/sign?ts=1565672000&hn=NS1413V001S00&d=android-mobile&sig=eca18ee0e559a33dab913c42b9469b41c06a0ef0c8f9a28a77f9e4878b7b41e3'
+AUTH_COOKIE = 'hdntl=exp=1565676000~acl=%2f*~data=hdntl~hmac=3e3986e98dc74d8d105ca94a1a575bcaf21eaa57b427297a35da94f2bbca3bbf; path=/; domain=;'  # noqa: E501
 
-AUTH_COOKIE = 'hdntl=exp=1565676000~acl=%2f*~data=hdntl~hmac=3e3986e98dc74d8d105ca94a1a575bcaf21eaa57b427297a35da94f2bbca3bbf; path=/; domain=;'
+RESOLVED_URL = '{0}&hdnea={1}|User-Agent={2}&Cookie={3}'.format(EXPECTED_HLS_URL, '{0}', '{1}', urllib.quote_plus(AUTH_COOKIE))  # noqa: E501
 
-RESOLVED_URL = '{0}&hdnea={1}|User-Agent={2}&Cookie={3}'.format(EXPECTED_HLS_URL, '{0}', '{1}', urllib.quote_plus(AUTH_COOKIE))
+RESOLVED_LIVE_URL = '{0}?hdnea={1}|User-Agent={2}&Cookie={3}'.format(EXPECTED_LIVE_HLS_URL, '{0}', '{1}', urllib.quote_plus(AUTH_COOKIE))  # noqa: E501
 
-RESOLVED_LIVE_URL = '{0}?hdnea={1}|User-Agent={2}&Cookie={3}'.format(EXPECTED_LIVE_HLS_URL, '{0}', '{1}', urllib.quote_plus(AUTH_COOKIE))
-
-EXPECTED_CAPTIONS_URL = 'https://iview.abc.net.au/cc/zw/ZW1939A016S00MA1D1_5d4e903d4a700.vtt'
+EXPECTED_CAPTIONS_URL = 'https://iview.abc.net.au/cc/zw/ZW1939A016S00MA1D1_5d4e903d4a700.vtt'  # noqa: E501
 
 COOKIEJAR = requests.cookies.RequestsCookieJar()
 COOKIEJAR.set('Foo', 'Bar', path='Somewhere', domain='foo.org', )
@@ -375,7 +373,7 @@ The Web is always changing
 2
 00:00:02,500 --> 00:00:04,300
 and the way we access it is changing
-"""
+"""  # noqa: E122
 )
 
 EXPECTED_SEARCH_TITLES = [

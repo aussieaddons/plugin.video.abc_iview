@@ -1,8 +1,11 @@
-import classes
-import comm
-import config
 import json
 import re
+
+import classes
+
+import comm
+
+import config
 
 
 def parse_categories(config):
@@ -47,7 +50,7 @@ def parse_programme_from_feed(data):
             if show.get('status'):
                 additional_title = show['status'].get('title', '').lower()
             title_match = re.match(
-                '^[Ss]eries\s?(?P<series>\w+)', additional_title)
+                '^[Ss]eries\\s?(?P<series>\\w+)', additional_title)
             if title_match:
                 s.title += ' Series ' + title_match.groups()[0]
             s.url = show.get('_links', '').get('deeplink', '').get(
@@ -99,24 +102,23 @@ def parse_programs_from_feed(data):
             # Series 2 Episode 25 Home Is Where The Hatch Is
             # Series 4 Ep:11 As A Yoga Yuppie
             # Series 4 Ep 10: Emission Impossible
-            title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s[Ee]p(isode)?:?\s?(?P<episode>\d+):?\s(?P<episode_title>.*)$', subtitle)  # noqa
+            title_match = re.search('^[Ss]eries\\s?(?P<series>\\w+):?\\s[Ee]p(isode)?:?\\s?(?P<episode>\\d+):?\\s(?P<episode_title>.*)$', subtitle)  # noqa: E501
             if not title_match:
                 # Series 8 Episode 13
                 # Series 8 Episode:13
-                title_match = re.search('^[Ss]eries\s?(?P<series>\w+):?\s?[Ee]p(isode)?:?\s?(?P<episode>\d+)$', subtitle)  # noqa
+                title_match = re.search('^[Ss]eries\\s?(?P<series>\\w+):?\\s?[Ee]p(isode)?:?\\s?(?P<episode>\\d+)$', subtitle)  # noqa: E501
             if not title_match:
                 # Episode 34 Shape Shifter
                 # Ep:34 Shape Shifter
-                title_match = re.search('^[Ee]p(isode)?:?\s?(?P<episode>\d+):?\s?(?P<episode_title>.*)$', subtitle)  # noqa
+                title_match = re.search('^[Ee]p(isode)?:?\\s?(?P<episode>\\d+):?\\s?(?P<episode_title>.*)$', subtitle)  # noqa: E501
             if not title_match:
                 # Series 10 Rylan Clark, Joanna Lumley, Ant And Dec
-                title_match = re.search('^[Ss]eries:?\s?(?P<series>\d+):?\s(?P<episode_title>.*)$', subtitle)  # noqa
+                title_match = re.search('^[Ss]eries:?\\s?(?P<series>\\d+):?\\s(?P<episode_title>.*)$', subtitle)  # noqa: E501
             if not title_match:
                 # Episode 5
                 # Ep 5
                 # Episode:5
-                title_match = re.search('^[Ee]p(isode)?:?\s?(?P<episode>\d+)$',
-                                        subtitle)
+                title_match = re.search('^[Ee]p(isode)?:?\\s?(?P<episode>\\d+)$', subtitle)  # noqa: E501
             if not title_match:
                 p.episode_title = subtitle
 
@@ -205,7 +207,7 @@ def parse_search_results(data):
             if show.get('status'):
                 additional_title = show['status'].get('title', '').lower()
             title_match = re.match(
-                '^[Ss]eries\s?(?P<series>\w+)', additional_title)
+                '^[Ss]eries\\s?(?P<series>\\w+)', additional_title)
             if title_match:
                 s.title += ' Series ' + title_match.groups()[0]
             s.url = show.get('_links', '').get('deeplink', '').get(

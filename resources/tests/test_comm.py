@@ -42,7 +42,6 @@ class CommTests(testtools.TestCase):
         with open(os.path.join(cwd, 'fakes/json/video_tb.json'), 'rb') as f:
             self.VIDEO_JSON_NA = io.BytesIO(f.read()).read()
 
-
     @responses.activate
     def test_fetch_url_headers(self):
         responses.add(responses.GET, 'https://foo.bar/', body='foo',
@@ -146,4 +145,3 @@ class CommTests(testtools.TestCase):
         expected_episode_titles = [x.get('title') for x in json_data]
         observed_episode_titles = [x.episode_title for x in observed]
         self.assertEqual(expected_episode_titles, observed_episode_titles)
-

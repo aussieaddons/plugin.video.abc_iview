@@ -1,9 +1,9 @@
 import datetime
+import re
 import time
 import unicodedata
 from builtins import str
 from collections import OrderedDict
-import re
 
 from future.moves.urllib.parse import parse_qsl, quote_plus, unquote_plus
 
@@ -20,7 +20,6 @@ class Series(object):
         self.thumb = None
         self.type = 'Series'
         self.url = None
-
 
     def __repr__(self):
         return self.title
@@ -208,7 +207,7 @@ class Program(object):
                 return seconds
             else:
                 # Older versions use minutes
-                minutes = seconds //60
+                minutes = seconds // 60
                 return minutes
 
     def get_date(self):

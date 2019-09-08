@@ -4,11 +4,6 @@ import io
 import json
 import os
 
-try:
-    import mock
-except ImportError:
-    import unittest.mock as mock
-
 import responses
 
 import testtools
@@ -36,7 +31,6 @@ class ParseTests(testtools.TestCase):
             self.VIDEO_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/video_tb.json'), 'rb') as f:
             self.VIDEO_JSON_NA = io.BytesIO(f.read()).read()
-
 
     def test_get_categories(self):
         category_list = parse.parse_categories(self.NAV_JSON)

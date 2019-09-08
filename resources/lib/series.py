@@ -1,9 +1,12 @@
-import comm
 import sys
-import xbmcgui
-import xbmcplugin
+
+import comm
 
 from aussieaddonscommon import utils
+
+import xbmcgui
+
+import xbmcplugin
 
 
 def make_series_list(params):

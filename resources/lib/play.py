@@ -1,12 +1,10 @@
-import classes
-import comm
 import io
 import os
 import sys
-import xbmc
-import xbmcaddon
-import xbmcgui
-import xbmcplugin
+
+import classes
+
+import comm
 
 from aussieaddonscommon import session
 from aussieaddonscommon import utils
@@ -14,6 +12,14 @@ from aussieaddonscommon.exceptions import AussieAddonsException
 
 from pycaption import SRTWriter
 from pycaption import WebVTTReader
+
+import xbmc
+
+import xbmcaddon
+
+import xbmcgui
+
+import xbmcplugin
 
 
 def play(url):

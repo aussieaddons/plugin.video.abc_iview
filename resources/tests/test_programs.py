@@ -45,7 +45,8 @@ class ProgramsTests(testtools.TestCase):
     @mock.patch('resources.lib.classes.utils.get_kodi_major_version')
     @mock.patch('xbmcgui.ListItem')
     @mock.patch('sys.argv', ['plugin://plugin.video.abc_iview/', '5',
-                             '?action=series_list&url=%2fshow%2fsesame-street&type=Series',
+                             '?action=series_list&url=%2fshow%2fsesame-street&'
+                             'type=Series',
                              'resume:false'])
     @responses.activate
     def test_make_programs_list_titles(self, mock_listitem, mock_version):

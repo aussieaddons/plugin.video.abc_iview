@@ -17,6 +17,7 @@ import testtools
 
 from resources.lib import config
 from resources.tests.fakes import fakes
+
 import xbmcaddon
 
 

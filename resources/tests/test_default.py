@@ -16,6 +16,7 @@ import requests
 import responses
 
 import testtools
+
 import resources.lib.config as config
 from resources.tests.fakes import fakes
 

@@ -11,6 +11,7 @@ except ImportError:
     import unittest.mock as mock
 
 from future.moves.urllib.parse import quote_plus
+
 import responses
 
 import testtools
@@ -76,7 +77,6 @@ class PlayTests(testtools.TestCase):
             quote_plus(self.AUTH_RESP_TEXT, safe='~'),
             quote_plus(config.USER_AGENT))
         self.assertEqual(expected, observed)
-
 
     @mock.patch('os.path.isfile')
     @mock.patch('os.path.isdir')

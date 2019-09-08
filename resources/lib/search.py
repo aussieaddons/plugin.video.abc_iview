@@ -1,14 +1,18 @@
-import comm
 import json
 import sys
+
+import comm
 
 from future.moves.urllib.parse import quote_plus
 
 from aussieaddonscommon import utils
 
 import xbmc
+
 import xbmcaddon
+
 import xbmcgui
+
 import xbmcplugin
 
 

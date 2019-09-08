@@ -1,6 +1,4 @@
 import sys
-import xbmcaddon
-import xbmcgui
 
 from aussieaddonscommon import utils
 
@@ -10,6 +8,10 @@ from resources.lib import play
 from resources.lib import programs
 from resources.lib import search
 from resources.lib import series
+
+import xbmcaddon
+
+import xbmcgui
 
 # Print our platform/version debugging information
 utils.log_kodi_platform_version()
@@ -72,6 +74,7 @@ def main():
                 utils.dialog_message('DRM Helper is needed for this function. '
                                      'For more information, please visit: '
                                      'http://aussieaddons.com/drm')
+
 
 if __name__ == '__main__':
     main()
