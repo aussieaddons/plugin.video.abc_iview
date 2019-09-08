@@ -105,7 +105,7 @@ class CommTests(testtools.TestCase):
     @responses.activate
     def test_get_categories(self):
         responses.add(responses.GET,
-                      config.API_BASE_URL.format('/v2/navigation/mobile'),
+                      config.API_BASE_URL.format(path='/v2/navigation/mobile'),
                       body=self.NAV_JSON)
         category_list = comm.get_categories()
         expected_len = 17

@@ -50,7 +50,7 @@ class CategoriesTests(testtools.TestCase):
     def test_categories_names(self, mock_listitem):
         mock_listitem.side_effect = fakes.FakeListItem
         responses.add(responses.GET,
-                      config.API_BASE_URL.format('/v2/navigation/mobile'),
+                      config.API_BASE_URL.format(path='/v2/navigation/mobile'),
                       body=self.NAV_JSON)
         categories.make_category_list()
         for index, expected in enumerate(fakes.EXPECTED_CATEGORY_TITLES):
@@ -66,7 +66,7 @@ class CategoriesTests(testtools.TestCase):
     def test_default_categories_paths(self, mock_listitem):
         mock_listitem.side_effect = fakes.FakeListItem
         responses.add(responses.GET,
-                      config.API_BASE_URL.format('/v2/navigation/mobile'),
+                      config.API_BASE_URL.format(path='/v2/navigation/mobile'),
                       body=self.NAV_JSON)
         categories.make_category_list()
         for index, expected in enumerate(fakes.EXPECTED_CATEGORY_PATHS):

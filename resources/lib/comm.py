@@ -92,7 +92,7 @@ def get_stream_url(hn, path):
 
 def get_categories():
     """Returns the list of categories"""
-    url = config.API_BASE_URL.format('/v2/navigation/mobile')
+    url = config.API_BASE_URL.format(path='/v2/navigation/mobile')
     category_data = fetch_url(url)
     categories = parse.parse_categories(category_data)
     return categories

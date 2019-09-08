@@ -9,7 +9,6 @@ HEADERS = {'User-Agent': USER_AGENT,
 SECRET = 'android.content.res.Resources'
 
 API_BASE_URL = 'https://api.iview.abc.net.au{path}'
-CONFIG_URL = 'https://api.iview.abc.net.au/v2/navigation/mobile'
 AUTH_PATH = '/auth/hls/sign?{params}'
 AUTH_PARAMS = 'ts={ts}&hn={hn}&d=android-mobile'
 
