@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><addon id="plugin.video.abc_iview" name="ABC iView" provider-name="Aussie Add-ons" version="1.8.4">
+<?xml version="1.0" ?><addon id="plugin.video.abc_iview" name="ABC iView" provider-name="Aussie Add-ons" version="0.0.1">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.aussieaddonscommon"/>
