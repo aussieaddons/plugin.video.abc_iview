@@ -4,12 +4,16 @@ import time
 import unicodedata
 from builtins import str
 from collections import OrderedDict
+from functools import total_ordering
 
 from future.moves.urllib.parse import parse_qsl, quote_plus, unquote_plus
+
+from past.builtins import cmp
 
 from aussieaddonscommon import utils
 
 
+@total_ordering
 class Series(object):
 
     def __init__(self):
@@ -24,12 +28,19 @@ class Series(object):
     def __repr__(self):
         return self.title
 
-    def __cmp__(self, other):
+    def __lt__(self, other):
         other_sort_title = getattr(other, 'get_sort_title', None)
         if callable(other_sort_title):
-            return cmp(self.get_sort_title(), other.get_sort_title())
+            return cmp(self.get_sort_title(), other.get_sort_title()) < 0
         else:
-            return cmp(self.get_sort_title(), self.get_sort_title(other))
+            return cmp(self.get_sort_title(), self.get_sort_title(other)) < 0
+
+    def __eq__(self, other):
+        other_sort_title = getattr(other, 'get_sort_title', None)
+        if callable(other_sort_title):
+            return cmp(self.get_sort_title(), other.get_sort_title()) == 0
+        else:
+            return cmp(self.get_sort_title(), self.get_sort_title(other)) == 0
 
     def get_sort_title(self, other=None):
         """Return a munged version of the title for sorting"""
@@ -72,8 +83,10 @@ class Series(object):
             return self.description
 
     def make_kodi_url(self):
-        d = OrderedDict(sorted(self.__dict__.items(), key=lambda x: x[0]))
-        for key, value in d.items():
+        d_original = OrderedDict(
+            sorted(self.__dict__.items(), key=lambda x: x[0]))
+        d = d_original.copy()
+        for key, value in d_original.items():
             if not value:
                 d.pop(key)
                 continue
@@ -81,15 +94,16 @@ class Series(object):
                 d[key] = unicodedata.normalize(
                     'NFKD', value).encode('ascii', 'ignore').decode('utf-8')
         url = ''
-        for item in d.keys():
-            if isinstance(d[item], (str, bytes)):
-                val = quote_plus(d[item])
+        for key in d.keys():
+            if isinstance(d[key], (str, bytes)):
+                val = quote_plus(d[key])
             else:
-                val = d[item]
-            url += '&{0}={1}'.format(item, val)
+                val = d[key]
+            url += '&{0}={1}'.format(key, val)
         return url
 
 
+@total_ordering
 class Program(object):
 
     def __init__(self):
@@ -114,12 +128,19 @@ class Program(object):
     def __repr__(self):
         return self.title
 
-    def __cmp__(self, other):
+    def __lt__(self, other):
         other_title = getattr(other, 'title', None)
         if other_title:
-            return cmp(self.title, other.title)
+            return cmp(self.title, other.title) < 0
         else:
-            return cmp(self.title, other)
+            return cmp(self.title, other) < 0
+
+    def __eq__(self, other):
+        other_title = getattr(other, 'title', None)
+        if other_title:
+            return cmp(self.title, other.title) == 0
+        else:
+            return cmp(self.title, other) == 0
 
     def parse_datetime(self, timestamp):
         """Parse timestamp into a datetime"""
@@ -330,8 +351,10 @@ class Program(object):
             self.expire = self.parse_datetime(timestamp)
 
     def make_kodi_url(self):
-        d = OrderedDict(sorted(self.__dict__.items(), key=lambda x: x[0]))
-        for key, value in d.items():
+        d_original = OrderedDict(
+            sorted(self.__dict__.items(), key=lambda x: x[0]))
+        d = d_original.copy()
+        for key, value in d_original.items():
             if not value:
                 d.pop(key)
                 continue

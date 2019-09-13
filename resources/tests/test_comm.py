@@ -67,7 +67,7 @@ class CommTests(testtools.TestCase):
                       status=200)
         mock_time.return_value = 1565669764
         observed = comm.get_auth('ZW1939A016S00', comm.session.Session())
-        expected = self.AUTH_RESP_TEXT
+        expected = self.AUTH_RESP_TEXT.decode('utf-8')
         self.assertEqual(expected, observed)
 
     def test_cookies_to_string(self):

@@ -1,11 +1,8 @@
 import json
 import re
 
-import classes
-
-import comm
-
-import config
+import resources.lib.classes as classes
+import resources.lib.config as config
 
 
 def parse_categories(config):
@@ -36,7 +33,7 @@ def parse_programme_from_feed(data):
         if collection.get('title'):
             if 'a-z' in collection['title'].lower():
                 collection_id = collection.get('id')
-
+    import resources.lib.comm as comm
     json_data = json.loads(comm.fetch_url(config.API_BASE_URL.format(
         path='/v2/collection/{0}'.format(collection_id))))
 
@@ -164,7 +161,7 @@ def parse_livestreams_from_feed(data):
         if collection.get('title'):
             if 'watch abc channels live' in collection['title'].lower():
                 collection_id = collection.get('id')
-
+    import resources.lib.comm as comm
     data = comm.fetch_url(config.API_BASE_URL.format(
         path='/v2/collection/{0}'.format(collection_id)))
     json_data = json.loads(data)

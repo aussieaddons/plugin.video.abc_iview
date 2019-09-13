@@ -152,7 +152,8 @@ class DefaultTests(testtools.TestCase):
     @mock.patch('xbmcgui.ListItem')
     @mock.patch('sys.argv', ['plugin://plugin.video.abc_iview/', '5',
                              ('?action=program_list&url=%2fvideo%2fZW1939A025S'
-                              '00&type=Program&house_number=ZW1939A025S00'),
+                              '00&type=Program&house_number=ZW1939A025S00'
+                              '&title=Foobar'),
                              'resume:false'])
     @responses.activate
     def test_default_play(self, mock_listitem, mock_version, mock_time):

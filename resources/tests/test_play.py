@@ -54,7 +54,8 @@ class PlayTests(testtools.TestCase):
     @mock.patch('xbmcgui.ListItem')
     @mock.patch('sys.argv', ['plugin://plugin.video.abc_iview/', '5',
                              ('?action=program_list&url=%2fvideo%2fZW1939A025S'
-                              '00&type=Program&house_number=ZW1939A025S00'),
+                              '00&type=Program&house_number=ZW1939A025S00'
+                              '&title=Foobar'),
                              'resume:false'])
     @responses.activate
     def test_play_resolved(self, mock_listitem, mock_version, mock_time):
@@ -64,7 +65,7 @@ class PlayTests(testtools.TestCase):
         path = '/video/ZW1939A025S00'
         video_url = config.API_BASE_URL.format(path='/v2{0}'.format(path))
         url = '{0}&hdnea={1}'.format(fakes.EXPECTED_HLS_URL,
-                                     self.AUTH_RESP_TEXT)
+                                     self.AUTH_RESP_TEXT.decode('utf-8'))
         responses.add(responses.GET, video_url, body=self.VIDEO_JSON)
         responses.add(responses.GET, url, body='#EXTM3U',
                       headers={'Set-Cookie': fakes.AUTH_COOKIE},
@@ -88,7 +89,7 @@ class PlayTests(testtools.TestCase):
     @mock.patch('sys.argv', ['plugin://plugin.video.abc_iview/', '5',
                              ('?action=program_list&url=%2fvideo%2fZW1939A025S'
                               '00&type=Program&house_number=ZW1939A025S00&capt'
-                              'ions=True'),
+                              'ions=True&title=foobar'),
                              'resume:false'])
     @responses.activate
     def test_play_captions(self, mock_listitem, mock_translate_path,
@@ -104,7 +105,7 @@ class PlayTests(testtools.TestCase):
         path = '/video/ZW1939A025S00'
         video_url = config.API_BASE_URL.format(path='/v2{0}'.format(path))
         url = '{0}&hdnea={1}'.format(fakes.EXPECTED_HLS_URL,
-                                     self.AUTH_RESP_TEXT)
+                                     self.AUTH_RESP_TEXT.decode('utf-8'))
         responses.add(responses.GET, video_url, body=self.VIDEO_JSON)
         responses.add(responses.GET, url, body='#EXTM3U',
                       headers={'Set-Cookie': fakes.AUTH_COOKIE},

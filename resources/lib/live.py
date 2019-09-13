@@ -1,8 +1,8 @@
 import sys
 
-import comm
-
 from aussieaddonscommon import utils
+
+import resources.lib.comm as comm
 
 import xbmcgui
 

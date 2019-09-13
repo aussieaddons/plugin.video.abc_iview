@@ -1,5 +1,5 @@
 # coding=utf-8
-import urllib
+from future.moves.urllib.parse import quote_plus
 
 from past.builtins import basestring
 
@@ -197,9 +197,9 @@ AUTH_URL_DEFAULT_LIVE_TEST = 'https://api.iview.abc.net.au/auth/hls/sign?ts=1565
 
 AUTH_COOKIE = 'hdntl=exp=1565676000~acl=%2f*~data=hdntl~hmac=3e3986e98dc74d8d105ca94a1a575bcaf21eaa57b427297a35da94f2bbca3bbf; path=/; domain=;'  # noqa: E501
 
-RESOLVED_URL = '{0}&hdnea={1}|User-Agent={2}&Cookie={3}'.format(EXPECTED_HLS_URL, '{0}', '{1}', urllib.quote_plus(AUTH_COOKIE))  # noqa: E501
+RESOLVED_URL = '{0}&hdnea={1}|User-Agent={2}&Cookie={3}'.format(EXPECTED_HLS_URL, '{0}', '{1}', quote_plus(AUTH_COOKIE))  # noqa: E501
 
-RESOLVED_LIVE_URL = '{0}?hdnea={1}|User-Agent={2}&Cookie={3}'.format(EXPECTED_LIVE_HLS_URL, '{0}', '{1}', urllib.quote_plus(AUTH_COOKIE))  # noqa: E501
+RESOLVED_LIVE_URL = '{0}?hdnea={1}|User-Agent={2}&Cookie={3}'.format(EXPECTED_LIVE_HLS_URL, '{0}', '{1}', quote_plus(AUTH_COOKIE))  # noqa: E501
 
 EXPECTED_CAPTIONS_URL = 'https://iview.abc.net.au/cc/zw/ZW1939A016S00MA1D1_5d4e903d4a700.vtt'  # noqa: E501
 
@@ -366,7 +366,7 @@ EXPECTED_SHOW_TITLES = [
 ]
 
 EXPECTED_SRT_TEXT = (
-"""1
+b"""1
 00:00:00,500 --> 00:00:02,000
 The Web is always changing
 

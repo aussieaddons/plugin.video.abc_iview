@@ -1,12 +1,10 @@
 import hashlib
 import hmac
 import json
+import sys
 import time
-import urllib
 
-import config
-
-import parse
+from future.moves.urllib.parse import quote_plus
 
 import requests
 
@@ -14,13 +12,18 @@ from aussieaddonscommon import exceptions
 from aussieaddonscommon import session
 from aussieaddonscommon import utils
 
+import resources.lib.config as config
+import resources.lib.parse as parse
+
+
 try:
     import StorageServer
 except ImportError:
     utils.log('script.common.plugin.cache not found!')
-    import storageserverdummy as StorageServer
+    import resources.lib.storageserverdummy as StorageServer
 
 cache = StorageServer.StorageServer(utils.get_addon_id(), 1)
+py2 = sys.version_info < (3, 0)
 
 
 def fetch_url(url, headers=None):
@@ -38,7 +41,9 @@ def get_auth(hn, sess):
     ts = str(int(time.time()))
     auth_path = config.AUTH_PATH.format(
         params=config.AUTH_PARAMS.format(ts=ts, hn=hn))
-    digest = hmac.new(config.SECRET, msg=auth_path,
+    auth_path_bytes = bytes(auth_path) if py2 else bytes(auth_path, 'utf8')
+    secret = bytes(config.SECRET) if py2 else bytes(config.SECRET, 'utf8')
+    digest = hmac.new(secret, msg=auth_path_bytes,
                       digestmod=hashlib.sha256).hexdigest()
     auth_url = config.API_BASE_URL.format(
         path='{authpath}&sig={digest}'.format(authpath=auth_path,
@@ -83,14 +88,13 @@ def get_stream_url(hn, path):
                                                   hls_streams.get('sd-low'))
             if stream_url_base:
                 captions_url = playlist.get('captions', {}).get('src-vtt')
-                utils.log(captions_url)
                 break
         akamai_auth = get_auth(hn, sess)
         request = sess.get(stream_url_base, params={'hdnea': akamai_auth})
         cookies = cookies_to_string(request.cookies)
         stream_url = '{0}|User-Agent={1}&Cookie={2}'.format(
-            request.url, urllib.quote_plus(config.USER_AGENT),
-            urllib.quote_plus(cookies))
+            request.url, quote_plus(config.USER_AGENT),
+            quote_plus(cookies))
 
     return {'stream_url': stream_url, 'captions_url': captions_url}
 

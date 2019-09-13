@@ -2,16 +2,15 @@ import io
 import os
 import sys
 
-import classes
-
-import comm
-
 from aussieaddonscommon import session
 from aussieaddonscommon import utils
 from aussieaddonscommon.exceptions import AussieAddonsException
 
 from pycaption import SRTWriter
 from pycaption import WebVTTReader
+
+import resources.lib.classes as classes
+import resources.lib.comm as comm
 
 import xbmc
 
@@ -74,7 +73,7 @@ def play(url):
         if p.is_captions():
             captions_url = stream_data.get('captions_url')
             profile = xbmcaddon.Addon().getAddonInfo('profile')
-            path = xbmc.translatePath(profile).decode('utf-8')
+            path = xbmc.translatePath(profile)
             if not os.path.isdir(path):
                 os.makedirs(path)
             caption_file = os.path.join(path, 'subtitles.eng.srt')
