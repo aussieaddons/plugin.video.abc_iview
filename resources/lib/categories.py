@@ -20,11 +20,14 @@ def make_category_list():
 
         ok = True
         for c in categories:
+            thumb = c.get('thumb')
             url = '{0}?action=category_list&category={1}'.format(
                 sys.argv[0], quote_plus(c['path']))
             listitem = xbmcgui.ListItem(c['name'])
-            if 'thumb' in c:
-                listitem.setArt({'thumb': c['thumb']})
+
+            if thumb:
+                listitem.setArt({'thumb': thumb})
+                url += '&fanart={0}'.format(thumb)
 
             # Add the program item to the list
             ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),
@@ -33,7 +36,6 @@ def make_category_list():
                                              isFolder=True)
 
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
-        xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
     except Exception as e:
         utils.handle_error('Unable to build category list')
         raise e

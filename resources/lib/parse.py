@@ -20,7 +20,7 @@ def parse_categories(config):
         item['path'] = cat['path']
         item['name'] = cat['title']
         if 'logoUrl' in cat:
-            item['thumbnail'] = cat['logoUrl']
+            item['thumb'] = cat['logoUrl']
         categories_list.append(item)
 
     return categories_list

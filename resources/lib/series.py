@@ -15,7 +15,7 @@ def make_series_list(params):
         category = params["category"]
         series_list = comm.get_programme_from_feed(category)
         series_list.sort()
-
+        fanart = params.get('fanart')
         ok = True
         for s in series_list:
             url = "{0}?action=series_list&{1}".format(sys.argv[0],
@@ -30,6 +30,9 @@ def make_series_list(params):
                 folder = False
             else:
                 folder = True
+
+            if fanart:
+                listitem.setArt({'fanart': fanart})
 
             # add the item to the media list
             ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),

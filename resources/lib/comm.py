@@ -120,32 +120,31 @@ def validate_category(keyword):
         return keyword
 
 
-""" not needed???
-def get_feed(keyword):
-    url = config.FEED_URL.format(keyword)
+def get_cached_feed(url):
     feed = cache.cacheFunction(fetch_url, url)
     return feed
-"""
 
 
 def get_programme_from_feed(keyword):
     keyword = validate_category(keyword)
-    utils.log('Getting programme from feed (%s)' % keyword)
-    feed = fetch_url(config.API_BASE_URL.format(path='/v2{0}'.format(keyword)))
+    utils.log('Getting programme from feed ({0})'.format(keyword))
+    feed = get_cached_feed(
+        config.API_BASE_URL.format(path='/v2{0}'.format(keyword)))
     shows = parse.parse_programme_from_feed(feed)
     return shows
 
 
 def get_series_from_feed(series_url):
     utils.log('Fetching series from feed')
-    feed = fetch_url(config.API_BASE_URL.format(path='/v2{0}{1}'.format(
+    feed = get_cached_feed(config.API_BASE_URL.format(path='/v2{0}{1}'.format(
         series_url, '?embed=seriesList,selectedSeries')))
     return parse.parse_programs_from_feed(feed)
 
 
 def get_livestreams_from_feed():
     utils.log('Fetching livestreams from feed')
-    feed = fetch_url(config.API_BASE_URL.format(path='/v2{0}'.format('/home')))
+    feed = get_cached_feed(
+        config.API_BASE_URL.format(path='/v2{0}'.format('/home')))
     return parse.parse_livestreams_from_feed(feed)
 
 
