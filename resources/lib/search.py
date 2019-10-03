@@ -28,6 +28,8 @@ def get_search_history():
 
 def get_search_input():
     search_string = xbmcgui.Dialog().input('Enter search terms')
+    if not search_string:
+        return
     add_to_search_history(search_string)
     make_search_list({'name': search_string})
 
