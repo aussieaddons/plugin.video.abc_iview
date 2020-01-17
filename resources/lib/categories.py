@@ -47,6 +47,6 @@ def make_category_list():
                                              isFolder=True)
 
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
-        xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
+        xbmcplugin.setContent(handle=int(sys.argv[1]), content='videos')
     except Exception:
         utils.handle_error('Unable to build category list')
