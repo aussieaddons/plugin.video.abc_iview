@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
   <!-- Settings -->
-  <category label="2000">
-    <setting id="hd_streams" label="2100" type="bool" default="true" />
-    <setting id="use_ia" label="2200" type="bool" default="false" />
+  <category label="30001">
+    <setting id="SHOW_COLLECTIONS" label="30008" type="enum" lvalues="30009|30010" default="0" />
+    <setting id="USE_IA" label="30004" type="bool" default="false" />
+    <setting label="30006" type="action" action="RunPlugin(plugin://plugin.video.abc_iview/?action=open_ia_settings)" option="close"/>
   </category>
   <!-- Debugging -->
-  <category label="9000">
-    <setting label="9100" type="action" action="RunPlugin(plugin://plugin.video.abc_iview/?action=sendreport)"/>
-    <setting label="9200" type="action" action="RunPlugin(plugin://plugin.video.abc_iview/?action=update_ia)"/>
-    <setting id="ignore_drm" label="9300" type="bool" default="false" />
+  <category label="30002">
+    <setting label="30005" type="action" action="RunPlugin(plugin://plugin.video.abc_iview/?action=sendreport)"/>
+    <setting id="IGNORE_DRM" label="30007" type="bool" default="false" />
   </category>
 </settings>

@@ -1,8 +1,10 @@
 import sys
 
 from aussieaddonscommon import utils
+print utils
 
 from resources.lib import categories
+from resources.lib import collect
 from resources.lib import live
 from resources.lib import play
 from resources.lib import programs
@@ -21,6 +23,7 @@ def main():
     params_str = sys.argv[2]
     params = utils.get_url(params_str)
 
+    addon = xbmcaddon.Addon()
     if (len(params) == 0):
         categories.make_category_list()
 
@@ -37,7 +40,7 @@ def main():
         elif action == 'category_list':
             category = params.get('category')
             if category == 'settings':
-                xbmcaddon.Addon().openSettings()
+                addon.openSettings()
             elif category == 'livestreams':
                 live.make_livestreams_list()
             elif category == 'search':
@@ -53,27 +56,18 @@ def main():
             search.remove_from_search_history(params.get('name'))
         elif action == 'sendreport':
             utils.user_report()
-        elif action == 'update_ia':
+        elif action == 'open_ia_settings':
             try:
                 import drmhelper
-                addon = drmhelper.get_addon(drm=False)
-                if not drmhelper.is_ia_current(addon, latest=True):
-                    if xbmcgui.Dialog().yesno(
-                        'Upgrade?', ('Newer version of inputstream.adaptive '
-                                     'available ({0}) - would you like to '
-                                     'upgrade to this version?'.format(
-                                        drmhelper.get_latest_ia_ver()))):
-                        drmhelper.get_ia_direct(update=True, drm=False)
+                if drmhelper.check_inputstream(drm=False):
+                    ia = drmhelper.get_addon()
+                    ia.openSettings()
                 else:
-                    ver = addon.getAddonInfo('version')
-                    utils.dialog_message('Up to date: Inputstream.adaptive '
-                                         'version {0} installed and enabled.'
-                                         ''.format(ver))
-            except ImportError:
-                utils.log("Failed to import drmhelper")
-                utils.dialog_message('DRM Helper is needed for this function. '
-                                     'For more information, please visit: '
-                                     'http://aussieaddons.com/drm')
+                    utils.dialog_message(
+                        "Can't open inputstream.adaptive settings")
+            except Exception:
+                utils.dialog_message(
+                    "Can't open inputstream.adaptive settings")
 
 
 if __name__ == '__main__':

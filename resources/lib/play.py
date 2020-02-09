@@ -38,9 +38,9 @@ def play(url):
                 'Not available: {0}\n{1}'.format(stream_data.get('msg'),
                                                  stream_data.get(
                                                      'availability')))
-        use_ia = addon.getSetting('use_ia') == 'true'
+        use_ia = addon.getSetting('USE_IA') == 'true'
         if use_ia:
-            if addon.getSetting('ignore_drm') == 'false':
+            if addon.getSetting('IGNORE_DRM') == 'false':
                 try:
                     import drmhelper
                     if not drmhelper.check_inputstream(drm=False):
