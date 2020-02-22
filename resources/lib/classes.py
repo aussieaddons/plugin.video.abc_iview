@@ -8,9 +8,11 @@ from functools import total_ordering
 
 from future.moves.urllib.parse import parse_qsl, quote_plus, unquote_plus
 
-from past.builtins import cmp
-
 from aussieaddonscommon import utils
+
+
+def comp(x, y):
+    return (x > y) - (x < y)
 
 
 @total_ordering
@@ -31,16 +33,16 @@ class Series(object):
     def __lt__(self, other):
         other_sort_title = getattr(other, 'get_sort_title', None)
         if callable(other_sort_title):
-            return cmp(self.get_sort_title(), other.get_sort_title()) < 0
+            return comp(self.get_sort_title(), other.get_sort_title()) < 0
         else:
-            return cmp(self.get_sort_title(), self.get_sort_title(other)) < 0
+            return comp(self.get_sort_title(), self.get_sort_title(other)) < 0
 
     def __eq__(self, other):
         other_sort_title = getattr(other, 'get_sort_title', None)
         if callable(other_sort_title):
-            return cmp(self.get_sort_title(), other.get_sort_title()) == 0
+            return comp(self.get_sort_title(), other.get_sort_title()) == 0
         else:
-            return cmp(self.get_sort_title(), self.get_sort_title(other)) == 0
+            return comp(self.get_sort_title(), self.get_sort_title(other)) == 0
 
     def get_sort_title(self, other=None):
         """Return a munged version of the title for sorting"""
@@ -139,16 +141,16 @@ class Program(object):
     def __lt__(self, other):
         other_title = getattr(other, 'title', None)
         if other_title:
-            return cmp(self.title, other.title) < 0
+            return comp(self.title, other.title) < 0
         else:
-            return cmp(self.title, other) < 0
+            return comp(self.title, other) < 0
 
     def __eq__(self, other):
         other_title = getattr(other, 'title', None)
         if other_title:
-            return cmp(self.title, other.title) == 0
+            return comp(self.title, other.title) == 0
         else:
-            return cmp(self.title, other) == 0
+            return comp(self.title, other) == 0
 
     def parse_datetime(self, timestamp):
         """Parse timestamp into a datetime"""
