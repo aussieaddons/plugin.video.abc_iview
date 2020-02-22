@@ -84,8 +84,8 @@ def get_stream_url(hn, path):
                 continue
             if 'hls' in playlist.get('streams'):
                 hls_streams = playlist['streams'].get('hls')
-                stream_url_base = hls_streams.get('sd',
-                                                  hls_streams.get('sd-low'))
+                stream_url_base = hls_streams.get(
+                    '720', hls_streams.get('sd', hls_streams.get('sd-low')))
             if stream_url_base:
                 captions_url = playlist.get('captions', {}).get('src-vtt')
                 break
