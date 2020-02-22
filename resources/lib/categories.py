@@ -36,6 +36,5 @@ def make_category_list():
                                              isFolder=True)
 
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
-    except Exception as e:
+    except Exception:
         utils.handle_error('Unable to build category list')
-        raise e
