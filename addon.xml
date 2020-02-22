@@ -12,6 +12,7 @@
     <provides>video</provides>
   </extension>
   <extension library="default.py" point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
