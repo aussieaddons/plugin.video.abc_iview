@@ -1,42 +1,29 @@
-#
-#  ABC iView XBMC Addon
-#  Copyright (C) 2012 Andy Botting
-#
-#  This addon is free software: you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation, either version 3 of the License, or
-#  (at your option) any later version.
-#
-#  This addon is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public License
-#  along with this addon. If not, see <http://www.gnu.org/licenses/>.
-#
-
-import config
 import hashlib
 import hmac
 import json
-import parse
-import requests
-import threading
+import sys
 import time
-import urllib
+
+from future.moves.urllib.parse import quote_plus
+
+import requests
 
 from aussieaddonscommon import exceptions
 from aussieaddonscommon import session
 from aussieaddonscommon import utils
 
+import resources.lib.config as config
+import resources.lib.parse as parse
+
+
 try:
     import StorageServer
 except ImportError:
     utils.log('script.common.plugin.cache not found!')
-    import storageserverdummy as StorageServer
+    import resources.lib.storageserverdummy as StorageServer
 
 cache = StorageServer.StorageServer(utils.get_addon_id(), 1)
+py2 = sys.version_info < (3, 0)
 
 
 def fetch_url(url, headers=None):
@@ -45,28 +32,22 @@ def fetch_url(url, headers=None):
         if headers:
             sess.headers.update(headers)
         request = sess.get(url)
-        try:
-            request.raise_for_status()
-        except Exception as e:
-            # Just re-raise for now
-            raise e
         data = request.text
     return data
-
-
-def fetch_protected_url(url):
-    """For protected URLs we add or Auth header when fetching"""
-    headers = {'Authorization': 'Basic ZmVlZHRlc3Q6YWJjMTIz'}
-    return fetch_url(url, headers)
 
 
 def get_auth(hn, sess):
     """Calculate signature and build auth URL for a program"""
     ts = str(int(time.time()))
-    path = config.AUTH_URL + 'ts={0}&hn={1}&d=android-mobile'.format(ts, hn)
-    digest = hmac.new(config.SECRET, msg=path,
+    auth_path = config.AUTH_PATH.format(
+        params=config.AUTH_PARAMS.format(ts=ts, hn=hn))
+    auth_path_bytes = bytes(auth_path) if py2 else bytes(auth_path, 'utf8')
+    secret = bytes(config.SECRET) if py2 else bytes(config.SECRET, 'utf8')
+    digest = hmac.new(secret, msg=auth_path_bytes,
                       digestmod=hashlib.sha256).hexdigest()
-    auth_url = config.BASE_URL + path + '&sig=' + digest
+    auth_url = config.API_BASE_URL.format(
+        path='{authpath}&sig={digest}'.format(authpath=auth_path,
+                                              digest=digest))
     try:
         res = sess.get(auth_url)
     except requests.exceptions.HTTPError as e:
@@ -87,23 +68,39 @@ def cookies_to_string(cookiejar):
     return ' '.join(cookies)
 
 
-def get_stream_url(hn, url):
-    utils.log("Fetching stream URL: {0}".format(url))
+def get_stream_url(hn, path):
     with session.Session() as sess:
+        video_url = config.API_BASE_URL.format(path='/v2{0}'.format(path))
+        utils.log("Fetching stream URL: {0}".format(video_url))
+        video_data = sess.get(video_url).text
+        video_json = json.loads(video_data)
+        if video_json.get('playable') is False:
+            return {'msg': video_json.get('playableMessage'),
+                    'availability': video_json.get('availability')}
         sess.headers = {'User-Agent': config.USER_AGENT}
+        for playlist in video_json['_embedded']['playlist']:
+            if playlist.get('type') not in ['program', 'livestream']:
+                continue
+            if 'hls' in playlist.get('streams'):
+                hls_streams = playlist['streams'].get('hls')
+                stream_url_base = hls_streams.get(
+                    '720', hls_streams.get('sd', hls_streams.get('sd-low')))
+            if stream_url_base:
+                captions_url = playlist.get('captions', {}).get('src-vtt')
+                break
         akamai_auth = get_auth(hn, sess)
-        akamai_url = "{0}?hdnea={1}".format(url, akamai_auth)
-        request = sess.get(akamai_url)
+        request = sess.get(stream_url_base, params={'hdnea': akamai_auth})
         cookies = cookies_to_string(request.cookies)
         stream_url = '{0}|User-Agent={1}&Cookie={2}'.format(
-            akamai_url, urllib.quote(config.USER_AGENT), urllib.quote(cookies))
+            request.url, quote_plus(config.USER_AGENT),
+            quote_plus(cookies))
 
-    return stream_url
+    return {'stream_url': stream_url, 'captions_url': captions_url}
 
 
 def get_categories():
     """Returns the list of categories"""
-    url = config.CONFIG_URL
+    url = config.API_BASE_URL.format(path='/v2/navigation/mobile')
     category_data = fetch_url(url)
     categories = parse.parse_categories(category_data)
     return categories
@@ -116,48 +113,65 @@ def validate_category(keyword):
     iview API, and updates if required. Maintains compatibility with old
     favourites links
     """
-    if keyword in config.CATEGORIES:
-        return config.CATEGORIES[keyword]
+    if keyword in config.OLD_CATEGORIES:
+        return config.OLD_CATEGORIES[keyword]
     else:
         return keyword
 
 
-def get_feed(keyword):
-    url = config.FEED_URL.format(keyword)
+def get_cached_feed(url):
     feed = cache.cacheFunction(fetch_url, url)
     return feed
 
 
-def get_programme_from_feed(keyword):
-    keyword = validate_category(keyword)
-    utils.log('Getting programme from feed (%s)' % keyword)
-    feed = get_feed(keyword)
-    shows = parse.parse_programme_from_feed(feed, keyword)
-    return shows
+def get_collections_from_feed(params):
+    utils.log(
+        'Getting collections from feed ({0})'.format(params.get('category')))
+    feed = get_cached_feed(config.API_BASE_URL.format(
+        path='/v2{0}'.format(params.get('category'))))
+    collects = parse.parse_collections_from_feed(feed)
+    return collects
 
 
-def get_series_from_feed(series_url, ep_count):
+def get_collection_from_feed(params):
+    keyword = params.get('collection_id')
+    utils.log('Getting collection from feed ({0})'.format(params.get('title')))
+    feed = get_cached_feed(
+        config.API_BASE_URL.format(path='/v2/collection/{0}'.format(keyword)))
+    collection = parse.parse_programme_from_feed(feed)
+    return collection
+
+
+def get_atoz_programme_from_feed(params):
+    params['category'] = validate_category(params['category'])
+    collects = get_collections_from_feed(params)
+    atoz_list = [x for x in collects if 'a-z' in x.get_title().lower()]
+    if len(atoz_list) > 0:
+        atoz_id = atoz_list[0].collection_id
+        feed = get_cached_feed(config.API_BASE_URL.format(
+            path='/v2/collection/{0}'.format(atoz_id)))
+        shows = parse.parse_programme_from_feed(feed)
+        return shows
+    else:
+        return atoz_list
+
+
+def get_series_from_feed(series_url):
     utils.log('Fetching series from feed')
-    feed = get_feed(series_url)
-    return parse.parse_programs_from_feed(feed, ep_count)
+    feed = get_cached_feed(config.API_BASE_URL.format(path='/v2{0}{1}'.format(
+        series_url, '?embed=seriesList,selectedSeries')))
+    return parse.parse_programs_from_feed(feed)
 
 
-def fetch_related(url, listobj, index):
-    related_url = config.FEED_URL.format(url)
-    related_data = fetch_url(related_url)
-    listobj[index+1] = json.loads(related_data)
+def get_livestreams_from_feed():
+    utils.log('Fetching livestreams from feed')
+    feed = get_cached_feed(
+        config.API_BASE_URL.format(path='/v2{0}'.format('/home')))
+    return parse.parse_livestreams_from_feed(feed)
 
 
-def fetch_related_list(urls, listobj):
-    utils.log('Downloading episode listings (%d) ...' % len(urls))
-    threads = []
-    listobj.extend([None for x in range(len(urls))])
-    for index, url in enumerate(urls):
-        thread = threading.Thread(target=fetch_related,
-                                  args=(url, listobj, index))
-        thread.daemon = True
-        thread.start()
-        threads.append(thread)
-
-    for thread in threads:
-        thread.join()
+def get_search_results(search_string):
+    utils.log('Fetching search results')
+    feed = fetch_url(config.API_BASE_URL.format(
+        path='/v2/search?keyword={0}'.format(search_string)))
+    return parse.parse_search_results(feed)

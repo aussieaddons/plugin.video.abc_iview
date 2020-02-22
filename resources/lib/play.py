@@ -1,39 +1,24 @@
-#
-#  ABC iView XBMC Addon
-#  Copyright (C) 2012 Andy Botting
-#
-#  This addon includes code from python-iview
-#  Copyright (C) 2009-2012 by Jeremy Visser <jeremy@visser.name>
-#
-#  This addon is free software: you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation, either version 3 of the License, or
-#  (at your option) any later version.
-#
-#  This addon is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public License
-#  along with this addon. If not, see <http://www.gnu.org/licenses/>.
-#
-
-import classes
-import comm
+import io
 import os
-import parse
 import sys
-import urllib2
-import xbmc
-import xbmcaddon
-import xbmcgui
-import xbmcplugin
 
+from aussieaddonscommon import session
 from aussieaddonscommon import utils
+from aussieaddonscommon.exceptions import AussieAddonsException
 
 from pycaption import SRTWriter
 from pycaption import WebVTTReader
+
+import resources.lib.classes as classes
+import resources.lib.comm as comm
+
+import xbmc
+
+import xbmcaddon
+
+import xbmcgui
+
+import xbmcplugin
 
 
 def play(url):
@@ -44,11 +29,18 @@ def play(url):
         if os.path.isfile(cookies_dat):
             os.remove(cookies_dat)
         p = classes.Program()
-        p.parse_xbmc_url(url)
-        stream = comm.get_stream_url(p.get_house_number(), p.get_url())
-        use_ia = addon.getSetting('use_ia') == 'true'
+        p.parse_kodi_url(url)
+        stream_data = comm.get_stream_url(p.get_house_number(), p.get_url())
+        stream_url = stream_data.get('stream_url')
+        if not stream_url:
+            utils.log('Not Playable: {0}'.format(repr(stream_data)))
+            raise AussieAddonsException(
+                'Not available: {0}\n{1}'.format(stream_data.get('msg'),
+                                                 stream_data.get(
+                                                     'availability')))
+        use_ia = addon.getSetting('USE_IA') == 'true'
         if use_ia:
-            if addon.getSetting('ignore_drm') == 'false':
+            if addon.getSetting('IGNORE_DRM') == 'false':
                 try:
                     import drmhelper
                     if not drmhelper.check_inputstream(drm=False):
@@ -62,44 +54,49 @@ def play(url):
                         'more information, please visit: '
                         'http://aussieaddons.com/drm')
                     return
-            hdrs = stream[stream.find('|') + 1:]
+            hdrs = stream_url[stream_url.find('|') + 1:]
 
         listitem = xbmcgui.ListItem(label=p.get_list_title(),
-                                    iconImage=p.thumbnail,
-                                    thumbnailImage=p.thumbnail,
-                                    path=stream)
+                                    iconImage=p.thumb,
+                                    thumbnailImage=p.thumb,
+                                    path=stream_url)
         if use_ia:
             listitem.setProperty('inputstreamaddon', 'inputstream.adaptive')
             listitem.setProperty('inputstream.adaptive.manifest_type', 'hls')
             listitem.setProperty('inputstream.adaptive.stream_headers', hdrs)
-            listitem.setProperty('inputstream.adaptive.license_key', stream)
+            listitem.setProperty('inputstream.adaptive.license_key',
+                                 stream_url)
         listitem.setInfo('video', p.get_kodi_list_item())
 
         # Add subtitles if available
-        if p.subtitle_url:
+
+        if p.is_captions():
+            captions_url = stream_data.get('captions_url')
             profile = xbmcaddon.Addon().getAddonInfo('profile')
-            path = xbmc.translatePath(profile).decode('utf-8')
+            path = xbmc.translatePath(profile)
             if not os.path.isdir(path):
                 os.makedirs(path)
-            subfile = xbmc.translatePath(
-                os.path.join(path, 'subtitles.eng.srt'))
-            if os.path.isfile(subfile):
-                os.remove(subfile)
+            caption_file = os.path.join(path, 'subtitles.eng.srt')
+            if os.path.isfile(caption_file):
+                os.remove(caption_file)
 
             try:
-                webvtt_data = urllib2.urlopen(
-                    p.subtitle_url).read().decode('utf-8')
+                sess = session.Session()
+                webvtt_data = sess.get(captions_url).text
                 if webvtt_data:
-                    with open(subfile, 'w') as f:
-                        webvtt_subtitle = WebVTTReader().read(webvtt_data)
-                        srt_subtitle = SRTWriter().write(webvtt_subtitle)
-                        srt_unicode = srt_subtitle.encode('utf-8')
-                        f.write(srt_unicode)
+                    with io.BytesIO() as buf:
+                        webvtt_captions = WebVTTReader().read(webvtt_data)
+                        srt_captions = SRTWriter().write(webvtt_captions)
+                        srt_unicode = srt_captions.encode('utf-8')
+                        buf.write(srt_unicode)
+                        with io.open(caption_file, "wb") as f:
+                            f.write(buf.getvalue())
                 if hasattr(listitem, 'setSubtitles'):
-                    listitem.setSubtitles([subfile])
+                    listitem.setSubtitles([caption_file])
             except Exception as e:
                 utils.log(
-                    'Subtitles not available for this program {0}'.format(e))
+                    'Subtitles not available for this program: {0}'.format(e))
+                raise
 
         if hasattr(listitem, 'addStreamInfo'):
             listitem.addStreamInfo('audio', p.get_kodi_audio_stream_info())
@@ -107,5 +104,6 @@ def play(url):
 
         xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, listitem=listitem)
 
-    except Exception:
+    except Exception as e:
         utils.handle_error('Unable to play video')
+        raise e

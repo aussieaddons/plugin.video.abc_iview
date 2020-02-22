@@ -9,9 +9,9 @@ import xbmcgui
 import xbmcplugin
 
 
-def make_programs_list(params):
+def make_livestreams_list():
     try:
-        programs = comm.get_series_from_feed(params['url'])
+        programs = comm.get_livestreams_from_feed()
 
         ok = True
         for p in programs:
@@ -29,8 +29,8 @@ def make_programs_list(params):
                 listitem.addStreamInfo('video', p.get_kodi_video_stream_info())
 
             # Build the URL for the program, including the list_info
-            url = "{0}?action=program_list&{1}".format(sys.argv[0],
-                                                       p.make_kodi_url())
+            url = "{0}?action=livestreams&{1}".format(sys.argv[0],
+                                                      p.make_kodi_url())
 
             # Add the program item to the list
             ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),
@@ -42,5 +42,5 @@ def make_programs_list(params):
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
     except Exception as e:
-        utils.handle_error('Unable to fetch program list')
+        utils.handle_error('Unable to fetch livestream list')
         raise e

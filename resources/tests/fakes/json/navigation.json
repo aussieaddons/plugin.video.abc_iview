@@ -1,0 +1,536 @@
+{
+  "items": [
+    {
+      "id": "home",
+      "title": "Home",
+      "accessibilityText": "home",
+      "path": "\/home"
+    },
+    {
+      "id": "channels",
+      "items": [
+        {
+          "id": "abc1",
+          "title": "ABC",
+          "accessibilityText": "select abc",
+          "logoUrl": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/abc1.png",
+          "logoUrlWide": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/abc1-wide.png",
+          "path": "\/channel\/abc1",
+          "parentalFilter": false,
+          "_entity": "channel",
+          "_links": {
+            "self": {
+              "href": "\/channel\/abc1"
+            }
+          },
+          "images": [
+            {
+              "id": "logo",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca433a702dd_1020.png",
+              "accessibilityText": "ABC"
+            },
+            {
+              "id": "logoHighlighted",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca439b28631_1020.png",
+              "accessibilityText": "Programs that have aired on the ABC's main channel"
+            },
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/dr\/DR1801H_5d48f20612373_1280.jpg",
+              "accessibilityText": "ABC"
+            }
+          ]
+        },
+        {
+          "id": "abc2",
+          "title": "ABC COMEDY",
+          "accessibilityText": "select abc comedy",
+          "logoUrl": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/abc2.png",
+          "logoUrlWide": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/abc2-wide.png",
+          "path": "\/channel\/abc2",
+          "parentalFilter": false,
+          "_entity": "channel",
+          "_links": {
+            "self": {
+              "href": "\/channel\/abc2"
+            }
+          },
+          "images": [
+            {
+              "id": "logo",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca434393686_1020.png",
+              "accessibilityText": "ABC COMEDY"
+            },
+            {
+              "id": "logoHighlighted",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca43a1af073_1020.png",
+              "accessibilityText": "Brand new comedy plus all your favourites"
+            },
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1908A_5ca41f9777d49.jpg",
+              "accessibilityText": "ABC COMEDY"
+            }
+          ]
+        },
+        {
+          "id": "abc3",
+          "title": "ABC ME",
+          "accessibilityText": "select abc me",
+          "logoUrl": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/abc3.png",
+          "logoUrlWide": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/abc3-wide.png",
+          "path": "\/channel\/abc3",
+          "parentalFilter": true,
+          "_entity": "channel",
+          "_links": {
+            "self": {
+              "href": "\/channel\/abc3"
+            }
+          },
+          "images": [
+            {
+              "id": "logo",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca434b3545a_1020.png",
+              "accessibilityText": "ABC ME"
+            },
+            {
+              "id": "logoHighlighted",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca43a868bd6_1020.png",
+              "accessibilityText": "Programs to inspire and entertain school-aged children"
+            },
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1720H_5d3fa736acf27.jpg",
+              "accessibilityText": "ABC ME"
+            }
+          ]
+        },
+        {
+          "id": "abc4kids",
+          "title": "ABC KIDS",
+          "accessibilityText": "select abc kids",
+          "logoUrl": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/abc4kids.png",
+          "logoUrlWide": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/abc4kids-wide.png",
+          "path": "\/channel\/abc4kids",
+          "parentalFilter": true,
+          "_entity": "channel",
+          "_links": {
+            "self": {
+              "href": "\/channel\/abc4kids"
+            }
+          },
+          "images": [
+            {
+              "id": "logo",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca43548e503_1020.png",
+              "accessibilityText": "ABC Kids"
+            },
+            {
+              "id": "logoHighlighted",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca43b0c15f5_1020.png",
+              "accessibilityText": "Programs for pre-school children to learn, play & explore"
+            },
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1636A_5c73593b9d078_1280.jpg",
+              "accessibilityText": "ABC Kids"
+            }
+          ]
+        },
+        {
+          "id": "news",
+          "title": "ABC NEWS",
+          "accessibilityText": "select abc news",
+          "logoUrl": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/news.png",
+          "logoUrlWide": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/news-wide.png",
+          "path": "\/channel\/news",
+          "parentalFilter": false,
+          "_entity": "channel",
+          "_links": {
+            "self": {
+              "href": "\/channel\/news"
+            }
+          },
+          "images": [
+            {
+              "id": "logo",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca43727d0c6_1020.png",
+              "accessibilityText": "ABC News"
+            },
+            {
+              "id": "logoHighlighted",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca43d0108f5_1020.png",
+              "accessibilityText": "Australia\u2019s most trusted source of local, national & world news"
+            },
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1902Q017S00_5d47858871bea_1280.jpg",
+              "accessibilityText": "ABC News"
+            }
+          ]
+        },
+        {
+          "id": "abcarts",
+          "title": "ABC ARTS",
+          "accessibilityText": "select abc arts",
+          "logoUrl": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/abcarts.png",
+          "logoUrlWide": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/abcarts-wide.png",
+          "path": "\/channel\/abcarts",
+          "parentalFilter": false,
+          "_entity": "channel",
+          "_links": {
+            "self": {
+              "href": "\/channel\/abcarts"
+            }
+          },
+          "images": [
+            {
+              "id": "logo",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca435f2264d_1020.png",
+              "accessibilityText": "ABC Arts"
+            },
+            {
+              "id": "logoHighlighted",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca43b7a2839_1020.png",
+              "accessibilityText": "Watch all your favourite Arts & Culture programs"
+            },
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1810H_5d367ac6b77bc.jpg",
+              "accessibilityText": "ABC Arts"
+            }
+          ]
+        },
+        {
+          "id": "iview",
+          "title": "IVIEW PRESENTS",
+          "accessibilityText": "select iview presents",
+          "logoUrl": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/iview.png",
+          "logoUrlWide": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/iview-wide.png",
+          "path": "\/channel\/iview",
+          "parentalFilter": false,
+          "_entity": "channel",
+          "_links": {
+            "self": {
+              "href": "\/channel\/iview"
+            }
+          },
+          "images": [
+            {
+              "id": "logo",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca43694117c_1020.png",
+              "accessibilityText": "iview Presents"
+            },
+            {
+              "id": "logoHighlighted",
+              "url": "https:\/\/cdn.iview.abc.net.au\/images\/i\/brand\/channel\/X0_5cca43c00c50b_1020.png",
+              "accessibilityText": "Watch original iview programs and much more"
+            },
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1701H_5c3fbbe6c174a.jpg",
+              "accessibilityText": "iview Presents"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "categories",
+      "title": "Categories",
+      "accessibilityText": "expand categories",
+      "items": [
+        {
+          "id": "arts",
+          "title": "Arts & Culture",
+          "accessibilityText": "arts and culture",
+          "path": "\/category\/arts",
+          "_entity": "category",
+          "_links": {
+            "self": {
+              "href": "\/category\/arts"
+            }
+          },
+          "images": [
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ac\/AC1828H001S00_5d47ca56388ba.jpg",
+              "accessibilityText": "Arts & Culture"
+            }
+          ]
+        },
+        {
+          "id": "comedy",
+          "title": "Comedy",
+          "accessibilityText": "comedy",
+          "path": "\/category\/comedy",
+          "_entity": "category",
+          "_links": {
+            "self": {
+              "href": "\/category\/comedy"
+            }
+          },
+          "images": [
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1908A_5ca41f9777d49.jpg",
+              "accessibilityText": "Comedy"
+            }
+          ]
+        },
+        {
+          "id": "docs",
+          "title": "Documentary",
+          "accessibilityText": "documentary",
+          "path": "\/category\/docs",
+          "_entity": "category",
+          "_links": {
+            "self": {
+              "href": "\/category\/docs"
+            }
+          },
+          "images": [
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1902Q017S00_5d47858871bea_1280.jpg",
+              "accessibilityText": "Documentary"
+            }
+          ]
+        },
+        {
+          "id": "drama",
+          "title": "Drama",
+          "accessibilityText": "drama",
+          "path": "\/category\/drama",
+          "_entity": "category",
+          "_links": {
+            "self": {
+              "href": "\/category\/drama"
+            }
+          },
+          "images": [
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/dr\/DR1801H_5d48f20612373_1280.jpg",
+              "accessibilityText": "Drama"
+            }
+          ]
+        },
+        {
+          "id": "education",
+          "title": "Education",
+          "accessibilityText": "education",
+          "path": "\/category\/education",
+          "_entity": "category",
+          "_links": {
+            "self": {
+              "href": "\/category\/education"
+            }
+          },
+          "images": [
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1919H_5ca42176565de.jpg",
+              "accessibilityText": "Education"
+            }
+          ]
+        },
+        {
+          "id": "lifestyle",
+          "title": "Lifestyle",
+          "accessibilityText": "lifestyle",
+          "path": "\/category\/lifestyle",
+          "_entity": "category",
+          "_links": {
+            "self": {
+              "href": "\/category\/lifestyle"
+            }
+          },
+          "images": [
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/le\/LE1712H_5c2ecc44d0a70_1280.jpg",
+              "accessibilityText": "Lifestyle"
+            }
+          ]
+        },
+        {
+          "id": "news",
+          "title": "News & Current Affairs",
+          "accessibilityText": "news and current affairs",
+          "path": "\/category\/news",
+          "_entity": "category",
+          "_links": {
+            "self": {
+              "href": "\/category\/news"
+            }
+          },
+          "images": [
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1902Q017S00_5d47858871bea_1280.jpg",
+              "accessibilityText": "News & Current Affairs"
+            }
+          ]
+        },
+        {
+          "id": "panel",
+          "title": "Panel & Discussion",
+          "accessibilityText": "panel and discussion",
+          "path": "\/category\/panel",
+          "_entity": "category",
+          "_links": {
+            "self": {
+              "href": "\/category\/panel"
+            }
+          },
+          "images": [
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/le\/LE1815V_5d12b65437635_1280.jpg",
+              "accessibilityText": "Panel & Discussion"
+            }
+          ]
+        },
+        {
+          "id": "regional",
+          "title": "Regional Australia",
+          "accessibilityText": "regional australia",
+          "path": "\/category\/regional",
+          "_entity": "category",
+          "_links": {
+            "self": {
+              "href": "\/category\/regional"
+            }
+          },
+          "images": [
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1827V_5cf5d8dadae0a.jpg",
+              "accessibilityText": "Regional Australia"
+            }
+          ]
+        },
+        {
+          "id": "sport",
+          "title": "Sport",
+          "accessibilityText": "sport",
+          "path": "\/category\/sport",
+          "_entity": "category",
+          "_links": {
+            "self": {
+              "href": "\/category\/sport"
+            }
+          },
+          "images": [
+            {
+              "id": "thumb",
+              "url": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1912H_5ce77ffdd5623_1280.jpg",
+              "accessibilityText": "Sport"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "programs_az",
+      "title": "Programs A-Z",
+      "accessibilityText": "shows programs from a to z",
+      "path": "\/shows"
+    },
+    {
+      "id": "your_iview",
+      "title": "Your iview",
+      "accessibilityText": "your iview",
+      "items": [
+        {
+          "id": "watchlist",
+          "title": "Watchlist",
+          "accessibilityText": "view your watchlist",
+          "path": "\/user\/watchlist"
+        },
+        {
+          "id": "recently-viewed",
+          "title": "Recently Viewed",
+          "accessibilityText": "select recently viewed",
+          "path": "\/user\/watchlist\/watched"
+        },
+        {
+          "id": "parental-filter",
+          "title": "Parental Filter",
+          "accessibilityText": "select parental filter",
+          "path": "\/parental-filter"
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "title": "Support",
+      "accessibilityText": "open support",
+      "items": [
+        {
+          "id": "support-faq",
+          "title": "FAQ and Help",
+          "accessibilityText": "open FAQ",
+          "path": "http:\/\/iviewsupport.abc.net.au\/"
+        },
+        {
+          "id": "support-contact-us",
+          "title": "Contact us",
+          "accessibilityText": "open contact us",
+          "path": "http:\/\/iviewsupport.abc.net.au\/hc\/en-us\/requests\/new"
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "Settings",
+      "accessibilityText": "open settings",
+      "path": "\/settings"
+    },
+    {
+      "id": "more",
+      "title": "More",
+      "accessibilityText": "open more",
+      "items": [
+        {
+          "id": "more_abc",
+          "title": "More ABC",
+          "accessibilityText": "open ABC",
+          "path": "https:\/\/iviewsupport.abc.net.au\/hc\/en-us\/articles\/360000963476-More-apps-from-the-ABC"
+        },
+        {
+          "id": "terms_of_use",
+          "title": "Terms of Use",
+          "accessibilityText": "open terms of use",
+          "path": "http:\/\/iviewsupport.abc.net.au\/hc\/en-us\/articles\/360000964736-ABC-iview-Terms-of-Use"
+        },
+        {
+          "id": "privacy",
+          "title": "Privacy Policy",
+          "accessibilityText": "open privacy",
+          "path": "http:\/\/about.abc.net.au\/abc-privacy-policy"
+        },
+        {
+          "id": "social",
+          "title": "Find us on",
+          "accessibilityText": "select follow us",
+          "items": [
+            {
+              "id": "facebook",
+              "accessibilityText": "open in facebook",
+              "logoUrl": "facebook_24",
+              "path": "http:\/\/www.facebook.com\/abciview"
+            },
+            {
+              "id": "twitter",
+              "accessibilityText": "open in twitter",
+              "logoUrl": "twitter_24",
+              "path": "https:\/\/twitter.com\/abctv"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

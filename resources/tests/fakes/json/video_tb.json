@@ -1,0 +1,86 @@
+{
+  "channel": "news",
+  "channelTitle": "ABC News",
+  "type": "episode",
+  "houseNumber": "NC1906H140S00",
+  "title": "(untitled)",
+  "showTitle": "The Business",
+  "seriesTitle": "The Business",
+  "displayTitle": "The Business",
+  "displaySubtitle": "(untitled)",
+  "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC1906H140S00_5d51fea0e11c8_1280.jpg",
+  "description": "JB Hi-Fi turns up the volume and the profit as shares hit a record, but is this as good as it gets? Plus as interest rates head towards zero why Bendigo and Adelaide Bank is feeling the squeeze. Presented by Elysse Morgan.",
+  "tags": [
+    "news",
+    "news24",
+    "finance",
+    "news-analysis"
+  ],
+  "captions": false,
+  "captionsOnAkamai": false,
+  "availability": "This episode was published 12 Aug 2019. It was available until Mon 19 Aug 2019.",
+  "analytics": {
+    "oztam": {
+      "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+      "mediaId": "NC1906H140S00",
+      "classification": null,
+      "seriesName": "The Business",
+      "seriesId": "NC1906H",
+      "episodeName": "(untitled)",
+      "episodeId": "NC1906H140S00",
+      "channel": "news",
+      "demo1": "",
+      "url": "\/video\/NC1906H140S00",
+      "mediaDuration": false,
+      "mediaType": "vod"
+    },
+    "dataLayer": {
+      "d_id": "NC1906H140S00",
+      "d_contentType": "video",
+      "d_contentSource": "iview",
+      "d_uri": "iview:\/\/video\/NC1906H140S00",
+      "d_program_name": "The Business",
+      "d_program_id": "123347",
+      "d_episode_name": "(untitled)",
+      "d_episode_id": "NC1906H140S00",
+      "d_language": "null",
+      "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/NC1906H140S00",
+      "d_classification": null,
+      "d_mediaDuration": "",
+      "d_captionsAvailable": "false",
+      "d_streamType": "ondemand",
+      "d_videoType": "series",
+      "d_title_title": "The Business",
+      "d_categories": "ABC News"
+    }
+  },
+  "playable": false,
+  "playableMessage": "THIS EPISODE IS NOT CURRENTLY AVAILABLE",
+  "unavailableMessage": "This episode is no longer available in iview. You might like similar programs to this, shown below. Learn more in iview Support.",
+  "shareUrl": "https:\/\/iview.abc.net.au\/show\/business\/series\/0\/video\/NC1906H140S00",
+  "_entity": "video",
+  "_links": {
+    "self": {
+      "href": "\/video\/NC1906H140S00"
+    },
+    "deeplink": {
+      "id": "NC1906H140S00",
+      "href": "\/show\/business\/series\/0\/video\/NC1906H140S00"
+    },
+    "show": {
+      "id": 123347,
+      "href": "\/show\/business"
+    },
+    "series": {
+      "id": "123347-0",
+      "href": "\/series\/business\/0"
+    },
+    "categories": [
+      {
+        "id": "news",
+        "title": "ABC NEWS",
+        "href": "\/channel\/news"
+      }
+    ]
+  }
+}

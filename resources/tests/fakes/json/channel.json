@@ -1,0 +1,3661 @@
+{
+  "id": "abc4kids",
+  "title": "ABC KIDS",
+  "logoUrl": "https:\/\/cdn.iview.abc.net.au\/images\/250\/brand\/channel\/abc4kids.png",
+  "banner": {
+    "large": "https:\/\/cdn.iview.abc.net.au\/banners\/i\/banners\/IVB313_5c99a68ba02ed_2048.jpg",
+    "small": "https:\/\/cdn.iview.abc.net.au\/banners\/i\/banners\/IVB313_5c99a68ba02ed_640.jpg",
+    "altText": "Bluey: Watch Now",
+    "link": "\/show\/bluey"
+  },
+  "featuredImage": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ls\/LS1604H001S00_5cca444029c3a_1020.jpg",
+  "theme": "light",
+  "seo": {
+    "title": "All programs from ABC Kids",
+    "description": "Watch all your favourite ABC Kids programs on ABC iview. Full of lots of fun TV programs to help your kids grown and learn in an advertising-free space."
+  },
+  "_entity": "category",
+  "_links": {
+    "self": {
+      "href": "\/category\/abc4kids"
+    }
+  },
+  "_embedded": {
+    "featuredCollection": {
+      "title": "Featured",
+      "items": [
+        {
+          "type": "livestream",
+          "houseNumber": "LS1604H001S00",
+          "title": "ABC KIDS Live Stream: 5:00am to 7:30pm AEDT",
+          "showTitle": "ABC KIDS Live Stream",
+          "seriesTitle": "ABC KIDS Live Stream: 5:00am to 7:30pm AEDT",
+          "displayTitle": "ABC KIDS Live Stream",
+          "displaySubtitle": "5:00am to 7:30pm AEDT",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ls\/LS1604H001S00_5cca444029c3a_1020.jpg",
+          "description": "ABC KIDS is now streamed live on iview! Watch your favourite ABC KIDS programs anytime, anywhere, on your computer, tablet or smartphone. This stream is available 5am  7.30pm AEDT and will reflect the ABC KIDS NSW schedule",
+          "status": {
+            "title": "LIVE",
+            "theme": "live"
+          },
+          "captions": false,
+          "captionsOnAkamai": false,
+          "availability": "Watching this stream will consume up to 700 MB per hour.",
+          "_entity": "video",
+          "_links": {
+            "self": {
+              "href": "\/video\/LS1604H001S00"
+            },
+            "deeplink": {
+              "id": "LS1604H001S00",
+              "href": "\/show\/abc-kids-live-stream\/video\/LS1604H001S00"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 123430,
+          "slug": "peppa-pig",
+          "type": "series",
+          "title": "Peppa Pig",
+          "displayTitle": "Peppa Pig",
+          "description": "The pre-school adventures of a cheeky and slightly bossy little pig called Peppa, who lives with her mummy and daddy and little brother George. Sometimes these adventures involve a few tears but they always end happily.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1636A_5c73593b9d078_1280.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4cd0658024b_720.jpg"
+          },
+          "episodeCount": 30,
+          "updated": "2019-08-13 09:05:02",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/peppa-pig"
+            },
+            "deeplink": {
+              "href": "\/show\/peppa-pig"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 183050,
+          "slug": "play-school-art-time",
+          "type": "series",
+          "title": "Play School Art Time",
+          "displayTitle": "Play School Art Time",
+          "description": "Play School Art Time is an action-packed series that celebrates creativity, curiosity and all things arty! Set in a magical art studio, the Art Crew join presenters Zindzi and Matt to create and explore the wonders of art.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1910H_5d23ef4b22b6f.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc7857ea0a_720.jpg"
+          },
+          "episodeCount": 20,
+          "updated": "2019-08-10 17:18:02",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/play-school-art-time"
+            },
+            "deeplink": {
+              "href": "\/show\/play-school-art-time"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 164089,
+          "slug": "bluey",
+          "type": "series",
+          "title": "Bluey",
+          "displayTitle": "Bluey",
+          "description": "Bluey is an inexhaustible six year-old Blue Heeler dog, who loves to play and turns everyday family life into extraordinary adventures, developing her imagination as well as her mental, physical and emotional resilience.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1702Q_5d2bdea1a6885_1280.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb398b2a47_720.jpg"
+          },
+          "episodeCount": 22,
+          "updated": "2019-08-13 08:14:02",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/bluey"
+            },
+            "deeplink": {
+              "href": "\/show\/bluey"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              },
+              {
+                "id": "abc3",
+                "title": "ABC ME",
+                "href": "\/channel\/abc3"
+              }
+            ]
+          }
+        },
+        {
+          "id": 164621,
+          "slug": "rusty-rivets",
+          "type": "series",
+          "title": "Rusty Rivets",
+          "displayTitle": "Rusty Rivets",
+          "description": "Rusty and best buds Ruby and Botasaur return to invent and innovate their way out of every jam by repurposing spare parts and found objects into the most awesome contraptions ever!",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1345A_5d1ad4a7bf1de.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc7e2e4f5c_720.jpg"
+          },
+          "episodeCount": 14,
+          "updated": "2019-08-12 20:00:35",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/rusty-rivets"
+            },
+            "deeplink": {
+              "href": "\/show\/rusty-rivets"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 187033,
+          "slug": "kiri-and-lou",
+          "type": "series",
+          "title": "Kiri and Lou",
+          "displayTitle": "Kiri and Lou",
+          "description": "In a forest of cut-out paper with creatures made of clay, Kiri and Lou invites children to learn about kindness, empathy and how to get along. Together they navigate a forest of feelings with laughter, song and adventure.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW2000A_5d084ddad57fe.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc13f38fe1_720.jpg"
+          },
+          "episodeCount": 20,
+          "updated": "2019-08-08 16:29:19",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/kiri-and-lou"
+            },
+            "deeplink": {
+              "href": "\/show\/kiri-and-lou"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 122600,
+          "slug": "sesame-street",
+          "type": "series",
+          "title": "Sesame Street",
+          "displayTitle": "Sesame Street",
+          "description": "Join Big Bird, Oscar, Elmo, Bert, Cookie Monster, the Count and many other characters to learn the alphabet and to count with Count von Count, but most of all just have a good time.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A_5d12c3306db15_1280.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4ccef1f1ad2_720.jpg"
+          },
+          "episodeCount": 25,
+          "updated": "2019-08-13 10:02:03",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/sesame-street"
+            },
+            "deeplink": {
+              "href": "\/show\/sesame-street"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 164154,
+          "slug": "kiddets",
+          "type": "series",
+          "title": "Kiddets",
+          "displayTitle": "Kiddets",
+          "description": "Five young space cadets in training at a play school space academy on planet WotWot will learn all the skills they need to embark on a mission to a new world under the watchful eye of SpottyWot and DottyWot.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1299A_5b84c88d57be5.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc1293b4b9_720.jpg"
+          },
+          "episodeCount": 50,
+          "updated": "2019-08-08 16:28:57",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/kiddets"
+            },
+            "deeplink": {
+              "href": "\/show\/kiddets"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 123203,
+          "slug": "hey-duggee",
+          "type": "series",
+          "title": "Hey Duggee",
+          "displayTitle": "Hey Duggee",
+          "description": "'The Squirrel Club' is run by a big friendly dog called Duggee - a place where kids take part in all kinds of activities, have adventures and earn activity badges all along the way.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1224A_5993933764276.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bbf850edb3_720.jpg"
+          },
+          "episodeCount": 29,
+          "updated": "2019-08-12 20:35:04",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/hey-duggee"
+            },
+            "deeplink": {
+              "href": "\/show\/hey-duggee"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 159718,
+          "slug": "pj-masks",
+          "type": "series",
+          "title": "PJ Masks",
+          "displayTitle": "PJ Masks",
+          "description": "When the city sleeps, Connor, Amaya & Greg's PJs magically transform the kids into superheroes - here comes Catboy, Owlette & Gekko! Watch out nighttime baddies - the PJ Masks are on their way, into the night to save the day!",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1191A_5b0f9298cd761_1280.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4cd1514cb37_720.jpg"
+          },
+          "episodeCount": 12,
+          "updated": "2019-08-12 18:55:09",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/pj-masks"
+            },
+            "deeplink": {
+              "href": "\/show\/pj-masks"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 123740,
+          "slug": "charlie-and-lola",
+          "type": "series",
+          "title": "Charlie And Lola",
+          "displayTitle": "Charlie And Lola",
+          "description": "The adventures of seven year-old Charlie and his feisty little sister Lola in this fresh, exuberant, delightfully witty animation.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY8550A54dc173809d200.29674016_1280.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb44b15ec6_720.jpg"
+          },
+          "episodeCount": 14,
+          "updated": "2019-08-12 20:30:05",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/charlie-and-lola"
+            },
+            "deeplink": {
+              "href": "\/show\/charlie-and-lola"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "type": "feature",
+          "houseNumber": "ZW0382A001S00",
+          "title": "Octonauts Special: The Over Under Adventure",
+          "showTitle": "Octonauts Special: The Over Under Adventure",
+          "displayTitle": "Octonauts Special: The Over Under Adventure",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/publicity_ZW0382A001S00.jpg",
+          "description": "The mission to explore Antarctica becomes a desperate rescue as a group of sea stars and urchins is threatened by a rare underwater icicle that can freeze creatures on the seabed.",
+          "duration": 1380,
+          "displayDuration": "23m",
+          "displayDurationAccessible": "23 minutes",
+          "classification": "G",
+          "captions": false,
+          "captionsOnAkamai": false,
+          "availability": "This program was published 2 weeks ago, available until 5:40pm on 26 Aug 2019.",
+          "_entity": "video",
+          "_links": {
+            "self": {
+              "href": "\/video\/ZW0382A001S00"
+            },
+            "deeplink": {
+              "id": "ZW0382A001S00",
+              "href": "\/show\/octonauts-special-the-over-under-adventure\/video\/ZW0382A001S00"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 124002,
+          "slug": "ready-steady-wiggle",
+          "type": "series",
+          "title": "Ready, Steady, Wiggle!",
+          "displayTitle": "Ready, Steady, Wiggle!",
+          "description": "Anthony, Emma, Lachy and Simon engage, entertain and inform children with their catchy songs and delightful characters.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0205A55470f2bd151b9.72858484_1280.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc7c1ad85c_720.jpg"
+          },
+          "episodeCount": 30,
+          "updated": "2019-08-13 07:50:02",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/ready-steady-wiggle"
+            },
+            "deeplink": {
+              "href": "\/show\/ready-steady-wiggle"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 123296,
+          "slug": "dinosaur-train",
+          "type": "series",
+          "title": "Dinosaur Train",
+          "displayTitle": "Dinosaur Train",
+          "description": "The show is set in a whimsically realistic, prehistoric world of jungles, swamps, active volcanoes and oceans, all teeming with dinosaur and animal life, and connected by a shining train line known as the Dinosaur Train.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0051A_5ac43c960118e_1280.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb7c6cbb16_720.jpg"
+          },
+          "episodeCount": 30,
+          "updated": "2019-08-12 19:45:02",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/dinosaur-train"
+            },
+            "deeplink": {
+              "href": "\/show\/dinosaur-train"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 182977,
+          "slug": "nella-the-princess-knight",
+          "type": "series",
+          "title": "Nella the Princess Knight",
+          "displayTitle": "Nella the Princess Knight",
+          "description": "Follow the adventures of Nella, a brave princess who turns into a princess knight.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1877A_5cbea9b2aed42.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc387c99b6_720.jpg"
+          },
+          "episodeCount": 14,
+          "updated": "2019-08-13 09:45:41",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/nella-the-princess-knight"
+            },
+            "deeplink": {
+              "href": "\/show\/nella-the-princess-knight"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        },
+        {
+          "id": 123691,
+          "slug": "thomas-and-friends",
+          "type": "series",
+          "title": "Thomas And Friends",
+          "displayTitle": "Thomas And Friends",
+          "description": "Join Thomas And Friends in Big World! Big Adventures! as they travel the tracks on the island of Sodor, under the direction of the Fat Controller.",
+          "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1374A_5b888e35ae066_1280.jpg",
+          "thumbnails": {
+            "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc74a4673d_720.jpg"
+          },
+          "episodeCount": 30,
+          "updated": "2019-08-13 08:30:03",
+          "_entity": "show",
+          "_links": {
+            "self": {
+              "href": "\/show\/thomas-and-friends"
+            },
+            "deeplink": {
+              "href": "\/show\/thomas-and-friends"
+            },
+            "categories": [
+              {
+                "id": "abc4kids",
+                "title": "ABC KIDS",
+                "href": "\/channel\/abc4kids"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "collections": [
+      {
+        "id": "419",
+        "title": "ABC KIDS Favourites",
+        "items": [
+          {
+            "id": 122600,
+            "type": "series",
+            "title": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A_5d12c3306db15_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4ccef1f1ad2_720.jpg"
+            },
+            "episodeCount": 25,
+            "updated": "2019-08-13 10:02:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/sesame-street"
+              },
+              "deeplink": {
+                "href": "\/show\/sesame-street"
+              }
+            }
+          },
+          {
+            "id": 122555,
+            "type": "series",
+            "title": "Play School",
+            "displayTitle": "Play School",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1512H578850fbaf1629.61106166_1280.jpg",
+            "episodeCount": 22,
+            "updated": "2019-08-13 09:34:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/play-school"
+              },
+              "deeplink": {
+                "href": "\/show\/play-school"
+              }
+            }
+          },
+          {
+            "id": 123543,
+            "type": "series",
+            "title": "Bananas In Pyjamas",
+            "displayTitle": "Bananas In Pyjamas",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1142H_5afb98a825672_1575.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb13473013_720.jpg"
+            },
+            "episodeCount": 60,
+            "updated": "2019-08-13 10:10:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/bananas-in-pyjamas"
+              },
+              "deeplink": {
+                "href": "\/show\/bananas-in-pyjamas"
+              }
+            }
+          },
+          {
+            "id": 122462,
+            "type": "series",
+            "title": "Get Grubby TV",
+            "displayTitle": "Get Grubby TV",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1620H_59a4fee935422.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb9ae08c69_720.jpg"
+            },
+            "episodeCount": 19,
+            "updated": "2019-08-08 15:57:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/get-grubby-tv"
+              },
+              "deeplink": {
+                "href": "\/show\/get-grubby-tv"
+              }
+            }
+          },
+          {
+            "id": 124394,
+            "type": "series",
+            "title": "Ben And Holly's Little Kingdom",
+            "displayTitle": "Ben And Holly's Little Kingdom",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9371A54dc37acb363f2.14279616_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb2d712ba2_720.jpg"
+            },
+            "episodeCount": 30,
+            "updated": "2019-08-13 09:35:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/ben-and-holly-s-little-kingdom"
+              },
+              "deeplink": {
+                "href": "\/show\/ben-and-holly-s-little-kingdom"
+              }
+            }
+          },
+          {
+            "id": 123995,
+            "type": "series",
+            "title": "Kazoops!",
+            "displayTitle": "Kazoops!",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1465H57a43a07e9a6d6.06354962_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc0fdbf0cf_720.jpg"
+            },
+            "episodeCount": 40,
+            "updated": "2019-08-13 07:35:09",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/kazoops"
+              },
+              "deeplink": {
+                "href": "\/show\/kazoops"
+              }
+            }
+          },
+          {
+            "id": 124046,
+            "type": "series",
+            "title": "Lily's Driftwood Bay",
+            "displayTitle": "Lily's Driftwood Bay",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1484A_5b447be825958.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc1e11d17d_720.jpg"
+            },
+            "episodeCount": 31,
+            "updated": "2019-08-13 13:34:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/lily-s-driftwood-bay"
+              },
+              "deeplink": {
+                "href": "\/show\/lily-s-driftwood-bay"
+              }
+            }
+          },
+          {
+            "id": 122790,
+            "type": "series",
+            "title": "Emma!",
+            "displayTitle": "Emma!",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1831A_5ce790690bef2_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb95da283d_720.jpg"
+            },
+            "episodeCount": 26,
+            "updated": "2019-08-13 10:26:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/emma"
+              },
+              "deeplink": {
+                "href": "\/show\/emma"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/419"
+          }
+        }
+      },
+      {
+        "id": "1987",
+        "title": "Science Week on ABC KIDS",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "CH1412H022S00",
+            "title": "Let's Experiment 2",
+            "showTitle": "Play School",
+            "displayTitle": "Play School",
+            "displaySubtitle": "Let's Experiment 2",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1412H022S0056e2405071d487.56143758_1280.jpg",
+            "duration": 1715,
+            "displayDuration": "29m",
+            "displayDurationAccessible": "29 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1412H022S00"
+              },
+              "deeplink": {
+                "id": "CH1412H022S00",
+                "href": "\/show\/play-school\/series\/0\/video\/CH1412H022S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1224A006S00",
+            "title": "The Fossil Badge",
+            "showTitle": "Hey Duggee",
+            "displayTitle": "Hey Duggee",
+            "displaySubtitle": "The Fossil Badge",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1224A006S00_5993933a94827.jpg",
+            "duration": 425,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1224A006S00"
+              },
+              "deeplink": {
+                "id": "ZW1224A006S00",
+                "href": "\/show\/hey-duggee\/series\/0\/video\/ZW1224A006S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0888A045S00",
+            "title": "Project: Sand",
+            "showTitle": "Floogals",
+            "displayTitle": "Floogals",
+            "displaySubtitle": "Project: Sand",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0888A045S00_5b6d1f2aca434_1280.jpg",
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0888A045S00"
+              },
+              "deeplink": {
+                "id": "ZW0888A045S00",
+                "href": "\/show\/floogals\/series\/0\/video\/ZW0888A045S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0620A043S00",
+            "title": "Cappadocia, Turkey",
+            "showTitle": "Go Jetters",
+            "displayTitle": "Go Jetters",
+            "displaySubtitle": "Cappadocia, Turkey",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0620A043S00_58d49401c535e.jpg",
+            "duration": 664,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0620A043S00"
+              },
+              "deeplink": {
+                "id": "ZW0620A043S00",
+                "href": "\/show\/go-jetters\/series\/0\/video\/ZW0620A043S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1191A007S00",
+            "title": "Catboy And The Shrinker",
+            "showTitle": "PJ Masks",
+            "displayTitle": "PJ Masks",
+            "displaySubtitle": "Catboy And The Shrinker",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1191A007S00_595ca4d922116.jpg",
+            "duration": 714,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1191A007S00"
+              },
+              "deeplink": {
+                "id": "ZW1191A007S00",
+                "href": "\/show\/pj-masks\/series\/0\/video\/ZW1191A007S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZX0510A029S00",
+            "title": "The Octonauts And The Seahorse Tale",
+            "showTitle": "Octonauts",
+            "displayTitle": "Octonauts",
+            "displaySubtitle": "The Octonauts And The Seahorse Tale",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX0510A029S0055405dcca91cd3.95909768_1280.jpg",
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX0510A029S00"
+              },
+              "deeplink": {
+                "id": "ZX0510A029S00",
+                "href": "\/show\/octonauts\/series\/0\/video\/ZX0510A029S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0310A030S00",
+            "title": "Stargazing",
+            "showTitle": "Becca's Bunch",
+            "displayTitle": "Becca's Bunch",
+            "displaySubtitle": "Stargazing",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0310A030S00_5bea547c81663.jpg",
+            "duration": 684,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0310A030S00"
+              },
+              "deeplink": {
+                "id": "ZW0310A030S00",
+                "href": "\/show\/becca-s-bunch\/series\/0\/video\/ZW0310A030S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1465H071S00",
+            "title": "Honestly, Monty",
+            "showTitle": "Kazoops!",
+            "displayTitle": "Kazoops!",
+            "displaySubtitle": "Honestly, Monty",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1465H071S00_59004f89718b4.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1465H071S00"
+              },
+              "deeplink": {
+                "id": "CH1465H071S00",
+                "href": "\/show\/kazoops\/series\/0\/video\/CH1465H071S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1987"
+          }
+        }
+      },
+      {
+        "id": "662",
+        "title": "Fun and Games",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "ZX1091A046S00",
+            "title": "All Fall Down",
+            "showTitle": "Guess How Much I Love You",
+            "displayTitle": "Guess How Much I Love You",
+            "displaySubtitle": "All Fall Down",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX1091A046S005563f13195dbf1.58126137_1280.jpg",
+            "duration": 650,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX1091A046S00"
+              },
+              "deeplink": {
+                "id": "ZX1091A046S00",
+                "href": "\/show\/guess-how-much-i-love-you\/series\/0\/video\/ZX1091A046S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0620A043S00",
+            "title": "Cappadocia, Turkey",
+            "showTitle": "Go Jetters",
+            "displayTitle": "Go Jetters",
+            "displaySubtitle": "Cappadocia, Turkey",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0620A043S00_58d49401c535e.jpg",
+            "duration": 664,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0620A043S00"
+              },
+              "deeplink": {
+                "id": "ZW0620A043S00",
+                "href": "\/show\/go-jetters\/series\/0\/video\/ZW0620A043S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1702Q025S00",
+            "title": "Shops",
+            "showTitle": "Bluey",
+            "displayTitle": "Bluey",
+            "displaySubtitle": "Shops",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1702Q025S00_5bc552183d062.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1702Q025S00"
+              },
+              "deeplink": {
+                "id": "CH1702Q025S00",
+                "href": "\/show\/bluey\/series\/0\/video\/CH1702Q025S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1702Q020S00",
+            "title": "Blue Mountains",
+            "showTitle": "Bluey",
+            "displayTitle": "Bluey",
+            "displaySubtitle": "Blue Mountains",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1702Q020S00_5bc54c770b335.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1702Q020S00"
+              },
+              "deeplink": {
+                "id": "CH1702Q020S00",
+                "href": "\/show\/bluey\/series\/0\/video\/CH1702Q020S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZY8550A015S00",
+            "title": "Will You Please Stop Messing About",
+            "showTitle": "Charlie And Lola",
+            "displayTitle": "Charlie And Lola",
+            "displaySubtitle": "Will You Please Stop Messing About",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY8550A015S00_5d3501454e8ef_1280.jpg",
+            "duration": 690,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZY8550A015S00"
+              },
+              "deeplink": {
+                "id": "ZY8550A015S00",
+                "href": "\/show\/charlie-and-lola\/series\/0\/video\/ZY8550A015S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZX9673A047S00",
+            "title": "Hiding",
+            "showTitle": "Bing",
+            "displayTitle": "Bing",
+            "displaySubtitle": "Hiding",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9673A047S0054dbd248784ef5.22770596_1280.jpg",
+            "duration": 440,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX9673A047S00"
+              },
+              "deeplink": {
+                "id": "ZX9673A047S00",
+                "href": "\/show\/bing\/series\/0\/video\/ZX9673A047S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZY9247A025S00",
+            "title": "Betty Caterpillar",
+            "showTitle": "Ben And Holly's Little Kingdom",
+            "displayTitle": "Ben And Holly's Little Kingdom",
+            "displaySubtitle": "Betty Caterpillar",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY9247A025S0055485e541800c7.34650152_1280.jpg",
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZY9247A025S00"
+              },
+              "deeplink": {
+                "id": "ZY9247A025S00",
+                "href": "\/show\/ben-and-holly-s-little-kingdom\/series\/0\/video\/ZY9247A025S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZX9633A042S00",
+            "title": "Simon Says",
+            "showTitle": "Ready, Steady, Wiggle!",
+            "displayTitle": "Ready, Steady, Wiggle!",
+            "displaySubtitle": "Simon Says",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9633A042S0055da63d3dfc175.11413685_1280.jpg",
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX9633A042S00"
+              },
+              "deeplink": {
+                "id": "ZX9633A042S00",
+                "href": "\/show\/ready-steady-wiggle\/series\/0\/video\/ZX9633A042S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/662"
+          }
+        }
+      },
+      {
+        "id": "590",
+        "title": "Peppa Pig: New Episodes",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "ZW1636A022S00",
+            "title": "Bird Spotting",
+            "showTitle": "Peppa Pig",
+            "displayTitle": "Peppa Pig",
+            "displaySubtitle": "Bird Spotting",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1636A022S00_5d3facdb12461.jpg",
+            "duration": 301,
+            "displayDuration": "5m",
+            "displayDurationAccessible": "5 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1636A022S00"
+              },
+              "deeplink": {
+                "id": "ZW1636A022S00",
+                "href": "\/show\/peppa-pig\/series\/0\/video\/ZW1636A022S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1636A021S00",
+            "title": "Roman Day",
+            "showTitle": "Peppa Pig",
+            "displayTitle": "Peppa Pig",
+            "displaySubtitle": "Roman Day",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1636A021S00_5d3facdabad4a.jpg",
+            "duration": 301,
+            "displayDuration": "5m",
+            "displayDurationAccessible": "5 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1636A021S00"
+              },
+              "deeplink": {
+                "id": "ZW1636A021S00",
+                "href": "\/show\/peppa-pig\/series\/0\/video\/ZW1636A021S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1636A020S00",
+            "title": "TV Land",
+            "showTitle": "Peppa Pig",
+            "displayTitle": "Peppa Pig",
+            "displaySubtitle": "TV Land",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1636A020S00_5d3fa91908ee8.jpg",
+            "duration": 301,
+            "displayDuration": "5m",
+            "displayDurationAccessible": "5 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1636A020S00"
+              },
+              "deeplink": {
+                "id": "ZW1636A020S00",
+                "href": "\/show\/peppa-pig\/series\/0\/video\/ZW1636A020S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1636A019S00",
+            "title": "Pizza! Pizza!",
+            "showTitle": "Peppa Pig",
+            "displayTitle": "Peppa Pig",
+            "displaySubtitle": "Pizza! Pizza!",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1636A019S00_5d3fdb774e016_1280.jpg",
+            "duration": 301,
+            "displayDuration": "5m",
+            "displayDurationAccessible": "5 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1636A019S00"
+              },
+              "deeplink": {
+                "id": "ZW1636A019S00",
+                "href": "\/show\/peppa-pig\/series\/0\/video\/ZW1636A019S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1636A018S00",
+            "title": "The Petting Farm",
+            "showTitle": "Peppa Pig",
+            "displayTitle": "Peppa Pig",
+            "displaySubtitle": "The Petting Farm",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1636A018S00_5d3fdb69d0c81_1280.jpg",
+            "duration": 301,
+            "displayDuration": "5m",
+            "displayDurationAccessible": "5 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1636A018S00"
+              },
+              "deeplink": {
+                "id": "ZW1636A018S00",
+                "href": "\/show\/peppa-pig\/series\/0\/video\/ZW1636A018S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1636A017S00",
+            "title": "Grandpa Pig's Birthday",
+            "showTitle": "Peppa Pig",
+            "displayTitle": "Peppa Pig",
+            "displaySubtitle": "Grandpa Pig's Birthday",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1636A017S00_5d3fdb5e9f6e3_1280.jpg",
+            "duration": 301,
+            "displayDuration": "5m",
+            "displayDurationAccessible": "5 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1636A017S00"
+              },
+              "deeplink": {
+                "id": "ZW1636A017S00",
+                "href": "\/show\/peppa-pig\/series\/0\/video\/ZW1636A017S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1636A016S00",
+            "title": "Strawberries",
+            "showTitle": "Peppa Pig",
+            "displayTitle": "Peppa Pig",
+            "displaySubtitle": "Strawberries",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1636A016S00_5d3fdb5519e9e_1280.jpg",
+            "duration": 302,
+            "displayDuration": "5m",
+            "displayDurationAccessible": "5 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1636A016S00"
+              },
+              "deeplink": {
+                "id": "ZW1636A016S00",
+                "href": "\/show\/peppa-pig\/series\/0\/video\/ZW1636A016S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1636A015S00",
+            "title": "Muddy Festival",
+            "showTitle": "Peppa Pig",
+            "displayTitle": "Peppa Pig",
+            "displaySubtitle": "Muddy Festival",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1636A015S00_5d3676193d6a2.jpg",
+            "duration": 302,
+            "displayDuration": "5m",
+            "displayDurationAccessible": "5 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1636A015S00"
+              },
+              "deeplink": {
+                "id": "ZW1636A015S00",
+                "href": "\/show\/peppa-pig\/series\/0\/video\/ZW1636A015S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/590"
+          }
+        }
+      },
+      {
+        "id": "1193",
+        "title": "Kiddets: New Episodes",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "ZW1299A051S00",
+            "title": "Bottle of Fun",
+            "showTitle": "Kiddets",
+            "displayTitle": "Kiddets",
+            "displaySubtitle": "Bottle of Fun",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1299A051S00_5d2443aa590ec.jpg",
+            "duration": 662,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1299A051S00"
+              },
+              "deeplink": {
+                "id": "ZW1299A051S00",
+                "href": "\/show\/kiddets\/series\/0\/video\/ZW1299A051S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1299A050S00",
+            "title": "King of the Castle",
+            "showTitle": "Kiddets",
+            "displayTitle": "Kiddets",
+            "displaySubtitle": "King of the Castle",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1299A050S00_5d2443aa196fc.jpg",
+            "duration": 652,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1299A050S00"
+              },
+              "deeplink": {
+                "id": "ZW1299A050S00",
+                "href": "\/show\/kiddets\/series\/0\/video\/ZW1299A050S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1299A049S00",
+            "title": "Look at That",
+            "showTitle": "Kiddets",
+            "displayTitle": "Kiddets",
+            "displaySubtitle": "Look at That",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1299A049S00_5d2443a9bf27c.jpg",
+            "duration": 651,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1299A049S00"
+              },
+              "deeplink": {
+                "id": "ZW1299A049S00",
+                "href": "\/show\/kiddets\/series\/0\/video\/ZW1299A049S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1299A048S00",
+            "title": "Comet Catastrophe",
+            "showTitle": "Kiddets",
+            "displayTitle": "Kiddets",
+            "displaySubtitle": "Comet Catastrophe",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1299A048S00_5d2443a976523.jpg",
+            "duration": 670,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1299A048S00"
+              },
+              "deeplink": {
+                "id": "ZW1299A048S00",
+                "href": "\/show\/kiddets\/series\/0\/video\/ZW1299A048S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1299A047S00",
+            "title": "Get in Formation",
+            "showTitle": "Kiddets",
+            "displayTitle": "Kiddets",
+            "displaySubtitle": "Get in Formation",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1299A047S00_5d2443a92cb7b.jpg",
+            "duration": 651,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1299A047S00"
+              },
+              "deeplink": {
+                "id": "ZW1299A047S00",
+                "href": "\/show\/kiddets\/series\/0\/video\/ZW1299A047S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1299A046S00",
+            "title": "Carrots and Caves",
+            "showTitle": "Kiddets",
+            "displayTitle": "Kiddets",
+            "displaySubtitle": "Carrots and Caves",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1299A046S00_5d2443a8d533d.jpg",
+            "duration": 657,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1299A046S00"
+              },
+              "deeplink": {
+                "id": "ZW1299A046S00",
+                "href": "\/show\/kiddets\/series\/0\/video\/ZW1299A046S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1299A045S00",
+            "title": "Animal Noises",
+            "showTitle": "Kiddets",
+            "displayTitle": "Kiddets",
+            "displaySubtitle": "Animal Noises",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1299A045S00_5d2443a7ea7b4.jpg",
+            "duration": 665,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1299A045S00"
+              },
+              "deeplink": {
+                "id": "ZW1299A045S00",
+                "href": "\/show\/kiddets\/series\/0\/video\/ZW1299A045S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1299A044S00",
+            "title": "Hic-Hic Hiccups",
+            "showTitle": "Kiddets",
+            "displayTitle": "Kiddets",
+            "displaySubtitle": "Hic-Hic Hiccups",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1299A044S00_5d23fd5b47604.jpg",
+            "duration": 664,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1299A044S00"
+              },
+              "deeplink": {
+                "id": "ZW1299A044S00",
+                "href": "\/show\/kiddets\/series\/0\/video\/ZW1299A044S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1193"
+          }
+        }
+      },
+      {
+        "id": "770",
+        "title": "Arts and Crafts Time",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "CH1412H022S00",
+            "title": "Let's Experiment 2",
+            "showTitle": "Play School",
+            "displayTitle": "Play School",
+            "displaySubtitle": "Let's Experiment 2",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1412H022S0056e2405071d487.56143758_1280.jpg",
+            "duration": 1715,
+            "displayDuration": "29m",
+            "displayDurationAccessible": "29 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1412H022S00"
+              },
+              "deeplink": {
+                "id": "CH1412H022S00",
+                "href": "\/show\/play-school\/series\/0\/video\/CH1412H022S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZX0926A001S00",
+            "title": "Series 3",
+            "showTitle": "Mister Maker",
+            "displayTitle": "Mister Maker",
+            "displaySubtitle": "Series 3",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX0926A001S005518c3b8517550.38813081_1280.jpg",
+            "duration": 1200,
+            "displayDuration": "20m",
+            "displayDurationAccessible": "20 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX0926A001S00"
+              },
+              "deeplink": {
+                "id": "ZX0926A001S00",
+                "href": "\/show\/mister-maker\/series\/3\/video\/ZX0926A001S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1412H021S00",
+            "title": "Let's Experiment 1",
+            "showTitle": "Play School",
+            "displayTitle": "Play School",
+            "displaySubtitle": "Let's Experiment 1",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1412H021S0056e2404acad0a6.69605874_1280.jpg",
+            "duration": 1529,
+            "displayDuration": "25m",
+            "displayDurationAccessible": "25 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1412H021S00"
+              },
+              "deeplink": {
+                "id": "CH1412H021S00",
+                "href": "\/show\/play-school\/series\/0\/video\/CH1412H021S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZY9100A043S00",
+            "title": "Pato's Paintings",
+            "showTitle": "Pocoyo",
+            "displayTitle": "Pocoyo",
+            "displaySubtitle": "Pato's Paintings",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY9100A043S005666175d4ec505.25789120_1280.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZY9100A043S00"
+              },
+              "deeplink": {
+                "id": "ZY9100A043S00",
+                "href": "\/show\/pocoyo\/series\/0\/video\/ZY9100A043S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZX9920A011S00",
+            "title": "Baby Jake Loves Space Painting",
+            "showTitle": "Baby Jake",
+            "displayTitle": "Baby Jake",
+            "displaySubtitle": "Baby Jake Loves Space Painting",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9920A011S0053faa7e17b6783.62034156_1280.jpg",
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX9920A011S00"
+              },
+              "deeplink": {
+                "id": "ZX9920A011S00",
+                "href": "\/show\/baby-jake\/series\/0\/video\/ZX9920A011S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1910H020S00",
+            "title": "Boats",
+            "showTitle": "Play School Art Time",
+            "displayTitle": "Play School Art Time",
+            "displaySubtitle": "Boats",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1910H020S00_5d367ac997ac2.jpg",
+            "duration": 710,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1910H020S00"
+              },
+              "deeplink": {
+                "id": "CK1910H020S00",
+                "href": "\/show\/play-school-art-time\/series\/0\/video\/CK1910H020S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1550A025S00",
+            "title": "Waffle's Wonderful Art",
+            "showTitle": "Waffle The Wonder Dog",
+            "displayTitle": "Waffle The Wonder Dog",
+            "displaySubtitle": "Waffle's Wonderful Art",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1550A025S00_5bfcab7ea37cf.jpg",
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1550A025S00"
+              },
+              "deeplink": {
+                "id": "ZW1550A025S00",
+                "href": "\/show\/waffle-the-wonder-dog\/series\/0\/video\/ZW1550A025S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1910H019S00",
+            "title": "Mini Beasts",
+            "showTitle": "Play School Art Time",
+            "displayTitle": "Play School Art Time",
+            "displaySubtitle": "Mini Beasts",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1910H019S00_5d367616df1c0.jpg",
+            "duration": 595,
+            "displayDuration": "10m",
+            "displayDurationAccessible": "10 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1910H019S00"
+              },
+              "deeplink": {
+                "id": "CK1910H019S00",
+                "href": "\/show\/play-school-art-time\/series\/0\/video\/CK1910H019S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/770"
+          }
+        }
+      },
+      {
+        "id": "1985",
+        "title": "Rusty Rivets: New Episodes",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "ZW1345A029S00",
+            "title": "Rusty and the Heroic Helpers",
+            "showTitle": "Rusty Rivets",
+            "displayTitle": "Rusty Rivets",
+            "displaySubtitle": "Rusty and the Heroic Helpers",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1345A029S00_5d411cdbdc296_1280.jpg",
+            "duration": 699,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1345A029S00"
+              },
+              "deeplink": {
+                "id": "ZW1345A029S00",
+                "href": "\/show\/rusty-rivets\/series\/0\/video\/ZW1345A029S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1345A028S00",
+            "title": "Liam Gets Birdnapped",
+            "showTitle": "Rusty Rivets",
+            "displayTitle": "Rusty Rivets",
+            "displaySubtitle": "Liam Gets Birdnapped",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1345A028S00_5d411cd107ed5_1280.jpg",
+            "duration": 700,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1345A028S00"
+              },
+              "deeplink": {
+                "id": "ZW1345A028S00",
+                "href": "\/show\/rusty-rivets\/series\/0\/video\/ZW1345A028S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1345A027S00",
+            "title": "Rusty's Walk on the Small Side",
+            "showTitle": "Rusty Rivets",
+            "displayTitle": "Rusty Rivets",
+            "displaySubtitle": "Rusty's Walk on the Small Side",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1345A027S00_5d411cc7384f2_1280.jpg",
+            "duration": 697,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1345A027S00"
+              },
+              "deeplink": {
+                "id": "ZW1345A027S00",
+                "href": "\/show\/rusty-rivets\/series\/0\/video\/ZW1345A027S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1345A026S00",
+            "title": "Rusty in Space",
+            "showTitle": "Rusty Rivets",
+            "displayTitle": "Rusty Rivets",
+            "displaySubtitle": "Rusty in Space",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1345A026S00_5d36761868712.jpg",
+            "duration": 696,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1345A026S00"
+              },
+              "deeplink": {
+                "id": "ZW1345A026S00",
+                "href": "\/show\/rusty-rivets\/series\/0\/video\/ZW1345A026S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1345A025S00",
+            "title": "Super Rusty vs Super Villain Bot",
+            "showTitle": "Rusty Rivets",
+            "displayTitle": "Rusty Rivets",
+            "displaySubtitle": "Super Rusty vs Super Villain Bot",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1345A025S00_5d367618440cb.jpg",
+            "duration": 700,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1345A025S00"
+              },
+              "deeplink": {
+                "id": "ZW1345A025S00",
+                "href": "\/show\/rusty-rivets\/series\/0\/video\/ZW1345A025S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1345A024S00",
+            "title": "Rusty's Journey to the Center of Sparkto",
+            "showTitle": "Rusty Rivets",
+            "displayTitle": "Rusty Rivets",
+            "displaySubtitle": "Rusty's Journey to the Center of Sparkto",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1345A024S00_5d367618125c1.jpg",
+            "duration": 692,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1345A024S00"
+              },
+              "deeplink": {
+                "id": "ZW1345A024S00",
+                "href": "\/show\/rusty-rivets\/series\/0\/video\/ZW1345A024S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1345A023S00",
+            "title": "Rusty's Sick Fix",
+            "showTitle": "Rusty Rivets",
+            "displayTitle": "Rusty Rivets",
+            "displaySubtitle": "Rusty's Sick Fix",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1345A023S00_5d367617d464d.jpg",
+            "duration": 700,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1345A023S00"
+              },
+              "deeplink": {
+                "id": "ZW1345A023S00",
+                "href": "\/show\/rusty-rivets\/series\/0\/video\/ZW1345A023S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1345A022S00",
+            "title": "Rusty's Sky Pie Delivery",
+            "showTitle": "Rusty Rivets",
+            "displayTitle": "Rusty Rivets",
+            "displaySubtitle": "Rusty's Sky Pie Delivery",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1345A022S00_5d36707c05e15.jpg",
+            "duration": 700,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1345A022S00"
+              },
+              "deeplink": {
+                "id": "ZW1345A022S00",
+                "href": "\/show\/rusty-rivets\/series\/0\/video\/ZW1345A022S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1985"
+          }
+        }
+      },
+      {
+        "id": "1944",
+        "title": "Winter Wonders",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "ZW0667A016S00",
+            "title": "Love Me Tender",
+            "showTitle": "Thomas And Friends",
+            "displayTitle": "Thomas And Friends",
+            "displaySubtitle": "Love Me Tender",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0667A016S00_58e4b880e2a05.jpg",
+            "duration": 652,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0667A016S00"
+              },
+              "deeplink": {
+                "id": "ZW0667A016S00",
+                "href": "\/show\/thomas-and-friends\/series\/0\/video\/ZW0667A016S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZY9555A039S00",
+            "title": "Snowed In",
+            "showTitle": "Shaun The Sheep",
+            "displayTitle": "Shaun The Sheep",
+            "displaySubtitle": "Snowed In",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY9555A039S0055d1160071e425.79668622_1280.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZY9555A039S00"
+              },
+              "deeplink": {
+                "id": "ZY9555A039S00",
+                "href": "\/show\/shaun-the-sheep\/series\/0\/video\/ZY9555A039S00"
+              }
+            }
+          },
+          {
+            "type": "feature",
+            "houseNumber": "ZW0567A001S00",
+            "title": "Octonauts And Operation Deep Freeze",
+            "showTitle": "Octonauts And Operation Deep Freeze",
+            "displayTitle": "Octonauts And Operation Deep Freeze",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0567A001S00_5951d9212b2de_1920.jpg",
+            "duration": 1380,
+            "displayDuration": "23m",
+            "displayDurationAccessible": "23 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0567A001S00"
+              },
+              "deeplink": {
+                "id": "ZW0567A001S00",
+                "href": "\/show\/octonauts-and-operation-deep-freeze\/video\/ZW0567A001S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZY9764A024S00",
+            "title": "Timmy's Monster",
+            "showTitle": "Timmy Time",
+            "displayTitle": "Timmy Time",
+            "displaySubtitle": "Timmy's Monster",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/publicity_ZY9764A024S00.jpg",
+            "duration": 600,
+            "displayDuration": "10m",
+            "displayDurationAccessible": "10 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZY9764A024S00"
+              },
+              "deeplink": {
+                "id": "ZY9764A024S00",
+                "href": "\/show\/timmy-time\/series\/0\/video\/ZY9764A024S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1585A002S00",
+            "title": "Watch Your Step, Pingu!",
+            "showTitle": "Pingu In The City",
+            "displayTitle": "Pingu In The City",
+            "displaySubtitle": "Watch Your Step, Pingu!",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1585A002S00_5b0e3bc9a9737.jpg",
+            "duration": 418,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1585A002S00"
+              },
+              "deeplink": {
+                "id": "ZW1585A002S00",
+                "href": "\/show\/pingu-in-the-city\/series\/0\/video\/ZW1585A002S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0620A030S00",
+            "title": "Mount Everest",
+            "showTitle": "Go Jetters",
+            "displayTitle": "Go Jetters",
+            "displaySubtitle": "Mount Everest",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0620A030S00_58c0fb5e34a07.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "light"
+            },
+            "duration": 662,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0620A030S00"
+              },
+              "deeplink": {
+                "id": "ZW0620A030S00",
+                "href": "\/show\/go-jetters\/series\/0\/video\/ZW0620A030S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1465H063S00",
+            "title": "Fun With Clouds",
+            "showTitle": "Kazoops!",
+            "displayTitle": "Kazoops!",
+            "displaySubtitle": "Fun With Clouds",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1465H063S00_58f7015a3f7c2.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1465H063S00"
+              },
+              "deeplink": {
+                "id": "CH1465H063S00",
+                "href": "\/show\/kazoops\/series\/0\/video\/CH1465H063S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1220H045S00",
+            "title": "Iceberg Escape",
+            "showTitle": "Sydney Sailboat",
+            "displayTitle": "Sydney Sailboat",
+            "displaySubtitle": "Iceberg Escape",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1220H045S0056fdd5a58b57a5.89919247_1280.jpg",
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1220H045S00"
+              },
+              "deeplink": {
+                "id": "CK1220H045S00",
+                "href": "\/show\/sydney-sailboat\/series\/0\/video\/CK1220H045S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1944"
+          }
+        }
+      },
+      {
+        "id": "2000",
+        "title": "Andy's Adventures",
+        "items": [
+          {
+            "id": 184170,
+            "type": "series",
+            "title": "Andy's Safari Adventures",
+            "displayTitle": "Andy's Safari Adventures",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1924A_5d4133a297a1c_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb0e60f258_720.jpg"
+            },
+            "episodeCount": 20,
+            "updated": "2019-08-08 15:19:34",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/andy-s-safari-adventures"
+              },
+              "deeplink": {
+                "href": "\/show\/andy-s-safari-adventures"
+              }
+            }
+          },
+          {
+            "id": 184168,
+            "type": "series",
+            "title": "Andy's Dinosaur Adventures",
+            "displayTitle": "Andy's Dinosaur Adventures",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1923A_5ccfd78cdb799_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb0b92996d_720.jpg"
+            },
+            "episodeCount": 1,
+            "updated": "2019-08-12 19:10:39",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/andy-s-dinosaur-adventures"
+              },
+              "deeplink": {
+                "href": "\/show\/andy-s-dinosaur-adventures"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1211A009S00",
+            "title": "Woolly Rhino And Flowers",
+            "showTitle": "Andy's Prehistoric Adventures",
+            "displayTitle": "Andy's Prehistoric Adventures",
+            "displaySubtitle": "Woolly Rhino And Flowers",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1211A009S00_595ca6ab6373f.jpg",
+            "duration": 844,
+            "displayDuration": "14m",
+            "displayDurationAccessible": "14 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1211A009S00"
+              },
+              "deeplink": {
+                "id": "ZW1211A009S00",
+                "href": "\/show\/andy-s-prehistoric-adventures\/series\/0\/video\/ZW1211A009S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1211A008S00",
+            "title": "Leptictidium And Fig",
+            "showTitle": "Andy's Prehistoric Adventures",
+            "displayTitle": "Andy's Prehistoric Adventures",
+            "displaySubtitle": "Leptictidium And Fig",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1211A008S00_595ca6a8ab7bf.jpg",
+            "duration": 844,
+            "displayDuration": "14m",
+            "displayDurationAccessible": "14 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1211A008S00"
+              },
+              "deeplink": {
+                "id": "ZW1211A008S00",
+                "href": "\/show\/andy-s-prehistoric-adventures\/series\/0\/video\/ZW1211A008S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1925A013S00",
+            "title": "Fast Animals",
+            "showTitle": "Andy's Secret Hideout",
+            "displayTitle": "Andy's Secret Hideout",
+            "displaySubtitle": "Fast Animals",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1925A013S00_5d3fa9195392e.jpg",
+            "duration": 284,
+            "displayDuration": "4m 44s",
+            "displayDurationAccessible": "4 minutes 44 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1925A013S00"
+              },
+              "deeplink": {
+                "id": "ZW1925A013S00",
+                "href": "\/show\/andy-s-secret-hideout\/series\/0\/video\/ZW1925A013S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1211A007S00",
+            "title": "Spinosaurus And Scan",
+            "showTitle": "Andy's Prehistoric Adventures",
+            "displayTitle": "Andy's Prehistoric Adventures",
+            "displaySubtitle": "Spinosaurus And Scan",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1211A007S00_595ca6a64e6b3.jpg",
+            "duration": 849,
+            "displayDuration": "14m",
+            "displayDurationAccessible": "14 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1211A007S00"
+              },
+              "deeplink": {
+                "id": "ZW1211A007S00",
+                "href": "\/show\/andy-s-prehistoric-adventures\/series\/0\/video\/ZW1211A007S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1925A012S00",
+            "title": "Australia",
+            "showTitle": "Andy's Secret Hideout",
+            "displayTitle": "Andy's Secret Hideout",
+            "displaySubtitle": "Australia",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1925A012S00_5d367ca96652e.jpg",
+            "duration": 292,
+            "displayDuration": "4m 52s",
+            "displayDurationAccessible": "4 minutes 52 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1925A012S00"
+              },
+              "deeplink": {
+                "id": "ZW1925A012S00",
+                "href": "\/show\/andy-s-secret-hideout\/series\/0\/video\/ZW1925A012S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1211A006S00",
+            "title": "Paraceratherium And Footprint",
+            "showTitle": "Andy's Prehistoric Adventures",
+            "displayTitle": "Andy's Prehistoric Adventures",
+            "displaySubtitle": "Paraceratherium And Footprint",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1211A006S00_59545b53bf0dc.jpg",
+            "duration": 850,
+            "displayDuration": "14m",
+            "displayDurationAccessible": "14 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1211A006S00"
+              },
+              "deeplink": {
+                "id": "ZW1211A006S00",
+                "href": "\/show\/andy-s-prehistoric-adventures\/series\/0\/video\/ZW1211A006S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2000"
+          }
+        }
+      },
+      {
+        "id": "2225",
+        "title": "Giggle and Hoot: Owl Pals",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "CK1832H259S00",
+            "title": "Owl Pals: Saying Goodbye in Different Languages",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Owl Pals: Saying Goodbye in Different Languages",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1832H259S00_5d2bdb15aa68d_1280.jpg",
+            "duration": 101,
+            "displayDuration": "1m 41s",
+            "displayDurationAccessible": "1 minute 41 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1832H259S00"
+              },
+              "deeplink": {
+                "id": "CK1832H259S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1832H259S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1832H258S00",
+            "title": "Owl Pals: Counting in Different Languages",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Owl Pals: Counting in Different Languages",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1832H258S00_5d2bdb03c2572_1280.jpg",
+            "duration": 141,
+            "displayDuration": "2m 21s",
+            "displayDurationAccessible": "2 minutes 21 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1832H258S00"
+              },
+              "deeplink": {
+                "id": "CK1832H258S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1832H258S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1832H257S00",
+            "title": "Owl Pals: Saying Hello in Different Languages",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Owl Pals: Saying Hello in Different Languages",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1832H257S00_5d2bdae5b49d1_1280.jpg",
+            "duration": 106,
+            "displayDuration": "1m 46s",
+            "displayDurationAccessible": "1 minute 46 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1832H257S00"
+              },
+              "deeplink": {
+                "id": "CK1832H257S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1832H257S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1923H009S00",
+            "title": "Owl Pals: Dancing",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Owl Pals: Dancing",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1923H009S00_5d1eaf8aef145_1280.jpg",
+            "duration": 100,
+            "displayDuration": "1m 40s",
+            "displayDurationAccessible": "1 minute 40 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1923H009S00"
+              },
+              "deeplink": {
+                "id": "CK1923H009S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1923H009S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1923H008S00",
+            "title": "Owl Pals: Counting in Indigenous Languages",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Owl Pals: Counting in Indigenous Languages",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1923H008S00_5d1eaf5eea660_1280.jpg",
+            "duration": 76,
+            "displayDuration": "1m 16s",
+            "displayDurationAccessible": "1 minute 16 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1923H008S00"
+              },
+              "deeplink": {
+                "id": "CK1923H008S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1923H008S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1923H006S00",
+            "title": "Owl Pals: Saying Hello and Goodbye in Indigenous Languages",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Owl Pals: Saying Hello and Goodbye in Indigenous Languages",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1923H006S00_5d1eaf6c7d8cc_1280.jpg",
+            "duration": 98,
+            "displayDuration": "1m 38s",
+            "displayDurationAccessible": "1 minute 38 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1923H006S00"
+              },
+              "deeplink": {
+                "id": "CK1923H006S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1923H006S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1832H249S00",
+            "title": "Owl Pals: Hoot Meow",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Owl Pals: Hoot Meow",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1832H249S00_5cf8b574de767_1280.jpg",
+            "duration": 131,
+            "displayDuration": "2m 11s",
+            "displayDurationAccessible": "2 minutes 11 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1832H249S00"
+              },
+              "deeplink": {
+                "id": "CK1832H249S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1832H249S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1832H247S00",
+            "title": "Owl Pals: Ask Hoot",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Owl Pals: Ask Hoot",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1832H247S00_5cf8b52845880_1280.jpg",
+            "duration": 113,
+            "displayDuration": "1m 53s",
+            "displayDurationAccessible": "1 minute 53 seconds",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1832H247S00"
+              },
+              "deeplink": {
+                "id": "CK1832H247S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1832H247S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2225"
+          }
+        }
+      },
+      {
+        "id": "2226",
+        "title": "Giggle and Hoot: Giggle Party Time!",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "CK1931H011S00",
+            "title": "Giggle Party Time!: Hoot's Lullaby",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Giggle Party Time!: Hoot's Lullaby",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1931H011S00_5d14430bb2f50_1280.jpg",
+            "duration": 120,
+            "displayDuration": "2m ",
+            "displayDurationAccessible": "2 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1931H011S00"
+              },
+              "deeplink": {
+                "id": "CK1931H011S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1931H011S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1929H008S00",
+            "title": "Giggle Party Time!: My Batty Lair",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Giggle Party Time!: My Batty Lair",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1929H008S00_5d1441fe89970_1280.jpg",
+            "duration": 120,
+            "displayDuration": "2m ",
+            "displayDurationAccessible": "2 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1929H008S00"
+              },
+              "deeplink": {
+                "id": "CK1929H008S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1929H008S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1929H006S00",
+            "title": "Giggle Party Time!: 5 Steps to Bed",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Giggle Party Time!: 5 Steps to Bed",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1929H006S00_5d14421d478e5_1280.jpg",
+            "duration": 120,
+            "displayDuration": "2m ",
+            "displayDurationAccessible": "2 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1929H006S00"
+              },
+              "deeplink": {
+                "id": "CK1929H006S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1929H006S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1923H005S00",
+            "title": "Giggle Party Time!: Hootball",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Giggle Party Time!: Hootball",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1923H005S00_5d1442806466a_1280.jpg",
+            "duration": 120,
+            "displayDuration": "2m ",
+            "displayDurationAccessible": "2 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1923H005S00"
+              },
+              "deeplink": {
+                "id": "CK1923H005S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1923H005S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1930H004S00",
+            "title": "Giggle Party Time!: Twinklify",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Giggle Party Time!: Twinklify",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1930H004S00_5d1442ec5f6d9_1280.jpg",
+            "duration": 120,
+            "displayDuration": "2m ",
+            "displayDurationAccessible": "2 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1930H004S00"
+              },
+              "deeplink": {
+                "id": "CK1930H004S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1930H004S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1926H004S00",
+            "title": "Giggle Party Time!: Giggle Mission Time",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Giggle Party Time!: Giggle Mission Time",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1926H004S00_5d14424314d2e_1280.jpg",
+            "duration": 120,
+            "displayDuration": "2m ",
+            "displayDurationAccessible": "2 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1926H004S00"
+              },
+              "deeplink": {
+                "id": "CK1926H004S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1926H004S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1923H003S00",
+            "title": "Giggle Party Time!: Piratey Pirate Hootbeard and Hootastic Seas",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Giggle Party Time!: Piratey Pirate Hootbeard and Hootastic Seas",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1923H003S00_5d14429970be9_1280.jpg",
+            "duration": 120,
+            "displayDuration": "2m ",
+            "displayDurationAccessible": "2 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1923H003S00"
+              },
+              "deeplink": {
+                "id": "CK1923H003S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1923H003S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CK1926H002S00",
+            "title": "Giggle Party Time!: Giggle Galaxy",
+            "showTitle": "Giggle And Hoot",
+            "displayTitle": "Giggle And Hoot",
+            "displaySubtitle": "Giggle Party Time!: Giggle Galaxy",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1926H002S00_5d12ead1b4a4e_1680.jpg",
+            "duration": 120,
+            "displayDuration": "2m ",
+            "displayDurationAccessible": "2 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CK1926H002S00"
+              },
+              "deeplink": {
+                "id": "CK1926H002S00",
+                "href": "\/show\/giggle-and-hoot\/series\/0\/video\/CK1926H002S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/2226"
+          }
+        }
+      },
+      {
+        "id": "436",
+        "title": "Teach Me How",
+        "items": [
+          {
+            "id": 123952,
+            "type": "series",
+            "title": "Peg + Cat",
+            "displayTitle": "Peg + Cat",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0495A_57e9eb2df1d63_1280.jpg",
+            "episodeCount": 30,
+            "updated": "2019-08-13 07:10:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/peg-cat"
+              },
+              "deeplink": {
+                "href": "\/show\/peg-cat"
+              }
+            }
+          },
+          {
+            "id": 159352,
+            "type": "series",
+            "title": "Go Jetters",
+            "displayTitle": "Go Jetters",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0620A56f9e02a19d766.51294798_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bba1ac8fce_720.jpg"
+            },
+            "episodeCount": 21,
+            "updated": "2019-08-12 19:20:06",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/go-jetters"
+              },
+              "deeplink": {
+                "href": "\/show\/go-jetters"
+              }
+            }
+          },
+          {
+            "id": 159345,
+            "type": "series",
+            "title": "Floogals",
+            "displayTitle": "Floogals",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0888A_58645ded776f5_1280.jpg",
+            "episodeCount": 30,
+            "updated": "2019-08-12 19:35:07",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/floogals"
+              },
+              "deeplink": {
+                "href": "\/show\/floogals"
+              }
+            }
+          },
+          {
+            "id": 169035,
+            "type": "series",
+            "title": "Learning Time With Timmy",
+            "displayTitle": "Learning Time With Timmy",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1518A_5b28ac861a289.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc1c65eac1_720.jpg"
+            },
+            "episodeCount": 26,
+            "updated": "2019-08-08 16:31:34",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/learning-time-with-timmy"
+              },
+              "deeplink": {
+                "href": "\/show\/learning-time-with-timmy"
+              }
+            }
+          },
+          {
+            "id": 122880,
+            "type": "series",
+            "title": "Mister Maker",
+            "displayTitle": "Mister Maker",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX0926A54dd375a8d8a69.68157329_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc2aeca1e5_720.jpg"
+            },
+            "episodeCount": 1,
+            "updated": "2019-08-12 14:46:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/mister-maker"
+              },
+              "deeplink": {
+                "href": "\/show\/mister-maker"
+              }
+            }
+          },
+          {
+            "id": 122600,
+            "type": "series",
+            "title": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A_5d12c3306db15_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4ccef1f1ad2_720.jpg"
+            },
+            "episodeCount": 25,
+            "updated": "2019-08-13 10:02:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/sesame-street"
+              },
+              "deeplink": {
+                "href": "\/show\/sesame-street"
+              }
+            }
+          },
+          {
+            "id": 156082,
+            "type": "series",
+            "title": "Wallykazam!",
+            "displayTitle": "Wallykazam!",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1343A_5a8bafcb183e6.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4caab97096d_720.jpg"
+            },
+            "episodeCount": 10,
+            "updated": "2019-08-12 16:05:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/wallykazam"
+              },
+              "deeplink": {
+                "href": "\/show\/wallykazam"
+              }
+            }
+          },
+          {
+            "id": 123716,
+            "type": "series",
+            "title": "Mister Maker Around The World",
+            "displayTitle": "Mister Maker Around The World",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/mi\/publicity_MisterMakerAroundTheWorld_460.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc2d11589a_720.jpg"
+            },
+            "episodeCount": 20,
+            "updated": "2019-08-11 14:46:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/mister-maker-around-the-world"
+              },
+              "deeplink": {
+                "href": "\/show\/mister-maker-around-the-world"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/436"
+          }
+        }
+      },
+      {
+        "id": "1298",
+        "title": "Mandarin Favourites",
+        "items": [
+          {
+            "id": 171656,
+            "type": "series",
+            "title": "Arthur (Mandarin)",
+            "displayTitle": "Arthur (Mandarin)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1558A_5ab0a0ce2186c_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4cf9345f5e4_720.jpg"
+            },
+            "episodeCount": 9,
+            "updated": "2019-08-12 14:30:32",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/arthur-mandarin"
+              },
+              "deeplink": {
+                "href": "\/show\/arthur-mandarin"
+              }
+            }
+          },
+          {
+            "id": 175353,
+            "type": "series",
+            "title": "Kiddets (Mandarin)",
+            "displayTitle": "Kiddets (Mandarin)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1695A_5b84cd3fd1322.jpg",
+            "episodeCount": 51,
+            "updated": "2019-08-03 07:58:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/kiddets-mandarin"
+              },
+              "deeplink": {
+                "href": "\/show\/kiddets-mandarin"
+              }
+            }
+          },
+          {
+            "id": 175248,
+            "type": "series",
+            "title": "Pocoyo (Mandarin)",
+            "displayTitle": "Pocoyo (Mandarin)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1692A_5cd51afff0a2a_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d5100cebbb4c_720.jpg"
+            },
+            "episodeCount": 30,
+            "updated": "2019-08-12 16:01:50",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/pocoyo-mandarin"
+              },
+              "deeplink": {
+                "href": "\/show\/pocoyo-mandarin"
+              }
+            }
+          },
+          {
+            "id": 159524,
+            "type": "series",
+            "title": "Peppa Pig (Mandarin)",
+            "displayTitle": "Peppa Pig (Mandarin)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1856A_5c538218551c3_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d50fdef29476_720.jpg"
+            },
+            "episodeCount": 27,
+            "updated": "2019-08-12 15:49:35",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/peppa-pig-mandarin"
+              },
+              "deeplink": {
+                "href": "\/show\/peppa-pig-mandarin"
+              }
+            }
+          },
+          {
+            "id": 172228,
+            "type": "series",
+            "title": "Rainbow Chicks (Mandarin)",
+            "displayTitle": "Rainbow Chicks (Mandarin)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1588A_5be40bb6bf414.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d50ff0fb9979_720.jpg"
+            },
+            "episodeCount": 39,
+            "updated": "2019-08-12 15:54:23",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/rainbow-chicks-mandarin"
+              },
+              "deeplink": {
+                "href": "\/show\/rainbow-chicks-mandarin"
+              }
+            }
+          },
+          {
+            "id": 159523,
+            "type": "series",
+            "title": "Octonauts (Mandarin)",
+            "displayTitle": "Octonauts (Mandarin)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1053A_5a6904026bca9_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d51069fa9f7e_720.jpg"
+            },
+            "episodeCount": 30,
+            "updated": "2019-08-12 16:26:39",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/octonauts-mandarin"
+              },
+              "deeplink": {
+                "href": "\/show\/octonauts-mandarin"
+              }
+            }
+          },
+          {
+            "id": 162073,
+            "type": "series",
+            "title": "hoopla doopla! (Mandarin)",
+            "displayTitle": "hoopla doopla! (Mandarin)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1039A_5a6908fa22901_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d50f7c33634f_720.jpg"
+            },
+            "episodeCount": 34,
+            "updated": "2019-08-13 09:30:14",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/hoopla-doopla-mandarin"
+              },
+              "deeplink": {
+                "href": "\/show\/hoopla-doopla-mandarin"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1298"
+          }
+        }
+      },
+      {
+        "id": "685",
+        "title": "Puggles",
+        "items": [
+          {
+            "id": 182968,
+            "type": "series",
+            "title": "Moon and Me",
+            "displayTitle": "Moon and Me",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1871A_5cff094698733_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc312d993b_720.jpg"
+            },
+            "episodeCount": 20,
+            "updated": "2019-08-08 16:37:07",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/moon-and-me"
+              },
+              "deeplink": {
+                "href": "\/show\/moon-and-me"
+              }
+            }
+          },
+          {
+            "id": 172226,
+            "type": "series",
+            "title": "Rainbow Chicks",
+            "displayTitle": "Rainbow Chicks",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1587A_5be4b956c2e50_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4ccf1b97787_720.jpg"
+            },
+            "episodeCount": 39,
+            "updated": "2019-08-09 11:40:43",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/rainbow-chicks"
+              },
+              "deeplink": {
+                "href": "\/show\/rainbow-chicks"
+              }
+            }
+          },
+          {
+            "id": 124285,
+            "type": "series",
+            "title": "Baby Jake",
+            "displayTitle": "Baby Jake",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9920A_5a1cfee0299a8_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb10815528_720.jpg"
+            },
+            "episodeCount": 15,
+            "updated": "2019-08-13 13:18:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/baby-jake"
+              },
+              "deeplink": {
+                "href": "\/show\/baby-jake"
+              }
+            }
+          },
+          {
+            "id": 122407,
+            "type": "series",
+            "title": "Clangers",
+            "displayTitle": "Clangers",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0280A_5a1f9383c1b46_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb5babedcc_720.jpg"
+            },
+            "episodeCount": 22,
+            "updated": "2019-08-13 12:58:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/clangers"
+              },
+              "deeplink": {
+                "href": "\/show\/clangers"
+              }
+            }
+          },
+          {
+            "id": 123926,
+            "type": "series",
+            "title": "Teletubbies",
+            "displayTitle": "Teletubbies",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0474A_5a1f94811f7bc_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc738da763_720.jpg"
+            },
+            "episodeCount": 30,
+            "updated": "2019-08-13 13:20:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/teletubbies"
+              },
+              "deeplink": {
+                "href": "\/show\/teletubbies"
+              }
+            }
+          },
+          {
+            "id": 123939,
+            "type": "series",
+            "title": "Twirlywoos",
+            "displayTitle": "Twirlywoos",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1259A_5a3b2978a15e9_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc6c2421da_720.jpg"
+            },
+            "episodeCount": 30,
+            "updated": "2019-08-13 12:20:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/twirlywoos"
+              },
+              "deeplink": {
+                "href": "\/show\/twirlywoos"
+              }
+            }
+          },
+          {
+            "id": 124348,
+            "type": "series",
+            "title": "Bing",
+            "displayTitle": "Bing",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9673A_5afa63a513d3b_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb387886fd_720.jpg"
+            },
+            "episodeCount": 15,
+            "updated": "2019-08-13 11:14:07",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/bing"
+              },
+              "deeplink": {
+                "href": "\/show\/bing"
+              }
+            }
+          },
+          {
+            "id": 123887,
+            "type": "series",
+            "title": "Miffy's Adventures Big and Small",
+            "displayTitle": "Miffy's Adventures Big and Small",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1174A_5a1f9489b4596_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb01ea08a5_720.jpg"
+            },
+            "episodeCount": 30,
+            "updated": "2019-08-13 06:35:02",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/miffy-s-adventures-big-and-small"
+              },
+              "deeplink": {
+                "href": "\/show\/miffy-s-adventures-big-and-small"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/685"
+          }
+        }
+      },
+      {
+        "id": "1955",
+        "title": "ABC KIDS Latest Episodes",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "ZY9100A045S00",
+            "title": "Poczilla",
+            "showTitle": "Pocoyo",
+            "displayTitle": "Pocoyo",
+            "displaySubtitle": "Poczilla",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY9100A045S005666176bb7af16.28115899_1280.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZY9100A045S00"
+              },
+              "deeplink": {
+                "id": "ZY9100A045S00",
+                "href": "\/show\/pocoyo\/series\/0\/video\/ZY9100A045S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1216H046S00",
+            "title": "Best Friends Day",
+            "showTitle": "hoopla doopla!",
+            "displayTitle": "hoopla doopla!",
+            "displaySubtitle": "Best Friends Day",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1216H046S00556662b922d7b5.20578604_1280.jpg",
+            "duration": 720,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1216H046S00"
+              },
+              "deeplink": {
+                "id": "CH1216H046S00",
+                "href": "\/show\/hoopla-doopla\/series\/0\/video\/CH1216H046S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0181A017S00",
+            "title": "The Emperor Comes To Town",
+            "showTitle": "Jamillah and Aladdin",
+            "displayTitle": "Jamillah and Aladdin",
+            "displaySubtitle": "The Emperor Comes To Town",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0181A017S0056f1fbbbb7f165.14869435_1280.jpg",
+            "duration": 665,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0181A017S00"
+              },
+              "deeplink": {
+                "id": "ZW0181A017S00",
+                "href": "\/show\/jamillah-and-aladdin\/series\/0\/video\/ZW0181A017S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1484A003S00",
+            "title": "At Your Service",
+            "showTitle": "Lily's Driftwood Bay",
+            "displayTitle": "Lily's Driftwood Bay",
+            "displaySubtitle": "At Your Service",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1484A003S00_5b447dc8c3694.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1484A003S00"
+              },
+              "deeplink": {
+                "id": "ZW1484A003S00",
+                "href": "\/show\/lily-s-driftwood-bay\/series\/0\/video\/ZW1484A003S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZX9920A013S00",
+            "title": "Baby Jake Loves To Jiggle And Shake",
+            "showTitle": "Baby Jake",
+            "displayTitle": "Baby Jake",
+            "displaySubtitle": "Baby Jake Loves To Jiggle And Shake",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9920A013S0053fd39cfcf44f8.83676409_1280.jpg",
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX9920A013S00"
+              },
+              "deeplink": {
+                "id": "ZX9920A013S00",
+                "href": "\/show\/baby-jake\/series\/0\/video\/ZX9920A013S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZX1168A005S00",
+            "title": "Timmy Shapes Up",
+            "showTitle": "Timmy Time",
+            "displayTitle": "Timmy Time",
+            "displaySubtitle": "Timmy Shapes Up",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX1168A005S00554c08de8ee017.31756714_1280.jpg",
+            "duration": 600,
+            "displayDuration": "10m",
+            "displayDurationAccessible": "10 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX1168A005S00"
+              },
+              "deeplink": {
+                "id": "ZX1168A005S00",
+                "href": "\/show\/timmy-time\/series\/0\/video\/ZX1168A005S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0280A039S00",
+            "title": "The Chicken Waltz",
+            "showTitle": "Clangers",
+            "displayTitle": "Clangers",
+            "displaySubtitle": "The Chicken Waltz",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0280A039S00_57e8a758662c5_1280.jpg",
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0280A039S00"
+              },
+              "deeplink": {
+                "id": "ZW0280A039S00",
+                "href": "\/show\/clangers\/series\/0\/video\/ZW0280A039S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0474A058S00",
+            "title": "Again, Again",
+            "showTitle": "Teletubbies",
+            "displayTitle": "Teletubbies",
+            "displaySubtitle": "Again, Again",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0474A058S00_583536b9c4523.jpg",
+            "duration": 717,
+            "displayDuration": "12m",
+            "displayDurationAccessible": "12 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0474A058S00"
+              },
+              "deeplink": {
+                "id": "ZW0474A058S00",
+                "href": "\/show\/teletubbies\/series\/0\/video\/ZW0474A058S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1955"
+          }
+        }
+      },
+      {
+        "id": "1385",
+        "title": "ABC KIDS Shows Expiring Soon",
+        "items": [
+          {
+            "type": "episode",
+            "houseNumber": "CH1702Q023S00",
+            "title": "BBQ",
+            "showTitle": "Bluey",
+            "displayTitle": "Bluey",
+            "displaySubtitle": "BBQ",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1702Q023S00_5bb2dd18055c1.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1702Q023S00"
+              },
+              "deeplink": {
+                "id": "CH1702Q023S00",
+                "href": "\/show\/bluey\/series\/0\/video\/CH1702Q023S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1702Q040S00",
+            "title": "Grannies",
+            "showTitle": "Bluey",
+            "displayTitle": "Bluey",
+            "displaySubtitle": "Grannies",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1702Q040S00_5c907807cc845.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1702Q040S00"
+              },
+              "deeplink": {
+                "id": "CH1702Q040S00",
+                "href": "\/show\/bluey\/series\/0\/video\/CH1702Q040S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1702Q004S00",
+            "title": "Takeaway",
+            "showTitle": "Bluey",
+            "displayTitle": "Bluey",
+            "displaySubtitle": "Takeaway",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1702Q004S00_5bbc1e27eb941.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1702Q004S00"
+              },
+              "deeplink": {
+                "id": "CH1702Q004S00",
+                "href": "\/show\/bluey\/series\/0\/video\/CH1702Q004S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1702Q001S00",
+            "title": "Yoga Ball",
+            "showTitle": "Bluey",
+            "displayTitle": "Bluey",
+            "displaySubtitle": "Yoga Ball",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1702Q001S00_5bbc23c84081f.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1702Q001S00"
+              },
+              "deeplink": {
+                "id": "CH1702Q001S00",
+                "href": "\/show\/bluey\/series\/0\/video\/CH1702Q001S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "CH1702Q008S00",
+            "title": "The Pool",
+            "showTitle": "Bluey",
+            "displayTitle": "Bluey",
+            "displaySubtitle": "The Pool",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1702Q008S00_5bc5503c0f4e3.jpg",
+            "duration": 420,
+            "displayDuration": "7m",
+            "displayDurationAccessible": "7 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/CH1702Q008S00"
+              },
+              "deeplink": {
+                "id": "CH1702Q008S00",
+                "href": "\/show\/bluey\/series\/0\/video\/CH1702Q008S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZX9373A025S00",
+            "title": "Shipwrecked!",
+            "showTitle": "Mouk",
+            "displayTitle": "Mouk",
+            "displaySubtitle": "Shipwrecked!",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9373A025S0054ffb8d99c0c06.66543156_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "light"
+            },
+            "duration": 669,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX9373A025S00"
+              },
+              "deeplink": {
+                "id": "ZX9373A025S00",
+                "href": "\/show\/mouk\/series\/0\/video\/ZX9373A025S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW0256A004S00",
+            "title": "Flushed Away",
+            "showTitle": "Little Roy",
+            "displayTitle": "Little Roy",
+            "displaySubtitle": "Flushed Away",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW0256A004S00_58ae78b071508_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "light"
+            },
+            "duration": 849,
+            "displayDuration": "14m",
+            "displayDurationAccessible": "14 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW0256A004S00"
+              },
+              "deeplink": {
+                "id": "ZW0256A004S00",
+                "href": "\/show\/little-roy\/series\/0\/video\/ZW0256A004S00"
+              }
+            }
+          },
+          {
+            "type": "episode",
+            "houseNumber": "ZW1558A004S00",
+            "title": "The Friend Who Wasn't There",
+            "showTitle": "Arthur (Mandarin)",
+            "displayTitle": "Arthur (Mandarin)",
+            "displaySubtitle": "The Friend Who Wasn't There",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1558A004S00_5ab86f9fc7090_1280.jpg",
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "light"
+            },
+            "duration": 660,
+            "displayDuration": "11m",
+            "displayDurationAccessible": "11 minutes",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1558A004S00"
+              },
+              "deeplink": {
+                "id": "ZW1558A004S00",
+                "href": "\/show\/arthur-mandarin\/series\/0\/video\/ZW1558A004S00"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1385"
+          }
+        }
+      },
+      {
+        "id": "1962",
+        "title": "ABC KIDS: A-Z",
+        "items": [
+          {
+            "id": 183100,
+            "type": "series",
+            "title": "Aliens Love Underpants And...",
+            "displayTitle": "Aliens Love Underpants And...",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1899A_5ca2f48d3f709.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d510b76c874c_720.jpg"
+            },
+            "episodeCount": 12,
+            "updated": "2019-08-12 16:47:18",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/aliens-love-underpants-and"
+              },
+              "deeplink": {
+                "href": "\/show\/aliens-love-underpants-and"
+              }
+            }
+          },
+          {
+            "id": 184168,
+            "type": "series",
+            "title": "Andy's Dinosaur Adventures",
+            "displayTitle": "Andy's Dinosaur Adventures",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1923A_5ccfd78cdb799_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb0b92996d_720.jpg"
+            },
+            "episodeCount": 1,
+            "updated": "2019-08-12 19:10:39",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/andy-s-dinosaur-adventures"
+              },
+              "deeplink": {
+                "href": "\/show\/andy-s-dinosaur-adventures"
+              }
+            }
+          },
+          {
+            "id": 160351,
+            "type": "series",
+            "title": "Andy's Prehistoric Adventures",
+            "displayTitle": "Andy's Prehistoric Adventures",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1211A_5d4cd5306cebd_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4cd474d8f53_720.jpg"
+            },
+            "episodeCount": 9,
+            "updated": "2019-08-12 19:10:10",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/andy-s-prehistoric-adventures"
+              },
+              "deeplink": {
+                "href": "\/show\/andy-s-prehistoric-adventures"
+              }
+            }
+          },
+          {
+            "id": 184170,
+            "type": "series",
+            "title": "Andy's Safari Adventures",
+            "displayTitle": "Andy's Safari Adventures",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1924A_5d4133a297a1c_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb0e60f258_720.jpg"
+            },
+            "episodeCount": 20,
+            "updated": "2019-08-08 15:19:34",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/andy-s-safari-adventures"
+              },
+              "deeplink": {
+                "href": "\/show\/andy-s-safari-adventures"
+              }
+            }
+          },
+          {
+            "id": 184172,
+            "type": "series",
+            "title": "Andy's Secret Hideout",
+            "displayTitle": "Andy's Secret Hideout",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1925A_5d084a1b2312f.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb0d26bca2_720.jpg"
+            },
+            "episodeCount": 8,
+            "updated": "2019-08-13 12:55:35",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/andy-s-secret-hideout"
+              },
+              "deeplink": {
+                "href": "\/show\/andy-s-secret-hideout"
+              }
+            }
+          },
+          {
+            "id": 124041,
+            "type": "series",
+            "title": "Arthur",
+            "displayTitle": "Arthur",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9903A_5d4cf87b87cf5_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb0f665b45_720.jpg"
+            },
+            "episodeCount": 9,
+            "updated": "2019-08-12 15:10:04",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/arthur"
+              },
+              "deeplink": {
+                "href": "\/show\/arthur"
+              }
+            }
+          },
+          {
+            "id": 171656,
+            "type": "series",
+            "title": "Arthur (Mandarin)",
+            "displayTitle": "Arthur (Mandarin)",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1558A_5ab0a0ce2186c_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4cf9345f5e4_720.jpg"
+            },
+            "episodeCount": 9,
+            "updated": "2019-08-12 14:30:32",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/arthur-mandarin"
+              },
+              "deeplink": {
+                "href": "\/show\/arthur-mandarin"
+              }
+            }
+          },
+          {
+            "id": 124285,
+            "type": "series",
+            "title": "Baby Jake",
+            "displayTitle": "Baby Jake",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9920A_5a1cfee0299a8_1280.jpg",
+            "thumbnails": {
+              "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb10815528_720.jpg"
+            },
+            "episodeCount": 15,
+            "updated": "2019-08-13 13:18:03",
+            "_entity": "show",
+            "_links": {
+              "self": {
+                "href": "\/show\/baby-jake"
+              },
+              "deeplink": {
+                "href": "\/show\/baby-jake"
+              }
+            }
+          }
+        ],
+        "_entity": "collection",
+        "_links": {
+          "self": {
+            "href": "\/collection\/1962"
+          }
+        }
+      }
+    ]
+  }
+}

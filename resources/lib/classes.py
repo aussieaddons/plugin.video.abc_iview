@@ -1,54 +1,63 @@
-#
-#  ABC iView XBMC Addon
-#  Copyright (C) 2012 Andy Botting
-#
-#  This addon includes code from python-iview
-#  Copyright (C) 2009-2012 by Jeremy Visser <jeremy@visser.name>
-#
-#  This addon is free software: you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation, either version 3 of the License, or
-#  (at your option) any later version.
-#
-#  This addon is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public License
-#  along with this addon. If not, see <http://www.gnu.org/licenses/>.
-#
-
 import datetime
+import re
 import time
-import urllib
+import unicodedata
+from builtins import str
+from collections import OrderedDict
+from functools import total_ordering
+
+from future.moves.urllib.parse import parse_qsl, quote_plus, unquote_plus
+
+from past.builtins import cmp
 
 from aussieaddonscommon import utils
 
 
+@total_ordering
 class Series(object):
 
     def __init__(self):
         self.description = None
         self.num_episodes = 1
-        self.thumbnail = None
         self.series_houseno = None
+        self.title = None
+        self.thumb = None
+        self.type = 'Series'
+        self.url = None
 
     def __repr__(self):
         return self.title
 
-    def __cmp__(self, other):
-        return cmp(self.get_sort_title(), other.get_sort_title())
+    def __lt__(self, other):
+        other_sort_title = getattr(other, 'get_sort_title', None)
+        if callable(other_sort_title):
+            return cmp(self.get_sort_title(), other.get_sort_title()) < 0
+        else:
+            return cmp(self.get_sort_title(), self.get_sort_title(other)) < 0
 
-    def get_sort_title(self):
+    def __eq__(self, other):
+        other_sort_title = getattr(other, 'get_sort_title', None)
+        if callable(other_sort_title):
+            return cmp(self.get_sort_title(), other.get_sort_title()) == 0
+        else:
+            return cmp(self.get_sort_title(), self.get_sort_title(other)) == 0
+
+    def get_sort_title(self, other=None):
         """Return a munged version of the title for sorting"""
-        sort_title = self.title.lower()
-        sort_title = sort_title.replace('the ', '')
+        if other:
+            sort_title = re.sub('[^A-Za-z0-9 ]+', '',
+                                other.title).lower().replace('the ', '')
+        else:
+            sort_title = re.sub('[^A-Za-z0-9 ]+', '',
+                                self.title).lower().replace('the ', '')
         return sort_title
 
     def get_title(self):
         """Return the program title, incl the Series X part on the end."""
         return utils.descape(self.title)
+
+    def get_num_episodes(self):
+        return self.num_episodes
 
     def get_list_title(self):
         """Return list title
@@ -56,39 +65,56 @@ class Series(object):
         Return the program title with the number of episodes
         together suitable for the Kodi list
         """
-        return "%s (%d)" % (self.get_title(), self.get_num_episodes())
+        num_episodes = self.get_num_episodes()
+        if num_episodes:
+            return "{0} ({1})".format(self.get_title(), num_episodes)
+        else:
+            return self.get_title()
 
     def increment_num_episodes(self):
         self.num_episodes += 1
 
-    def get_num_episodes(self):
-        return self.num_episodes
-
-    def get_keywords(self):
-        """Return a list of keywords"""
-        if self.keywords:
-            return self.keywords
-
-    def get_thumbnail(self):
-        if self.thumbnail:
-            return self.thumbnail
+    def get_thumb(self):
+        if self.thumb:
+            return self.thumb
 
     def get_description(self):
         if self.description:
             return self.description
 
-    def has_keyword(self, keyword):
-        """Returns true if a keyword is found"""
-        for kw in self.keywords:
-            if kw == keyword:
-                return True
-        return False
+    def make_kodi_url(self):
+        d_original = OrderedDict(
+            sorted(self.__dict__.items(), key=lambda x: x[0]))
+        d = d_original.copy()
+        for key, value in d_original.items():
+            if not value:
+                d.pop(key)
+                continue
+            if isinstance(value, str):
+                d[key] = unicodedata.normalize(
+                    'NFKD', value).encode('ascii', 'ignore').decode('utf-8')
+        url = ''
+        for key in d.keys():
+            if isinstance(d[key], (str, bytes)):
+                val = quote_plus(d[key])
+            else:
+                val = d[key]
+            url += '&{0}={1}'.format(key, val)
+        return url
 
 
+class Collect(Series):
+    def __init__(self):
+        super(Series, self).__init__()
+        self.type = 'Collection'
+        self.collection_id = None
+        self.num_episodes = 0
+
+
+@total_ordering
 class Program(object):
 
     def __init__(self):
-        self.id = -1
         self.title = None
         self.episode_title = None
         self.description = None
@@ -98,19 +124,43 @@ class Program(object):
         self.keywords = []
         self.rating = 'PG'
         self.duration = None
-        self.date = datetime.datetime.now()
-        self.thumbnail = None
+        self.date = None
+        self.thumb = None
+        self.fanart = None
         self.url = None
         self.expire = None
-        self.subtitle_url = None
+        self.captions = False
         self.house_number = None
-        self.hq = None
+        self.type = 'Program'
 
     def __repr__(self):
         return self.title
 
-    def __cmp__(self, other):
-        return cmp(self.title, other.title)
+    def __lt__(self, other):
+        other_title = getattr(other, 'title', None)
+        if other_title:
+            return cmp(self.title, other.title) < 0
+        else:
+            return cmp(self.title, other) < 0
+
+    def __eq__(self, other):
+        other_title = getattr(other, 'title', None)
+        if other_title:
+            return cmp(self.title, other.title) == 0
+        else:
+            return cmp(self.title, other) == 0
+
+    def parse_datetime(self, timestamp):
+        """Parse timestamp into a datetime"""
+        try:
+            dt = time.mktime(time.strptime(timestamp, '%Y-%m-%d %H:%M:%S'))
+            return datetime.datetime.fromtimestamp(dt)
+        except Exception:
+            utils.log_error("Couldn't parse timestamp: %s" % timestamp)
+            raise
+
+    def is_captions(self):
+        return self.captions
 
     def get_title(self):
         """Get program title
@@ -146,7 +196,8 @@ class Program(object):
             title = "%s (S%02d)" % (title, self.get_season())
 
         if self.get_episode_title():
-            title = "%s: %s" % (title, self.get_episode_title())
+            if title != self.get_episode_title():
+                title = "%s: %s" % (title, self.get_episode_title())
 
         return title
 
@@ -184,7 +235,7 @@ class Program(object):
                 return seconds
             else:
                 # Older versions use minutes
-                minutes = seconds / 60
+                minutes = seconds // 60
                 return minutes
 
     def get_date(self):
@@ -220,10 +271,15 @@ class Program(object):
         if self.episode:
             return int(self.episode)
 
-    def get_thumbnail(self):
+    def get_thumb(self):
         """Returns the thumbnail"""
-        if self.thumbnail:
-            return utils.descape(self.thumbnail)
+        if self.thumb:
+            return utils.descape(self.thumb)
+
+    def get_fanart(self):
+        """Returns the fanart"""
+        if self.fanart:
+            return utils.descape(self.fanart)
 
     def get_url(self):
         """Returns the video url"""
@@ -233,7 +289,7 @@ class Program(object):
     def get_expire(self):
         """Returns the expiry date"""
         if self.expire:
-            return self.expire.strftime("%Y-%m-%d %h:%m:%s")
+            return self.expire.strftime("%Y-%m-%d %H:%M:%S")
 
     def get_house_number(self):
         """Returns ABC's internal house number of the episode"""
@@ -287,15 +343,39 @@ class Program(object):
             info_dict['duration'] = self.get_duration()
 
         # This information may be incorrect
-        if self.hq:
-            info_dict['codec'] = 'h264'
-            info_dict['width'] = '1024'
-            info_dict['height'] = '576'
-        else:
-            info_dict['codec'] = 'h264'
-            info_dict['width'] = '640'
-            info_dict['height'] = '360'
+        info_dict['codec'] = 'h264'
+        info_dict['width'] = '1024'
+        info_dict['height'] = '576'
+
         return info_dict
+
+    def set_date(self, timestamp):
+        if timestamp:
+            self.date = self.parse_datetime(timestamp)
+
+    def set_expire(self, timestamp):
+        if timestamp:
+            self.expire = self.parse_datetime(timestamp)
+
+    def make_kodi_url(self):
+        d_original = OrderedDict(
+            sorted(self.__dict__.items(), key=lambda x: x[0]))
+        d = d_original.copy()
+        for key, value in d_original.items():
+            if not value:
+                d.pop(key)
+                continue
+            if isinstance(value, str):
+                d[key] = unicodedata.normalize(
+                    'NFKD', value).encode('ascii', 'ignore').decode('utf-8')
+        url = ''
+        for key in d.keys():
+            if isinstance(d[key], (str, bytes)):
+                val = quote_plus(d[key])
+            else:
+                val = d[key]
+            url += '&{0}={1}'.format(key, val)
+        return url
 
     def make_xbmc_url(self):
         """Make XBMC url
@@ -320,8 +400,8 @@ class Program(object):
             d['rating'] = self.rating
         if self.date:
             d['date'] = self.date.strftime("%Y-%m-%d %H:%M:%S")
-        if self.thumbnail:
-            d['thumbnail'] = self.thumbnail
+        if self.thumb:
+            d['thumb'] = self.thumb
         if self.url:
             d['url'] = self.url
         if self.subtitle_url:
@@ -331,6 +411,17 @@ class Program(object):
         if self.hq:
             d['hq'] = self.hq
         return utils.make_url(d)
+
+    def parse_kodi_url(self, url):
+        params = dict(parse_qsl(url))
+        for item in params.keys():
+            setattr(self, item, unquote_plus(params[item]))
+        if getattr(self, 'captions', None) == 'True':
+            self.captions = True
+        if getattr(self, 'date', None):
+            self.date = self.parse_datetime(self.date)
+        if getattr(self, 'expire', None):
+            self.expire = self.parse_datetime(self.expire)
 
     def parse_xbmc_url(self, string):
         """Parse XBMC URL
@@ -347,7 +438,7 @@ class Program(object):
         self.category = d.get('category')
         self.rating = d.get('rating')
         self.url = d.get('url')
-        self.thumbnail = urllib.unquote_plus(d.get('thumbnail'))
+        self.thumb = unquote_plus(d.get('thumb'))
         self.subtitle_url = d.get('subtitle_url')
         self.house_number = d.get('house_number')
         self.hq = d.get('hq')

@@ -1,0 +1,8 @@
+mock;python_version < '3.0'
+testtools
+pytest
+requests
+responses
+future
+bs4
+git+https://github.com/glennguy/Kodistubs.git@python3#egg=Kodistubs

@@ -1,0 +1,3086 @@
+{
+  "id": 122600,
+  "slug": "sesame-street",
+  "type": "series",
+  "title": "Sesame Street",
+  "displayTitle": "Sesame Street",
+  "description": "Join Big Bird, Oscar, Elmo, Bert, Cookie Monster, the Count and many other characters to learn the alphabet and to count with Count von Count, but most of all just have a good time.",
+  "theme": "light",
+  "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A_5d12c3306db15_1280.jpg",
+  "thumbnails": {
+    "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4ccef1f1ad2_720.jpg"
+  },
+  "episodeCount": 30,
+  "relatedLinks": [
+    {
+      "title": "Go To Website",
+      "href": "http:\/\/www.abc.net.au\/abcforkids\/shows\/s2948891.htm"
+    }
+  ],
+  "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street",
+  "updated": "2019-08-22 11:05:03",
+  "tags": [
+    "abc4kids",
+    "4learn",
+    "4upper",
+    "4song",
+    "4liveaction",
+    "4celebrity",
+    "4how-why"
+  ],
+  "_entity": "show",
+  "_links": {
+    "self": {
+      "href": "\/show\/sesame-street"
+    },
+    "deeplink": {
+      "href": "\/show\/sesame-street"
+    },
+    "related": {
+      "href": "\/related\/show\/sesame-street"
+    },
+    "categories": [
+      {
+        "id": "abc4kids",
+        "title": "ABC KIDS",
+        "href": "\/channel\/abc4kids"
+      }
+    ],
+    "selectedSeries": {
+      "id": "0",
+      "href": "\/series\/sesame-street\/0"
+    },
+    "highlightVideo": {
+      "id": "ZW1939A025S00",
+      "href": "\/video\/ZW1939A025S00"
+    }
+  },
+  "_embedded": {
+    "selectedSeries": {
+      "id": "122600-0",
+      "title": "Episodes",
+      "showTitle": "Sesame Street",
+      "displayTitle": "Sesame Street",
+      "displaySubtitle": "Episodes",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A_5d12c3306db15_1280.jpg",
+      "episodeCount": 30,
+      "_entity": "series",
+      "_links": {
+        "self": {
+          "href": "\/series\/sesame-street\/0"
+        },
+        "deeplink": {
+          "href": "\/show\/sesame-street\/series\/0"
+        },
+        "show": {
+          "href": "\/show\/sesame-street"
+        }
+      },
+      "_embedded": {
+        "videoEpisodes": [
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A025S00",
+            "title": "Welcome to Sesame Hospital",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Welcome to Sesame Hospital",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A025S00_5d48ecf74289a.jpg",
+            "description": "Rosita, Abby, and Telly play hospital and pretend to be a doctor, nurse and x-ray technician. Chris pretends to be their patient and they help heal his funny bone.",
+            "pubDate": "2019-08-22 10:02:05",
+            "expireDate": "2019-09-21 10:02:05",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 5 hours ago, available until 10:02am on 21 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A025S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Welcome to Sesame Hospital",
+                "episodeId": "ZW1939A025S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A025S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A025S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A025S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Welcome to Sesame Hospital",
+                "d_episode_id": "ZW1939A025S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A025S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A025S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A025S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A025S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A025S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZX9851A005S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Episode 5"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A024S00",
+            "title": "The Furry Four",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "The Furry Four",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A024S00_5d48e1bc1001f.jpg",
+            "description": "Telly, Abby and Elmo want to pretend to be their favourite superheroes - The Furry Four.",
+            "pubDate": "2019-08-21 10:01:53",
+            "expireDate": "2019-09-20 10:01:53",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 1 day ago, available until 10:01am on 20 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A024S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "The Furry Four",
+                "episodeId": "ZW1939A024S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A024S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A024S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A024S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "The Furry Four",
+                "d_episode_id": "ZW1939A024S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A024S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A024S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A024S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A024S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A024S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A025S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Welcome to Sesame Hospital"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A023S00",
+            "title": "Earth Day",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Earth Day",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A023S00_5d48dfd99555d.jpg",
+            "description": "It's Earth Day on Sesame Street! Rudy learns to be kind to the earth after he sees what it would be like if everyone acted like him and threw their trash on the street.",
+            "pubDate": "2019-08-20 10:02:13",
+            "expireDate": "2019-09-19 10:02:13",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 2 days ago, available until 10:02am on 19 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A023S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Earth Day",
+                "episodeId": "ZW1939A023S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A023S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A023S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A023S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Earth Day",
+                "d_episode_id": "ZW1939A023S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A023S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A023S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A023S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A023S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A023S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A024S00",
+                "seriesTitle": "Sesame Street",
+                "title": "The Furry Four"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A011S00",
+            "title": "Honk if You Love Libraries",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Honk if You Love Libraries",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A011S00_5d367cac7b353.jpg",
+            "description": "Librarian Grover helps Nina and Elmo find the books they need while looking through the different sections of the library.",
+            "pubDate": "2019-08-19 10:03:43",
+            "expireDate": "2019-09-18 10:03:43",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 3 days ago, available until 10:03am on 18 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A011S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Honk if You Love Libraries",
+                "episodeId": "ZW1939A011S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A011S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A011S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A011S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Honk if You Love Libraries",
+                "d_episode_id": "ZW1939A011S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A011S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A011S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A011S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A011S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A011S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A023S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Earth Day"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A021S00",
+            "title": "Julia's Haircut",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Julia's Haircut",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A021S00_5d12c33f232b2_1280.jpg",
+            "description": "Elmo, Abby and Alan play hair salon and pretend to be hair stylists to help Julia feel less scared about getting a haircut.",
+            "pubDate": "2019-08-18 10:02:51",
+            "expireDate": "2019-09-17 10:02:51",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1620,
+            "displayDuration": "27m",
+            "displayDurationAccessible": "27 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 4 days ago, available until 10:02am on 17 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A021S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Julia's Haircut",
+                "episodeId": "ZW1939A021S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A021S00",
+                "mediaDuration": 1620,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A021S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A021S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Julia's Haircut",
+                "d_episode_id": "ZW1939A021S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A021S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1620",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1595,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A021S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A021S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A021S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A021S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A011S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Honk if You Love Libraries"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A020S00",
+            "title": "Elmo the Engineer",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Elmo the Engineer",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A020S00_5d3fbcc7da463.jpg",
+            "description": "Elmo and his dad become engineers as they design a 'toy putter awayer' to help Elmo put away his toys.",
+            "pubDate": "2019-08-17 10:01:39",
+            "expireDate": "2019-09-16 10:01:39",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 5 days ago, available until 10:01am on 16 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A020S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Elmo the Engineer",
+                "episodeId": "ZW1939A020S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A020S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A020S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A020S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Elmo the Engineer",
+                "d_episode_id": "ZW1939A020S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A020S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A020S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A020S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A020S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A020S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A021S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Julia's Haircut"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A019S00",
+            "title": "Walking the Dog",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Walking the Dog",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A019S00_5d3fb72b35712.jpg",
+            "description": "Elmo wants to be a dog walker just like Dog Walker Grover. His friends help him practice by pretending to be different kinds of dogs.",
+            "pubDate": "2019-08-16 10:00:19",
+            "expireDate": "2019-09-15 10:00:19",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 6 days ago, available until 10:00am on 15 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A019S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Walking the Dog",
+                "episodeId": "ZW1939A019S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A019S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A019S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A019S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Walking the Dog",
+                "d_episode_id": "ZW1939A019S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A019S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A019S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A019S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A019S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A019S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A020S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Elmo the Engineer"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A018S00",
+            "title": "Elmo Goes to Chicken School",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Elmo Goes to Chicken School",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A018S00_5d3fb72ae0b30.jpg",
+            "description": "Elmo helps Professor Buck Awe teach a class of chickens using strategies he learned in preschool.",
+            "pubDate": "2019-08-15 10:00:50",
+            "expireDate": "2019-09-14 10:00:50",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 1 week ago, available until 10:00am on 14 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A018S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Elmo Goes to Chicken School",
+                "episodeId": "ZW1939A018S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A018S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A018S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A018S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Elmo Goes to Chicken School",
+                "d_episode_id": "ZW1939A018S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A018S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A018S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A018S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A018S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A018S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A019S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Walking the Dog"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A017S00",
+            "title": "Fishing X",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Fishing X",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A017S00_5d3fb27a9326d.jpg",
+            "description": "Big Bird and Snuffy are the hosts of 'The Letter of the Day Show' on Sesame Street and learn all about how the letter X can come at the end of a word.",
+            "pubDate": "2019-08-14 10:00:39",
+            "expireDate": "2019-09-13 10:00:39",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 1 week ago, available until 10:00am on 13 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A017S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Fishing X",
+                "episodeId": "ZW1939A017S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A017S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A017S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A017S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Fishing X",
+                "d_episode_id": "ZW1939A017S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A017S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A017S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A017S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A017S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A017S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A018S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Elmo Goes to Chicken School"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A016S00",
+            "title": "Mechanics in Space",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Mechanics in Space",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A016S00_5d3fb09735a64.jpg",
+            "description": "Rudy is pretending to be a space alien from another planet. When his space ship won't start, Abby and Elmo play mechanics. They figure out what the problem is and fix Rudy's space ship.",
+            "pubDate": "2019-08-13 10:01:36",
+            "expireDate": "2019-09-12 10:01:36",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 1 week ago, available until 10:01am on 12 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A016S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Mechanics in Space",
+                "episodeId": "ZW1939A016S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A016S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A016S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A016S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Mechanics in Space",
+                "d_episode_id": "ZW1939A016S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A016S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A016S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A016S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A016S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A016S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A017S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Fishing X"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A015S00",
+            "title": "Rudy Rides the Bus",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Rudy Rides the Bus",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A015S00_5d3fb096e3fac.jpg",
+            "description": "Elmo and Rudy play bus driver and bus monitor, driving a homemade bus and helping their friends get around Sesame Street.",
+            "pubDate": "2019-08-12 10:02:27",
+            "expireDate": "2019-09-11 10:02:27",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 1 week ago, available until 10:02am on 11 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A015S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Rudy Rides the Bus",
+                "episodeId": "ZW1939A015S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A015S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A015S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A015S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Rudy Rides the Bus",
+                "d_episode_id": "ZW1939A015S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A015S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A015S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A015S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A015S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A015S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A016S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Mechanics in Space"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A014S00",
+            "title": "Sesame Friendship",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Sesame Friendship",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A014S00_5d3fa919ca627.jpg",
+            "description": "Big Bird builds a tall block castle and it accidentally gets knocked down. Big Bird thinks Snuffy did it without letting him explain. With Alan and Nina's help, they learn to stand up for themselves, listen and apologise.",
+            "pubDate": "2019-08-11 10:02:09",
+            "expireDate": "2019-09-10 10:02:09",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 2 weeks ago, available until 10:02am on 10 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A014S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Sesame Friendship",
+                "episodeId": "ZW1939A014S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A014S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A014S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A014S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Sesame Friendship",
+                "d_episode_id": "ZW1939A014S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A014S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A014S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A014S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A014S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A014S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A015S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Rudy Rides the Bus"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A013S00",
+            "title": "The Big Pretend Band",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "The Big Pretend Band",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A013S00_5d367cb08c362.jpg",
+            "description": "Bert learns how to use his imagination and pretend play a saxophone so he can join his friends in their pretend band and play in a concert.",
+            "pubDate": "2019-08-10 10:01:28",
+            "expireDate": "2019-09-09 10:01:28",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 2 weeks ago, available until 10:01am on 9 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A013S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "The Big Pretend Band",
+                "episodeId": "ZW1939A013S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A013S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A013S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A013S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "The Big Pretend Band",
+                "d_episode_id": "ZW1939A013S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A013S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A013S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A013S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A013S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A013S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A014S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Sesame Friendship"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A012S00",
+            "title": "Elmo's Happy Little Train",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Elmo's Happy Little Train",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A012S00_5d367cae68a2e.jpg",
+            "description": "Elmo, Rosita, and Zoe play train and pretend to be the driver, conductor and passenger. They make up an adventure so Oscar can play too.",
+            "pubDate": "2019-08-09 10:01:19",
+            "expireDate": "2019-09-08 10:01:19",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 2 weeks ago, available until 10:01am on 8 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A012S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Elmo's Happy Little Train",
+                "episodeId": "ZW1939A012S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A012S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A012S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A012S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Elmo's Happy Little Train",
+                "d_episode_id": "ZW1939A012S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A012S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A012S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A012S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A012S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A012S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A013S00",
+                "seriesTitle": "Sesame Street",
+                "title": "The Big Pretend Band"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A022S00",
+            "title": "Dinosaur in the Laundromat",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Dinosaur in the Laundromat",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A022S00_5d37a7b672687.jpg",
+            "description": "There's a strange noise on Sesame Street that Rudy, Zoe, and Rosita keep hearing. To find out what's making this noise, they become scientists and observe, ask questions, and investigate.",
+            "pubDate": "2019-08-08 10:01:30",
+            "expireDate": "2019-09-07 10:01:30",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 2 weeks ago, available until 10:01am on 7 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A022S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Dinosaur in the Laundromat",
+                "episodeId": "ZW1939A022S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A022S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A022S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A022S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Dinosaur in the Laundromat",
+                "d_episode_id": "ZW1939A022S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A022S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A022S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A022S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A022S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A022S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A012S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Elmo's Happy Little Train"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A010S00",
+            "title": "Astronaut Elmo",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Astronaut Elmo",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A010S00_5d367cabc5818.jpg",
+            "description": "Rosita, Elmo and Abby pretend to be astronauts and use their imagination to go into space and with help from Chris, they figure out which 'space tool' to use to fix their ripped space ship.",
+            "pubDate": "2019-08-07 10:01:13",
+            "expireDate": "2019-09-06 10:01:13",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 2 weeks ago, available until 10:01am on 6 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A010S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Astronaut Elmo",
+                "episodeId": "ZW1939A010S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A010S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A010S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A010S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Astronaut Elmo",
+                "d_episode_id": "ZW1939A010S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A010S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A010S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A010S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A010S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A010S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A022S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Dinosaur in the Laundromat"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A009S00",
+            "title": "Bath Time For Blanky",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Bath Time For Blanky",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A009S00_5d367cab6c99b.jpg",
+            "description": "Abby brings Rudy to the laundromat to wash his stinky blanky. Grover is the new laundromat attendant but he doesn't know how to use the machines. Luckily Chris shows them all how to use a washing machine and dryer.",
+            "pubDate": "2019-08-06 10:01:41",
+            "expireDate": "2019-09-05 10:01:41",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 2 weeks ago, available until 10:01am on 5 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A009S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Bath Time For Blanky",
+                "episodeId": "ZW1939A009S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A009S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A009S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A009S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Bath Time For Blanky",
+                "d_episode_id": "ZW1939A009S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A009S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A009S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A009S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A009S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A009S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A010S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Astronaut Elmo"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A008S00",
+            "title": "Play Time",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Play Time",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A008S00_5d367cab41b17.jpg",
+            "description": "Nina, Elmo, Abby, Big Bird and Chris put on a play about Little Miss Muffet. With the actors, narrator, costume designer and set designer jobs already planned out , Nina helps Big Bird find his job as playwright.",
+            "pubDate": "2019-08-05 10:01:29",
+            "expireDate": "2019-09-04 10:01:29",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 2 weeks ago, available until 10:01am on 4 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A008S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Play Time",
+                "episodeId": "ZW1939A008S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A008S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A008S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A008S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Play Time",
+                "d_episode_id": "ZW1939A008S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A008S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A008S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A008S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A008S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A008S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A009S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Bath Time For Blanky"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A007S00",
+            "title": "New Year's Eve Show",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "New Year's Eve Show",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A007S00_5d366ad730f62.jpg",
+            "description": "It's New Year's Eve on Sesame Street. Rosita and Telly try to help Elmo stay awake until the new year so he can celebrate with his friends.",
+            "pubDate": "2019-08-04 10:01:50",
+            "expireDate": "2019-09-03 10:01:50",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 3 weeks ago, available until 10:01am on 3 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A007S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "New Year's Eve Show",
+                "episodeId": "ZW1939A007S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A007S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A007S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A007S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "New Year's Eve Show",
+                "d_episode_id": "ZW1939A007S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A007S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A007S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A007S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A007S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A007S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A008S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Play Time"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A006S00",
+            "title": "Math Magic",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Math Magic",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A006S00_5d2d404a18a9d.jpg",
+            "description": "Max the Magician amazes Rosita, Big Bird and Elmo with his magical, mathematical tricks.",
+            "pubDate": "2019-08-03 10:02:55",
+            "expireDate": "2019-09-02 10:02:55",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 3 weeks ago, available until 10:02am on 2 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A006S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Math Magic",
+                "episodeId": "ZW1939A006S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A006S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A006S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A006S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Math Magic",
+                "d_episode_id": "ZW1939A006S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A006S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A006S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A006S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A006S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A006S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A007S00",
+                "seriesTitle": "Sesame Street",
+                "title": "New Year's Eve Show"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A005S00",
+            "title": "Elmo's Factory",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Elmo's Factory",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A005S00_5d2d4049bf5c2.jpg",
+            "description": "Elmo has a lot of anything holders to make so Chris helps Elmo put together his own factory. Elmo's friends work as a team and each take on a different job to help make the anything holders quicker.",
+            "pubDate": "2019-08-02 10:02:26",
+            "expireDate": "2019-09-01 10:02:26",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 3 weeks ago, available until 10:02am on 1 Sep 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A005S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Elmo's Factory",
+                "episodeId": "ZW1939A005S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A005S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A005S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A005S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Elmo's Factory",
+                "d_episode_id": "ZW1939A005S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A005S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A005S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A005S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A005S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A005S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A006S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Math Magic"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A004S00",
+            "title": "So You Think Choreograph",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "So You Think Choreograph",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A004S00_5d2d40497a669.jpg",
+            "description": "Elmo and his friends are making a music video. They ask Zoe to be the choreographer, who comes up with the perfect dance and teaches everyone the moves.",
+            "pubDate": "2019-08-01 10:00:51",
+            "expireDate": "2019-08-31 10:00:51",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 3 weeks ago, available until 10:00am on 31 Aug 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A004S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "So You Think Choreograph",
+                "episodeId": "ZW1939A004S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A004S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A004S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A004S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "So You Think Choreograph",
+                "d_episode_id": "ZW1939A004S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A004S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A004S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A004S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A004S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A004S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A005S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Elmo's Factory"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A003S00",
+            "title": "Hey! Sesame Street News",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Hey! Sesame Street News",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A003S00_5d2d4049279c3.jpg",
+            "description": "Cookie Monster is a journalist for Abby and Big Bird's newspaper 'Hey Sesame Street News!', He solves the mystery of Chris' missing belt buckle by asking the five W questions: who, what, where, when and why.",
+            "pubDate": "2019-07-31 10:01:13",
+            "expireDate": "2019-08-30 10:01:13",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 3 weeks ago, available until 10:01am on 30 Aug 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A003S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Hey! Sesame Street News",
+                "episodeId": "ZW1939A003S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A003S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A003S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A003S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Hey! Sesame Street News",
+                "d_episode_id": "ZW1939A003S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A003S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A003S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A003S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A003S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A003S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A004S00",
+                "seriesTitle": "Sesame Street",
+                "title": "So You Think Choreograph"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A002S00",
+            "title": "Picture This",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Picture This",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A002S00_5d2d4048ed1f4.jpg",
+            "description": "Alan gives Elmo, Rosita, and Abby his old cameras to play with and suggests that they can be photographers for the day. So Abby, Rosita, and Elmo go around Sesame Street taking pictures and learning how to use their cameras.",
+            "pubDate": "2019-07-30 10:01:18",
+            "expireDate": "2019-08-29 10:01:18",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 3 weeks ago, available until 10:01am on 29 Aug 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A002S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "Picture This",
+                "episodeId": "ZW1939A002S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A002S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A002S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A002S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Picture This",
+                "d_episode_id": "ZW1939A002S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A002S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A002S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A002S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A002S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A002S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A003S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Hey! Sesame Street News"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZW1939A001S00",
+            "title": "When You're a Vet",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "When You're a Vet",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A001S00_5d2d4048bafa8.jpg",
+            "description": "Abby and Elmo play veterinarians. By using their eyes, ears and hands, Abby and Elmo figure out what's wrong with their pretend patients and help them feel better.",
+            "pubDate": "2019-07-29 10:01:18",
+            "expireDate": "2019-08-28 10:01:18",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1555,
+            "displayDuration": "26m",
+            "displayDurationAccessible": "26 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 3 weeks ago, available until 10:01am on 28 Aug 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZW1939A001S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZW1939A",
+                "episodeName": "When You're a Vet",
+                "episodeId": "ZW1939A001S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZW1939A001S00",
+                "mediaDuration": 1555,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZW1939A001S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZW1939A001S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "When You're a Vet",
+                "d_episode_id": "ZW1939A001S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A001S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1555",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1530,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A001S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZW1939A001S00"
+              },
+              "deeplink": {
+                "id": "ZW1939A001S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A001S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A002S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Picture This"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZX9851A009S00",
+            "title": "Episode 9",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Episode 9",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9851A009S0054ebf4efcdb157.33930240_1280.jpg",
+            "description": "Abby and Zoe are very excited for Leela to read them a story, but Leela keeps texting on her phone. Abby and Zoe become frustrated, so they decide to hide her phone, until she reads the story.",
+            "pubDate": "2019-07-28 10:00:05",
+            "expireDate": "2019-08-27 10:00:05",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1753,
+            "displayDuration": "29m",
+            "displayDurationAccessible": "29 minutes",
+            "classification": "G",
+            "captions": false,
+            "captionsOnAkamai": false,
+            "availability": "This episode was published 4 weeks ago, available until 10:00am on 27 Aug 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZX9851A009S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZX9851A",
+                "episodeName": "Episode 9",
+                "episodeId": "ZX9851A009S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZX9851A009S00",
+                "mediaDuration": 1753,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZX9851A009S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZX9851A009S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Episode 9",
+                "d_episode_id": "ZX9851A009S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZX9851A009S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1753",
+                "d_captionsAvailable": "false",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1728,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZX9851A009S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX9851A009S00"
+              },
+              "deeplink": {
+                "id": "ZX9851A009S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZX9851A009S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZW1939A001S00",
+                "seriesTitle": "Sesame Street",
+                "title": "When You're a Vet"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZX9851A008S00",
+            "title": "Episode 8",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Episode 8",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9851A008S0054ebf4e0c74561.07360129_1280.jpg",
+            "description": "Chris begins reading a story about a Mexican but Rosita stops him, explaining that there is so much more to being Mexican than siestas, sombreros, and burros. She wishes that there was a book that showed how she really lived.",
+            "pubDate": "2019-07-27 10:00:16",
+            "expireDate": "2019-08-26 10:00:16",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1768,
+            "displayDuration": "29m",
+            "displayDurationAccessible": "29 minutes",
+            "classification": "G",
+            "captions": false,
+            "captionsOnAkamai": false,
+            "availability": "This episode was published 4 weeks ago, available until 10:00am on 26 Aug 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZX9851A008S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZX9851A",
+                "episodeName": "Episode 8",
+                "episodeId": "ZX9851A008S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZX9851A008S00",
+                "mediaDuration": 1768,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZX9851A008S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZX9851A008S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Episode 8",
+                "d_episode_id": "ZX9851A008S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZX9851A008S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1768",
+                "d_captionsAvailable": "false",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1743,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZX9851A008S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX9851A008S00"
+              },
+              "deeplink": {
+                "id": "ZX9851A008S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZX9851A008S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZX9851A009S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Episode 9"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZX9851A007S00",
+            "title": "Episode 7",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Episode 7",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9851A007S00559a17ee8dc225.58514157_1280.jpg",
+            "description": "Alan is outside painting a picture of a bowl of fruit. Cookie Monster walks by and tries to eat the fruit, but thinks the bowl of fruit is there to eat. Alan stops him and explains that he is painting a picture of the fruit.",
+            "pubDate": "2019-07-26 09:59:32",
+            "expireDate": "2019-08-25 09:59:32",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "duration": 1752,
+            "displayDuration": "29m",
+            "displayDurationAccessible": "29 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 4 weeks ago, available until 9:59am on 25 Aug 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZX9851A007S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZX9851A",
+                "episodeName": "Episode 7",
+                "episodeId": "ZX9851A007S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZX9851A007S00",
+                "mediaDuration": 1752,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZX9851A007S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZX9851A007S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Episode 7",
+                "d_episode_id": "ZX9851A007S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZX9851A007S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1752",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1727,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZX9851A007S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX9851A007S00"
+              },
+              "deeplink": {
+                "id": "ZX9851A007S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZX9851A007S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZX9851A008S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Episode 8"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZX9851A006S00",
+            "title": "Episode 6",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Episode 6",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9851A006S00559a17e63034a3.40326285_1280.jpg",
+            "description": "Telly and Rosita decide to become robots to help Chris at Hooper's store. They call themselves the Help-O-Bots. At first they are a really big help but then they start going faster and end up making more of a mess for Chris.",
+            "pubDate": "2019-07-25 10:00:43",
+            "expireDate": "2019-08-24 10:00:43",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "light"
+            },
+            "duration": 1766,
+            "displayDuration": "29m",
+            "displayDurationAccessible": "29 minutes",
+            "classification": "G",
+            "captions": false,
+            "captionsOnAkamai": false,
+            "availability": "This episode was published 4 weeks ago, available until 10:00am on 24 Aug 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZX9851A006S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZX9851A",
+                "episodeName": "Episode 6",
+                "episodeId": "ZX9851A006S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZX9851A006S00",
+                "mediaDuration": 1766,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZX9851A006S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZX9851A006S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Episode 6",
+                "d_episode_id": "ZX9851A006S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZX9851A006S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1766",
+                "d_captionsAvailable": "false",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1741,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZX9851A006S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX9851A006S00"
+              },
+              "deeplink": {
+                "id": "ZX9851A006S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZX9851A006S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZX9851A007S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Episode 7"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          },
+          {
+            "channel": "abc4kids",
+            "channelTitle": "ABC Kids",
+            "type": "episode",
+            "houseNumber": "ZX9851A005S00",
+            "title": "Episode 5",
+            "showTitle": "Sesame Street",
+            "seriesTitle": "Sesame Street",
+            "displayTitle": "Sesame Street",
+            "displaySubtitle": "Episode 5",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9851A005S0054ebf4cdebd065.01470547_1280.jpg",
+            "description": "There's a big \"Simon Says\" competition on Sesame Street, and players from all over have come to see who is the best at \"Simon Says!\" Elmo was supposed to be the player for Sesame Street, but he is too young to play.",
+            "pubDate": "2019-07-24 10:00:15",
+            "expireDate": "2019-08-23 10:00:15",
+            "tags": [
+              "abc4kids",
+              "4learn",
+              "4upper",
+              "4song",
+              "4liveaction",
+              "4celebrity",
+              "4how-why"
+            ],
+            "status": {
+              "title": "LAST CHANCE",
+              "theme": "light"
+            },
+            "duration": 1734,
+            "displayDuration": "29m",
+            "displayDurationAccessible": "29 minutes",
+            "classification": "G",
+            "captions": false,
+            "captionsOnAkamai": false,
+            "availability": "This episode was published 4 weeks ago, available until 10:00am on 23 Aug 2019.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "ZX9851A005S00",
+                "classification": "G",
+                "seriesName": "Sesame Street",
+                "seriesId": "ZX9851A",
+                "episodeName": "Episode 5",
+                "episodeId": "ZX9851A005S00",
+                "channel": "abc4kids",
+                "demo1": "",
+                "url": "\/video\/ZX9851A005S00",
+                "mediaDuration": 1734,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "ZX9851A005S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/ZX9851A005S00",
+                "d_program_name": "Sesame Street",
+                "d_program_id": "122600",
+                "d_episode_name": "Episode 5",
+                "d_episode_id": "ZX9851A005S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZX9851A005S00",
+                "d_classification": "G",
+                "d_mediaDuration": "1734",
+                "d_captionsAvailable": "false",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Sesame Street",
+                "d_categories": "ABC Kids"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 1709,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZX9851A005S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/ZX9851A005S00"
+              },
+              "deeplink": {
+                "id": "ZX9851A005S00",
+                "href": "\/show\/sesame-street\/series\/0\/video\/ZX9851A005S00"
+              },
+              "show": {
+                "id": 122600,
+                "href": "\/show\/sesame-street"
+              },
+              "series": {
+                "id": "122600-0",
+                "href": "\/series\/sesame-street\/0"
+              },
+              "nextEpisode": {
+                "href": "\/video\/ZX9851A006S00",
+                "seriesTitle": "Sesame Street",
+                "title": "Episode 6"
+              },
+              "categories": [
+                {
+                  "id": "abc4kids",
+                  "title": "ABC KIDS",
+                  "href": "\/channel\/abc4kids"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "seriesList": [
+      {
+        "id": "122600-0",
+        "title": "Episodes",
+        "showTitle": "Sesame Street",
+        "displayTitle": "Sesame Street",
+        "displaySubtitle": "Episodes",
+        "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9851A54ed020ff0b3a6.31276911_1280.jpg",
+        "description": "Join Big Bird, Oscar, Bert, Cookie Monster, the Count and many other characters to learn the alphabet and to count with Count von Count, but most of all just have a good time.",
+        "_entity": "series",
+        "_links": {
+          "self": {
+            "href": "\/series\/sesame-street\/0"
+          },
+          "deeplink": {
+            "href": "\/show\/sesame-street\/series\/0"
+          },
+          "show": {
+            "href": "\/show\/sesame-street"
+          }
+        }
+      }
+    ]
+  }
+}

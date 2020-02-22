@@ -1,0 +1,131 @@
+{
+  "channel": "abc4kids",
+  "channelTitle": "ABC Kids",
+  "type": "episode",
+  "houseNumber": "ZW1939A016S00",
+  "title": "Mechanics in Space",
+  "showTitle": "Sesame Street",
+  "seriesTitle": "Sesame Street",
+  "displayTitle": "Sesame Street",
+  "displaySubtitle": "Mechanics in Space",
+  "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A016S00_5d3fb09735a64.jpg",
+  "description": "Rudy is pretending to be a space alien from another planet. When his space ship won't start, Abby and Elmo play mechanics. They figure out what the problem is and fix Rudy's space ship.",
+  "pubDate": "2019-08-13 10:01:36",
+  "expireDate": "2019-09-12 10:01:36",
+  "tags": [
+    "abc4kids",
+    "4learn",
+    "4upper",
+    "4song",
+    "4liveaction",
+    "4celebrity",
+    "4how-why"
+  ],
+  "duration": 1555,
+  "displayDuration": "26m",
+  "displayDurationAccessible": "26 minutes",
+  "classification": "G",
+  "captions": true,
+  "captionsOnAkamai": true,
+  "availability": "This episode was published 4 hours ago, available until 10:01am on 12 Sep 2019.",
+  "analytics": {
+    "oztam": {
+      "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+      "mediaId": "ZW1939A016S00",
+      "classification": "G",
+      "seriesName": "Sesame Street",
+      "seriesId": "ZW1939A",
+      "episodeName": "Mechanics in Space",
+      "episodeId": "ZW1939A016S00",
+      "channel": "abc4kids",
+      "demo1": "",
+      "url": "\/video\/ZW1939A016S00",
+      "mediaDuration": 1555,
+      "mediaType": "vod"
+    },
+    "dataLayer": {
+      "d_id": "ZW1939A016S00",
+      "d_contentType": "video",
+      "d_contentSource": "iview",
+      "d_uri": "iview:\/\/video\/ZW1939A016S00",
+      "d_program_name": "Sesame Street",
+      "d_program_id": "122600",
+      "d_episode_name": "Mechanics in Space",
+      "d_episode_id": "ZW1939A016S00",
+      "d_language": "null",
+      "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/ZW1939A016S00",
+      "d_classification": "G",
+      "d_mediaDuration": "1555",
+      "d_captionsAvailable": "true",
+      "d_streamType": "ondemand",
+      "d_videoType": "series",
+      "d_title_title": "Sesame Street",
+      "d_categories": "ABC Kids"
+    }
+  },
+  "playable": true,
+  "nextVideoCuepoint": 1530,
+  "shareUrl": "https:\/\/iview.abc.net.au\/show\/sesame-street\/series\/0\/video\/ZW1939A016S00",
+  "_entity": "video",
+  "_links": {
+    "self": {
+      "href": "\/video\/ZW1939A016S00"
+    },
+    "deeplink": {
+      "id": "ZW1939A016S00",
+      "href": "\/show\/sesame-street\/series\/0\/video\/ZW1939A016S00"
+    },
+    "show": {
+      "id": 122600,
+      "href": "\/show\/sesame-street"
+    },
+    "series": {
+      "id": "122600-0",
+      "href": "\/series\/sesame-street\/0"
+    },
+    "nextEpisode": {
+      "href": "\/video\/ZX9851A001S00",
+      "seriesTitle": "Sesame Street",
+      "title": "Episode 1"
+    },
+    "categories": [
+      {
+        "id": "abc4kids",
+        "title": "ABC KIDS",
+        "href": "\/channel\/abc4kids"
+      }
+    ]
+  },
+  "_embedded": {
+    "playlist": [
+      {
+        "type": "program",
+        "stream-labels": {
+          "sd": "SD - HBR",
+          "sd-low": "SD - 650k"
+        },
+        "streams": {
+          "mpegdash": {
+            "sd": "https:\/\/iview-vod.akamaized.net\/prod\/zw1\/ZW1939A016S00MA1D1\/20190731135521\/mpegdash\/master.mpd",
+            "sd-low": "https:\/\/iview-vod.akamaized.net\/prod\/zw1\/ZW1939A016S00MA1D1\/20190731135521\/mpegdash\/master.mpd",
+            "protected": true
+          },
+          "fairplay": {
+            "sd": "https:\/\/iview-vod.akamaized.net\/prod\/zw1\/ZW1939A016S00MA1D1\/20190731135521\/fairplay\/master.m3u8",
+            "sd-low": "https:\/\/iview-vod.akamaized.net\/prod\/zw1\/ZW1939A016S00MA1D1\/20190731135521\/fairplay\/master.m3u8",
+            "protected": true
+          },
+          "hls": {
+            "sd": "https:\/\/iviewhlsvod-vh.akamaihd.net\/i\/playback\/_definst_\/_video\/zw1\/ZW1939A016S00MA1D1_20190731135521_,1500000,1000000,650000,500000,220000,.mp4.csmil\/master.m3u8?subtitle_file_pattern=identifier_langcode&subtitle_identifier=ZW1939A016S00MA1D1_5d4e903d4a700&subtitle_location=%2Fplayback%2Fcaptions%2Fprod%2Fzw",
+            "sd-low": "https:\/\/iviewhlsvod-vh.akamaihd.net\/i\/playback\/_definst_\/_video\/zw1\/ZW1939A016S00MA1D1_20190731135521_,650000,500000,220000,.mp4.csmil\/master.m3u8?subtitle_file_pattern=identifier_langcode&subtitle_identifier=ZW1939A016S00MA1D1_5d4e903d4a700&subtitle_location=%2Fplayback%2Fcaptions%2Fprod%2Fzw",
+            "protected": false
+          }
+        },
+        "captions": {
+          "src-vtt": "https:\/\/iview.abc.net.au\/cc\/zw\/ZW1939A016S00MA1D1_5d4e903d4a700.vtt",
+          "live": "0"
+        }
+      }
+    ]
+  }
+}
