@@ -2,8 +2,8 @@
 <settings>
   <!-- Settings -->
   <category label="30001">
-    <setting id="SHOW_COLLECTIONS" label="30008" type="enum" lvalues="30009|30010" default="0" />
-    <setting id="USE_IA" label="30004" type="bool" default="false" />
+    <setting id="SHOW_COLLECTIONS" label="30008" type="enum" lvalues="30009|30010" default="1" />
+    <setting id="USE_IA" label="30004" type="bool" default="true" />
     <setting label="30006" type="action" action="RunPlugin(plugin://plugin.video.abc_iview/?action=open_ia_settings)" option="close"/>
   </category>
   <!-- Debugging -->
