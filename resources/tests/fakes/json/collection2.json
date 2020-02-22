@@ -1,0 +1,440 @@
+{
+  "id": 419,
+  "title": "ABC KIDS Favourites",
+  "description": "Watch your favourite ABC KIDS programs live or on demand anytime, anywhere, on your computer, tablet or smartphone",
+  "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1812H_5e1d314749f87.jpg",
+  "collectionLink": {
+    "title": "More ABC KIDS programs",
+    "href": "\/channel\/abc4kids"
+  },
+  "items": [
+    {
+      "id": 122555,
+      "type": "series",
+      "title": "Play School",
+      "displayTitle": "Play School",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1812H_5e1d314749f87.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d70914ac8d87_720.jpg"
+      },
+      "episodeCount": 21,
+      "updated": "2020-02-10 09:34:01",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/play-school"
+        },
+        "deeplink": {
+          "href": "\/show\/play-school"
+        }
+      }
+    },
+    {
+      "id": 123123,
+      "type": "series",
+      "title": "Giggle And Hoot",
+      "displayTitle": "Giggle And Hoot",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ck\/CK1922H_5e39efb87b493.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb9f05ad5c_720.jpg"
+      },
+      "episodeCount": 34,
+      "updated": "2020-02-05 11:20:03",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/giggle-and-hoot"
+        },
+        "deeplink": {
+          "href": "\/show\/giggle-and-hoot"
+        }
+      }
+    },
+    {
+      "id": 123543,
+      "type": "series",
+      "title": "Bananas In Pyjamas",
+      "displayTitle": "Bananas In Pyjamas",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1142H_5afb98a825672_1575.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb13473013_720.jpg"
+      },
+      "episodeCount": 60,
+      "updated": "2020-02-10 10:05:02",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/bananas-in-pyjamas"
+        },
+        "deeplink": {
+          "href": "\/show\/bananas-in-pyjamas"
+        }
+      }
+    },
+    {
+      "id": 122462,
+      "type": "series",
+      "title": "Get Grubby TV",
+      "displayTitle": "Get Grubby TV",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1620H_59a4fee935422.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5e2f720690635_720.jpg"
+      },
+      "episodeCount": 19,
+      "updated": "2019-10-29 17:50:14",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/get-grubby-tv"
+        },
+        "deeplink": {
+          "href": "\/show\/get-grubby-tv"
+        }
+      }
+    },
+    {
+      "id": 123916,
+      "type": "series",
+      "title": "dirtgirlworld",
+      "displayTitle": "dirtgirlworld",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH0701H550a06e5d77746.78078640_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb9350be32_720.jpg"
+      },
+      "episodeCount": 11,
+      "updated": "2020-02-10 14:10:03",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/dirtgirlworld"
+        },
+        "deeplink": {
+          "href": "\/show\/dirtgirlworld"
+        }
+      }
+    },
+    {
+      "id": 122790,
+      "type": "series",
+      "title": "Emma!",
+      "displayTitle": "Emma!",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1831A_5ce790690bef2_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb95da283d_720.jpg"
+      },
+      "episodeCount": 25,
+      "updated": "2020-02-03 16:42:03",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/emma"
+        },
+        "deeplink": {
+          "href": "\/show\/emma"
+        }
+      }
+    },
+    {
+      "id": 122600,
+      "type": "series",
+      "title": "Sesame Street",
+      "displayTitle": "Sesame Street",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1939A_5d12c3306db15_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4ccef1f1ad2_720.jpg"
+      },
+      "episodeCount": 60,
+      "updated": "2020-02-10 11:05:02",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/sesame-street"
+        },
+        "deeplink": {
+          "href": "\/show\/sesame-street"
+        }
+      }
+    },
+    {
+      "id": 167334,
+      "type": "series",
+      "title": "The Justine Clarke Show!",
+      "displayTitle": "The Justine Clarke Show!",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1621H_5a1cee0920c1a.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc0aad26ae_720.jpg"
+      },
+      "episodeCount": 15,
+      "updated": "2020-01-24 10:14:02",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/justine-clarke-show"
+        },
+        "deeplink": {
+          "href": "\/show\/justine-clarke-show"
+        }
+      }
+    },
+    {
+      "id": 123995,
+      "type": "series",
+      "title": "Kazoops!",
+      "displayTitle": "Kazoops!",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1465H57a43a07e9a6d6.06354962_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc0fdbf0cf_720.jpg"
+      },
+      "episodeCount": 30,
+      "updated": "2020-02-10 11:30:05",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/kazoops"
+        },
+        "deeplink": {
+          "href": "\/show\/kazoops"
+        }
+      }
+    },
+    {
+      "id": 124149,
+      "type": "series",
+      "title": "hoopla doopla!",
+      "displayTitle": "hoopla doopla!",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1216H54f7f1438e4448.11954359_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bbf9a0351d_720.jpg"
+      },
+      "episodeCount": 20,
+      "updated": "2020-02-09 14:30:04",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/hoopla-doopla"
+        },
+        "deeplink": {
+          "href": "\/show\/hoopla-doopla"
+        }
+      }
+    },
+    {
+      "id": 123865,
+      "type": "series",
+      "title": "Shaun The Sheep",
+      "displayTitle": "Shaun The Sheep",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY9555A_5a447b7a67e65_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4ccf0457d72_720.jpg"
+      },
+      "episodeCount": 10,
+      "updated": "2020-02-09 20:02:02",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/shaun-the-sheep"
+        },
+        "deeplink": {
+          "href": "\/show\/shaun-the-sheep"
+        }
+      }
+    },
+    {
+      "id": 124448,
+      "type": "series",
+      "title": "Octonauts",
+      "displayTitle": "Octonauts",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9200A55c99192495383.24002380_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4ccf80d3255_720.jpg"
+      },
+      "episodeCount": 30,
+      "updated": "2020-02-09 19:15:02",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/octonauts"
+        },
+        "deeplink": {
+          "href": "\/show\/octonauts"
+        }
+      }
+    },
+    {
+      "id": 124394,
+      "type": "series",
+      "title": "Ben And Holly's Little Kingdom",
+      "displayTitle": "Ben And Holly's Little Kingdom",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9371A_5e0923fa7cfb3_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb2d712ba2_720.jpg"
+      },
+      "episodeCount": 30,
+      "updated": "2020-02-10 09:35:02",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/ben-and-holly-s-little-kingdom"
+        },
+        "deeplink": {
+          "href": "\/show\/ben-and-holly-s-little-kingdom"
+        }
+      }
+    },
+    {
+      "id": 124348,
+      "type": "series",
+      "title": "Bing",
+      "displayTitle": "Bing",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9673A_5afa63a513d3b_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb387886fd_720.jpg",
+        "character1": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5dd36621504d6_720.png"
+      },
+      "episodeCount": 14,
+      "updated": "2020-02-10 12:15:02",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/bing"
+        },
+        "deeplink": {
+          "href": "\/show\/bing"
+        }
+      }
+    },
+    {
+      "id": 123430,
+      "type": "series",
+      "title": "Peppa Pig",
+      "displayTitle": "Peppa Pig",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1636A_5e09228c16063_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4cd0658024b_720.jpg"
+      },
+      "episodeCount": 31,
+      "updated": "2020-02-10 09:05:02",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/peppa-pig"
+        },
+        "deeplink": {
+          "href": "\/show\/peppa-pig"
+        }
+      }
+    },
+    {
+      "id": 123203,
+      "type": "series",
+      "title": "Hey Duggee",
+      "displayTitle": "Hey Duggee",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW1224A_5e09232b7b209_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bbf850edb3_720.jpg"
+      },
+      "episodeCount": 14,
+      "updated": "2020-02-09 19:55:02",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/hey-duggee"
+        },
+        "deeplink": {
+          "href": "\/show\/hey-duggee"
+        }
+      }
+    },
+    {
+      "id": 124041,
+      "type": "series",
+      "title": "Arthur",
+      "displayTitle": "Arthur",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW2048A_5e267bb703f47.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bb0f665b45_720.jpg"
+      },
+      "episodeCount": 6,
+      "updated": "2020-02-09 15:26:03",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/arthur"
+        },
+        "deeplink": {
+          "href": "\/show\/arthur"
+        }
+      }
+    },
+    {
+      "id": "ZX8931A001S00",
+      "type": "feature",
+      "houseNumber": "ZX8931A001S00",
+      "title": "Octonauts And The Mariana Trench Adventure",
+      "showTitle": "Octonauts And The Mariana Trench Adventure",
+      "displayTitle": "Octonauts And The Mariana Trench Adventure",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX8931A001S00_5d50fbf16ce6b_1280.jpg",
+      "duration": 1380,
+      "displayDuration": "23m",
+      "displayDurationAccessible": "23 minutes",
+      "_entity": "video",
+      "_links": {
+        "self": {
+          "href": "\/video\/ZX8931A001S00"
+        },
+        "deeplink": {
+          "id": "ZX8931A001S00",
+          "href": "\/show\/octonauts-and-the-mariana-trench-adventure\/video\/ZX8931A001S00"
+        }
+      }
+    },
+    {
+      "id": 123826,
+      "type": "series",
+      "title": "Justine Clarke: I Like To Sing!",
+      "displayTitle": "Justine Clarke: I Like To Sing!",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zx\/ZX9959A_5ae9445560f83_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc049afc93_720.jpg"
+      },
+      "episodeCount": 13,
+      "updated": "2019-08-08 16:25:13",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/justine-clarke-i-like-to-sing"
+        },
+        "deeplink": {
+          "href": "\/show\/justine-clarke-i-like-to-sing"
+        }
+      }
+    },
+    {
+      "id": 122504,
+      "type": "series",
+      "title": "Justine Clarke: Songs To Make You Smile",
+      "displayTitle": "Justine Clarke: Songs To Make You Smile",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zy\/ZY9852A550f8ef81b4093.13020014_1280.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5d4bc06d8e8a6_720.jpg"
+      },
+      "episodeCount": 14,
+      "updated": "2019-08-08 16:25:49",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/justine-clarke-songs-to-make-you-smile"
+        },
+        "deeplink": {
+          "href": "\/show\/justine-clarke-songs-to-make-you-smile"
+        }
+      }
+    }
+  ],
+  "_entity": "collection",
+  "_links": {
+    "self": {
+      "href": "\/collection\/419"
+    }
+  }
+}

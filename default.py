@@ -1,7 +1,7 @@
 import sys
 
 from aussieaddonscommon import utils
-print utils
+
 
 from resources.lib import categories
 from resources.lib import collect
@@ -13,8 +13,6 @@ from resources.lib import series
 
 import xbmcaddon
 
-import xbmcgui
-
 # Print our platform/version debugging information
 utils.log_kodi_platform_version()
 
@@ -22,7 +20,6 @@ utils.log_kodi_platform_version()
 def main():
     params_str = sys.argv[2]
     params = utils.get_url(params_str)
-
     addon = xbmcaddon.Addon()
     if (len(params) == 0):
         categories.make_category_list()
@@ -32,11 +29,13 @@ def main():
 
         if action in ['program_list', 'livestreams']:
             play.play(params_str)
-        elif action == 'series_list':
+        elif action in ['series_list']:
             if params.get('type') == 'Series':
                 programs.make_programs_list(params)
             else:
                 play.play(params_str)
+        elif action == 'collect_list':
+            series.make_series_list(params, atoz=False)
         elif action == 'category_list':
             category = params.get('category')
             if category == 'settings':
@@ -46,7 +45,10 @@ def main():
             elif category == 'search':
                 search.make_search_history_list()
             else:
-                series.make_series_list(params)
+                if addon.getSetting('SHOW_COLLECTIONS') == '1':
+                    collect.make_collect_list(params)
+                else:
+                    series.make_series_list(params)
         elif action == 'searchhistory':
             if params.get('name') == 'New Search':
                 search.get_search_input()

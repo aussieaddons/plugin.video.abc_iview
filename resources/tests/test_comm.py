@@ -35,6 +35,8 @@ class CommTests(testtools.TestCase):
             self.CHANNEL_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/collection.json'), 'rb') as f:
             self.COLLECTION_JSON = io.BytesIO(f.read()).read()
+        with open(os.path.join(cwd, 'fakes/json/collection2.json'), 'rb') as f:
+            self.COLLECTION2_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/show.json'), 'rb') as f:
             self.SHOW_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/video_ss.json'), 'rb') as f:
@@ -117,6 +119,29 @@ class CommTests(testtools.TestCase):
             self.assertTrue(observed.startswith(('channel', 'category')))
 
     @responses.activate
+    def test_get_collections_from_feed(self):
+        responses.add('GET',
+                      config.API_BASE_URL.format(path='/v2/channel/Foobar'),
+                      body=self.CHANNEL_JSON)
+        observed = comm.get_collections_from_feed(
+            {'category': '/channel/Foobar', 'collection_id': '419'})
+        self.assertEqual(
+            [x.get('title') for x in
+             json.loads(self.CHANNEL_JSON)['_embedded'].get('collections')],
+            [x.get_title() for x in observed])
+
+    @responses.activate
+    def test_get_collection_from_feed(self):
+        responses.add('GET',
+                      config.API_BASE_URL.format(path='/v2/collection/419'),
+                      body=self.COLLECTION2_JSON)
+        observed = comm.get_collection_from_feed({'title': '/channel/Foobar',
+                                                  'collection_id': '419'})
+        self.assertEqual([x.get('title') for x in
+                          json.loads(self.COLLECTION2_JSON).get('items')],
+                         [x.title for x in observed])
+
+    @responses.activate
     def test_get_programme_from_feed(self):
         channel_path = '/channel/abc4kids'
         channel_url = config.API_BASE_URL.format(
@@ -126,8 +151,8 @@ class CommTests(testtools.TestCase):
             path='/v2{0}'.format(collection_path))
         responses.add(responses.GET, channel_url, body=self.CHANNEL_JSON)
         responses.add(responses.GET, collection_url, body=self.COLLECTION_JSON)
-        observed = comm.get_programme_from_feed(channel_path)
-        import json
+        observed = comm.get_atoz_programme_from_feed(
+            {'category': channel_path})
         self.assertEqual([x.get('title') for x in
                           json.loads(self.COLLECTION_JSON).get('items')],
                          [x.title for x in observed])

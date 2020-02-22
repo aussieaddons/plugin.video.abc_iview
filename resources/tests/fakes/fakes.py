@@ -229,6 +229,26 @@ EXPECTED_CATEGORY_TITLES = [
     'Settings'
 ]
 
+EXPECTED_COLLECTION_TITLES = [
+    'ABC KIDS: A-Z',
+    'ABC KIDS Favourites',
+    'ABC KIDS Latest Episodes',
+    'ABC KIDS Shows Expiring Soon',
+    "Andy's Adventures",
+    'Arts and Crafts Time',
+    'Fun and Games',
+    'Giggle and Hoot: Giggle Party Time!',
+    'Giggle and Hoot: Owl Pals',
+    'Kiddets: New Episodes',
+    'Mandarin Favourites',
+    'Peppa Pig: New Episodes',
+    'Puggles',
+    'Rusty Rivets: New Episodes',
+    'Science Week on ABC KIDS',
+    'Teach Me How',
+    'Winter Wonders'
+]
+
 EXPECTED_CATEGORY_PATHS = [
     '/channel/abc1',
     '/channel/abc2',

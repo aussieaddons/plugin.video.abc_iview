@@ -44,8 +44,7 @@ class ParseTests(testtools.TestCase):
         collection_url = config.API_BASE_URL.format(
             path='/v2{0}'.format(collection_path))
         responses.add(responses.GET, collection_url, body=self.COLLECTION_JSON)
-        observed = parse.parse_programme_from_feed(self.CHANNEL_JSON)
-        import json
+        observed = parse.parse_programme_from_feed(self.COLLECTION_JSON)
         self.assertEqual([x.get('title') for x in
                           json.loads(self.COLLECTION_JSON).get('items')],
                          [x.title for x in observed])
@@ -57,3 +56,8 @@ class ParseTests(testtools.TestCase):
         expected_episode_titles = [x.get('title') for x in json_data]
         observed_episode_titles = [x.episode_title for x in observed]
         self.assertEqual(expected_episode_titles, observed_episode_titles)
+
+    def test_parse_collections_from_feed(self):
+        observed = parse.parse_collections_from_feed(self.CHANNEL_JSON)
+        self.assertEqual(17, len(observed))
+        self.assertEqual('ABC KIDS Favourites', observed[0].get_title())

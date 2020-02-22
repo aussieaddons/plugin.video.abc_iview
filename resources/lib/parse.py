@@ -26,17 +26,20 @@ def parse_categories(config):
     return categories_list
 
 
-def parse_programme_from_feed(data):
+def parse_collections_from_feed(data):
+    listing = []
     collection_json_data = json.loads(data)['_embedded'].get('collections')
-
     for collection in collection_json_data:
         if collection.get('title'):
-            if 'a-z' in collection['title'].lower():
-                collection_id = collection.get('id')
-    import resources.lib.comm as comm
-    json_data = json.loads(comm.fetch_url(config.API_BASE_URL.format(
-        path='/v2/collection/{0}'.format(collection_id))))
+            c = classes.Collect()
+            c.title = collection.get('title')
+            c.collection_id = collection.get('id')
+            listing.append(c)
+    return listing
 
+
+def parse_programme_from_feed(data):
+    json_data = json.loads(data)
     show_list = []
     for show in json_data.get('items'):
         if show.get('_entity') == 'show':

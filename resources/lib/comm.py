@@ -69,7 +69,6 @@ def cookies_to_string(cookiejar):
 
 
 def get_stream_url(hn, path):
-
     with session.Session() as sess:
         video_url = config.API_BASE_URL.format(path='/v2{0}'.format(path))
         utils.log("Fetching stream URL: {0}".format(video_url))
@@ -125,13 +124,36 @@ def get_cached_feed(url):
     return feed
 
 
-def get_programme_from_feed(keyword):
-    keyword = validate_category(keyword)
-    utils.log('Getting programme from feed ({0})'.format(keyword))
+def get_collections_from_feed(params):
+    utils.log(
+        'Getting collections from feed ({0})'.format(params.get('category')))
+    feed = get_cached_feed(config.API_BASE_URL.format(
+        path='/v2{0}'.format(params.get('category'))))
+    collects = parse.parse_collections_from_feed(feed)
+    return collects
+
+
+def get_collection_from_feed(params):
+    keyword = params.get('collection_id')
+    utils.log('Getting collection from feed ({0})'.format(params.get('title')))
     feed = get_cached_feed(
-        config.API_BASE_URL.format(path='/v2{0}'.format(keyword)))
-    shows = parse.parse_programme_from_feed(feed)
-    return shows
+        config.API_BASE_URL.format(path='/v2/collection/{0}'.format(keyword)))
+    collection = parse.parse_programme_from_feed(feed)
+    return collection
+
+
+def get_atoz_programme_from_feed(params):
+    params['category'] = validate_category(params['category'])
+    collects = get_collections_from_feed(params)
+    atoz_list = [x for x in collects if 'a-z' in x.get_title().lower()]
+    if len(atoz_list) > 0:
+        atoz_id = atoz_list[0].collection_id
+        feed = get_cached_feed(config.API_BASE_URL.format(
+            path='/v2/collection/{0}'.format(atoz_id)))
+        shows = parse.parse_programme_from_feed(feed)
+        return shows
+    else:
+        return atoz_list
 
 
 def get_series_from_feed(series_url):

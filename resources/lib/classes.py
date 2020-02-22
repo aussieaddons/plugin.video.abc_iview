@@ -103,6 +103,14 @@ class Series(object):
         return url
 
 
+class Collect(Series):
+    def __init__(self):
+        super(Series, self).__init__()
+        self.type = 'Collection'
+        self.collection_id = None
+        self.num_episodes = 0
+
+
 @total_ordering
 class Program(object):
 
@@ -148,9 +156,8 @@ class Program(object):
             dt = time.mktime(time.strptime(timestamp, '%Y-%m-%d %H:%M:%S'))
             return datetime.datetime.fromtimestamp(dt)
         except Exception:
-            raise
             utils.log_error("Couldn't parse timestamp: %s" % timestamp)
-        return
+            raise
 
     def is_captions(self):
         return self.captions

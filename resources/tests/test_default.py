@@ -52,7 +52,8 @@ class DefaultTests(testtools.TestCase):
                                        xbmcplugin=self.mock_plugin)
         self.patcher.start()
         self.addCleanup(self.patcher.stop)
-        for module in ['categories', 'search', 'series', 'programs', 'play']:
+        for module in ['categories', 'search', 'series', 'programs', 'play',
+                       'collect']:
             setattr(self, module,
                     importlib.import_module(
                         'resources.lib.{0}'.format(module)))
@@ -272,6 +273,54 @@ class DefaultTests(testtools.TestCase):
         responses.add(responses.GET, search_url, body=self.SEARCH_JSON)
         default.main()
         for index, expected in enumerate(fakes.EXPECTED_SEARCH_TITLES):
+            url = self.mock_plugin.directory[index].get('url')
+            url_query = dict(parse_qsl(urlparse(url)[4]))
+            observed = url_query.get('title')
+            self.assertEqual(expected, observed)
+
+    @mock.patch('xbmcaddon.Addon.getSetting')
+    @mock.patch('xbmcgui.ListItem')
+    @mock.patch('sys.argv',
+                ['plugin://plugin.video.abc_iview/', '5',
+                 '?action=category_list&category=%2fchannel%2fabc4kids',
+                 'resume:false'])
+    @responses.activate
+    def test_default_collections(self, mock_listitem, mock_setting):
+        mock_listitem.side_effect = fakes.FakeListItem
+        mock_setting.return_value = '1'
+        channel_path = '/channel/abc4kids'
+        channel_url = config.API_BASE_URL.format(
+            path='/v2{0}'.format(channel_path))
+        responses.add(responses.GET, channel_url, body=self.CHANNEL_JSON)
+
+        default.main()
+        for index, expected in enumerate(fakes.EXPECTED_COLLECTION_TITLES):
+            url = self.mock_plugin.directory[index].get('url')
+            url_query = dict(parse_qsl(urlparse(url)[4]))
+            observed = url_query.get('title')
+            self.assertEqual(expected, observed)
+
+    @mock.patch('xbmcgui.ListItem')
+    @mock.patch('sys.argv',
+                ['plugin://plugin.video.abc_iview/', '5',
+                 '?action=collect_list&collection_id=419&title=ABC%20KIDS'
+                 '%20Favourites',
+                 'resume:false'])
+    @responses.activate
+    def test_default_collection(self, mock_listitem):
+        mock_listitem.side_effect = fakes.FakeListItem
+        channel_path = '/channel/abc4kids'
+        channel_url = config.API_BASE_URL.format(
+            path='/v2{0}'.format(channel_path))
+        collection_path = '/collection/419'
+        collection_url = config.API_BASE_URL.format(
+            path='/v2{0}'.format(collection_path))
+        responses.add(responses.GET, channel_url, body=self.CHANNEL_JSON)
+        responses.add(responses.GET, collection_url,
+                      body=self.COLLECTION_JSON)
+
+        default.main()
+        for index, expected in enumerate(fakes.EXPECTED_SERIES_TITLES):
             url = self.mock_plugin.directory[index].get('url')
             url_query = dict(parse_qsl(urlparse(url)[4]))
             observed = url_query.get('title')
