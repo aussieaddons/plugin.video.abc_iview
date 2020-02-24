@@ -28,6 +28,8 @@ class SearchTests(testtools.TestCase):
         cwd = os.path.join(os.getcwd(), 'resources/tests')
         with open(os.path.join(cwd, 'fakes/json/search.json'), 'rb') as f:
             self.SEARCH_JSON = io.BytesIO(f.read()).read()
+        with open(os.path.join(cwd, 'fakes/json/search_fail.json'), 'rb') as f:
+            self.SEARCH_NORESULTS_JSON = io.BytesIO(f.read()).read()
 
     def setUp(self):
         super(SearchTests, self).setUp()
@@ -113,3 +115,24 @@ class SearchTests(testtools.TestCase):
             url_query = dict(parse_qsl(urlparse(url)[4]))
             observed = url_query.get('title')
             self.assertEqual(expected, observed)
+
+    @mock.patch('xbmcgui.ListItem')
+    @mock.patch('sys.argv',
+                ['plugin://plugin.video.abc_iview/', '5',
+                 '?action=searchhistory&name=les%20norton',
+                 'resume:false'])
+    @responses.activate
+    def test_make_search_list_no_results(self, mock_listitem):
+        mock_listitem.side_effect = fakes.FakeListItem
+        search_path = '/search?keyword=les%20norton'
+        search_url = config.API_BASE_URL.format(
+            path='/v2{0}'.format(search_path))
+        responses.add(responses.GET, search_url,
+                      body=self.SEARCH_NORESULTS_JSON)
+        search.make_search_list({'name': 'les norton'})
+        expected = 'No results!'
+        url = self.mock_plugin.directory[0].get('url')
+        url_query = dict(parse_qsl(urlparse(url)[4]))
+        observed = url_query.get('title')
+        self.assertEqual(expected, observed)
+        self.assertEqual('True', url_query.get('dummy'))

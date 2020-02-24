@@ -26,6 +26,7 @@ class Series(object):
         self.thumb = None
         self.type = 'Series'
         self.url = None
+        self.dummy = None
 
     def __repr__(self):
         return self.title
@@ -134,6 +135,7 @@ class Program(object):
         self.captions = False
         self.house_number = None
         self.type = 'Program'
+        self.dummy = None
 
     def __repr__(self):
         return self.title

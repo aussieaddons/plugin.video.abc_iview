@@ -31,7 +31,10 @@ def main():
             play.play(params_str)
         elif action in ['series_list']:
             if params.get('type') == 'Series':
-                programs.make_programs_list(params)
+                if params.get('dummy') == 'True':
+                    return
+                else:
+                    programs.make_programs_list(params)
             else:
                 play.play(params_str)
         elif action == 'collect_list':

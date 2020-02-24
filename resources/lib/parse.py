@@ -198,7 +198,7 @@ def parse_livestreams_from_feed(data):
 def parse_search_results(data):
     json_data = json.loads(data)
     show_list = []
-    for show in json_data['results'].get('items'):
+    for show in json_data['results'].get('items', []):
         if show.get('_entity') == 'show':
             s = classes.Series()
             s.num_episodes = show.get('episodeCount')
@@ -218,12 +218,15 @@ def parse_search_results(data):
             s.duration = show.get('duration')
             s.house_number = show.get('houseNumber')
             s.url = show.get('_links').get('self').get('href')
-
         else:
             continue
-
         s.description = show.get('title')
         s.thumb = show.get('thumbnail')
-
+        show_list.append(s)
+    if len(show_list) == 0:
+        s = classes.Series()
+        s.title = 'No results!'
+        s.num_episodes = 0
+        s.dummy = True
         show_list.append(s)
     return show_list

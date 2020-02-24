@@ -101,11 +101,12 @@ def make_search_list(params):
                                         iconImage=thumb,
                                         thumbnailImage=thumb)
             listitem.setInfo('video', {'plot': s.get_description()})
+            folder = False
             if s.type == 'Program':
                 listitem.setProperty('IsPlayable', 'true')
-                folder = False
             else:
-                folder = True
+                if not s.dummy:
+                    folder = True
 
             # add the item to the media list
             ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),
