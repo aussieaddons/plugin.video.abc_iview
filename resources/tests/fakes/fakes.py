@@ -249,6 +249,16 @@ EXPECTED_COLLECTION_TITLES = [
     'Winter Wonders'
 ]
 
+EXPECTED_MULTISERIES_TITLES = [
+    'Gardening Australia (S31E04): Series 31 Episode 4',
+    'Gardening Australia (S31E03): Series 31 Episode 3',
+    'Gardening Australia (S31E02): Series 31 Episode 2',
+    'Gardening Australia (S31E01): Series 31 Episode 1',
+    'Series 28',
+    'Series 29',
+    'Series 30'
+]
+
 EXPECTED_CATEGORY_PATHS = [
     '/channel/abc1',
     '/channel/abc2',

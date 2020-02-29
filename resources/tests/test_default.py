@@ -38,6 +38,9 @@ class DefaultTests(testtools.TestCase):
             self.SEARCH_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/show.json'), 'rb') as f:
             self.SHOW_JSON = io.BytesIO(f.read()).read()
+        with open(os.path.join(cwd, 'fakes/json/show_multiseries.json'),
+                  'rb') as f:
+            self.SHOW_MULTISERIES_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/video_ss.json'), 'rb') as f:
             self.VIDEO_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/live_video.json'), 'rb') as f:
@@ -60,7 +63,9 @@ class DefaultTests(testtools.TestCase):
             self.assertEqual(self.mock_plugin,
                              getattr(self, module).xbmcplugin)
         global default
+        global classes
         default = importlib.import_module('default')
+        classes = importlib.import_module('resources.lib.classes')
 
     def tearDown(self):
         super(DefaultTests, self).tearDown()
@@ -324,4 +329,37 @@ class DefaultTests(testtools.TestCase):
             url = self.mock_plugin.directory[index].get('url')
             url_query = dict(parse_qsl(urlparse(url)[4]))
             observed = url_query.get('title')
+            self.assertEqual(expected, observed)
+
+    @mock.patch('resources.lib.classes.utils.get_kodi_major_version')
+    @mock.patch('xbmcgui.ListItem')
+    @mock.patch('sys.argv',
+                ['plugin://plugin.video.abc_iview/', '5',
+                 '?action=series_list&description=Gardening%20Australia'
+                 '&num_episodes=124&thumb=https%3a%2f%2fcdn.iview.abc.net.au'
+                 '%2fthumbs%2fi%2frf%2fRF1905V_5e267529eccbc.jpg&title'
+                 '=Gardening%20Australia&type=Series&url=%2fshow%2fgardening'
+                 '-australia',
+                 'resume:false'])
+    @responses.activate
+    def test_default_collection_with_multi_series(self, mock_listitem,
+                                                  mock_version):
+        mock_listitem.side_effect = fakes.FakeListItem
+        mock_version.return_value = '15'
+        series_path = '/show/gardening-australia'
+        series_url = config.API_BASE_URL.format(
+            path='/v2{0}'.format(series_path))
+        responses.add(responses.GET, series_url,
+                      body=self.SHOW_MULTISERIES_JSON)
+        default.main()
+        for index, expected in enumerate(fakes.EXPECTED_MULTISERIES_TITLES):
+            url = self.mock_plugin.directory[index].get('url')
+            url_query = dict(parse_qsl(urlparse(url)[4]))
+            if url_query.get('type') == 'Program':
+                o = classes.Program()
+                o.parse_kodi_url(urlparse(url)[4])
+            elif url_query.get('type') == 'Series':
+                o = classes.Series()
+                o.parse_kodi_url(urlparse(url)[4])
+            observed = o.get_list_title()
             self.assertEqual(expected, observed)

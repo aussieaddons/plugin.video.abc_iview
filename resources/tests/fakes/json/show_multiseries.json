@@ -1,0 +1,666 @@
+{
+  "id": 122768,
+  "slug": "gardening-australia",
+  "type": "series",
+  "title": "Gardening Australia",
+  "displayTitle": "Gardening Australia",
+  "description": "Join Logie winning host Costa Georgiadis and the team on Australia's most popular lifestyle show for all the gardening know-how and inspiration.",
+  "theme": "default",
+  "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1905V_5e267529eccbc.jpg",
+  "episodeCount": 124,
+  "socialLinks": {
+    "title": "Find us on",
+    "items": [
+      {
+        "id": "facebook",
+        "title": "Facebook",
+        "href": "https:\/\/www.facebook.com\/gardeningaustralia"
+      },
+      {
+        "id": "instagram",
+        "title": "Instagram",
+        "href": "https:\/\/www.instagram.com\/gardeningaustralia\/"
+      },
+      {
+        "id": "youtube",
+        "title": "YouTube",
+        "href": "https:\/\/www.youtube.com\/channel\/UCzzsltdnAgTMSlPOvjko_Dw"
+      }
+    ]
+  },
+  "participants": [
+    {
+      "title": "Host",
+      "list": "Costa Georgiadis"
+    }
+  ],
+  "relatedLinks": [
+    {
+      "title": "Gardening Australia Website",
+      "href": "http:\/\/www.abc.net.au\/gardening\/"
+    },
+    {
+      "title": "Contact Gardening Australia",
+      "href": "https:\/\/www.abc.net.au\/gardening\/contact-us\/"
+    }
+  ],
+  "shareUrl": "https:\/\/iview.abc.net.au\/show\/gardening-australia",
+  "updated": "2020-02-28 20:30:04",
+  "tags": [
+    "abc1",
+    "aussie",
+    "lifestyle",
+    "regional",
+    "home",
+    "garden",
+    "featured-lifestyle"
+  ],
+  "_entity": "show",
+  "_links": {
+    "self": {
+      "href": "\/show\/gardening-australia"
+    },
+    "deeplink": {
+      "href": "\/show\/gardening-australia"
+    },
+    "related": {
+      "href": "\/related\/show\/gardening-australia"
+    },
+    "categories": [
+      {
+        "id": "abc1",
+        "title": "ABC",
+        "href": "\/channel\/abc1"
+      },
+      {
+        "id": "lifestyle",
+        "title": "LIFESTYLE",
+        "href": "\/category\/lifestyle"
+      },
+      {
+        "id": "regional",
+        "title": "REGIONAL AUSTRALIA",
+        "href": "\/category\/regional"
+      }
+    ],
+    "selectedSeries": {
+      "id": "31",
+      "href": "\/series\/gardening-australia\/31"
+    },
+    "highlightVideo": {
+      "id": "RF1905V004S00",
+      "href": "\/video\/RF1905V004S00",
+      "playTitle": "Watch Latest Episode"
+    }
+  },
+  "_embedded": {
+    "selectedSeries": {
+      "id": "122768-31",
+      "title": "Series 31",
+      "showTitle": "Gardening Australia",
+      "description": "Join Logie winning host Costa Georgiadis and the team on Australia's most popular lifestyle show for all the gardening know-how and inspiration.",
+      "displayTitle": "Gardening Australia",
+      "displaySubtitle": "Series 31",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1905V_5e267529eccbc.jpg",
+      "episodeCount": 4,
+      "participants": [
+        {
+          "title": "Host",
+          "list": "Costa Georgiadis"
+        }
+      ],
+      "_entity": "series",
+      "_links": {
+        "self": {
+          "href": "\/series\/gardening-australia\/31"
+        },
+        "deeplink": {
+          "href": "\/show\/gardening-australia\/series\/31"
+        },
+        "show": {
+          "href": "\/show\/gardening-australia"
+        }
+      },
+      "_embedded": {
+        "videoEpisodes": [
+          {
+            "id": "RF1905V004S00",
+            "channel": "abc1",
+            "channelTitle": "ABC",
+            "type": "episode",
+            "houseNumber": "RF1905V004S00",
+            "title": "Series 31 Episode 4",
+            "showTitle": "Gardening Australia",
+            "seriesTitle": "Gardening Australia",
+            "displayTitle": "Gardening Australia",
+            "displaySubtitle": "Episode 4",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1905V004S00_5e44b8d270244_1280.jpg",
+            "description": "Jerry Coleby-Williams explores a restored mangrove wetland, Costa Georgiadis visits a wheat farm, Tino Carnevale meets a gardener just shy of 100 and we meet a creative duo capturing plants in stunning detail.",
+            "pubDate": "2020-02-28 20:28:00",
+            "expireDate": "2023-02-27 20:28:00",
+            "tags": [
+              "abc1",
+              "aussie",
+              "lifestyle",
+              "regional",
+              "home",
+              "garden",
+              "featured-lifestyle"
+            ],
+            "duration": 3404,
+            "displayDuration": "57m",
+            "displayDurationAccessible": "57 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 12 hours ago.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "RF1905V004S00",
+                "classification": "G",
+                "seriesName": "Gardening Australia",
+                "seriesId": "RF1905V",
+                "episodeName": "Series 31 Episode 4",
+                "episodeId": "RF1905V004S00",
+                "channel": "abc1",
+                "demo1": "",
+                "url": "\/video\/RF1905V004S00",
+                "mediaDuration": 3404,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "RF1905V004S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/RF1905V004S00",
+                "d_program_name": "Gardening Australia",
+                "d_program_id": "122768",
+                "d_series_name": "Series 31",
+                "d_series_id": "122768-31",
+                "d_episode_name": "Series 31 Episode 4",
+                "d_episode_id": "RF1905V004S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/RF1905V004S00",
+                "d_classification": "G",
+                "d_mediaDuration": "3404",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Gardening Australia",
+                "d_categories": "ABC, Lifestyle, Regional Australia"
+              }
+            },
+            "playable": true,
+            "doneCuePoint": 3384,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/gardening-australia\/series\/31\/video\/RF1905V004S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/RF1905V004S00"
+              },
+              "deeplink": {
+                "id": "RF1905V004S00",
+                "href": "\/show\/gardening-australia\/series\/31\/video\/RF1905V004S00"
+              },
+              "show": {
+                "id": 122768,
+                "href": "\/show\/gardening-australia"
+              },
+              "series": {
+                "id": "122768-31",
+                "href": "\/series\/gardening-australia\/31"
+              },
+              "categories": [
+                {
+                  "id": "abc1",
+                  "title": "ABC",
+                  "href": "\/channel\/abc1"
+                },
+                {
+                  "id": "lifestyle",
+                  "title": "LIFESTYLE",
+                  "href": "\/category\/lifestyle"
+                },
+                {
+                  "id": "regional",
+                  "title": "REGIONAL AUSTRALIA",
+                  "href": "\/category\/regional"
+                }
+              ]
+            }
+          },
+          {
+            "id": "RF1905V003S00",
+            "channel": "abc1",
+            "channelTitle": "ABC",
+            "type": "episode",
+            "houseNumber": "RF1905V003S00",
+            "title": "Series 31 Episode 3",
+            "showTitle": "Gardening Australia",
+            "seriesTitle": "Gardening Australia",
+            "displayTitle": "Gardening Australia",
+            "displaySubtitle": "Episode 3",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1905V003S00_5e3a29d9e1335.jpg",
+            "description": "Costa Georgiadis visits a rental garden brimming with Aussie native plants in pots, Josh Byrne learns how a native marsupial is regenerating its plant filled habitat, Sophie Thomson visits an artist's stunning home garden.",
+            "pubDate": "2020-02-21 20:32:00",
+            "expireDate": "2023-02-20 20:32:00",
+            "tags": [
+              "abc1",
+              "aussie",
+              "lifestyle",
+              "regional",
+              "home",
+              "garden",
+              "featured-lifestyle"
+            ],
+            "duration": 3445,
+            "displayDuration": "57m",
+            "displayDurationAccessible": "57 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 1 week ago.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "RF1905V003S00",
+                "classification": "G",
+                "seriesName": "Gardening Australia",
+                "seriesId": "RF1905V",
+                "episodeName": "Series 31 Episode 3",
+                "episodeId": "RF1905V003S00",
+                "channel": "abc1",
+                "demo1": "",
+                "url": "\/video\/RF1905V003S00",
+                "mediaDuration": 3445,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "RF1905V003S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/RF1905V003S00",
+                "d_program_name": "Gardening Australia",
+                "d_program_id": "122768",
+                "d_series_name": "Series 31",
+                "d_series_id": "122768-31",
+                "d_episode_name": "Series 31 Episode 3",
+                "d_episode_id": "RF1905V003S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/RF1905V003S00",
+                "d_classification": "G",
+                "d_mediaDuration": "3445",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Gardening Australia",
+                "d_categories": "ABC, Lifestyle, Regional Australia"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 3425,
+            "doneCuePoint": 3425,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/gardening-australia\/series\/31\/video\/RF1905V003S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/RF1905V003S00"
+              },
+              "deeplink": {
+                "id": "RF1905V003S00",
+                "href": "\/show\/gardening-australia\/series\/31\/video\/RF1905V003S00"
+              },
+              "show": {
+                "id": 122768,
+                "href": "\/show\/gardening-australia"
+              },
+              "series": {
+                "id": "122768-31",
+                "href": "\/series\/gardening-australia\/31"
+              },
+              "nextEpisode": {
+                "href": "\/video\/RF1905V004S00",
+                "seriesTitle": "Gardening Australia",
+                "title": "Series 31 Episode 4"
+              },
+              "categories": [
+                {
+                  "id": "abc1",
+                  "title": "ABC",
+                  "href": "\/channel\/abc1"
+                },
+                {
+                  "id": "lifestyle",
+                  "title": "LIFESTYLE",
+                  "href": "\/category\/lifestyle"
+                },
+                {
+                  "id": "regional",
+                  "title": "REGIONAL AUSTRALIA",
+                  "href": "\/category\/regional"
+                }
+              ]
+            }
+          },
+          {
+            "id": "RF1905V002S00",
+            "channel": "abc1",
+            "channelTitle": "ABC",
+            "type": "episode",
+            "houseNumber": "RF1905V002S00",
+            "title": "Series 31 Episode 2",
+            "showTitle": "Gardening Australia",
+            "seriesTitle": "Gardening Australia",
+            "displayTitle": "Gardening Australia",
+            "displaySubtitle": "Episode 2",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1905V002S00_5e2fcbc6f18be.jpg",
+            "description": "Costa Georgiadis visits a farming club for city kids, Sophie Thomson gets summer watering tips from an expert, Tino Carnevale explores the secret world of saltmarshes and Josh Byrne propagates succulents.",
+            "pubDate": "2020-02-14 20:32:00",
+            "expireDate": "2023-02-13 20:32:00",
+            "tags": [
+              "abc1",
+              "aussie",
+              "lifestyle",
+              "regional",
+              "home",
+              "garden",
+              "featured-lifestyle"
+            ],
+            "duration": 3497,
+            "displayDuration": "58m",
+            "displayDurationAccessible": "58 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 2 weeks ago.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "RF1905V002S00",
+                "classification": "G",
+                "seriesName": "Gardening Australia",
+                "seriesId": "RF1905V",
+                "episodeName": "Series 31 Episode 2",
+                "episodeId": "RF1905V002S00",
+                "channel": "abc1",
+                "demo1": "",
+                "url": "\/video\/RF1905V002S00",
+                "mediaDuration": 3497,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "RF1905V002S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/RF1905V002S00",
+                "d_program_name": "Gardening Australia",
+                "d_program_id": "122768",
+                "d_series_name": "Series 31",
+                "d_series_id": "122768-31",
+                "d_episode_name": "Series 31 Episode 2",
+                "d_episode_id": "RF1905V002S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/RF1905V002S00",
+                "d_classification": "G",
+                "d_mediaDuration": "3497",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Gardening Australia",
+                "d_categories": "ABC, Lifestyle, Regional Australia"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 3477,
+            "doneCuePoint": 3477,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/gardening-australia\/series\/31\/video\/RF1905V002S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/RF1905V002S00"
+              },
+              "deeplink": {
+                "id": "RF1905V002S00",
+                "href": "\/show\/gardening-australia\/series\/31\/video\/RF1905V002S00"
+              },
+              "show": {
+                "id": 122768,
+                "href": "\/show\/gardening-australia"
+              },
+              "series": {
+                "id": "122768-31",
+                "href": "\/series\/gardening-australia\/31"
+              },
+              "nextEpisode": {
+                "href": "\/video\/RF1905V003S00",
+                "seriesTitle": "Gardening Australia",
+                "title": "Series 31 Episode 3"
+              },
+              "categories": [
+                {
+                  "id": "abc1",
+                  "title": "ABC",
+                  "href": "\/channel\/abc1"
+                },
+                {
+                  "id": "lifestyle",
+                  "title": "LIFESTYLE",
+                  "href": "\/category\/lifestyle"
+                },
+                {
+                  "id": "regional",
+                  "title": "REGIONAL AUSTRALIA",
+                  "href": "\/category\/regional"
+                }
+              ]
+            }
+          },
+          {
+            "id": "RF1905V001S00",
+            "channel": "abc1",
+            "channelTitle": "ABC",
+            "type": "episode",
+            "houseNumber": "RF1905V001S00",
+            "title": "Series 31 Episode 1",
+            "showTitle": "Gardening Australia",
+            "seriesTitle": "Gardening Australia",
+            "displayTitle": "Gardening Australia",
+            "displaySubtitle": "Episode 1",
+            "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1905V001S00_5e26752adc308.jpg",
+            "description": "Costa Georgiadis visits the home of permaculture, Sophie Thomson visits waterside accommodation for native bees, Tino Carnevale prunes stone fruit at The Patch and we explore Bundjalung country with Clarence Slockee.",
+            "pubDate": "2020-02-07 20:31:52",
+            "expireDate": "2023-02-06 20:31:52",
+            "tags": [
+              "abc1",
+              "aussie",
+              "lifestyle",
+              "regional",
+              "home",
+              "garden",
+              "featured-lifestyle"
+            ],
+            "duration": 3459,
+            "displayDuration": "58m",
+            "displayDurationAccessible": "58 minutes",
+            "classification": "G",
+            "captions": true,
+            "captionsOnAkamai": true,
+            "availability": "This episode was published 3 weeks ago.",
+            "analytics": {
+              "oztam": {
+                "publisherId": "5D3923E9-AC02-497C-BD9A-098C5CD3B9D3",
+                "mediaId": "RF1905V001S00",
+                "classification": "G",
+                "seriesName": "Gardening Australia",
+                "seriesId": "RF1905V",
+                "episodeName": "Series 31 Episode 1",
+                "episodeId": "RF1905V001S00",
+                "channel": "abc1",
+                "demo1": "",
+                "url": "\/video\/RF1905V001S00",
+                "mediaDuration": 3459,
+                "mediaType": "vod"
+              },
+              "dataLayer": {
+                "d_id": "RF1905V001S00",
+                "d_contentType": "video",
+                "d_contentSource": "iview",
+                "d_uri": "iview:\/\/video\/RF1905V001S00",
+                "d_program_name": "Gardening Australia",
+                "d_program_id": "122768",
+                "d_series_name": "Series 31",
+                "d_series_id": "122768-31",
+                "d_episode_name": "Series 31 Episode 1",
+                "d_episode_id": "RF1905V001S00",
+                "d_language": "null",
+                "d_canonicalUrl": "https:\/\/iview.abc.net.au\/video\/RF1905V001S00",
+                "d_classification": "G",
+                "d_mediaDuration": "3459",
+                "d_captionsAvailable": "true",
+                "d_streamType": "ondemand",
+                "d_videoType": "series",
+                "d_title_title": "Gardening Australia",
+                "d_categories": "ABC, Lifestyle, Regional Australia"
+              }
+            },
+            "playable": true,
+            "nextVideoCuepoint": 3439,
+            "doneCuePoint": 3439,
+            "shareUrl": "https:\/\/iview.abc.net.au\/show\/gardening-australia\/series\/31\/video\/RF1905V001S00",
+            "_entity": "video",
+            "_links": {
+              "self": {
+                "href": "\/video\/RF1905V001S00"
+              },
+              "deeplink": {
+                "id": "RF1905V001S00",
+                "href": "\/show\/gardening-australia\/series\/31\/video\/RF1905V001S00"
+              },
+              "show": {
+                "id": 122768,
+                "href": "\/show\/gardening-australia"
+              },
+              "series": {
+                "id": "122768-31",
+                "href": "\/series\/gardening-australia\/31"
+              },
+              "nextEpisode": {
+                "href": "\/video\/RF1905V002S00",
+                "seriesTitle": "Gardening Australia",
+                "title": "Series 31 Episode 2"
+              },
+              "categories": [
+                {
+                  "id": "abc1",
+                  "title": "ABC",
+                  "href": "\/channel\/abc1"
+                },
+                {
+                  "id": "lifestyle",
+                  "title": "LIFESTYLE",
+                  "href": "\/category\/lifestyle"
+                },
+                {
+                  "id": "regional",
+                  "title": "REGIONAL AUSTRALIA",
+                  "href": "\/category\/regional"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "seriesList": [
+      {
+        "id": "122768-28",
+        "title": "Series 28",
+        "showTitle": "Gardening Australia",
+        "displayTitle": "Gardening Australia",
+        "displaySubtitle": "Series 28",
+        "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/fa\/FA1605V_58afb009e6021_1280.jpg",
+        "description": "Costa and the team bring you practical advice, guided tours of inspiring gardens, plus handy hints, floral eye candy & the country's best gardening characters & innovators. #ABCgardening",
+        "_entity": "series",
+        "_links": {
+          "self": {
+            "href": "\/series\/gardening-australia\/28"
+          },
+          "deeplink": {
+            "href": "\/show\/gardening-australia\/series\/28"
+          },
+          "show": {
+            "href": "\/show\/gardening-australia"
+          }
+        }
+      },
+      {
+        "id": "122768-29",
+        "title": "Series 29",
+        "showTitle": "Gardening Australia",
+        "displayTitle": "Gardening Australia",
+        "displaySubtitle": "Series 29",
+        "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/fa\/FA1705V_5a5ec4684f37d.jpg",
+        "status": {
+          "title": "ALL EPISODES",
+          "theme": "default"
+        },
+        "description": "For almost 30 years Gardening Australia has provided practical, trustworthy and credible gardening advice to inspire and entertain. Join Costa Georgiadis and the team as they traverse the country unearthing the best gardens.",
+        "_entity": "series",
+        "_links": {
+          "self": {
+            "href": "\/series\/gardening-australia\/29"
+          },
+          "deeplink": {
+            "href": "\/show\/gardening-australia\/series\/29"
+          },
+          "show": {
+            "href": "\/show\/gardening-australia"
+          }
+        }
+      },
+      {
+        "id": "122768-30",
+        "title": "Series 30",
+        "showTitle": "Gardening Australia",
+        "displayTitle": "Gardening Australia",
+        "displaySubtitle": "Series 30",
+        "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1805V_5d2bdefe99da6_1280.jpg",
+        "description": "Inspiring, entertaining and full of practical advice, join Costa Georgiadis and the team as they unearth gardening ideas, meet avid gardeners and look at some of the most inspiring gardens from across the country.",
+        "_entity": "series",
+        "_links": {
+          "self": {
+            "href": "\/series\/gardening-australia\/30"
+          },
+          "deeplink": {
+            "href": "\/show\/gardening-australia\/series\/30"
+          },
+          "show": {
+            "href": "\/show\/gardening-australia"
+          }
+        }
+      },
+      {
+        "id": "122768-31",
+        "title": "Series 31",
+        "showTitle": "Gardening Australia",
+        "displayTitle": "Gardening Australia",
+        "displaySubtitle": "Series 31",
+        "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/rf\/RF1905V_5e267529eccbc.jpg",
+        "description": "Join Logie winning host Costa Georgiadis and the team on Australia's most popular lifestyle show for all the gardening know-how and inspiration.",
+        "_entity": "series",
+        "_links": {
+          "self": {
+            "href": "\/series\/gardening-australia\/31"
+          },
+          "deeplink": {
+            "href": "\/show\/gardening-australia\/series\/31"
+          },
+          "show": {
+            "href": "\/show\/gardening-australia"
+          }
+        }
+      }
+    ]
+  }
+}

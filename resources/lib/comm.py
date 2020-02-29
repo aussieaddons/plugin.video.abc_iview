@@ -156,11 +156,12 @@ def get_atoz_programme_from_feed(params):
         return atoz_list
 
 
-def get_series_from_feed(series_url):
+def get_series_from_feed(series_url, from_series_list=False):
     utils.log('Fetching series from feed')
+    query = '?embed=seriesList,selectedSeries'
     feed = get_cached_feed(config.API_BASE_URL.format(path='/v2{0}{1}'.format(
-        series_url, '?embed=seriesList,selectedSeries')))
-    return parse.parse_programs_from_feed(feed)
+        series_url, query)))
+    return parse.parse_programs_from_feed(feed, from_series_list)
 
 
 def get_livestreams_from_feed():

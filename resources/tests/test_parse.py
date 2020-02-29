@@ -27,6 +27,9 @@ class ParseTests(testtools.TestCase):
             self.COLLECTION_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/show.json'), 'rb') as f:
             self.SHOW_JSON = io.BytesIO(f.read()).read()
+        with open(os.path.join(cwd, 'fakes/json/show_multiseries.json'),
+                  'rb') as f:
+            self.SHOW_MULTISERIES_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/video_ss.json'), 'rb') as f:
             self.VIDEO_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/video_tb.json'), 'rb') as f:
@@ -56,6 +59,22 @@ class ParseTests(testtools.TestCase):
         expected_episode_titles = [x.get('title') for x in json_data]
         observed_episode_titles = [x.episode_title for x in observed]
         self.assertEqual(expected_episode_titles, observed_episode_titles)
+
+    def test_get_series_from_feed_with_extra_series(self):
+        observed = parse.parse_programs_from_feed(self.SHOW_MULTISERIES_JSON)
+        json_data = json.loads(self.SHOW_MULTISERIES_JSON)
+        current_series_data = json_data['_embedded']['selectedSeries'][
+            '_embedded'].get('videoEpisodes')
+        series_json_data = json_data['_embedded']['seriesList']
+        expected_titles = [x.get('title') for x in current_series_data]
+        expected_titles.extend(
+            [x.get('title') for x in series_json_data if x.get('id') !=
+             json_data['_embedded']['selectedSeries']['id']])
+        observed_titles = [
+            x.episode_title for x in observed if x.type == 'Program']
+        observed_titles.extend(
+            [x.title for x in observed if x.type == 'Series'])
+        self.assertEqual(expected_titles, observed_titles)
 
     def test_parse_collections_from_feed(self):
         observed = parse.parse_collections_from_feed(self.CHANNEL_JSON)
