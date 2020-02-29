@@ -345,7 +345,7 @@ class DefaultTests(testtools.TestCase):
     def test_default_collection_with_multi_series(self, mock_listitem,
                                                   mock_version):
         mock_listitem.side_effect = fakes.FakeListItem
-        mock_version.return_value = '15'
+        mock_version.return_value = 15
         series_path = '/show/gardening-australia'
         series_url = config.API_BASE_URL.format(
             path='/v2{0}'.format(series_path))

@@ -36,7 +36,7 @@ def make_programs_list(params):
                 fanart = params.get('fanart')
                 folder = True
                 url = "{0}?action=series_list&{1}".format(sys.argv[0],
-                                                           p.make_kodi_url())
+                                                          p.make_kodi_url())
 
             listitem.setArt({'fanart': fanart})
 
@@ -49,6 +49,5 @@ def make_programs_list(params):
 
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='episodes')
-    except Exception as e:
+    except Exception:
         utils.handle_error('Unable to fetch program list')
-        raise e

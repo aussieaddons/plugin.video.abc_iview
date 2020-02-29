@@ -115,6 +115,5 @@ def make_search_list(params):
                                              isFolder=folder)
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]), succeeded=ok)
         xbmcplugin.setContent(handle=int(sys.argv[1]), content='tvshows')
-    except Exception as e:
+    except Exception:
         utils.handle_error('Unable to fetch search history list')
-        raise e

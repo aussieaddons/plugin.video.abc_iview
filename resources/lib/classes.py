@@ -389,41 +389,6 @@ class Program(object):
             url += '&{0}={1}'.format(key, val)
         return url
 
-    def make_xbmc_url(self):
-        """Make XBMC url
-
-        Returns a string which represents the program object, but in
-        a format suitable for passing as a URL.
-        """
-        d = {}
-        if self.id:
-            d['id'] = self.id
-        if self.title:
-            d['title'] = self.title
-        if self.episode_title:
-            d['episode_title'] = self.episode_title
-        if self.description:
-            d['description'] = self.description
-        if self.duration:
-            d['duration'] = self.duration
-        if self.category:
-            d['category'] = self.category
-        if self.rating:
-            d['rating'] = self.rating
-        if self.date:
-            d['date'] = self.date.strftime("%Y-%m-%d %H:%M:%S")
-        if self.thumb:
-            d['thumb'] = self.thumb
-        if self.url:
-            d['url'] = self.url
-        if self.subtitle_url:
-            d['subtitle_url'] = self.subtitle_url
-        if self.house_number:
-            d['house_number'] = self.house_number
-        if self.hq:
-            d['hq'] = self.hq
-        return utils.make_url(d)
-
     def parse_kodi_url(self, url):
         params = dict(parse_qsl(url))
         for item in params.keys():
@@ -434,27 +399,3 @@ class Program(object):
             self.date = self.parse_datetime(self.date)
         if getattr(self, 'expire', None):
             self.expire = self.parse_datetime(self.expire)
-
-    def parse_xbmc_url(self, string):
-        """Parse XBMC URL
-
-        Takes a string input which is a URL representation of the
-        program object
-        """
-        d = utils.get_url(string)
-        self.id = d.get('id')
-        self.title = d.get('title')
-        self.episode_title = d.get('episode_title')
-        self.description = d.get('description')
-        self.duration = d.get('duration')
-        self.category = d.get('category')
-        self.rating = d.get('rating')
-        self.url = d.get('url')
-        self.thumb = unquote_plus(d.get('thumb'))
-        self.subtitle_url = d.get('subtitle_url')
-        self.house_number = d.get('house_number')
-        self.hq = d.get('hq')
-        if 'date' in d:
-            timestamp = time.mktime(time.strptime(d['date'],
-                                                  '%Y-%m-%d %H:%M:%S'))
-            self.date = datetime.date.fromtimestamp(timestamp)
