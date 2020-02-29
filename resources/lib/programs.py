@@ -25,12 +25,10 @@ def make_programs_list(params):
                                            p.get_kodi_audio_stream_info())
                     listitem.addStreamInfo('video',
                                            p.get_kodi_video_stream_info())
-                fanart = p.get_fanart()
                 folder = False
                 url = "{0}?action=program_list&{1}".format(sys.argv[0],
                                                            p.make_kodi_url())
             else:
-                fanart = params.get('fanart')
                 folder = True
                 url = "{0}?action=series_list&{1}".format(sys.argv[0],
                                                           p.make_kodi_url())

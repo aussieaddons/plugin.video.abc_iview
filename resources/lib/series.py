@@ -33,8 +33,6 @@ def make_series_list(params, atoz=True):
             else:
                 folder = True
 
-
-
             # add the item to the media list
             ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),
                                              url=url,
