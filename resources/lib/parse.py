@@ -202,7 +202,6 @@ def parse_livestreams_from_feed(data):
         path='/v2/collection/{0}'.format(collection_id)))
     json_data = json.loads(data)
     programs_list = []
-    fanart = json_data.get('thumbnail')
 
     for item in json_data.get('items'):
         if item.get('type') != 'livestream':
@@ -213,8 +212,7 @@ def parse_livestreams_from_feed(data):
         p.house_number = item.get('houseNumber')
         p.description = item.get('description')
         p.thumb = item.get('thumbnail')
-        if fanart:
-            p.fanart = fanart
+        p.fanart = item.get('thumbnail')
         p.url = item['_links']['self'].get('href')
         p.rating = item.get('classification')
         p.duration = item.get('duration')
