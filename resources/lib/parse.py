@@ -38,6 +38,63 @@ def parse_collections_from_feed(data):
     return listing
 
 
+def parse_subtitle(p, item):
+    # Convoluted Season/Episode parsing
+    title_parts = None
+
+    subtitle = item.get('title')
+    if subtitle:
+        # Series 2 Episode 25 Home Is Where The Hatch Is
+        # Series 4 Ep:11 As A Yoga Yuppie
+        # Series 4 Ep 10: Emission Impossible
+        title_match = re.search(
+            '^[Ss]eries\\s?(?P<series>\\w+):?\\s[Ee]p(isode)?:?\\s?('
+            '?P<episode>\\d+):?\\s(?P<episode_title>.*)$',
+            subtitle)  # noqa: E501
+        if not title_match:
+            # Series 8 Episode 13
+            # Series 8 Episode:13
+            title_match = re.search(
+                '^[Ss]eries\\s?(?P<series>\\w+):?\\s?[Ee]p(isode)?:?\\s?('
+                '?P<episode>\\d+)$',
+                subtitle)  # noqa: E501
+        if not title_match:
+            # Episode 34 Shape Shifter
+            # Ep:34 Shape Shifter
+            title_match = re.search(
+                '^[Ee]p(isode)?:?\\s?(?P<episode>\\d+):?\\s?('
+                '?P<episode_title>.*)$',
+                subtitle)  # noqa: E501
+        if not title_match:
+            # Series 10 Rylan Clark, Joanna Lumley, Ant And Dec
+            title_match = re.search(
+                '^[Ss]eries:?\\s?(?P<series>\\d+):?\\s(?P<episode_title>.*)$',
+                subtitle)  # noqa: E501
+        if not title_match:
+            # Episode 5
+            # Ep 5
+            # Episode:5
+            title_match = re.search('^[Ee]p(isode)?:?\\s?(?P<episode>\\d+)$',
+                                    subtitle)  # noqa: E501
+        if not title_match:
+            p.episode_title = subtitle
+
+        else:
+            title_parts = title_match.groupdict()
+            episode_title = title_parts.get('episode_title')
+            if episode_title:
+                p.episode_title = episode_title
+            else:  # episode is literally named 'Episode 1' etc.
+                p.episode_title = subtitle
+
+    try:
+        # If we only get series/episode in the subtitle
+        p.series = title_parts.get('series')
+        p.episode = title_parts.get('episode')
+    except Exception:
+        pass
+
+
 def parse_programme_from_feed(data):
     json_data = json.loads(data)
     show_list = []
@@ -61,6 +118,7 @@ def parse_programme_from_feed(data):
             s.duration = show.get('duration')
             s.house_number = show.get('houseNumber')
             s.url = show.get('_links').get('self').get('href')
+            parse_subtitle(s, show)
 
         else:
             continue
@@ -73,14 +131,16 @@ def parse_programme_from_feed(data):
     return show_list
 
 
-def parse_programs_from_feed(data):
+def parse_programs_from_feed(data, from_series_list=False):
     json_data = json.loads(data)
     programs_list = []
+    serieslist_data = []
 
     fanart = json_data.get('thumbnail')
     if json_data.get('type') == 'series':
         item_list = json_data['_embedded']['selectedSeries']['_embedded'].get(
             'videoEpisodes')
+        serieslist_data = json_data['_embedded']['seriesList']
     else:
         item_list = [json_data['_embedded']['highlightVideo']]
 
@@ -94,49 +154,7 @@ def parse_programs_from_feed(data):
         else:
             p.title = item.get('title')
 
-        # Convoluted Season/Episode parsing
-        title_parts = None
-
-        subtitle = item.get('title')
-        if subtitle:
-            # Series 2 Episode 25 Home Is Where The Hatch Is
-            # Series 4 Ep:11 As A Yoga Yuppie
-            # Series 4 Ep 10: Emission Impossible
-            title_match = re.search('^[Ss]eries\\s?(?P<series>\\w+):?\\s[Ee]p(isode)?:?\\s?(?P<episode>\\d+):?\\s(?P<episode_title>.*)$', subtitle)  # noqa: E501
-            if not title_match:
-                # Series 8 Episode 13
-                # Series 8 Episode:13
-                title_match = re.search('^[Ss]eries\\s?(?P<series>\\w+):?\\s?[Ee]p(isode)?:?\\s?(?P<episode>\\d+)$', subtitle)  # noqa: E501
-            if not title_match:
-                # Episode 34 Shape Shifter
-                # Ep:34 Shape Shifter
-                title_match = re.search('^[Ee]p(isode)?:?\\s?(?P<episode>\\d+):?\\s?(?P<episode_title>.*)$', subtitle)  # noqa: E501
-            if not title_match:
-                # Series 10 Rylan Clark, Joanna Lumley, Ant And Dec
-                title_match = re.search('^[Ss]eries:?\\s?(?P<series>\\d+):?\\s(?P<episode_title>.*)$', subtitle)  # noqa: E501
-            if not title_match:
-                # Episode 5
-                # Ep 5
-                # Episode:5
-                title_match = re.search('^[Ee]p(isode)?:?\\s?(?P<episode>\\d+)$', subtitle)  # noqa: E501
-            if not title_match:
-                p.episode_title = subtitle
-
-            else:
-                title_parts = title_match.groupdict()
-                episode_title = title_parts.get('episode_title')
-                if episode_title:
-                    p.episode_title = episode_title
-                else:  # episode is literally named 'Episode 1' etc.
-                    p.episode_title = subtitle
-
-        try:
-            # If we only get series/episode in the subtitle
-            p.series = title_parts.get('series')
-            p.episode = title_parts.get('episode')
-        except Exception:
-            pass
-
+        parse_subtitle(p, item)
         p.house_number = item.get('houseNumber')
         p.description = item.get('description')
         p.thumb = item.get('thumbnail')
