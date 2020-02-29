@@ -27,6 +27,7 @@ class Series(object):
         self.type = 'Series'
         self.url = None
         self.dummy = None
+        self.from_serieslist = False
 
     def __repr__(self):
         return self.title
@@ -90,7 +91,7 @@ class Series(object):
             sorted(self.__dict__.items(), key=lambda x: x[0]))
         d = d_original.copy()
         for key, value in d_original.items():
-            if not value:
+            if value != 0 and not value:
                 d.pop(key)
                 continue
             if isinstance(value, str):
@@ -104,6 +105,13 @@ class Series(object):
                 val = d[key]
             url += '&{0}={1}'.format(key, val)
         return url
+
+    def parse_kodi_url(self, url):
+        params = dict(parse_qsl(url))
+        for item in params.keys():
+            setattr(self, item, unquote_plus(params[item]))
+        if self.num_episodes:
+            self.num_episodes = int(self.num_episodes)
 
 
 class Collect(Series):

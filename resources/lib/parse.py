@@ -172,6 +172,21 @@ def parse_programs_from_feed(data, from_series_list=False):
     sorted_programs = sorted(programs_list,
                              key=lambda x: x.get_date_time(),
                              reverse=True)
+    if len(serieslist_data) > 1 and not from_series_list:
+        for series in serieslist_data:
+            if series.get('id') == json_data['_embedded'][
+                    'selectedSeries'].get('id'):
+                continue
+            s = classes.Series()
+            s.title = series.get('title')
+            s.url = series.get('_links', '').get('deeplink', '').get(
+                'href')
+            s.description = series.get('description')
+            s.thumb = series.get('thumbnail')
+            s.num_episodes = 0
+            s.from_serieslist = True
+            sorted_programs.append(s)
+
     return sorted_programs
 
 
