@@ -24,6 +24,7 @@ class Series(object):
         self.series_houseno = None
         self.title = None
         self.thumb = None
+        self.fanart = None
         self.type = 'Series'
         self.url = None
         self.dummy = None
@@ -78,9 +79,11 @@ class Series(object):
     def increment_num_episodes(self):
         self.num_episodes += 1
 
+    def get_fanart(self):
+        return self.fanart
+
     def get_thumb(self):
-        if self.thumb:
-            return self.thumb
+        return self.thumb
 
     def get_description(self):
         if self.description:

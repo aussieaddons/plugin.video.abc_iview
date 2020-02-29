@@ -26,7 +26,7 @@ def parse_categories(config):
     return categories_list
 
 
-def parse_collections_from_feed(data):
+def parse_collections_from_feed(data, params):
     listing = []
     collection_json_data = json.loads(data)['_embedded'].get('collections')
     for collection in collection_json_data:
@@ -34,6 +34,7 @@ def parse_collections_from_feed(data):
             c = classes.Collect()
             c.title = collection.get('title')
             c.collection_id = collection.get('id')
+            c.fanart = params.get('fanart')
             listing.append(c)
     return listing
 
@@ -95,7 +96,7 @@ def parse_subtitle(p, item):
         pass
 
 
-def parse_programme_from_feed(data):
+def parse_programme_from_feed(data, params):
     json_data = json.loads(data)
     show_list = []
     for show in json_data.get('items'):
@@ -119,15 +120,16 @@ def parse_programme_from_feed(data):
             s.house_number = show.get('houseNumber')
             s.url = show.get('_links').get('self').get('href')
             parse_subtitle(s, show)
-
         else:
             continue
-
         s.description = show.get('title')
         s.thumb = show.get('thumbnail')
-
+        fanart = params.get('fanart')
+        if fanart:
+            s.fanart = params.get('fanart')
+        else:
+            s.fanart = s.thumb
         show_list.append(s)
-
     return show_list
 
 
@@ -145,9 +147,7 @@ def parse_programs_from_feed(data, from_series_list=False):
         item_list = [json_data['_embedded']['highlightVideo']]
 
     for item in item_list:
-
         p = classes.Program()
-
         title = item.get('seriesTitle')
         if title:
             p.title = title
@@ -158,8 +158,7 @@ def parse_programs_from_feed(data, from_series_list=False):
         p.house_number = item.get('houseNumber')
         p.description = item.get('description')
         p.thumb = item.get('thumbnail')
-        if fanart:
-            p.fanart = fanart
+        p.fanart = fanart
         p.url = item['_links']['self'].get('href')
         p.rating = item.get('classification')
         p.duration = item.get('duration')
@@ -185,6 +184,7 @@ def parse_programs_from_feed(data, from_series_list=False):
             s.thumb = series.get('thumbnail')
             s.num_episodes = 0
             s.from_serieslist = True
+            s.fanart = fanart
             sorted_programs.append(s)
 
     return sorted_programs
@@ -207,9 +207,7 @@ def parse_livestreams_from_feed(data):
     for item in json_data.get('items'):
         if item.get('type') != 'livestream':
             continue
-
         p = classes.Program()
-
         title = item.get('showTitle')
         p.title = title
         p.house_number = item.get('houseNumber')
@@ -223,7 +221,6 @@ def parse_livestreams_from_feed(data):
         p.captions = item.get('captions')
         p.set_date(item.get('pubDate'))
         p.set_expire(item.get('expireDate'))
-
         programs_list.append(p)
     return programs_list
 

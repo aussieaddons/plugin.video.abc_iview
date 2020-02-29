@@ -16,14 +16,13 @@ def make_collect_list(params):
     try:
         collect_list = comm.get_collections_from_feed(params)
         collect_list.sort()
-        fanart = params.get('fanart')
         ok = True
         for c in collect_list:
             url = str('{0}?action=collect_list&{1}'.format(
                 sys.argv[0], c.make_kodi_url()))
             listitem = xbmcgui.ListItem(c.get_title())
             listitem.setInfo('video', {})
-            listitem.setArt({'fanart': fanart})
+            listitem.setArt({'fanart': c.get_fanart()})
             folder = True
             ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),
                                              url=url,

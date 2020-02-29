@@ -26,7 +26,8 @@ def make_category_list():
             listitem = xbmcgui.ListItem(c['name'])
 
             if thumb:
-                listitem.setArt({'thumb': thumb})
+                listitem.setArt({'thumb': thumb,
+                                 'icon': thumb})
                 url += '&fanart={0}'.format(thumb)
 
             # Add the program item to the list

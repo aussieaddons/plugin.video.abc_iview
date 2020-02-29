@@ -97,9 +97,9 @@ def make_search_list(params):
             url = "{0}?action=series_list&{1}".format(sys.argv[0],
                                                       s.make_kodi_url())
             thumb = s.get_thumb()
-            listitem = xbmcgui.ListItem(s.get_list_title(),
-                                        iconImage=thumb,
-                                        thumbnailImage=thumb)
+            listitem = xbmcgui.ListItem(s.get_list_title())
+            listitem.setArt({'icon': thumb,
+                             'thumb': thumb})
             listitem.setInfo('video', {'plot': s.get_description()})
             folder = False
             if s.type == 'Program':

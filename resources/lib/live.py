@@ -15,14 +15,13 @@ def make_livestreams_list():
 
         ok = True
         for p in programs:
-            listitem = xbmcgui.ListItem(label=p.get_list_title(),
-                                        iconImage=p.get_thumb(),
-                                        thumbnailImage=p.get_thumb())
+            listitem = xbmcgui.ListItem(label=p.get_list_title())
             listitem.setInfo('video', p.get_kodi_list_item())
             listitem.setProperty('IsPlayable', 'true')
-
-            if p.get_fanart():
-                listitem.setArt({'fanart': p.get_fanart()})
+            thumb = p.get_thumb()
+            listitem.setArt({'fanart': p.get_fanart(),
+                             'icon': thumb,
+                             'thumb': thumb})
 
             if hasattr(listitem, 'addStreamInfo'):
                 listitem.addStreamInfo('audio', p.get_kodi_audio_stream_info())

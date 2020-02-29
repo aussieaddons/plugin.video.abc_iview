@@ -129,7 +129,7 @@ def get_collections_from_feed(params):
         'Getting collections from feed ({0})'.format(params.get('category')))
     feed = get_cached_feed(config.API_BASE_URL.format(
         path='/v2{0}'.format(params.get('category'))))
-    collects = parse.parse_collections_from_feed(feed)
+    collects = parse.parse_collections_from_feed(feed, params)
     return collects
 
 
@@ -138,7 +138,7 @@ def get_collection_from_feed(params):
     utils.log('Getting collection from feed ({0})'.format(params.get('title')))
     feed = get_cached_feed(
         config.API_BASE_URL.format(path='/v2/collection/{0}'.format(keyword)))
-    collection = parse.parse_programme_from_feed(feed)
+    collection = parse.parse_programme_from_feed(feed, params)
     return collection
 
 
@@ -150,7 +150,7 @@ def get_atoz_programme_from_feed(params):
         atoz_id = atoz_list[0].collection_id
         feed = get_cached_feed(config.API_BASE_URL.format(
             path='/v2/collection/{0}'.format(atoz_id)))
-        shows = parse.parse_programme_from_feed(feed)
+        shows = parse.parse_programme_from_feed(feed, params)
         return shows
     else:
         return atoz_list

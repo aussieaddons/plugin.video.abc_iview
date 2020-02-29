@@ -16,10 +16,7 @@ def make_programs_list(params):
 
         ok = True
         for p in programs:
-            listitem = xbmcgui.ListItem(label=p.get_list_title(),
-                                        iconImage=p.get_thumb(),
-                                        thumbnailImage=p.get_thumb())
-
+            listitem = xbmcgui.ListItem(label=p.get_list_title())
             if p.type == 'Program':
                 listitem.setInfo('video', p.get_kodi_list_item())
                 listitem.setProperty('IsPlayable', 'true')
@@ -37,8 +34,10 @@ def make_programs_list(params):
                 folder = True
                 url = "{0}?action=series_list&{1}".format(sys.argv[0],
                                                           p.make_kodi_url())
-
-            listitem.setArt({'fanart': fanart})
+            thumb = p.get_thumb()
+            listitem.setArt({'fanart': p.get_fanart(),
+                             'icon': thumb,
+                             'thumb': thumb})
 
             # Add the program item to the list
             ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),

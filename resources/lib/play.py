@@ -57,9 +57,10 @@ def play(url):
             hdrs = stream_url[stream_url.find('|') + 1:]
 
         listitem = xbmcgui.ListItem(label=p.get_list_title(),
-                                    iconImage=p.thumb,
-                                    thumbnailImage=p.thumb,
                                     path=stream_url)
+        thumb = p.get_thumb()
+        listitem.setArt({'icon': thumb,
+                         'thumb': thumb})
         if use_ia:
             listitem.setProperty('inputstreamaddon', 'inputstream.adaptive')
             listitem.setProperty('inputstream.adaptive.manifest_type', 'hls')
