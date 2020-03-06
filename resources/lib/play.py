@@ -97,7 +97,6 @@ def play(url):
             except Exception as e:
                 utils.log(
                     'Subtitles not available for this program: {0}'.format(e))
-                raise
 
         if hasattr(listitem, 'addStreamInfo'):
             listitem.addStreamInfo('audio', p.get_kodi_audio_stream_info())
