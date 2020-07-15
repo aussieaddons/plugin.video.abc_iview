@@ -15,14 +15,6 @@ from aussieaddonscommon import utils
 import resources.lib.config as config
 import resources.lib.parse as parse
 
-
-try:
-    import StorageServer
-except ImportError:
-    utils.log('script.common.plugin.cache not found!')
-    import resources.lib.storageserverdummy as StorageServer
-
-cache = StorageServer.StorageServer(utils.get_addon_id(), 1)
 py2 = sys.version_info < (3, 0)
 
 
@@ -119,15 +111,10 @@ def validate_category(keyword):
         return keyword
 
 
-def get_cached_feed(url):
-    feed = cache.cacheFunction(fetch_url, url)
-    return feed
-
-
 def get_collections_from_feed(params):
     utils.log(
         'Getting collections from feed ({0})'.format(params.get('category')))
-    feed = get_cached_feed(config.API_BASE_URL.format(
+    feed = fetch_url(config.API_BASE_URL.format(
         path='/v2{0}'.format(params.get('category'))))
     collects = parse.parse_collections_from_feed(feed, params)
     return collects
@@ -136,7 +123,7 @@ def get_collections_from_feed(params):
 def get_collection_from_feed(params):
     keyword = params.get('collection_id')
     utils.log('Getting collection from feed ({0})'.format(params.get('title')))
-    feed = get_cached_feed(
+    feed = fetch_url(
         config.API_BASE_URL.format(path='/v2/collection/{0}'.format(keyword)))
     collection = parse.parse_programme_from_feed(feed, params)
     return collection
@@ -148,7 +135,7 @@ def get_atoz_programme_from_feed(params):
     atoz_list = [x for x in collects if 'a-z' in x.get_title().lower()]
     if len(atoz_list) > 0:
         atoz_id = atoz_list[0].collection_id
-        feed = get_cached_feed(config.API_BASE_URL.format(
+        feed = fetch_url(config.API_BASE_URL.format(
             path='/v2/collection/{0}'.format(atoz_id)))
         shows = parse.parse_programme_from_feed(feed, params)
         return shows
@@ -159,14 +146,14 @@ def get_atoz_programme_from_feed(params):
 def get_series_from_feed(series_url, from_series_list=False):
     utils.log('Fetching series from feed')
     query = '?embed=seriesList,selectedSeries'
-    feed = get_cached_feed(config.API_BASE_URL.format(path='/v2{0}{1}'.format(
+    feed = fetch_url(config.API_BASE_URL.format(path='/v2{0}{1}'.format(
         series_url, query)))
     return parse.parse_programs_from_feed(feed, from_series_list)
 
 
 def get_livestreams_from_feed():
     utils.log('Fetching livestreams from feed')
-    feed = get_cached_feed(
+    feed = fetch_url(
         config.API_BASE_URL.format(path='/v2{0}'.format('/home')))
     return parse.parse_livestreams_from_feed(feed)
 

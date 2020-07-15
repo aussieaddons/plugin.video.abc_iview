@@ -2,7 +2,6 @@
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.aussieaddonscommon"/>
-    <import addon="script.common.plugin.cache"/>
     <import addon="script.module.requests"/>
     <import addon="script.module.drmhelper"/>
     <import addon="script.module.pycaption"/>
