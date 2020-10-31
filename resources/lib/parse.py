@@ -140,12 +140,14 @@ def parse_programs_from_feed(data, from_series_list=False):
 
     fanart = json_data.get('thumbnail')
     if json_data.get('type') == 'series':
-        item_list = json_data['_embedded']['selectedSeries']['_embedded'].get(
-            'videoEpisodes')
-        if not item_list:  # let's see if there are 'extras' instead
-            item_list = json_data['_embedded']['selectedSeries'][
-                '_embedded'].get(
-                'videoExtras')
+        item_list = json_data['_embedded']['selectedSeries'].get(
+            '_embedded', {}).get('videoEpisodes')
+        if not item_list:
+            # Let's see if there are 'extras' instead.
+            # Users may bookmark a series which will end up
+            # empty, make sure we have an empty list to use instead
+            item_list = json_data['_embedded']['selectedSeries'].get(
+                '_embedded', {}).get('videoExtras', [])
         serieslist_data = json_data['_embedded']['seriesList']
     else:
         item_list = [json_data['_embedded']['highlightVideo']]
