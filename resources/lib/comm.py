@@ -49,6 +49,8 @@ def get_auth(hn, sess):
                 'playback. Please set the correct system '
                 'time/date/timezone for your location and try again.')
             raise exceptions.AussieAddonsException(e)
+        else:
+            raise
     return res.text
 
 
