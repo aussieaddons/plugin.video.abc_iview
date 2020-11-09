@@ -194,6 +194,9 @@ class Program(object):
         if self.episode_title:
             return utils.descape(self.episode_title)
 
+    def set_episode_title(self, title):
+        self.episode_title = title
+
     def get_list_title(self):
         """Return a string of the title, nicely formatted for Kodi list"""
         title = self.get_title()
@@ -281,10 +284,16 @@ class Program(object):
         if self.series:
             return int(self.series)
 
+    def set_season(self, season):
+        self.series = season
+
     def get_episode(self):
         """Return an integer of the Episode"""
         if self.episode:
             return int(self.episode)
+
+    def set_episode(self, episode):
+        self.episode = episode
 
     def get_thumb(self):
         """Returns the thumbnail"""

@@ -39,11 +39,8 @@ def parse_collections_from_feed(data, params):
     return listing
 
 
-def parse_subtitle(p, item):
+def match_season_episode(subtitle):
     # Convoluted Season/Episode parsing
-    title_parts = None
-
-    subtitle = item.get('title')
     if subtitle:
         # Series 2 Episode 25 Home Is Where The Hatch Is
         # Series 4 Ep:11 As A Yoga Yuppie
@@ -77,23 +74,24 @@ def parse_subtitle(p, item):
             # Episode:5
             title_match = re.search('^[Ee]p(isode)?:?\\s?(?P<episode>\\d+)$',
                                     subtitle)  # noqa: E501
-        if not title_match:
-            p.episode_title = subtitle
+        return title_match
 
-        else:
-            title_parts = title_match.groupdict()
-            episode_title = title_parts.get('episode_title')
-            if episode_title:
-                p.episode_title = episode_title
-            else:  # episode is literally named 'Episode 1' etc.
-                p.episode_title = subtitle
 
-    try:
-        # If we only get series/episode in the subtitle
-        p.series = title_parts.get('series')
-        p.episode = title_parts.get('episode')
-    except Exception:
-        pass
+def set_episode_title_from_match(p, title_match, subtitle):
+    title_parts = {}
+    if not title_match:
+        p.set_episode_title(subtitle)
+    else:
+        title_parts = title_match.groupdict()
+        episode_title = title_parts.get('episode_title')
+        if episode_title:
+            p.set_episode_title(episode_title)
+        else:  # episode is literally named 'Episode 1' etc.
+            p.set_episode_title(subtitle)
+
+    # If we only get series/episode in the subtitle
+    p.set_season(title_parts.get('series'))
+    p.set_episode(title_parts.get('episode'))
 
 
 def parse_programme_from_feed(data, params):
@@ -116,9 +114,12 @@ def parse_programme_from_feed(data, params):
         elif show.get('_entity') == 'video':
             s = classes.Program()
             s.title = show.get('showTitle')
+            subtitle = show.get('title')
             s.duration = show.get('duration')
             s.house_number = show.get('houseNumber')
             s.url = show.get('_links').get('self').get('href')
+            title_match = match_season_episode(subtitle)
+            set_episode_title_from_match(s, title_match, subtitle)
             parse_subtitle(s, show)
         else:
             continue
@@ -160,7 +161,8 @@ def parse_programs_from_feed(data, from_series_list=False):
         else:
             p.title = item.get('title')
 
-        parse_subtitle(p, item)
+        title_match = match_season_episode(item.get('title'))
+        set_episode_title_from_match(p, title_match, item.get('title'))
         p.house_number = item.get('houseNumber')
         p.description = item.get('description')
         p.thumb = item.get('thumbnail')
