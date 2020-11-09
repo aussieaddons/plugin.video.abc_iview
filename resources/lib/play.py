@@ -25,9 +25,11 @@ def play(url):
     try:
         # Remove cookies.dat for Kodi < 17.0 - causes issues with playback
         addon = xbmcaddon.Addon()
-        cookies_dat = xbmc.translatePath('special://home/cache/cookies.dat')
-        if os.path.isfile(cookies_dat):
-            os.remove(cookies_dat)
+        if utils.get_kodi_major_version() < 17:
+            cookies_dat = xbmc.translatePath(
+                'special://home/cache/cookies.dat')
+            if os.path.isfile(cookies_dat):
+                os.remove(cookies_dat)
         p = classes.Program()
         p.parse_kodi_url(url)
         stream_data = comm.get_stream_url(p.get_house_number(), p.get_url())
