@@ -9,8 +9,6 @@ try:
 except ImportError:
     import unittest.mock as mock
 
-from future.moves.urllib.parse import parse_qsl, urlparse
-
 import responses
 
 import testtools
@@ -60,7 +58,6 @@ class ProgramsTests(testtools.TestCase):
 
         programs.make_programs_list({'url': '/show/sesame-street'})
         for index, expected in enumerate(fakes.EXPECTED_SHOW_TITLES):
-            url = self.mock_plugin.directory[index].get('url')
-            url_query = dict(parse_qsl(urlparse(url)[4]))
-            observed = url_query.get('episode_title')
+            li = self.mock_plugin.directory[index].get('listitem')
+            observed = li.getLabel()
             self.assertEqual(expected, observed)

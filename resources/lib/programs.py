@@ -26,8 +26,8 @@ def make_programs_list(params):
                     listitem.addStreamInfo('video',
                                            p.get_kodi_video_stream_info())
                 folder = False
-                url = "{0}?action=program_list&{1}".format(sys.argv[0],
-                                                           p.make_kodi_url())
+                url = "{0}?action=program_list&{1}".format(
+                    sys.argv[0], p.make_kodi_url(short=True))
             else:
                 folder = True
                 url = "{0}?action=series_list&{1}".format(sys.argv[0],

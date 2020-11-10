@@ -28,7 +28,7 @@ def main():
         action = params.get('action')
 
         if action in ['program_list', 'livestreams']:
-            play.play(params_str)
+            play.play(params)
         elif action in ['series_list']:
             if params.get('type') == 'Series':
                 if params.get('dummy') == 'True':
@@ -36,7 +36,7 @@ def main():
                 else:
                     programs.make_programs_list(params)
             else:
-                play.play(params_str)
+                play.play(params)
         elif action == 'collect_list':
             series.make_series_list(params, atoz=False)
         elif action == 'category_list':

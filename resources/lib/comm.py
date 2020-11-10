@@ -12,6 +12,7 @@ from aussieaddonscommon import exceptions
 from aussieaddonscommon import session
 from aussieaddonscommon import utils
 
+import resources.lib.classes as classes
 import resources.lib.config as config
 import resources.lib.parse as parse
 
@@ -62,16 +63,20 @@ def cookies_to_string(cookiejar):
     return ' '.join(cookies)
 
 
-def get_stream_url(hn, path):
+def get_stream_program(params):
     with session.Session() as sess:
-        video_url = config.API_BASE_URL.format(path='/v2{0}'.format(path))
+        video_url = config.API_BASE_URL.format(
+            path='/v2{0}'.format(params.get('url')))
         utils.log("Fetching stream URL: {0}".format(video_url))
         video_data = sess.get(video_url).text
         video_json = json.loads(video_data)
         if video_json.get('playable') is False:
-            return {'msg': video_json.get('playableMessage'),
-                    'availability': video_json.get('availability')}
+            p = classes.Program()
+            p.failure_msg = {'msg': video_json.get('playableMessage'),
+                             'availability': video_json.get('availability')}
+            return p
         sess.headers = {'User-Agent': config.USER_AGENT}
+        captions_url = None
         for playlist in video_json['_embedded']['playlist']:
             if playlist.get('type') not in ['program', 'livestream']:
                 continue
@@ -82,14 +87,16 @@ def get_stream_url(hn, path):
             if stream_url_base:
                 captions_url = playlist.get('captions', {}).get('src-vtt')
                 break
-        akamai_auth = get_auth(hn, sess)
+        akamai_auth = get_auth(params.get('house_number'), sess)
         request = sess.get(stream_url_base, params={'hdnea': akamai_auth})
         cookies = cookies_to_string(request.cookies)
         stream_url = '{0}|User-Agent={1}&Cookie={2}'.format(
             request.url, quote_plus(config.USER_AGENT),
             quote_plus(cookies))
-
-    return {'stream_url': stream_url, 'captions_url': captions_url}
+        p = parse.parse_stream_from_json(video_json)
+        p.stream_url = stream_url
+        p.captions_url = captions_url
+    return p
 
 
 def get_categories():

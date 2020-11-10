@@ -92,9 +92,8 @@ class DefaultTests(testtools.TestCase):
 
         default.main()
         for index, expected in enumerate(fakes.EXPECTED_SERIES_TITLES):
-            url = self.mock_plugin.directory[index].get('url')
-            url_query = dict(parse_qsl(urlparse(url)[4]))
-            observed = url_query.get('title')
+            li = self.mock_plugin.directory[index].get('listitem')
+            observed = li.getLabel()
             self.assertEqual(expected, observed)
 
     @mock.patch('xbmcgui.ListItem')
@@ -148,9 +147,8 @@ class DefaultTests(testtools.TestCase):
         responses.add(responses.GET, show_url, body=self.SHOW_JSON)
         default.main()
         for index, expected in enumerate(fakes.EXPECTED_SHOW_TITLES):
-            url = self.mock_plugin.directory[index].get('url')
-            url_query = dict(parse_qsl(urlparse(url)[4]))
-            observed = url_query.get('episode_title')
+            li = self.mock_plugin.directory[index].get('listitem')
+            observed = li.getLabel()
             self.assertEqual(expected, observed)
 
     @mock.patch('time.time')
@@ -173,8 +171,9 @@ class DefaultTests(testtools.TestCase):
                                params={'hdnea': self.AUTH_RESP_TEXT})
         prepared = req.prepare()
         url = prepared.url
-
-        responses.add(responses.GET, video_url, body=self.VIDEO_JSON)
+        video_json_modified = self.VIDEO_JSON.replace(b'"captions": true',
+                                                      b'"captions": false')
+        responses.add(responses.GET, video_url, body=video_json_modified)
         responses.add(responses.GET, url, body='#EXTM3U',
 
                       headers={'Set-Cookie': fakes.AUTH_COOKIE}, status=200)
@@ -212,7 +211,9 @@ class DefaultTests(testtools.TestCase):
                                params={'hdnea': self.AUTH_RESP_TEXT})
         prepared = req.prepare()
         url = prepared.url
-        responses.add(responses.GET, video_url, body=self.VIDEO_JSON)
+        video_json_modified = self.VIDEO_JSON.replace(b'"captions": true',
+                                                      b'"captions": false')
+        responses.add(responses.GET, video_url, body=video_json_modified)
         responses.add(responses.GET, url, body='#EXTM3U',
                       headers={'Set-Cookie': fakes.AUTH_COOKIE},
                       status=200)
@@ -326,9 +327,8 @@ class DefaultTests(testtools.TestCase):
 
         default.main()
         for index, expected in enumerate(fakes.EXPECTED_SERIES_TITLES):
-            url = self.mock_plugin.directory[index].get('url')
-            url_query = dict(parse_qsl(urlparse(url)[4]))
-            observed = url_query.get('title')
+            li = self.mock_plugin.directory[index].get('listitem')
+            observed = li.getLabel()
             self.assertEqual(expected, observed)
 
     @mock.patch('resources.lib.classes.utils.get_kodi_major_version')
@@ -353,13 +353,6 @@ class DefaultTests(testtools.TestCase):
                       body=self.SHOW_MULTISERIES_JSON)
         default.main()
         for index, expected in enumerate(fakes.EXPECTED_MULTISERIES_TITLES):
-            url = self.mock_plugin.directory[index].get('url')
-            url_query = dict(parse_qsl(urlparse(url)[4]))
-            if url_query.get('type') == 'Program':
-                o = classes.Program()
-                o.parse_kodi_url(urlparse(url)[4])
-            elif url_query.get('type') == 'Series':
-                o = classes.Series()
-                o.parse_kodi_url(urlparse(url)[4])
-            observed = o.get_list_title()
+            li = self.mock_plugin.directory[index].get('listitem')
+            observed = li.getLabel()
             self.assertEqual(expected, observed)

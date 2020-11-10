@@ -19,8 +19,6 @@ def make_series_list(params, atoz=True):
         series_list.sort()
         ok = True
         for s in series_list:
-            url = "{0}?action=series_list&{1}".format(sys.argv[0],
-                                                      s.make_kodi_url())
             thumb = s.get_thumb()
             listitem = xbmcgui.ListItem(s.get_list_title())
             listitem.setArt({'fanart': s.get_fanart(),
@@ -30,8 +28,12 @@ def make_series_list(params, atoz=True):
             if s.type == 'Program':
                 listitem.setProperty('IsPlayable', 'true')
                 folder = False
+                url = "{0}?action=program_list&{1}".format(
+                    sys.argv[0], s.make_kodi_url(short=True))
             else:
                 folder = True
+                url = "{0}?action=series_list&{1}".format(
+                    sys.argv[0], s.make_kodi_url())
 
             # add the item to the media list
             ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),

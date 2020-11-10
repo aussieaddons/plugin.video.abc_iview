@@ -63,9 +63,8 @@ class SeriesTests(testtools.TestCase):
 
         series.make_series_list({'category': channel_path})
         for index, expected in enumerate(fakes.EXPECTED_SERIES_TITLES):
-            url = self.mock_plugin.directory[index].get('url')
-            url_query = dict(parse_qsl(urlparse(url)[4]))
-            observed = url_query.get('title')
+            li = self.mock_plugin.directory[index].get('listitem')
+            observed = li.getLabel()
             self.assertEqual(expected, observed)
 
     @mock.patch('xbmcgui.ListItem')

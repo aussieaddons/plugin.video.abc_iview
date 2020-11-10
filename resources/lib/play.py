@@ -9,7 +9,6 @@ from aussieaddonscommon.exceptions import AussieAddonsException
 from pycaption import SRTWriter
 from pycaption import WebVTTReader
 
-import resources.lib.classes as classes
 import resources.lib.comm as comm
 
 import xbmc
@@ -21,7 +20,7 @@ import xbmcgui
 import xbmcplugin
 
 
-def play(url):
+def play(params):
     try:
         # Remove cookies.dat for Kodi < 17.0 - causes issues with playback
         addon = xbmcaddon.Addon()
@@ -30,15 +29,14 @@ def play(url):
                 'special://home/cache/cookies.dat')
             if os.path.isfile(cookies_dat):
                 os.remove(cookies_dat)
-        p = classes.Program()
-        p.parse_kodi_url(url)
-        stream_data = comm.get_stream_url(p.get_house_number(), p.get_url())
-        stream_url = stream_data.get('stream_url')
+        p = comm.get_stream_program(params)
+        stream_url = p.get_stream_url()
         if not stream_url:
-            utils.log('Not Playable: {0}'.format(repr(stream_data)))
+            utils.log('Not Playable: {0}'.format(repr(stream_url)))
+            failure_data = p.get_failure_msg()
             raise AussieAddonsException(
-                'Not available: {0}\n{1}'.format(stream_data.get('msg'),
-                                                 stream_data.get(
+                'Not available: {0}\n{1}'.format(failure_data.get('msg'),
+                                                 failure_data.get(
                                                      'availability')))
         use_ia = addon.getSetting('USE_IA') == 'true'
         if use_ia:
@@ -74,7 +72,6 @@ def play(url):
         # Add subtitles if available
 
         if p.is_captions():
-            captions_url = stream_data.get('captions_url')
             profile = xbmcaddon.Addon().getAddonInfo('profile')
             path = xbmc.translatePath(profile)
             if not os.path.isdir(path):
@@ -85,7 +82,7 @@ def play(url):
 
             try:
                 sess = session.Session()
-                webvtt_data = sess.get(captions_url).text
+                webvtt_data = sess.get(p.get_captions_url()).text
                 if webvtt_data:
                     with io.BytesIO() as buf:
                         webvtt_captions = WebVTTReader().read(webvtt_data)

@@ -120,7 +120,6 @@ def parse_programme_from_feed(data, params):
             s.url = show.get('_links').get('self').get('href')
             title_match = match_season_episode(subtitle)
             set_episode_title_from_match(s, title_match, subtitle)
-            parse_subtitle(s, show)
         else:
             continue
         s.description = show.get('title')
@@ -229,6 +228,23 @@ def parse_livestreams_from_feed(data):
         p.set_expire(item.get('expireDate'))
         programs_list.append(p)
     return programs_list
+
+
+def parse_stream_from_json(data):
+    p = classes.Program()
+    p.title = data.get('showTitle')
+    subtitle = data.get('title')
+    title_match = match_season_episode(subtitle)
+    set_episode_title_from_match(p, title_match, subtitle)
+    p.description = data.get('description')
+    p.thumb = data.get('thumbnail')
+    p.fanart = data.get('thumbnail')
+    p.rating = data.get('classification')
+    p.duration = data.get('duration')
+    p.set_date(data.get('pubDate'))
+    p.set_expire(data.get('expireDate'))
+    p.captions = data.get('captions') and data.get('captionsOnAkamai')
+    return p
 
 
 def parse_search_results(data):

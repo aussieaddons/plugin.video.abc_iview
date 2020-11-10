@@ -66,13 +66,16 @@ class PlayTests(testtools.TestCase):
         video_url = config.API_BASE_URL.format(path='/v2{0}'.format(path))
         url = '{0}&hdnea={1}'.format(fakes.EXPECTED_HLS_URL,
                                      self.AUTH_RESP_TEXT.decode('utf-8'))
-        responses.add(responses.GET, video_url, body=self.VIDEO_JSON)
+        video_json_modified = self.VIDEO_JSON.replace(b'"captions": true',
+                                                      b'"captions": false')
+        responses.add(responses.GET, video_url, body=video_json_modified)
         responses.add(responses.GET, url, body='#EXTM3U',
                       headers={'Set-Cookie': fakes.AUTH_COOKIE},
                       status=200)
         responses.add(responses.GET, fakes.AUTH_URL_DEFAULT_TEST,
                       body=self.AUTH_RESP_TEXT, status=200)
-        play.play(sys.argv[2][1:])
+        params = play.utils.get_url(sys.argv[2])
+        play.play(params)
         observed = self.mock_plugin.resolved[2].getPath()
         expected = fakes.RESOLVED_URL.format(
             quote_plus(self.AUTH_RESP_TEXT, safe='~'),
@@ -114,7 +117,8 @@ class PlayTests(testtools.TestCase):
                       body=self.AUTH_RESP_TEXT, status=200)
         responses.add(responses.GET, fakes.EXPECTED_CAPTIONS_URL,
                       body=self.VTT_TEXT, status=200)
-        play.play(sys.argv[2][1:])
+        params = play.utils.get_url(sys.argv[2])
+        play.play(params)
         observed = self.mock_plugin.resolved[2].getPath()
         expected = fakes.RESOLVED_URL.format(
             quote_plus(self.AUTH_RESP_TEXT, safe='~'),

@@ -147,6 +147,9 @@ class Program(object):
         self.house_number = None
         self.type = 'Program'
         self.dummy = None
+        self.stream_url = None
+        self.captions_url = None
+        self.failure_msg = None
 
     def __repr__(self):
         return self.title
@@ -310,6 +313,15 @@ class Program(object):
         if self.url:
             return utils.descape(self.url)
 
+    def get_stream_url(self):
+        return self.stream_url
+
+    def get_captions_url(self):
+        return self.captions_url
+
+    def get_failure_msg(self):
+        return self.failure_msg
+
     def get_expire(self):
         """Returns the expiry date"""
         if self.expire:
@@ -381,12 +393,15 @@ class Program(object):
         if timestamp:
             self.expire = self.parse_datetime(timestamp)
 
-    def make_kodi_url(self):
+    def make_kodi_url(self, short=False):
         d_original = OrderedDict(
             sorted(self.__dict__.items(), key=lambda x: x[0]))
         d = d_original.copy()
         for key, value in d_original.items():
             if not value:
+                d.pop(key)
+                continue
+            if short and key not in ['house_number', 'url', 'type']:
                 d.pop(key)
                 continue
             if isinstance(value, str):

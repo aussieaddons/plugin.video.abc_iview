@@ -80,3 +80,10 @@ class ParseTests(testtools.TestCase):
         observed = parse.parse_collections_from_feed(self.CHANNEL_JSON, {})
         self.assertEqual(17, len(observed))
         self.assertEqual('ABC KIDS Favourites', observed[0].get_title())
+
+    def test_parse_stream_from_json(self):
+        data = json.loads(self.VIDEO_JSON)
+        p = parse.parse_stream_from_json(data)
+        self.assertEqual(p.get_list_title(),
+                         'Sesame Street: Mechanics in Space')
+        self.assertEqual(p.get_date(), '2019-08-13')

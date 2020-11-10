@@ -80,7 +80,7 @@ class CommTests(testtools.TestCase):
 
     @mock.patch('resources.lib.comm.get_auth')
     @responses.activate
-    def test_get_stream_url(self, mock_auth):
+    def test_get_stream_program(self, mock_auth):
         path = '/video/ZW1939A025S00'
         video_url = config.API_BASE_URL.format(path='/v2{0}'.format(path))
 
@@ -93,15 +93,17 @@ class CommTests(testtools.TestCase):
         responses.add(responses.GET, url, body='#EXTM3U',
                       headers={'Set-Cookie': fakes.AUTH_COOKIE}, status=200)
         mock_auth.return_value = self.AUTH_RESP_TEXT
-        observed = comm.get_stream_url(fakes.HN, path)
+        observed = comm.get_stream_program({'house_number': fakes.HN,
+                                            'url': path})
 
-        expected = {'stream_url': fakes.RESOLVED_URL.format(
+        expected_stream_url = fakes.RESOLVED_URL.format(
             quote_plus(self.AUTH_RESP_TEXT, safe='~'),
-            quote_plus(config.USER_AGENT)),
-                    'captions_url': fakes.EXPECTED_SUB_URL}
+            quote_plus(config.USER_AGENT))
+        expected_captions_url = fakes.EXPECTED_SUB_URL
         # responses doesn't handle cookie domain/paths correctly atm, so
         # the expected stream_url omits the domain value.
-        self.assertEqual(expected, observed)
+        self.assertEqual(expected_stream_url, observed.get_stream_url())
+        self.assertEqual(expected_captions_url, observed.get_captions_url())
 
     @responses.activate
     def test_get_categories(self):
