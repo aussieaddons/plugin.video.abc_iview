@@ -89,12 +89,17 @@ class Series(object):
         if self.description:
             return self.description
 
-    def make_kodi_url(self):
+    def make_kodi_url(self, short=True):
         d_original = OrderedDict(
             sorted(self.__dict__.items(), key=lambda x: x[0]))
         d = d_original.copy()
         for key, value in d_original.items():
             if value != 0 and not value:
+                d.pop(key)
+                continue
+            if short and key not in ['category', 'collection_id', 'title',
+                                     'fanart', 'url', 'name', 'type', 'dummy',
+                                     'num_episodes']:
                 d.pop(key)
                 continue
             if isinstance(value, str):
@@ -393,7 +398,7 @@ class Program(object):
         if timestamp:
             self.expire = self.parse_datetime(timestamp)
 
-    def make_kodi_url(self, short=False):
+    def make_kodi_url(self, short=True):
         d_original = OrderedDict(
             sorted(self.__dict__.items(), key=lambda x: x[0]))
         d = d_original.copy()

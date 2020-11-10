@@ -176,12 +176,12 @@ class ClassesProgramTests(testtools.TestCase):
         for k, v in attrs.items():
             setattr(p, k, v)
         p.__dict__.pop('date')  # do we still need the date attrib?
-        observed = p.make_kodi_url()
+        observed = p.make_kodi_url(short=False)
         self.assertEqual(fakes.PROGRAM_URL, observed)
 
     def test_parse_kodi_url(self):
         p = classes.Program()
         p.parse_kodi_url(fakes.PROGRAM_URL)
         p.__dict__.pop('date')  # do we still need the date attrib?
-        observed = p.make_kodi_url()
+        observed = p.make_kodi_url(short=False)
         self.assertEqual(fakes.PROGRAM_URL, observed)

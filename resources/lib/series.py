@@ -29,7 +29,7 @@ def make_series_list(params, atoz=True):
                 listitem.setProperty('IsPlayable', 'true')
                 folder = False
                 url = "{0}?action=program_list&{1}".format(
-                    sys.argv[0], s.make_kodi_url(short=True))
+                    sys.argv[0], s.make_kodi_url())
             else:
                 folder = True
                 url = "{0}?action=series_list&{1}".format(

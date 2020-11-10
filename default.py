@@ -20,6 +20,7 @@ utils.log_kodi_platform_version()
 def main():
     params_str = sys.argv[2]
     params = utils.get_url(params_str)
+    utils.log('Called with params: {0}'.format(str(params)))
     addon = xbmcaddon.Addon()
     if (len(params) == 0):
         categories.make_category_list()
