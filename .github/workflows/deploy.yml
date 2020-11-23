@@ -1,0 +1,66 @@
+name: Deploy to repo/repo-devel
+
+on:
+  push:
+    branches: [ master ]
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: pip install GitPython
+      - name: Checkout this repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # anything other than 0 will not get tags
+      - name: Checkout devel repo
+        uses: actions/checkout@v2
+        with:
+          repository: aussieaddons/repo-devel
+          path: .deploy-devel
+          token: ${{ secrets.PAT }}
+      - if: startsWith(github.ref, 'refs/tags/v')
+        name: Checkout production repo
+        uses: actions/checkout@v2
+        with:
+          repository: aussieaddons/repo
+          path: .deploy
+          token: ${{ secrets.PAT }}
+      - name: Set git credentials
+        run: |
+          git config --global user.email 'aussieaddons@aussieaddons.com'
+          git config --global user.name 'Aussie Add-ons Bot'
+          git config credential.helper "store --file=.git/credentials"
+          #echo "https://${{ secrets.PAT }}:@github.com" > .git/credentials
+      - name: Execute manage_repo.py and commit/push to devel
+        env:
+          COMMIT_MSG: ${{ github.event.repository.name }} - ${{ github.event.head_commit.message }}
+        run: |
+          cd $GITHUB_WORKSPACE/.deploy-devel
+          ./manage_repo.py $GITHUB_WORKSPACE -b leia matrix
+          git add .
+          git commit --allow-empty -m "$COMMIT_MSG"
+          git push
+      - if: startsWith(github.ref, 'refs/tags/v')
+        name: Extract tag name
+        id: vars
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+      - if: startsWith(github.ref, 'refs/tags/v')
+        name: Execute manage_repo.py and commit/push to production
+        env:
+          REPO: ${{ github.event.repository.name }}
+          TAG: ${{ steps.vars.outputs.tag }}
+        run: |
+          cd $GITHUB_WORKSPACE/.deploy
+          ./manage_repo.py $GITHUB_WORKSPACE -b leia matrix
+          git add .
+          git commit --allow-empty -m "Update $REPO to $TAG"
+          git push
+
