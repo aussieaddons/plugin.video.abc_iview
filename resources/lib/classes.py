@@ -28,7 +28,7 @@ class Series(object):
         self.type = 'Series'
         self.url = None
         self.dummy = None
-        self.from_serieslist = False
+        self.from_serieslist = None
 
     def __repr__(self):
         return self.title
@@ -99,7 +99,7 @@ class Series(object):
                 continue
             if short and key not in ['category', 'collection_id', 'title',
                                      'fanart', 'url', 'name', 'type', 'dummy',
-                                     'num_episodes']:
+                                     'num_episodes', 'from_serieslist']:
                 d.pop(key)
                 continue
             if isinstance(value, str):
