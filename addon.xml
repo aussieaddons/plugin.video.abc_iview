@@ -2,9 +2,10 @@
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.aussieaddonscommon"/>
-    <import addon="script.module.requests"/>
     <import addon="script.module.drmhelper"/>
+    <import addon="script.module.future"/>
     <import addon="script.module.pycaption"/>
+    <import addon="script.module.requests"/>
   </requires>
   <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
     <provides>video</provides>
