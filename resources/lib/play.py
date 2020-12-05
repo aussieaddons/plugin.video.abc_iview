@@ -62,6 +62,7 @@ def play(params):
         listitem.setArt({'icon': thumb,
                          'thumb': thumb})
         if use_ia:
+            listitem.setProperty('inputstream', 'inputstream.adaptive')
             listitem.setProperty('inputstreamaddon', 'inputstream.adaptive')
             listitem.setProperty('inputstream.adaptive.manifest_type', 'hls')
             listitem.setProperty('inputstream.adaptive.stream_headers', hdrs)
