@@ -68,7 +68,18 @@ def get_stream_program(params):
         video_url = config.API_BASE_URL.format(
             path='/v2{0}'.format(params.get('url')))
         utils.log("Fetching stream URL: {0}".format(video_url))
-        video_data = sess.get(video_url).text
+        try:
+            video_data = sess.get(video_url).text
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 404:
+                error_data = json.loads(e.response.text)
+                msg = error_data.get('message')
+                p = classes.Program()
+                p.failure_msg = {
+                    'msg': msg,
+                    'availability': 'The content may have expired, '
+                                    'please refresh the listing and try again'}
+                return p
         video_json = json.loads(video_data)
         if video_json.get('playable') is False:
             p = classes.Program()

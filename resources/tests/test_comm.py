@@ -42,7 +42,9 @@ class CommTests(testtools.TestCase):
         with open(os.path.join(cwd, 'fakes/json/video_ss.json'), 'rb') as f:
             self.VIDEO_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/video_tb.json'), 'rb') as f:
-            self.VIDEO_JSON_NA = io.BytesIO(f.read()).read()
+            self.VIDEO_NA_JSON = io.BytesIO(f.read()).read()
+        with open(os.path.join(cwd, 'fakes/json/video_404.json'), 'rb') as f:
+            self.VIDEO_404_JSON = io.BytesIO(f.read()).read()
 
     @responses.activate
     def test_fetch_url_headers(self):
@@ -104,6 +106,28 @@ class CommTests(testtools.TestCase):
         # the expected stream_url omits the domain value.
         self.assertEqual(expected_stream_url, observed.get_stream_url())
         self.assertEqual(expected_captions_url, observed.get_captions_url())
+
+    @responses.activate
+    def test_get_stream_program_404(self):
+        path = '/video/ZW1939A025S00'
+        video_url = config.API_BASE_URL.format(path='/v2{0}'.format(path))
+        responses.add(responses.GET, video_url, body=self.VIDEO_404_JSON,
+                      status=404)
+        program = comm.get_stream_program({'house_number': fakes.HN,
+                                           'url': path})
+        observed = program.get_failure_msg()
+        self.assertIs(True, observed.get('msg').startswith('The requested'))
+
+    @responses.activate
+    def test_get_stream_program_not_available(self):
+        path = '/video/ZW1939A025S00'
+        video_url = config.API_BASE_URL.format(path='/v2{0}'.format(path))
+        responses.add(responses.GET, video_url, body=self.VIDEO_NA_JSON,
+                      status=200)
+        program = comm.get_stream_program({'house_number': fakes.HN,
+                                           'url': path})
+        observed = program.get_failure_msg()
+        self.assertIs(True, observed.get('msg').startswith('THIS EPISODE IS'))
 
     @responses.activate
     def test_get_categories(self):
