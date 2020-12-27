@@ -28,7 +28,7 @@ def make_series_list(params, atoz=True):
             if s.type == 'Program':
                 listitem.setProperty('IsPlayable', 'true')
                 folder = False
-                url = "{0}?action=program_list&{1}".format(
+                url = "{0}?action=program_list{1}".format(
                     sys.argv[0], s.make_kodi_url())
             else:
                 folder = True
