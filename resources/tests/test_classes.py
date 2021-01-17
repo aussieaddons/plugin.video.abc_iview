@@ -169,7 +169,9 @@ class ClassesProgramTests(testtools.TestCase):
         observed = p.expire
         self.assertEqual(expire, str(observed))
 
-    def test_make_kodi_url(self):
+    @mock.patch('aussieaddonscommon.utils.get_addon_version')
+    def test_make_kodi_url(self, mock_version):
+        mock_version.return_value = '1.0.0'
         p = classes.Program()
         attrs = OrderedDict(
             sorted(fakes.PROGRAM_ATTRS.items(), key=lambda x: x[0]))
@@ -179,7 +181,9 @@ class ClassesProgramTests(testtools.TestCase):
         observed = p.make_kodi_url(short=False)
         self.assertEqual(fakes.PROGRAM_URL, observed)
 
-    def test_parse_kodi_url(self):
+    @mock.patch('aussieaddonscommon.utils.get_addon_version')
+    def test_parse_kodi_url(self, mock_version):
+        mock_version.return_value = '1.0.0'
         p = classes.Program()
         p.parse_kodi_url(fakes.PROGRAM_URL)
         p.__dict__.pop('date')  # do we still need the date attrib?

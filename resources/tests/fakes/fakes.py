@@ -167,7 +167,7 @@ PROGRAM_ATTRS = {
     'video_url': '/video/NC1906H140S00'
 }
 
-PROGRAM_URL = '&captions=True&desc=JB+Hi-Fi+turns+up+the+volume...&duration=902&episode_title=Monday+12%2F8%2F2019&rating=PG&series=The+Business&thumb=https%3A%2F%2Ffoo.com%2Fbar.jpg&time=2019-08-12+22%3A15%3A00&title=The+Business&type=Program&video_url=%2Fvideo%2FNC1906H140S00'  # noqa: E501
+PROGRAM_URL = '&captions=True&desc=JB+Hi-Fi+turns+up+the+volume...&duration=902&episode_title=Monday+12%2F8%2F2019&rating=PG&series=The+Business&thumb=https%3A%2F%2Ffoo.com%2Fbar.jpg&time=2019-08-12+22%3A15%3A00&title=The+Business&type=Program&video_url=%2Fvideo%2FNC1906H140S00&addon_version=1.0.0'  # noqa: E501
 
 INFO_DICT = {
     'tvshowtitle': 'Foo',

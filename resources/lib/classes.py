@@ -112,10 +112,12 @@ class Series(object):
             else:
                 val = d[key]
             url += '&{0}={1}'.format(key, val)
+        url += '&addon_version={0}'.format(utils.get_addon_version())
         return url
 
     def parse_kodi_url(self, url):
         params = dict(parse_qsl(url))
+        params.pop('addon_version')
         for item in params.keys():
             setattr(self, item, unquote_plus(params[item]))
         if self.num_episodes:
@@ -124,10 +126,10 @@ class Series(object):
 
 class Collect(Series):
     def __init__(self):
-        super(Series, self).__init__()
         self.type = 'Collection'
         self.collection_id = None
         self.num_episodes = 0
+        super(Series, self).__init__()
 
 
 @total_ordering
@@ -419,10 +421,12 @@ class Program(object):
             else:
                 val = d[key]
             url += '&{0}={1}'.format(key, val)
+        url += '&addon_version={0}'.format(utils.get_addon_version())
         return url
 
     def parse_kodi_url(self, url):
         params = dict(parse_qsl(url))
+        params.pop('addon_version')
         for item in params.keys():
             setattr(self, item, unquote_plus(params[item]))
         if getattr(self, 'captions', None) == 'True':
