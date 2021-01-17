@@ -25,6 +25,8 @@ class ParseTests(testtools.TestCase):
             self.CHANNEL_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/collection.json'), 'rb') as f:
             self.COLLECTION_JSON = io.BytesIO(f.read()).read()
+        with open(os.path.join(cwd, 'fakes/json/collection3.json'), 'rb') as f:
+            self.COLLECTION3_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/show.json'), 'rb') as f:
             self.SHOW_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/show_multiseries.json'),
@@ -41,15 +43,17 @@ class ParseTests(testtools.TestCase):
         observed_len = len(category_list)
         self.assertEqual(expected_len, observed_len)
 
-    @responses.activate
+
     def test_get_programme_from_feed(self):
-        collection_path = '/collection/1962'
-        collection_url = config.API_BASE_URL.format(
-            path='/v2{0}'.format(collection_path))
-        responses.add(responses.GET, collection_url, body=self.COLLECTION_JSON)
         observed = parse.parse_programme_from_feed(self.COLLECTION_JSON, {})
         self.assertEqual([x.get('title') for x in
                           json.loads(self.COLLECTION_JSON).get('items')],
+                         [x.title for x in observed])
+
+    def test_get_programme_from_feed_missing_show_display_title(self):
+        observed = parse.parse_programme_from_feed(self.COLLECTION3_JSON, {})
+        self.assertEqual([x.get('title') for x in
+                          json.loads(self.COLLECTION3_JSON).get('items')],
                          [x.title for x in observed])
 
     def test_get_series_from_feed(self):

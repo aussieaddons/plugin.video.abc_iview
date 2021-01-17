@@ -1,0 +1,98 @@
+{
+  "id": 1960,
+  "type": "standard",
+  "pubDate": "2016-01-01 00:00:00",
+  "title": "ABC: A-Z",
+  "description": "All the ABC TV programs on iview.",
+  "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC2101H_5fe17b3702469.jpg",
+  "items": [
+    {
+      "id": 122725,
+      "type": "series",
+      "title": "7.30",
+      "displayTitle": "7.30",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nc\/NC2101H_5fe17b3702469.jpg",
+      "thumbnails": {
+        "portrait": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_5fff7589dac25_720.jpg"
+      },
+      "episodeCount": 8,
+      "updated": "2021-01-16 20:02:04",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/7-30"
+        },
+        "deeplink": {
+          "href": "\/show\/7-30"
+        }
+      }
+    },
+    {
+      "id": 163582,
+      "type": "series",
+      "title": "ABC News ACT",
+      "displayTitle": "ABC News ACT",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/nu\/NU2104C_5fd85af939d82.jpg",
+      "episodeCount": 7,
+      "updated": "2021-01-16 20:35:12",
+      "_entity": "show",
+      "_links": {
+        "self": {
+          "href": "\/show\/abc-news-act"
+        },
+        "deeplink": {
+          "href": "\/show\/abc-news-act"
+        }
+      }
+    },
+    {
+      "id": "IV1563V001S00",
+      "type": "feature",
+      "houseNumber": "IV1563V001S00",
+      "title": "Heywire Regional Youth Summit 2016",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/iv\/IV1563V001S0056b140b8858c43.17743909_1280.jpg",
+      "_entity": "video",
+      "_links": {
+        "self": {
+          "href": "\/video\/IV1563V001S00"
+        },
+        "deeplink": {
+          "id": "IV1563V001S00",
+          "href": "\/show\/heywire\/video\/IV1563V001S00"
+        }
+      }
+    },
+    {
+      "id": "ZW2582A001S00",
+      "type": "feature",
+      "houseNumber": "ZW2582A001S00",
+      "title": "The Royal Variety Performance 2020",
+      "showTitle": "The Royal Variety Performance 2020",
+      "displayTitle": "The Royal Variety Performance 2020",
+      "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/zw\/ZW2582A001S00_5fd16743d2655_1280.jpg",
+      "status": {
+        "title": "SPECIAL",
+        "theme": "default"
+      },
+      "duration": 5320,
+      "displayDuration": "1h 29m",
+      "displayDurationAccessible": "1 hour 29 minutes",
+      "_entity": "video",
+      "_links": {
+        "self": {
+          "href": "\/video\/ZW2582A001S00"
+        },
+        "deeplink": {
+          "id": "ZW2582A001S00",
+          "href": "\/show\/royal-variety-performance-2020\/video\/ZW2582A001S00"
+        }
+      }
+    }
+  ],
+  "_entity": "collection",
+  "_links": {
+    "self": {
+      "href": "\/collection\/1960"
+    }
+  }
+}

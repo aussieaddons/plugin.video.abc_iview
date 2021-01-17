@@ -129,6 +129,9 @@ def parse_programme_from_feed(data, params):
             s.fanart = params.get('fanart')
         else:
             s.fanart = s.thumb
+        #  show is missing some title metadata...
+        if not s.title:
+            s.title = s.get_episode_title()
         show_list.append(s)
     return show_list
 
