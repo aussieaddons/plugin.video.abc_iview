@@ -4,11 +4,8 @@ import io
 import json
 import os
 
-import responses
-
 import testtools
 
-import resources.lib.config as config
 import resources.lib.parse as parse
 
 
@@ -42,7 +39,6 @@ class ParseTests(testtools.TestCase):
         expected_len = 17
         observed_len = len(category_list)
         self.assertEqual(expected_len, observed_len)
-
 
     def test_get_programme_from_feed(self):
         observed = parse.parse_programme_from_feed(self.COLLECTION_JSON, {})
