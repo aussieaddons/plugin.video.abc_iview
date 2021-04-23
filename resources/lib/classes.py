@@ -283,6 +283,8 @@ class Program(object):
         """
         if self.date:
             return self.date.strftime("%Y-%m-%d %H:%M:%S")
+        else:
+            return ''
 
     def get_year(self):
         """Return an integer of the year of publish date"""
