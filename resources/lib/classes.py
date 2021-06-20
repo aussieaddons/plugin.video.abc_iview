@@ -178,8 +178,12 @@ class Program(object):
     def parse_datetime(self, timestamp):
         """Parse timestamp into a datetime"""
         try:
-            dt = time.mktime(time.strptime(timestamp, '%Y-%m-%d %H:%M:%S'))
-            return datetime.datetime.fromtimestamp(dt)
+            try:
+                tm = datetime.datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S')
+            except TypeError:
+                tm = datetime.datetime(
+                    *(time.strptime(timestamp, '%Y-%m-%d %H:%M:%S')[0:6]))
+            return tm
         except Exception:
             utils.log_error("Couldn't parse timestamp: %s" % timestamp)
             raise
