@@ -79,7 +79,11 @@ def play(params):
                 os.makedirs(path)
             caption_file = os.path.join(path, 'subtitles.eng.srt')
             if os.path.isfile(caption_file):
-                os.remove(caption_file)
+                try:
+                    os.remove(caption_file)
+                except WindowsError as e:
+                    utils.log('Subtitles not available for this '
+                              'program: {0}'.format(e))
 
             try:
                 sess = session.Session()
