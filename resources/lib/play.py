@@ -19,13 +19,17 @@ import xbmcgui
 
 import xbmcplugin
 
+try:
+    from xbmc import translatePath
+except ImportError:
+    from xbmcvfs import translatePath
 
 def play(params):
     try:
         # Remove cookies.dat for Kodi < 17.0 - causes issues with playback
         addon = xbmcaddon.Addon()
         if utils.get_kodi_major_version() < 17:
-            cookies_dat = xbmc.translatePath(
+            cookies_dat = translatePath(
                 'special://home/cache/cookies.dat')
             if os.path.isfile(cookies_dat):
                 os.remove(cookies_dat)
@@ -74,7 +78,7 @@ def play(params):
 
         if p.is_captions():
             profile = xbmcaddon.Addon().getAddonInfo('profile')
-            path = xbmc.translatePath(profile)
+            path = translatePath(profile)
             if not os.path.isdir(path):
                 os.makedirs(path)
             caption_file = os.path.join(path, 'subtitles.eng.srt')
