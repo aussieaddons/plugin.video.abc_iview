@@ -11,8 +11,6 @@ from pycaption import WebVTTReader
 
 import resources.lib.comm as comm
 
-import xbmc
-
 import xbmcaddon
 
 import xbmcgui
@@ -23,6 +21,7 @@ try:
     from xbmc import translatePath
 except ImportError:
     from xbmcvfs import translatePath
+
 
 def play(params):
     try:

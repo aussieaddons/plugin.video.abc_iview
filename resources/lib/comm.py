@@ -44,7 +44,7 @@ def get_auth(hn, sess):
     try:
         res = sess.get(auth_url)
     except requests.exceptions.HTTPError as e:
-        if e.response.status_code == 404:
+        if e.response.status_code in [401, 404]:
             utils.dialog_message(
                 'Accurate system time required for '
                 'playback. Please set the correct system '

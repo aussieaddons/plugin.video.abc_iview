@@ -87,7 +87,7 @@ class PlayTests(testtools.TestCase):
     @mock.patch('io.open', new_callable=mock.mock_open)
     @mock.patch('time.time')
     @mock.patch('resources.lib.classes.utils.get_kodi_major_version')
-    @mock.patch('xbmc.translatePath')
+    @mock.patch('resources.lib.play.translatePath')
     @mock.patch('xbmcgui.ListItem')
     @mock.patch('sys.argv', ['plugin://plugin.video.abc_iview/', '5',
                              ('?action=program_list&url=%2fvideo%2fZW1939A025S'
