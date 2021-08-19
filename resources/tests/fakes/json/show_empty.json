@@ -1,0 +1,70 @@
+{
+  "id": 122888,
+  "slug": "tashi",
+  "type": "series",
+  "title": "Tashi",
+  "displayTitle": "Tashi",
+  "description": "When Jack's parents bundle him off to stay with his distant cousin Tashi, the two boys become swept up in a series of wild adventures exploring a fantastical land far, far away.",
+  "theme": "default",
+  "thumbnail": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/ch\/CH1261H_5ad8385ea43da_1280.jpg",
+  "thumbnails": {
+    "portraitTitled": "https:\/\/cdn.iview.abc.net.au\/thumbs\/i\/X0_60458dd69a4cf_2000.jpg"
+  },
+  "episodeCount": 22,
+  "relatedLinks": [
+    {
+      "title": "Go To Website",
+      "href": "http:\/\/www.abc.net.au\/abc3\/shows\/16215.htm"
+    }
+  ],
+  "shareUrl": "https:\/\/iview.abc.net.au\/show\/tashi",
+  "updated": "2021-08-19 10:15:12",
+  "tags": [
+    "abc3",
+    "3toons",
+    "3tween",
+    "3brains",
+    "3bookweek2",
+    "3antics"
+  ],
+  "_entity": "show",
+  "_links": {
+    "self": {
+      "href": "\/show\/tashi"
+    },
+    "deeplink": {
+      "href": "\/show\/tashi"
+    },
+    "related": {
+      "href": "\/related\/show\/tashi"
+    },
+    "categories": [
+      {
+        "id": "abc3",
+        "title": "ABC ME",
+        "href": "\/channel\/abc3"
+      }
+    ],
+    "selectedSeries": {
+      "id": "0",
+      "href": "\/series\/tashi\/0"
+    },
+    "highlightVideo": {
+      "id": "CH1261H025S00",
+      "href": "\/video\/CH1261H025S00",
+      "playTitle": "Watch Latest"
+    }
+  },
+  "_embedded": {
+    "selectedSeries": {
+      "title": "Episodes",
+      "_entity": "series",
+      "_links": {
+        "show": {
+          "id": false,
+          "href": "\/show\/"
+        }
+      }
+    }
+  }
+}

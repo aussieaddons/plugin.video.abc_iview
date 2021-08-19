@@ -151,7 +151,7 @@ def parse_programs_from_feed(data, from_series_list=False):
             # empty, make sure we have an empty list to use instead
             item_list = json_data['_embedded']['selectedSeries'].get(
                 '_embedded', {}).get('videoExtras', [])
-        serieslist_data = json_data['_embedded']['seriesList']
+        serieslist_data = json_data['_embedded'].get('seriesList', [])
     else:
         item_list = [json_data['_embedded']['highlightVideo']]
 

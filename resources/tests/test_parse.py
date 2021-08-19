@@ -26,6 +26,8 @@ class ParseTests(testtools.TestCase):
             self.COLLECTION3_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/show.json'), 'rb') as f:
             self.SHOW_JSON = io.BytesIO(f.read()).read()
+        with open(os.path.join(cwd, 'fakes/json/show_empty.json'), 'rb') as f:
+            self.SHOW_EMPTY_JSON = io.BytesIO(f.read()).read()
         with open(os.path.join(cwd, 'fakes/json/show_multiseries.json'),
                   'rb') as f:
             self.SHOW_MULTISERIES_JSON = io.BytesIO(f.read()).read()
@@ -51,6 +53,10 @@ class ParseTests(testtools.TestCase):
         self.assertEqual([x.get('title') for x in
                           json.loads(self.COLLECTION3_JSON).get('items')],
                          [x.title for x in observed])
+
+    def test_get_series_from_feed_empty(self):
+        observed = parse.parse_programs_from_feed(self.SHOW_EMPTY_JSON)
+        self.assertEqual(0, len(observed))
 
     def test_get_series_from_feed(self):
         observed = parse.parse_programs_from_feed(self.SHOW_JSON)
