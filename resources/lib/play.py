@@ -66,7 +66,10 @@ def play(params):
                          'thumb': thumb})
         if use_ia:
             listitem.setProperty('inputstream', 'inputstream.adaptive')
-            listitem.setProperty('inputstreamaddon', 'inputstream.adaptive')
+            if utils.get_kodi_major_version() < 19:
+                listitem.setProperty('inputstreamaddon', 'inputstream.adaptive')
+            else:
+                listitem.setProperty('inputstream', 'inputstream.adaptive')
             listitem.setProperty('inputstream.adaptive.manifest_type', 'hls')
             listitem.setProperty('inputstream.adaptive.stream_headers', hdrs)
             listitem.setProperty('inputstream.adaptive.license_key',
