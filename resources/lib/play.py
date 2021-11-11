@@ -65,7 +65,6 @@ def play(params):
         listitem.setArt({'icon': thumb,
                          'thumb': thumb})
         if use_ia:
-            listitem.setProperty('inputstream', 'inputstream.adaptive')
             if utils.get_kodi_major_version() < 19:
                 listitem.setProperty('inputstreamaddon', 'inputstream.adaptive')
             else:
