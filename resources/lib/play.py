@@ -71,6 +71,7 @@ def play(params):
                 listitem.setProperty('inputstream', 'inputstream.adaptive')
             listitem.setProperty('inputstream.adaptive.manifest_type', 'hls')
             listitem.setProperty('inputstream.adaptive.stream_headers', hdrs)
+            listitem.setProperty('inputstream.adaptive.manifest_headers', hdrs)
             listitem.setProperty('inputstream.adaptive.license_key',
                                  stream_url)
         listitem.setInfo('video', p.get_kodi_list_item())
