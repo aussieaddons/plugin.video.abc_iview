@@ -63,6 +63,26 @@ def cookies_to_string(cookiejar):
     return ' '.join(cookies)
 
 
+def get_drm_auth(program):
+    with session.Session() as sess:
+        jwt_url = config.API_BASE_URL.format(path='/v2/token/jwt')
+        jwt_res = sess.post(jwt_url, data={'clientId': config.DRM_AUTH_CLIENT_ID}).text
+        token = json.loads(jwt_res).get('token')
+        utils.log(str(vars(program)))
+        drm_header_url = config.API_BASE_URL.format(path='/v2/token/drm/{hn}'.format(hn=program.house_number))
+        drm_header_res = sess.get(drm_header_url, headers={'Authorization': 'Bearer {bearer}'.format(bearer=token)})
+        return quote_plus(json.loads(drm_header_res.text).get("license"))
+
+
+def check_playlist(program):
+    with requests.Session() as sess:
+        url = program.stream_url[:program.stream_url.find('|')]
+        res = sess.get(url, params={'hdnea': program.auth_string})
+        if 'AUDIO="audio_aac"' in res.text and 'TYPE=AUDIO' not in res.text:
+            return True
+        return False
+
+
 def get_stream_program(params):
     with session.Session() as sess:
         video_url = config.API_BASE_URL.format(
@@ -91,22 +111,29 @@ def get_stream_program(params):
         for playlist in video_json['_embedded']['playlist']:
             if playlist.get('type') not in ['program', 'livestream']:
                 continue
-            if 'hls' in playlist.get('streams'):
-                hls_streams = playlist['streams'].get('hls')
+            streams = playlist.get('streams', [])
+            hls_streams = []
+            if ('hls') in streams:
+                hls_streams = streams.get('hls')
                 stream_url_base = hls_streams.get(
-                    '720', hls_streams.get('sd', hls_streams.get('sd-low')))
+                    '1080', hls_streams.get('720', hls_streams.get(
+                        'sd', hls_streams.get('sd-low'))))
             if stream_url_base:
                 captions_url = playlist.get('captions', {}).get('src-vtt')
                 break
         akamai_auth = get_auth(params.get('house_number'), sess)
         request = sess.get(stream_url_base, params={'hdnea': akamai_auth})
         cookies = cookies_to_string(request.cookies)
-        stream_url = '{0}|User-Agent={1}&Cookie={2}'.format(
+        p = parse.parse_stream_from_json(video_json)
+        p.stream_url = '{0}|User-Agent={1}&Cookie={2}'.format(
             request.url, quote_plus(config.USER_AGENT),
             quote_plus(cookies))
-        p = parse.parse_stream_from_json(video_json)
-        p.stream_url = stream_url
+        p.headers_string = 'User-Agent={0}&Cookie={1}'.format(
+            quote_plus(config.USER_AGENT),
+            quote_plus(cookies))
+        p.cookies = request.cookies
         p.captions_url = captions_url
+        p.auth_string = akamai_auth
     return p
 
 

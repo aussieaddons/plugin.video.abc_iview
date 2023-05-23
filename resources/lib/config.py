@@ -10,7 +10,8 @@ SECRET = 'android.content.res.Resources'
 
 API_BASE_URL = 'https://api.iview.abc.net.au{path}'
 AUTH_PATH = '/auth/hls/sign?{params}'
-AUTH_PARAMS = 'ts={ts}&hn={hn}&d=android-mobile'
+AUTH_PARAMS = 'ts={ts}&hn={hn}&d=android-tablet'
+DRM_AUTH_CLIENT_ID = '1d4b5cba-42d2-403e-80e7-34565cdf772d'
 
 #  Dictionary for converting LG iview API categories to mobile API categories
 #  Many users have saved 'favourites' in Kodi, this will mitigate a lot of

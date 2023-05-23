@@ -247,6 +247,7 @@ def parse_stream_from_json(data):
     p.set_date(data.get('pubDate'))
     p.set_expire(data.get('expireDate'))
     p.captions = data.get('captions') and data.get('captionsOnAkamai')
+    p.house_number = data.get('houseNumber')
     return p
 
 

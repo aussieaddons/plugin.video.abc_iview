@@ -6,6 +6,8 @@ from aussieaddonscommon import session
 from aussieaddonscommon import utils
 from aussieaddonscommon.exceptions import AussieAddonsException
 
+from future.moves.urllib.parse import quote_plus
+
 from pycaption import SRTWriter
 from pycaption import WebVTTReader
 
@@ -33,6 +35,7 @@ def play(params):
             if os.path.isfile(cookies_dat):
                 os.remove(cookies_dat)
         p = comm.get_stream_program(params)
+        port = addon.getSetting('playlist_port')
         stream_url = p.get_stream_url()
         if not stream_url:
             utils.log('Not Playable: {0}'.format(repr(stream_url)))
@@ -41,6 +44,13 @@ def play(params):
                 'Not available: {0}\n{1}'.format(failure_data.get('msg'),
                                                  failure_data.get(
                                                      'availability')))
+        playlist_has_error = comm.check_playlist(p)
+        if playlist_has_error:
+            utils.log('Playlist has erroneous audio attributes, fixing via proxy...')
+            stream_url = "http://127.0.0.1:{0}/{1}".format(port, quote_plus(p.get_stream_url()))
+        else:
+            utils.log('Playlist check returns good...')
+
         use_ia = addon.getSetting('USE_IA') == 'true'
         if use_ia:
             if addon.getSetting('IGNORE_DRM') == 'false':
@@ -57,7 +67,7 @@ def play(params):
                         'more information, please visit: '
                         'http://aussieaddons.com/drm')
                     return
-            hdrs = stream_url[stream_url.find('|') + 1:]
+            hdrs = p.headers_string
 
         listitem = xbmcgui.ListItem(label=p.get_list_title(),
                                     path=stream_url)
@@ -69,11 +79,15 @@ def play(params):
                 listitem.setProperty('inputstreamaddon', 'inputstream.adaptive')
             else:
                 listitem.setProperty('inputstream', 'inputstream.adaptive')
+            #auth_hdrs = comm.get_drm_auth(p)
             listitem.setProperty('inputstream.adaptive.manifest_type', 'hls')
             listitem.setProperty('inputstream.adaptive.stream_headers', hdrs)
             listitem.setProperty('inputstream.adaptive.manifest_headers', hdrs)
             listitem.setProperty('inputstream.adaptive.license_key',
-                                 stream_url)
+                                 p.get_stream_url())
+            #listitem.setProperty('inputstream.adaptive.license_type', 'com.widevine.alpha')
+            #key = 'https://wv-keyos.licensekeyserver.com/|customdata={cd}|R{SSM}|B'.format(cd=auth_hdrs, SSM='{SSM}')
+            #listitem.setProperty('inputstream.adaptive.license_key', key)
         listitem.setInfo('video', p.get_kodi_list_item())
 
         # Add subtitles if available

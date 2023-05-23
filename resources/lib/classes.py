@@ -157,6 +157,9 @@ class Program(object):
         self.stream_url = None
         self.captions_url = None
         self.failure_msg = None
+        self.headers_string = None
+        self.cookies = None
+        self.auth_string = None
 
     def __repr__(self):
         return self.title
