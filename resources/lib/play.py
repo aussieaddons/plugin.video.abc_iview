@@ -79,13 +79,14 @@ def play(params):
                 listitem.setProperty('inputstreamaddon', 'inputstream.adaptive')
             else:
                 listitem.setProperty('inputstream', 'inputstream.adaptive')
-            #auth_hdrs = comm.get_drm_auth(p)
+            
             listitem.setProperty('inputstream.adaptive.manifest_type', 'hls')
             listitem.setProperty('inputstream.adaptive.stream_headers', hdrs)
             listitem.setProperty('inputstream.adaptive.manifest_headers', hdrs)
             listitem.setProperty('inputstream.adaptive.license_key',
                                  p.get_stream_url())
-            #listitem.setProperty('inputstream.adaptive.license_type', 'com.widevine.alpha')
+            # if DASH needs to be implemented in future... (currently VMP is enforced :/ )
+            #auth_hdrs = comm.get_drm_auth(p)
             #key = 'https://wv-keyos.licensekeyserver.com/|customdata={cd}|R{SSM}|B'.format(cd=auth_hdrs, SSM='{SSM}')
             #listitem.setProperty('inputstream.adaptive.license_key', key)
         listitem.setInfo('video', p.get_kodi_list_item())
