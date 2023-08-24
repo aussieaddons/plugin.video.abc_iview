@@ -102,7 +102,7 @@ def play(params):
             if os.path.isfile(caption_file):
                 try:
                     os.remove(caption_file)
-                except WindowsError as e:
+                except OSError as e:
                     utils.log('Subtitles not available for this '
                               'program: {0}'.format(e))
 
